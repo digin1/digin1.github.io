@@ -12,24 +12,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4  # Update to latest version
 
+      - name: Configure Git
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+    
       - name: Setup Node.js
-        uses: actions/setup-node@v4  # Update to latest version
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Use latest LTS Node version
-          cache: 'npm'  # Enable npm caching
-
+          node-version: '20'
+          cache: 'npm'
+    
       - name: Install dependencies
-        run: npm ci  # Consistent, clean install
-
+        run: npm ci
+    
       - name: Build
         run: npm run build
         env:
           REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
           REACT_APP_GITHUB_USERNAME: ${{ secrets.REACT_APP_GITHUB_USERNAME }}
           REACT_APP_GITHUB_REPO: ${{ secrets.REACT_APP_GITHUB_REPO }}
-
+    
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          folder: build
-          single-commit: true  # Keep gh-pages branch clean
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          user_name: 'GitHub Actions'
+          user_email: 'actions@github.com'
+          commit_message: ${{ github.event.head_commit.message }}

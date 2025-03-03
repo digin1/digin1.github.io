@@ -27,6 +27,65 @@ const useGithubIssues = (label = null, issueNumber = null) => {
     return headers;
   }, [token]);
   
+  // Process issue body to extract metadata
+  const processIssue = useCallback((issue) => {
+    // Default to the original issue
+    const processedIssue = { ...issue };
+    
+    // Initialize metadata object
+    processedIssue.metadata = {};
+    
+    // Extract the raw content without metadata
+    processedIssue.rawContent = issue.body || '';
+    
+    if (issue.body) {
+      // More flexible regex that handles various whitespace patterns
+      // This will match YAML-style frontmatter with more flexibility
+      const yamlRegex = /^\s*---\s*([\s\S]*?)\s*---/;
+      const match = issue.body.match(yamlRegex);
+      
+      if (match && match[1]) {
+        // Extract metadata section
+        const metadataText = match[1];
+        
+        // Parse each line as a key-value pair
+        metadataText.split('\n').forEach(line => {
+          // Skip empty lines
+          if (!line.trim()) return;
+          
+          const colonIndex = line.indexOf(':');
+          if (colonIndex > 0) {
+            const key = line.substring(0, colonIndex).trim();
+            const value = line.substring(colonIndex + 1).trim();
+            
+            // Handle lists (comma-separated values)
+            if (value.includes(',') && 
+                (key === 'skills' || key === 'tags' || key === 'technologies')) {
+              processedIssue.metadata[key] = value.split(',').map(item => item.trim());
+            } else {
+              processedIssue.metadata[key] = value;
+            }
+          }
+        });
+        
+        // Remove the metadata section from the raw content
+        processedIssue.rawContent = issue.body.replace(yamlRegex, '').trim();
+        
+        // Add title from metadata or use issue title
+        if (!processedIssue.metadata.title && issue.title) {
+          processedIssue.metadata.title = issue.title;
+        }
+      }
+    }
+    
+    // Set labels for easy access
+    if (issue.labels && Array.isArray(issue.labels)) {
+      processedIssue.labelNames = issue.labels.map(label => label.name);
+    }
+    
+    return processedIssue;
+  }, []);
+  
   // Fetch issues by label
   const fetchIssues = useCallback(async () => {
     if (!label) return;
@@ -98,65 +157,6 @@ const useGithubIssues = (label = null, issueNumber = null) => {
       setLoading(false);
     }
   }, [owner, repo, getHeaders, processIssue]);
-  
-  // Process issue body to extract metadata
-  const processIssue = useCallback((issue) => {
-    // Default to the original issue
-    const processedIssue = { ...issue };
-    
-    // Initialize metadata object
-    processedIssue.metadata = {};
-    
-    // Extract the raw content without metadata
-    processedIssue.rawContent = issue.body || '';
-    
-    if (issue.body) {
-      // More flexible regex that handles various whitespace patterns
-      // This will match YAML-style frontmatter with more flexibility
-      const yamlRegex = /^\s*---\s*([\s\S]*?)\s*---/;
-      const match = issue.body.match(yamlRegex);
-      
-      if (match && match[1]) {
-        // Extract metadata section
-        const metadataText = match[1];
-        
-        // Parse each line as a key-value pair
-        metadataText.split('\n').forEach(line => {
-          // Skip empty lines
-          if (!line.trim()) return;
-          
-          const colonIndex = line.indexOf(':');
-          if (colonIndex > 0) {
-            const key = line.substring(0, colonIndex).trim();
-            const value = line.substring(colonIndex + 1).trim();
-            
-            // Handle lists (comma-separated values)
-            if (value.includes(',') && 
-                (key === 'skills' || key === 'tags' || key === 'technologies')) {
-              processedIssue.metadata[key] = value.split(',').map(item => item.trim());
-            } else {
-              processedIssue.metadata[key] = value;
-            }
-          }
-        });
-        
-        // Remove the metadata section from the raw content
-        processedIssue.rawContent = issue.body.replace(yamlRegex, '').trim();
-        
-        // Add title from metadata or use issue title
-        if (!processedIssue.metadata.title && issue.title) {
-          processedIssue.metadata.title = issue.title;
-        }
-      }
-    }
-    
-    // Set labels for easy access
-    if (issue.labels && Array.isArray(issue.labels)) {
-      processedIssue.labelNames = issue.labels.map(label => label.name);
-    }
-    
-    return processedIssue;
-  }, []);
   
   // Fetch data when the component mounts or when dependencies change
   useEffect(() => {

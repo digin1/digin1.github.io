@@ -15,7 +15,7 @@ const useGithubIssues = (label = null, issueNumber = null) => {
   const token = process.env.REACT_APP_GITHUB_TOKEN; // Optional: Your GitHub token for API rate limits
   
   // Function to create headers with authorization if token exists
-  const getHeaders = () => {
+  const getHeaders = useCallback(() => {
     const headers = {
       'Accept': 'application/vnd.github.v3+json'
     };
@@ -25,7 +25,7 @@ const useGithubIssues = (label = null, issueNumber = null) => {
     }
     
     return headers;
-  };
+  }, [token]);
   
   // Fetch issues by label
   const fetchIssues = useCallback(async () => {
@@ -64,7 +64,7 @@ const useGithubIssues = (label = null, issueNumber = null) => {
     } finally {
       setLoading(false);
     }
-  }, [label, owner, repo]);
+  }, [label, owner, repo, getHeaders, processIssue]);
   
   // Fetch a specific issue by number
   const fetchIssue = useCallback(async (num) => {
@@ -97,10 +97,10 @@ const useGithubIssues = (label = null, issueNumber = null) => {
     } finally {
       setLoading(false);
     }
-  }, [owner, repo]);
+  }, [owner, repo, getHeaders, processIssue]);
   
   // Process issue body to extract metadata
-  const processIssue = (issue) => {
+  const processIssue = useCallback((issue) => {
     // Default to the original issue
     const processedIssue = { ...issue };
     
@@ -156,7 +156,7 @@ const useGithubIssues = (label = null, issueNumber = null) => {
     }
     
     return processedIssue;
-  };
+  }, []);
   
   // Fetch data when the component mounts or when dependencies change
   useEffect(() => {

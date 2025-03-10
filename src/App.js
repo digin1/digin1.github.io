@@ -12,10 +12,10 @@ import NotFoundPage from './pages/NotFoundPage';
 const App = () => {
   // Get the basename for GitHub Pages
   // When deployed to GitHub Pages, the app will be served from /{repo-name}/
-  const basename = process.env.NODE_ENV === 'production' 
-    ? `/${process.env.REACT_APP_GITHUB_REPO || 'portfolio-website'}` 
-    : '';
-
+  const basename = process.env.REACT_APP_GITHUB_REPO 
+  ? `/${process.env.REACT_APP_GITHUB_REPO}` 
+  : '';
+  
   return (
     <Router basename={basename}>
       <Layout>

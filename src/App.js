@@ -7,15 +7,17 @@ import ProjectsPage from './pages/ProjectsPage';
 import ProjectPage from './pages/ProjectPage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
+import BlogPage from './pages/BlogPage';
+import BlogPostPage from './pages/BlogPostPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 const App = () => {
   // Get the basename for GitHub Pages
   // When deployed to GitHub Pages, the app will be served from /{repo-name}/
-  const basename = process.env.REACT_APP_GITHUB_REPO 
-  ? `/${process.env.REACT_APP_GITHUB_REPO}` 
-  : '';
-  
+  const basename = process.env.REACT_APP_GITHUB_REPO
+    ? `/${process.env.REACT_APP_GITHUB_REPO}`
+    : '';
+
   return (
     <Router basename={basename}>
       <Layout>
@@ -25,6 +27,8 @@ const App = () => {
           <Route path="/projects/:id" element={<ProjectPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogPostPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Layout>

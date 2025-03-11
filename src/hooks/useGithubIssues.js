@@ -26,16 +26,16 @@ const useGithubIssues = (label = null, issueNumber = null) => {
     return headers;
   }, [token]);
   
-  // Simple function to extract metadata from issue body
+  // Updated function to extract metadata from issue body
   const processIssue = useCallback((issue) => {
     const processedIssue = { ...issue };
     processedIssue.metadata = {};
     processedIssue.rawContent = issue.body || '';
     
     if (issue.body) {
-      // Simple regex to extract fields between triple dashes
-      // Example: ---name: John Doe---
-      const metadataRegex = /---([^:]+):\s*([^-]*?)---/g;
+      // Improved regex to better match metadata between triple dashes
+      // This will now properly extract all metadata including multi-paragraph subtitle
+      const metadataRegex = /---([^:]+):\s*([\s\S]*?)(?=---(?:[^:]+):|$)/g;
       let match;
       
       while ((match = metadataRegex.exec(issue.body)) !== null) {

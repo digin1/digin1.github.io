@@ -6,22 +6,22 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   const socialLinks = [
-    { name: 'GitHub', url: 'https://github.com/yourusername', icon: 'github' },
+    { name: 'GitHub', url: 'https://github.com/digin1', icon: 'github' },
     { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername', icon: 'linkedin' },
     { name: 'Twitter', url: 'https://twitter.com/yourusername', icon: 'twitter' },
   ];
   
   return (
-    <footer className="bg-dark text-white mt-auto">
-      <div className="container mx-auto px-4 py-8">
+    <footer className="bg-gray-900 border-t border-gray-800 mt-auto">
+      <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and copyright */}
-          <div className="mb-4 md:mb-0">
-            <Link to="/" className="text-xl font-bold text-white">
+          <div className="mb-8 md:mb-0">
+            <Link to="/" className="text-2xl font-bold gradient-text">
               Portfolio
             </Link>
             <p className="text-gray-400 mt-2 text-sm">
-              © {currentYear} Your Name. All rights reserved.
+              © {currentYear} Digin Dominic. All rights reserved.
             </p>
           </div>
           
@@ -33,7 +33,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-full"
                 aria-label={link.name}
               >
                 {/* Simple icons for now, replace with proper react-icons later */}
@@ -64,6 +64,38 @@ const Footer = () => {
                 </svg>
               </a>
             ))}
+          </div>
+        </div>
+
+        {/* Navigation Links */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 text-center md:text-left">
+          <div>
+            <h3 className="text-white font-semibold mb-4">Navigation</h3>
+            <ul className="space-y-2">
+              <li><Link to="/" className="text-gray-400 hover:text-white">Home</Link></li>
+              <li><Link to="/projects" className="text-gray-400 hover:text-white">Projects</Link></li>
+              <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
+              <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>
+              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-4">Technologies</h3>
+            <ul className="space-y-2">
+              <li><span className="text-gray-400">React</span></li>
+              <li><span className="text-gray-400">Tailwind CSS</span></li>
+              <li><span className="text-gray-400">JavaScript</span></li>
+              <li><span className="text-gray-400">GitHub API</span></li>
+            </ul>
+          </div>
+          
+          <div className="col-span-2 md:col-span-2">
+            <h3 className="text-white font-semibold mb-4">About This Site</h3>
+            <p className="text-gray-400">
+              This portfolio website is built with React and uses GitHub Issues as a CMS.
+              Content is dynamically fetched from GitHub repository issues with specific labels.
+            </p>
           </div>
         </div>
       </div>

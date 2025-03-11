@@ -57,10 +57,10 @@ const Hero = ({ content, loading }) => {
   return (
     <section className="py-16 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
-        {/* Two-column layout for larger screens, stacked for mobile */}
-        <div className="flex flex-col md:flex-row items-start justify-between">
+        {/* Modified layout: stacked for mobile and tablet (up to 1023px), side-by-side for larger screens */}
+        <div className="flex flex-col xl:flex-row items-start justify-between">
           {/* Left side text content */}
-          <div className="max-w-2xl mb-12 md:mb-0">
+          <div className="max-w-2xl mb-12 xl:mb-0">
             <h1 className="text-5xl md:text-6xl font-bold mb-2 text-gray-900">
               {name}
             </h1>
@@ -94,9 +94,9 @@ const Hero = ({ content, loading }) => {
 
           {/* Right side tech array with vertical offset on larger screens */}
           {techArray.length > 0 && (
-            <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-end mt-8 md:mt-16">
+            <div className="w-full xl:w-1/2 flex flex-col justify-center xl:justify-end mt-8 xl:mt-16">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">My Toolkit</h2>
-              <div className="w-full md:w-2/3 text-center mx-auto">
+              <div className="w-full md:w-3/4 xl:w-2/3 text-center mx-auto">
                 <div className="flex flex-wrap justify-center gap-2">
                   {techArray.map((tech, index) => (
                     <span

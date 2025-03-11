@@ -14,7 +14,7 @@ const Hero = ({ content, loading }) => {
   // Render loading state
   if (loading) {
     return (
-      <section className="py-32 bg-white border-b border-gray-100">
+      <section className="py-16 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
           <div className="h-64 flex items-center justify-center">
             <div className="animate-pulse space-y-4 w-full max-w-2xl">
@@ -45,16 +45,17 @@ const Hero = ({ content, loading }) => {
     primaryCtaLink = '/projects',
     secondaryCta = 'Contact Me',
     secondaryCtaLink = '/contact',
-    technologies = 'React, JavaScript, Node.js, HTML, CSS, Bootstrap, Git, GitHub, GitLab CI, MongoDB, SQLite, PostgreSQL, AWS, Linux/Ubuntu, Docker, Flask, Python, Dask, Celery, Ansible, Prometheus, Grafana, MATLAB, Three.js, Chart.js, WebGL, PyTorch, TensorFlow, OpenCV, RadiantKit, rclone, VSCode, OpenVZ, KVM, Xen, Nagios, NoMachine',
+    technologies = '',
   } = content.metadata;
 
   // Parse technologies string into array
-  const techArray = technologies ? technologies.split(',').map(tech => tech.trim()) : [];
+  const techArray = technologies ? technologies.split(',').map(tech => tech.trim()).filter(tech => tech !== '') : [];
+  
   // Default subtitle text if none is provided
   const displaySubtitle = subtitle || 'I build modern, responsive websites and web applications.';
 
   return (
-    <section className="py-32 bg-white border-b border-gray-100">
+    <section className="py-16 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
         {/* Two-column layout for larger screens, stacked for mobile */}
         <div className="flex flex-col md:flex-row items-start justify-between">
@@ -93,8 +94,9 @@ const Hero = ({ content, loading }) => {
 
           {/* Right side tech array with vertical offset on larger screens */}
           {techArray.length > 0 && (
-            <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-16">
-              <div className="w-full md:w-2/3 text-center">
+            <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-end mt-8 md:mt-16">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">My Toolkit</h2>
+              <div className="w-full md:w-2/3 text-center mx-auto">
                 <div className="flex flex-wrap justify-center gap-2">
                   {techArray.map((tech, index) => (
                     <span

@@ -4,6 +4,94 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 import { marked } from 'marked';
 import useGithubIssues from '../hooks/useGithubIssues';
 
+// Custom component to handle GitHub image loading with fallbacks
+const ProjectImage = ({ imageUrl, title }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadFailed, setLoadFailed] = useState(false);
+  const [directUrl, setDirectUrl] = useState('');
+  
+  useEffect(() => {
+    if (!imageUrl) {
+      setIsLoading(false);
+      return;
+    }
+    
+    // Step 1: Try the original URL first (for GitHub assets)
+    if (imageUrl.includes('github.com') && imageUrl.includes('/assets/')) {
+      setDirectUrl(imageUrl);
+    } 
+    // Step 2: For regular GitHub content URLs, transform to raw URLs
+    else if (imageUrl.includes('github.com') && imageUrl.includes('/blob/')) {
+      setDirectUrl(
+        imageUrl
+          .replace('github.com', 'raw.githubusercontent.com')
+          .replace('/blob/', '/')
+      );
+    } else if (imageUrl.includes('github.com') && imageUrl.includes('/raw/')) {
+      setDirectUrl(
+        imageUrl.replace('github.com', 'raw.githubusercontent.com')
+      );
+    } else {
+      // For any other URL, use as is
+      setDirectUrl(imageUrl);
+    }
+    
+    setIsLoading(true);
+    setLoadFailed(false);
+  }, [imageUrl]);
+  
+  const handleImageLoad = () => {
+    setIsLoading(false);
+  };
+  
+  const handleImageError = () => {
+    console.error('Failed to load image:', directUrl);
+    setIsLoading(false);
+    setLoadFailed(true);
+  };
+  
+  return (
+    <div className="relative w-full h-80">
+      {/* Loading indicator */}
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+        </div>
+      )}
+      
+      {/* The image itself */}
+      {directUrl && (
+        <img 
+          src={directUrl}
+          alt={title || 'Project image'} 
+          referrerPolicy="no-referrer"
+          crossOrigin="anonymous"
+          className={`w-full h-80 object-cover object-center ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+          onLoad={handleImageLoad}
+          onError={handleImageError}
+        />
+      )}
+      
+      {/* Error state with "View Image" button */}
+      {loadFailed && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+          <div className="text-center p-4">
+            <p className="text-gray-600 mb-4">Unable to display image directly</p>
+            <a 
+              href={imageUrl} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+            >
+              View Image
+            </a>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 const ProjectPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -68,10 +156,9 @@ const ProjectPage = () => {
       <div className="card max-w-4xl mx-auto">
         {project.metadata && project.metadata.image && (
           <div className="mb-8 -mx-6 -mt-8 overflow-hidden rounded-t-lg">
-            <img 
-              src={project.metadata.image} 
-              alt={project.title} 
-              className="w-full h-80 object-cover object-center" 
+            <ProjectImage 
+              imageUrl={project.metadata.image}
+              title={project.title}
             />
           </div>
         )}

@@ -1,8 +1,16 @@
 // src/components/sections/Hero.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 const Hero = ({ content, loading }) => {
+  // Debugging to see what's being received
+  useEffect(() => {
+    if (content && content.metadata) {
+      console.log('Hero content metadata:', content.metadata);
+      console.log('Subtitle value:', content.metadata.subtitle);
+    }
+  }, [content]);
+
   // Render loading state
   if (loading) {
     return (
@@ -24,52 +32,82 @@ const Hero = ({ content, loading }) => {
 
   // Exit early if no content
   if (!content || !content.metadata) {
+    console.error('Hero component received invalid content:', content);
     return null;
   }
 
-  // Extract values from metadata
-  const { 
+  // Extract values from metadata with explicit debugging
+  const {
     name = 'Digin Dominic',
     title = 'System Engineer & Web Developer',
-    subtitle = 'I build modern, responsive websites and web applications.',
+    subtitle,
     primaryCta = 'View My Work',
     primaryCtaLink = '/projects',
     secondaryCta = 'Contact Me',
-    secondaryCtaLink = '/contact'
+    secondaryCtaLink = '/contact',
+    technologies = 'React, JavaScript, Node.js, HTML, CSS, Bootstrap, Git, GitHub, GitLab CI, MongoDB, SQLite, PostgreSQL, AWS, Linux/Ubuntu, Docker, Flask, Python, Dask, Celery, Ansible, Prometheus, Grafana, MATLAB, Three.js, Chart.js, WebGL, PyTorch, TensorFlow, OpenCV, RadiantKit, rclone, VSCode, OpenVZ, KVM, Xen, Nagios, NoMachine',
   } = content.metadata;
+
+  // Parse technologies string into array
+  const techArray = technologies ? technologies.split(',').map(tech => tech.trim()) : [];
+  // Default subtitle text if none is provided
+  const displaySubtitle = subtitle || 'I build modern, responsive websites and web applications.';
 
   return (
     <section className="py-32 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
-            {name}
-          </h1>
-          
-          {title && (
-            <div className="text-xl mb-8 text-gray-600">
-              <p>{title}</p>
-              {subtitle && <p className="mt-2">{subtitle}</p>}
+        {/* Two-column layout for larger screens, stacked for mobile */}
+        <div className="flex flex-col md:flex-row items-start justify-between">
+          {/* Left side text content */}
+          <div className="max-w-2xl mb-12 md:mb-0">
+            <h1 className="text-5xl md:text-6xl font-bold mb-2 text-gray-900">
+              {name}
+            </h1>
+
+            {title && (
+              <div className="mb-8">
+                <p className="text-xl text-gray-800 font-medium">{title}</p>
+                {/* Render subtitle with support for multiple paragraphs */}
+                <div className="mt-2 text-lg text-gray-600 mt-8">
+                  {displaySubtitle.split('\n\n').map((paragraph, index) => (
+                    <p key={index} className={index > 0 ? 'mt-4' : ''}>
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="flex flex-wrap gap-4">
+              <Link to={primaryCtaLink} className="button-primary">
+                {primaryCta}
+              </Link>
+
+              {secondaryCta && (
+                <Link to={secondaryCtaLink} className="button-secondary">
+                  {secondaryCta}
+                </Link>
+              )}
+            </div>
+          </div>
+
+          {/* Right side tech array with vertical offset on larger screens */}
+          {techArray.length > 0 && (
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-16">
+              <div className="w-full md:w-2/3 text-center">
+                <div className="flex flex-wrap justify-center gap-2">
+                  {techArray.map((tech, index) => (
+                    <span
+                      key={index}
+                      className="inline-flex items-center px-3 py-1.5 rounded-md bg-white border border-gray-200 text-sm font-medium text-gray-700 shadow-sm hover:shadow hover:border-gray-300 transition-all duration-200"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
-          
-          <div className="flex flex-wrap gap-4">
-            <Link
-              to={primaryCtaLink}
-              className="button-primary"
-            >
-              {primaryCta}
-            </Link>
-            
-            {secondaryCta && (
-              <Link
-                to={secondaryCtaLink}
-                className="button-secondary"
-              >
-                {secondaryCta}
-              </Link>
-            )}
-          </div>
         </div>
       </div>
     </section>

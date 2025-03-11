@@ -6,20 +6,20 @@ const About = ({ content, loading }) => {
   // Render loading state
   if (loading) {
     return (
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/3 animate-pulse">
-              <div className="bg-gray-300 h-80 w-full rounded-lg"></div>
+              <div className="bg-gray-200 h-80 w-full rounded-lg"></div>
             </div>
             <div className="lg:w-2/3 animate-pulse space-y-4">
-              <div className="h-8 bg-gray-300 rounded w-1/3"></div>
-              <div className="h-4 bg-gray-300 rounded w-full"></div>
-              <div className="h-4 bg-gray-300 rounded w-full"></div>
-              <div className="h-4 bg-gray-300 rounded w-full"></div>
-              <div className="h-4 bg-gray-300 rounded w-5/6"></div>
-              <div className="h-4 bg-gray-300 rounded w-full"></div>
-              <div className="h-4 bg-gray-300 rounded w-3/4"></div>
+              <div className="h-8 bg-gray-200 rounded w-1/3"></div>
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-3/4"></div>
             </div>
           </div>
         </div>
@@ -31,10 +31,10 @@ const About = ({ content, loading }) => {
   if (!content) {
     console.warn('About section: No content available');
     return (
-      <section className="py-16" id="about">
+      <section className="py-16 bg-white" id="about">
         <div className="container mx-auto px-4">
           <div className="w-full max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">About Me</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">About Me</h2>
             <p className="text-gray-600">About content is not available. Please check the GitHub Issues.</p>
           </div>
         </div>
@@ -56,10 +56,10 @@ const About = ({ content, loading }) => {
   if (!hasAboutLabel) {
     console.warn('About section: Content does not have about label', content.labels);
     return (
-      <section className="py-16" id="about">
+      <section className="py-16 bg-white" id="about">
         <div className="container mx-auto px-4">
           <div className="w-full max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">About Me</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">About Me</h2>
             <p className="text-gray-600">
               About content is misconfigured. Please add the 'about' label to the GitHub Issue.
             </p>
@@ -84,7 +84,7 @@ const About = ({ content, loading }) => {
     Array.isArray(skills) ? skills : [];
 
   return (
-    <section className="py-16" id="about">
+    <section className="py-16 bg-white" id="about">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           {image && (
@@ -92,13 +92,13 @@ const About = ({ content, loading }) => {
               <img 
                 src={image} 
                 alt={content.metadata?.name || 'Profile'} 
-                className="rounded-lg shadow-md w-full"
+                className="rounded-lg shadow-sm w-full border border-gray-200"
               />
             </div>
           )}
           
           <div className={image ? 'lg:w-2/3' : 'w-full max-w-3xl mx-auto'}>
-            <h2 className="text-3xl font-bold mb-6">{title}</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">{title}</h2>
             
             {content.rawContent ? (
               <div 
@@ -111,12 +111,12 @@ const About = ({ content, loading }) => {
             
             {skillsArray.length > 0 && (
               <div className="mt-8">
-                <h3 className="text-xl font-semibold mb-4">Skills</h3>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">Skills</h3>
                 <div className="flex flex-wrap gap-2">
                   {skillsArray.map((skill, index) => (
                     <span 
                       key={index} 
-                      className="px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-sm"
+                      className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm border border-gray-200"
                     >
                       {skill}
                     </span>

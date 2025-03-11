@@ -19,11 +19,11 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gray-900/80 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold gradient-text">
+          <Link to="/" className="text-xl font-bold text-gray-900">
             Digin Dominic
           </Link>
           
@@ -33,8 +33,10 @@ const Header = () => {
               <Link 
                 key={item.path}
                 to={item.path}
-                className={`transition-colors hover:text-indigo-400 ${
-                  location.pathname === item.path ? 'text-indigo-400 font-semibold' : 'text-gray-300'
+                className={`transition-colors ${
+                  location.pathname === item.path 
+                    ? 'nav-link-active' 
+                    : 'nav-link'
                 }`}
               >
                 {item.name}
@@ -44,8 +46,9 @@ const Header = () => {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-300 focus:outline-none"
+            className="md:hidden text-gray-700 focus:outline-none"
             onClick={toggleMenu}
+            aria-label="Toggle menu"
           >
             <svg 
               className="w-6 h-6" 
@@ -83,8 +86,8 @@ const Header = () => {
                   to={item.path}
                   className={`py-2 px-4 rounded-md transition-colors ${
                     location.pathname === item.path 
-                      ? 'bg-gray-800 text-indigo-400 font-medium' 
-                      : 'text-gray-300 hover:bg-gray-800'
+                      ? 'bg-gray-100 text-gray-900 font-medium' 
+                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

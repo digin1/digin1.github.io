@@ -6,42 +6,42 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#3490dc',
-        secondary: '#ffed4a',
-        dark: '#2d3748',
-        spotlight: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
-          950: '#082f49',
-        }
+        // Using grayscale for primary colors
+        primary: '#111827', // gray-900
+        secondary: '#6B7280', // gray-500
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['Georgia', 'serif'],
       },
-      animation: {
-        'spotlight': 'spotlight 2s ease .75s 1 forwards',
-      },
-      keyframes: {
-        spotlight: {
-          '0%': {
-            opacity: 0,
-            transform: 'translate(-72%, -62%) scale(0.5)',
-          },
-          '100%': {
-            opacity: 1,
-            transform: 'translate(-50%,-40%) scale(1)',
+      typography: {
+        DEFAULT: {
+          css: {
+            maxWidth: '65ch',
+            color: '#111827',
+            a: {
+              color: '#111827',
+              textDecoration: 'underline',
+              fontWeight: '500',
+              '&:hover': {
+                color: '#374151',
+              },
+            },
+            h1: {
+              color: '#111827',
+            },
+            h2: {
+              color: '#111827',
+            },
+            h3: {
+              color: '#111827',
+            },
           },
         },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }

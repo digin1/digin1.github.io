@@ -25,14 +25,14 @@ const Button = ({
   ...props
 }) => {
   // Base classes for all button variants
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary';
+  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500';
   
   // Classes for different variants
   const variantClasses = {
-    primary: 'bg-primary text-white hover:bg-primary/90 focus:ring-primary',
-    secondary: 'bg-gray-800 text-white hover:bg-gray-700 focus:ring-gray-500',
-    outline: 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-primary',
-    text: 'text-primary hover:text-primary/90 hover:underline'
+    primary: 'bg-gray-900 text-white hover:bg-gray-800 focus:ring-gray-700',
+    secondary: 'bg-white text-gray-900 border border-gray-300 hover:bg-gray-50 focus:ring-gray-500',
+    outline: 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus:ring-gray-500',
+    text: 'text-gray-900 hover:text-gray-700 hover:underline'
   };
   
   // Classes for different sizes

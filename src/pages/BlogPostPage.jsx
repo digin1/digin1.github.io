@@ -72,7 +72,7 @@ const BlogPostPage = () => {
     return (
       <div className="container mx-auto px-4 py-16">
         <div className="flex justify-center items-center h-64">
-          <Loader size="lg" />
+          <Loader size="lg" color="gray" />
         </div>
       </div>
     );
@@ -82,9 +82,9 @@ const BlogPostPage = () => {
     return (
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-800 mb-4">Blog Post Not Found</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Blog Post Not Found</h1>
           <p className="text-gray-600 mb-8">Sorry, we couldn't find the blog post you're looking for.</p>
-          <Link to="/blog" className="text-primary hover:underline">
+          <Link to="/blog" className="text-gray-900 hover:underline">
             &larr; Back to Blog
           </Link>
         </div>
@@ -94,14 +94,14 @@ const BlogPostPage = () => {
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <Link to="/blog" className="inline-flex items-center text-primary hover:underline mb-8">
+      <Link to="/blog" className="inline-flex items-center text-gray-900 hover:underline mb-8">
         <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
         </svg>
         Back to Blog
       </Link>
 
-      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+      <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
         {post.metadata && post.metadata.image && (
           <img 
             src={post.metadata.image} 
@@ -136,7 +136,7 @@ const BlogPostPage = () => {
               label.name !== 'blog' && (
                 <span 
                   key={label.id} 
-                  className="px-3 py-1 text-sm rounded-full bg-primary/10 text-primary"
+                  className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700"
                 >
                   {label.name}
                 </span>

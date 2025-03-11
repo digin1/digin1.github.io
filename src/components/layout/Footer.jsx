@@ -12,15 +12,15 @@ const Footer = () => {
   ];
   
   return (
-    <footer className="bg-gray-900 border-t border-gray-800 mt-auto">
+    <footer className="bg-white border-t border-gray-200 mt-auto">
       <div className="container mx-auto px-6 py-12">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo and copyright */}
           <div className="mb-8 md:mb-0">
-            <Link to="/" className="text-2xl font-bold gradient-text">
+            <Link to="/" className="text-2xl font-bold text-gray-900">
               Portfolio
             </Link>
-            <p className="text-gray-400 mt-2 text-sm">
+            <p className="text-gray-500 mt-2 text-sm">
               © {currentYear} Digin Dominic. All rights reserved.
             </p>
           </div>
@@ -33,7 +33,7 @@ const Footer = () => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-full"
+                className="text-gray-500 hover:text-gray-900 transition-colors p-2 hover:bg-gray-100 rounded-full"
                 aria-label={link.name}
               >
                 {/* Simple icons for now, replace with proper react-icons later */}
@@ -70,29 +70,29 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 text-center md:text-left">
           <div>
-            <h3 className="text-white font-semibold mb-4">Navigation</h3>
+            <h3 className="text-gray-900 font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-gray-400 hover:text-white">Home</Link></li>
-              <li><Link to="/projects" className="text-gray-400 hover:text-white">Projects</Link></li>
-              <li><Link to="/blog" className="text-gray-400 hover:text-white">Blog</Link></li>
-              <li><Link to="/about" className="text-gray-400 hover:text-white">About</Link></li>
-              <li><Link to="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+              <li><Link to="/" className="text-gray-500 hover:text-gray-900">Home</Link></li>
+              <li><Link to="/projects" className="text-gray-500 hover:text-gray-900">Projects</Link></li>
+              <li><Link to="/blog" className="text-gray-500 hover:text-gray-900">Blog</Link></li>
+              <li><Link to="/about" className="text-gray-500 hover:text-gray-900">About</Link></li>
+              <li><Link to="/contact" className="text-gray-500 hover:text-gray-900">Contact</Link></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-white font-semibold mb-4">Technologies</h3>
+            <h3 className="text-gray-900 font-semibold mb-4">Technologies</h3>
             <ul className="space-y-2">
-              <li><span className="text-gray-400">React</span></li>
-              <li><span className="text-gray-400">Tailwind CSS</span></li>
-              <li><span className="text-gray-400">JavaScript</span></li>
-              <li><span className="text-gray-400">GitHub API</span></li>
+              <li><span className="text-gray-500">React</span></li>
+              <li><span className="text-gray-500">Tailwind CSS</span></li>
+              <li><span className="text-gray-500">JavaScript</span></li>
+              <li><span className="text-gray-500">GitHub API</span></li>
             </ul>
           </div>
           
           <div className="col-span-2 md:col-span-2">
-            <h3 className="text-white font-semibold mb-4">About This Site</h3>
-            <p className="text-gray-400">
+            <h3 className="text-gray-900 font-semibold mb-4">About This Site</h3>
+            <p className="text-gray-500">
               This portfolio website is built with React and uses GitHub Issues as a CMS.
               Content is dynamically fetched from GitHub repository issues with specific labels.
             </p>

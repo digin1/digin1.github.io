@@ -6,12 +6,12 @@ import React from 'react';
  * 
  * @param {Object} props - Component props
  * @param {string} [props.size='md'] - Loader size (sm, md, lg)
- * @param {string} [props.color='primary'] - Loader color (primary, gray, white)
+ * @param {string} [props.color='gray'] - Loader color (gray, white)
  * @param {string} [props.className] - Additional CSS classes
  */
 const Loader = ({
   size = 'md',
-  color = 'primary',
+  color = 'gray',
   className = '',
   ...props
 }) => {
@@ -24,8 +24,7 @@ const Loader = ({
   
   // Color classes
   const colorClasses = {
-    primary: 'border-primary/30 border-t-primary',
-    gray: 'border-gray-300 border-t-gray-700',
+    gray: 'border-gray-300 border-t-gray-900',
     white: 'border-white/30 border-t-white'
   };
   

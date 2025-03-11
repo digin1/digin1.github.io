@@ -7,15 +7,15 @@ const Hero = ({ content, loading }) => {
   // Render loading state
   if (loading) {
     return (
-      <section className="py-32 bg-gray-950 with-spotlight">
+      <section className="py-32 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
           <div className="h-64 flex items-center justify-center">
             <div className="animate-pulse space-y-4 w-full max-w-2xl">
-              <div className="h-8 bg-gray-800 rounded w-3/4"></div>
-              <div className="h-4 bg-gray-800 rounded w-full"></div>
-              <div className="h-4 bg-gray-800 rounded w-5/6"></div>
-              <div className="h-4 bg-gray-800 rounded w-4/6"></div>
-              <div className="h-10 bg-gray-800 rounded w-32 mt-6"></div>
+              <div className="h-8 bg-gray-200 rounded w-3/4"></div>
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+              <div className="h-4 bg-gray-200 rounded w-4/6"></div>
+              <div className="h-10 bg-gray-200 rounded w-32 mt-6"></div>
             </div>
           </div>
         </div>
@@ -27,21 +27,21 @@ const Hero = ({ content, loading }) => {
   if (!content) {
     console.warn('Hero section: No content available');
     return (
-      <section className="py-32 bg-gray-950 with-spotlight">
+      <section className="py-32 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Welcome to My <span className="gradient-text">Portfolio</span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+              Welcome to My Portfolio
             </h1>
-            <div className="text-xl mb-8 text-gray-400">
+            <div className="text-xl mb-8 text-gray-600">
               <p>Showcasing my work, skills, and achievements.</p>
             </div>
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/projects"
-                className="glow-button"
+                className="button-primary"
               >
-                <span className="glow-button-inner">View Projects</span>
+                View Projects
               </Link>
               <Link
                 to="/contact"
@@ -68,31 +68,17 @@ const Hero = ({ content, loading }) => {
   const secondaryCta = content.metadata?.secondaryCta;
   const secondaryCtaLink = content.metadata?.secondaryCtaLink || '/contact';
 
-  // Format title to add gradient to last word
-  const formatTitle = (title) => {
-    const words = title.split(' ');
-    if (words.length > 1) {
-      const lastWord = words.pop();
-      return (
-        <>
-          {words.join(' ')} <span className="gradient-text">{lastWord}</span>
-        </>
-      );
-    }
-    return title;
-  };
-
   return (
-    <section className="py-32 bg-gray-950 with-spotlight">
+    <section className="py-32 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            {formatTitle(title)}
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900">
+            {title}
           </h1>
           
           {subtitle && (
             <div 
-              className="text-xl mb-8 text-gray-400"
+              className="text-xl mb-8 text-gray-600"
               dangerouslySetInnerHTML={{ __html: marked.parse(subtitle) }}
             />
           )}
@@ -100,9 +86,9 @@ const Hero = ({ content, loading }) => {
           <div className="flex flex-wrap gap-4">
             <Link
               to={primaryCtaLink}
-              className="glow-button"
+              className="button-primary"
             >
-              <span className="glow-button-inner">{primaryCta}</span>
+              {primaryCta}
             </Link>
             
             {secondaryCta && (

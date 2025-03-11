@@ -19,8 +19,8 @@ const Card = ({
   className = '',
   ...props
 }) => {
-  const baseClasses = 'bg-white rounded-lg shadow-md overflow-hidden';
-  const hoverClasses = hover ? 'transition-transform hover:-translate-y-1 hover:shadow-lg' : '';
+  const baseClasses = 'bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200';
+  const hoverClasses = hover ? 'transition-transform hover:-translate-y-1 hover:shadow-md' : '';
   
   return (
     <div 

@@ -128,17 +128,19 @@ const BlogPostPage = () => {
 
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-sm overflow-hidden border border-gray-200">
         {post.metadata && post.metadata.image && (
-          <img 
-            src={post.metadata.image} 
-            alt={post.title} 
-            className="w-full h-64 md:h-80 object-cover object-center" 
-          />
+          <div className="w-full">
+            <img 
+              src={post.metadata.image} 
+              alt={post.title} 
+              className="w-full object-cover object-center" 
+            />
+          </div>
         )}
         
         <div className="p-6 md:p-8">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
           
-          <div className="flex flex-wrap items-center text-gray-600 mb-6">
+          <div className="flex flex-wrap items-center text-gray-600 mb-2">
             <span className="mr-4">
               {formatDate(post.created_at)}
             </span>
@@ -151,7 +153,14 @@ const BlogPostPage = () => {
                   alt={post.user.login} 
                   className="w-6 h-6 rounded-full mr-2"
                 />
-                By {post.user.login}
+                By <a 
+                  href={`https://github.com/${post.user.login}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:underline ml-1"
+                >
+                  {post.user.login}
+                </a>
               </span>
             )}
           </div>

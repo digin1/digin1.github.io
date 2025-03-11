@@ -10,6 +10,7 @@ const BlogPostPage = () => {
   const navigate = useNavigate();
   const issueNumber = parseInt(id, 10);
   const [loading, setLoading] = useState(true);
+  const [processedContent, setProcessedContent] = useState('');
   
   // Fetch all blog posts for validation
   const { 
@@ -33,6 +34,30 @@ const BlogPostPage = () => {
       navigate('/not-found');
     }
   }, [issueNumber, fetchIssue, navigate]);
+
+  // Process content to remove metadata sections
+  useEffect(() => {
+    if (post && post.rawContent) {
+      let cleanedContent = post.rawContent;
+      
+      // Extract just the content after "---content:" if it exists
+      if (cleanedContent.includes('---content:')) {
+        cleanedContent = cleanedContent.split('---content:')[1].trim();
+      } else {
+        // Fallback cleaning method if ---content: marker is not found
+        cleanedContent = cleanedContent
+          // Remove lines starting with ---summary:
+          .replace(/^---summary:.*$/gm, '')
+          // Remove lines containing ---image:
+          .replace(/^.*---image:.*$/gm, '')
+          // Clean up excessive newlines
+          .replace(/\n{3,}/g, '\n\n')
+          .trim();
+      }
+      
+      setProcessedContent(cleanedContent);
+    }
+  }, [post]);
 
   // Set overall loading state
   useEffect(() => {
@@ -146,7 +171,7 @@ const BlogPostPage = () => {
           
           <div 
             className="prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: marked.parse(post.rawContent || '') }}
+            dangerouslySetInnerHTML={{ __html: marked.parse(processedContent) }}
           />
         </div>
       </div>

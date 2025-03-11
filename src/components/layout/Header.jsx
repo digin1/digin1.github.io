@@ -19,11 +19,11 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-gray-900/80 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold text-primary">
+          <Link to="/" className="text-xl font-bold gradient-text">
             Digin Dominic
           </Link>
           
@@ -33,8 +33,8 @@ const Header = () => {
               <Link 
                 key={item.path}
                 to={item.path}
-                className={`transition-colors hover:text-primary ${
-                  location.pathname === item.path ? 'text-primary font-semibold' : 'text-gray-600'
+                className={`transition-colors hover:text-indigo-400 ${
+                  location.pathname === item.path ? 'text-indigo-400 font-semibold' : 'text-gray-300'
                 }`}
               >
                 {item.name}
@@ -44,7 +44,7 @@ const Header = () => {
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-600 focus:outline-none"
+            className="md:hidden text-gray-300 focus:outline-none"
             onClick={toggleMenu}
           >
             <svg 
@@ -83,8 +83,8 @@ const Header = () => {
                   to={item.path}
                   className={`py-2 px-4 rounded-md transition-colors ${
                     location.pathname === item.path 
-                      ? 'bg-primary/10 text-primary font-medium' 
-                      : 'text-gray-600 hover:bg-gray-100'
+                      ? 'bg-gray-800 text-indigo-400 font-medium' 
+                      : 'text-gray-300 hover:bg-gray-800'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >

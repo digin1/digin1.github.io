@@ -11,7 +11,6 @@ const Header = () => {
     { name: 'Projects', path: '/projects' },
     { name: 'Blog', path: '/blog' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
   ];
   
   const toggleMenu = () => {

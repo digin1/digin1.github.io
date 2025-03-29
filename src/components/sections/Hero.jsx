@@ -69,7 +69,7 @@ const Hero = ({ content, loading }) => {
               <div className="mb-8">
                 <p className="text-xl text-gray-800 font-medium">{title}</p>
                 {/* Render subtitle with support for multiple paragraphs */}
-                <div className="mt-2 text-lg text-gray-600 mt-8">
+                <div className="mt-2 text-lg text-gray-600 mt-4">
                   {displaySubtitle.split('\n\n').map((paragraph, index) => (
                     <p key={index} className={index > 0 ? 'mt-4' : ''}>
                       {paragraph}

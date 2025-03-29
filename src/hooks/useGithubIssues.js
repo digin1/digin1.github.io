@@ -26,22 +26,40 @@ const useGithubIssues = (label = null, issueNumber = null) => {
     return headers;
   }, [token]);
   
-  // Updated function to extract metadata from issue body
+  // Updated function to extract metadata from issue body with support for JSON format
   const processIssue = useCallback((issue) => {
     const processedIssue = { ...issue };
     processedIssue.metadata = {};
     processedIssue.rawContent = issue.body || '';
     
     if (issue.body) {
-      // Improved regex to better match metadata between triple dashes
-      // This will now properly extract all metadata including multi-paragraph subtitle
-      const metadataRegex = /---([^:]+):\s*([\s\S]*?)(?=---(?:[^:]+):|$)/g;
-      let match;
+      // Try to extract JSON metadata from markdown
+      const jsonMetadataRegex = /```json\s*([\s\S]*?)\s*```/;
+      const jsonMatch = issue.body.match(jsonMetadataRegex);
       
-      while ((match = metadataRegex.exec(issue.body)) !== null) {
-        const key = match[1].trim();
-        const value = match[2].trim();
-        processedIssue.metadata[key] = value;
+      if (jsonMatch && jsonMatch[1]) {
+        try {
+          // Parse the JSON metadata
+          const jsonMetadata = JSON.parse(jsonMatch[1].trim());
+          processedIssue.metadata = jsonMetadata;
+          console.log('Parsed JSON metadata:', processedIssue.metadata);
+          
+          // Remove the JSON block from rawContent for cleaner markdown rendering
+          processedIssue.rawContent = issue.body.replace(/## Metadata\s*```json[\s\S]*?```/, '').trim();
+        } catch (err) {
+          console.error('Error parsing JSON metadata:', err);
+          // Fallback to traditional metadata extraction if JSON parsing fails
+        }
+      } else {
+        // Fallback to the original metadata extraction for backward compatibility
+        const metadataRegex = /---([^:]+):\s*([\s\S]*?)(?=---(?:[^:]+):|$)/g;
+        let match;
+        
+        while ((match = metadataRegex.exec(issue.body)) !== null) {
+          const key = match[1].trim();
+          const value = match[2].trim();
+          processedIssue.metadata[key] = value;
+        }
       }
       
       // Set label names for easy access
@@ -49,7 +67,7 @@ const useGithubIssues = (label = null, issueNumber = null) => {
         processedIssue.labelNames = issue.labels.map(label => label.name);
       }
       
-      console.log('Processed metadata:', processedIssue.metadata);
+      console.log('Processed issue:', processedIssue);
     }
     
     return processedIssue;

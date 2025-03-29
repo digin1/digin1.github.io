@@ -12,7 +12,7 @@ const ProjectsPage = () => {
   } = useGithubIssues('project', null);
 
   return (
-    <div className="pt-10">
+    <div>
       <Projects projects={projects} loading={projectsLoading} />
     </div>
   );

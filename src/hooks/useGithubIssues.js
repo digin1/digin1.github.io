@@ -10,7 +10,7 @@ const useGithubIssues = (label = null, issueNumber = null) => {
   
   // GitHub API configuration
   const owner = 'digin1';
-  const repo = 'portfolio-website';
+  const repo = 'digin1.github.io';
   
   // Create headers without any authorization token
   const getHeaders = useCallback(() => {

@@ -122,7 +122,7 @@ const ProjectsPage = () => {
 
   if (projectsLoading) {
     return (
-      <div className="container mx-auto px-4 py-24">
+      <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 text-gray-900">My Projects</h2>
           <p className="max-w-2xl mx-auto text-gray-600">Explore the projects I've been working on</p>
@@ -154,7 +154,7 @@ const ProjectsPage = () => {
   });
 
   return (
-    <div className="container mx-auto px-4 py-24">
+    <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold mb-4 text-gray-900">My Projects</h2>
         <p className="max-w-2xl mx-auto text-gray-600 mb-6">Explore the projects I've been working on</p>

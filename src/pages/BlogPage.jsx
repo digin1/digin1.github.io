@@ -136,7 +136,7 @@ const BlogPage = () => {
 
   if (blogPostsLoading) {
     return (
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <Helmet>
           <title>Loading Blog | Your Portfolio Website</title>
           <meta name="description" content="Loading blog posts..." />
@@ -153,7 +153,7 @@ const BlogPage = () => {
 
   if (error) {
     return (
-      <section className="py-24 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <Helmet>
           <title>Blog Error | Your Portfolio Website</title>
           <meta name="description" content="An error occurred while loading blog posts." />
@@ -169,7 +169,7 @@ const BlogPage = () => {
   }
 
   return (
-    <section className="py-24 bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <Helmet>
         <title>{activeTag ? `${activeTag} Blog Posts | Your Portfolio Website` : 'Blog | Your Portfolio Website'}</title>
         <meta

@@ -11,18 +11,34 @@ const Hero = ({ content, loading }) => {
     }
   }, [content]);
 
-  // Render loading state
+  // Render loading state with a layout matching the final content structure
   if (loading) {
     return (
       <section className="py-16 bg-white border-b border-gray-100">
         <div className="container mx-auto px-4">
-          <div className="h-64 flex items-center justify-center">
-            <div className="animate-pulse space-y-4 w-full max-w-2xl">
-              <div className="h-8 bg-gray-200 rounded w-3/4"></div>
-              <div className="h-4 bg-gray-200 rounded w-full"></div>
-              <div className="h-4 bg-gray-200 rounded w-5/6"></div>
-              <div className="h-4 bg-gray-200 rounded w-4/6"></div>
-              <div className="h-10 bg-gray-200 rounded w-32 mt-6"></div>
+          <div className="flex flex-col xl:flex-row items-start justify-between">
+            {/* Left side placeholder */}
+            <div className="max-w-2xl mb-12 xl:mb-0 animate-pulse">
+              <div className="h-10 bg-gray-200 rounded w-3/4 mb-4"></div>
+              <div className="h-6 bg-gray-200 rounded w-full mb-2"></div>
+              <div className="h-4 bg-gray-200 rounded w-5/6 mb-2"></div>
+              <div className="h-4 bg-gray-200 rounded w-4/6 mb-6"></div>
+              <div className="flex gap-4">
+                <div className="h-10 bg-gray-200 rounded w-32"></div>
+                <div className="h-10 bg-gray-200 rounded w-24"></div>
+              </div>
+            </div>
+            {/* Right side placeholder for tech toolkit */}
+            <div className="w-full xl:w-1/2 animate-pulse">
+              <div className="h-8 bg-gray-200 rounded w-1/2 mx-auto mb-4"></div>
+              <div className="flex flex-wrap justify-center gap-2">
+                {Array.from({ length: 4 }).map((_, index) => (
+                  <div
+                    key={index}
+                    className="h-6 bg-gray-200 rounded w-16"
+                  ></div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -49,13 +65,14 @@ const Hero = ({ content, loading }) => {
   } = content.metadata;
 
   // Parse technologies string into array
-  const techArray = technologies ? technologies.split(',').map(tech => tech.trim()).filter(tech => tech !== '') : [];
+  const techArray = technologies
+    ? technologies.split(',').map(tech => tech.trim()).filter(tech => tech !== '')
+    : [];
   
   // Default subtitle text if none is provided
   const displaySubtitle = subtitle || 'I build modern, responsive websites and web applications.';
   
   // First, replace literal '\n' strings with actual newline characters
-  // This helps when metadata contains "\n" as text instead of actual newlines
   const processedSubtitle = displaySubtitle.replace(/\\n/g, '\n');
   
   // Then split on actual newlines
@@ -63,22 +80,15 @@ const Hero = ({ content, loading }) => {
   
   // If we still only have one paragraph and it's long (> 200 chars), try to intelligently split it
   if (paragraphs.length === 1 && processedSubtitle.length > 200) {
-    // Find a good splitting point - ideally at the end of a sentence in the middle third of the text
     const lowerBound = Math.floor(processedSubtitle.length / 3);
     const upperBound = Math.floor(processedSubtitle.length * 2 / 3);
-    
-    // Look for periods in the middle section of the text
     let splitPoint = -1;
-    
-    // Find periods followed by spaces in the middle third of the text
     for (let i = upperBound; i >= lowerBound; i--) {
       if (processedSubtitle[i] === '.' && processedSubtitle[i+1] === ' ') {
         splitPoint = i + 1;
         break;
       }
     }
-    
-    // If we found a good split point, create paragraphs
     if (splitPoint !== -1) {
       paragraphs = [
         processedSubtitle.substring(0, splitPoint).trim(),
@@ -90,19 +100,16 @@ const Hero = ({ content, loading }) => {
   return (
     <section className="py-16 bg-white border-b border-gray-100">
       <div className="container mx-auto px-4">
-        {/* Modified layout: stacked for mobile and tablet (up to 1023px), side-by-side for larger screens */}
         <div className="flex flex-col xl:flex-row items-start justify-between">
           {/* Left side text content */}
           <div className="max-w-2xl mb-12 xl:mb-0">
             <h1 className="text-5xl md:text-6xl font-bold mb-2 text-gray-900">
               {name}
             </h1>
-
             {title && (
               <div className="mb-8">
                 <p className="text-xl text-gray-800 font-medium">{title}</p>
-                {/* Render subtitle with support for multiple paragraphs */}
-                <div className="mt-2 text-lg text-gray-600 mt-4">
+                <div className="mt-4 text-lg text-gray-600">
                   {paragraphs.map((paragraph, index) => (
                     <p key={index} className={index > 0 ? 'mt-4' : ''}>
                       {paragraph}
@@ -111,12 +118,10 @@ const Hero = ({ content, loading }) => {
                 </div>
               </div>
             )}
-
             <div className="flex flex-wrap gap-4">
               <Link to={primaryCtaLink} className="button-primary">
                 {primaryCta}
               </Link>
-
               {secondaryCta && (
                 <Link to={secondaryCtaLink} className="button-secondary">
                   {secondaryCta}
@@ -124,8 +129,7 @@ const Hero = ({ content, loading }) => {
               )}
             </div>
           </div>
-
-          {/* Right side tech array with vertical offset on larger screens */}
+          {/* Right side tech toolkit */}
           {techArray.length > 0 && (
             <div className="w-full xl:w-1/2 flex flex-col justify-center xl:justify-end mt-8 xl:mt-16">
               <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">My Toolkit</h2>

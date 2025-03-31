@@ -1,21 +1,16 @@
-name: Production Deployment
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ production ]
-  workflow_dispatch:  # Allow manual triggering with version input
-    inputs:
-      version:
-        description: 'Release version'
-        required: true
-        default: ''
+    branches: [ main ]
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # Update to latest version
 
       - name: Configure Git
         run: |
@@ -37,38 +32,12 @@ jobs:
           REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
           REACT_APP_GITHUB_USERNAME: ${{ secrets.REACT_APP_GITHUB_USERNAME }}
           REACT_APP_GITHUB_REPO: ${{ secrets.REACT_APP_GITHUB_REPO }}
-          NODE_ENV: 'production'
     
-      - name: Deploy to gh-pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          publish_branch: gh-pages  # Explicitly specify gh-pages branch
           user_name: 'GitHub Actions'
           user_email: 'actions@github.com'
-          commit_message: 'Deploy production release ${{ github.event.inputs.version || github.ref_name }}'
-          full_commit_message: 'Deploy production release ${{ github.event.inputs.version || github.ref_name }} from ${{ github.sha }}'
-
-      - name: Create Release Tag
-        if: github.event_name == 'workflow_dispatch' && github.event.inputs.version != ''
-        run: |
-          git tag v${{ github.event.inputs.version }}
-          git push origin v${{ github.event.inputs.version }}
-      
-      - name: Create GitHub Release
-        if: github.event_name == 'workflow_dispatch' && github.event.inputs.version != ''
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: v${{ github.event.inputs.version }}
-          release_name: Release v${{ github.event.inputs.version }}
-          draft: false
-          prerelease: false
-          body: |
-            ## Portfolio Website Release v${{ github.event.inputs.version }}
-            
-            Production release of the portfolio website.
-            
-            Visit the deployed site at https://digin1.github.io/portfolio-website/
+          commit_message: ${{ github.event.head_commit.message }}

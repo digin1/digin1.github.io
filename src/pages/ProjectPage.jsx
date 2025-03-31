@@ -57,7 +57,7 @@ const ProjectPage = () => {
   if (loading) {
     return (
       <div className="bg-gray-50 min-h-screen">
-        <section className="container mx-auto px-4 py-24">
+        <section className="container mx-auto px-4 py-12">
           <Helmet>
             <title>Loading Project | Your Portfolio Website</title>
             <meta name="description" content="Loading project details..." />
@@ -73,7 +73,7 @@ const ProjectPage = () => {
   if (error || !project) {
     return (
       <div className="bg-gray-50 min-h-screen">
-        <section className="container mx-auto px-4 py-24">
+        <section className="container mx-auto px-4 py-12">
           <Helmet>
             <title>Project Not Found | Your Portfolio Website</title>
             <meta name="description" content="The requested project could not be found." />
@@ -92,7 +92,7 @@ const ProjectPage = () => {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      <section className="container mx-auto px-4 py-24">
+      <section className="container mx-auto px-4 py-12">
         <Helmet>
           <title>{`${project.title} | Your Portfolio Website`}</title>
           <meta

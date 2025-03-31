@@ -7,29 +7,29 @@ import { parseCustomDate, formatDateAsDDMMYYYY } from '../../utils/dateUtils'; /
 const ProjectCard = ({ project }) => {
   // Extract the issue number from the URL
   const issueNumber = project.number;
-  
+
   return (
     <Link to={`/projects/${issueNumber}`} className="block">
       <div className="project-card group h-full">
         {project.metadata?.image && (
           <div className="relative mb-6 overflow-hidden rounded-lg">
-            <img 
-              src={project.metadata.image} 
-              alt={project.title} 
-              className="w-full h-48 object-cover object-center transition-transform duration-500 group-hover:scale-105" 
+            <img
+              src={project.metadata.image}
+              alt={project.title}
+              className="w-full h-48 object-cover object-center transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         )}
-        
+
         <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-gray-700 transition-colors">
           {project.title}
         </h3>
-        
+
         <div className="flex flex-wrap gap-2 mb-4">
           {project.labels && project.labels.map(label => (
             label.name !== 'project' && (
-              <span 
-                key={label.id} 
+              <span
+                key={label.id}
                 className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-600 border border-gray-200"
               >
                 {label.name}
@@ -37,18 +37,18 @@ const ProjectCard = ({ project }) => {
             )
           ))}
         </div>
-        
+
         <p className="text-gray-600 mb-4">
-          {project.metadata?.summary || project.metadata?.description || 
+          {project.metadata?.summary || project.metadata?.description ||
             (project.rawContent && project.rawContent.substring(0, 120) + '...')}
         </p>
-        
+
         {project.metadata?.date && (
           <p className="text-sm text-gray-500 mb-3">
             {formatDateAsDDMMYYYY(parseCustomDate(project.metadata.date))}
           </p>
         )}
-        
+
         <div className="flex items-center text-gray-900 font-medium group-hover:text-gray-700 transition-colors">
           View Project
           <svg className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +66,7 @@ const Projects = ({ projects, loading }) => {
       <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900">My Projects</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gray-900">Featured Projects</h2>
             <p className="max-w-2xl mx-auto text-gray-600">Explore the projects I've been working on</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -95,21 +95,23 @@ const Projects = ({ projects, loading }) => {
 
   // Sort projects by date (newest first) and take only the first 6
   const sortedProjects = [...projectsArray]
+    .filter(project => project.metadata?.featured === 'yes') // Filter featured only
     .sort((a, b) => {
       const dateA = a.metadata?.date ? parseCustomDate(a.metadata.date) : new Date(0);
       const dateB = b.metadata?.date ? parseCustomDate(b.metadata.date) : new Date(0);
-      return dateB - dateA; // For descending order (newest first)
+      return dateB - dateA;
     })
-    .slice(0, 6); // Limit to 6 projects
+    .slice(0, 6);
+
 
   return (
     <section className="py-24 bg-gray-50" id="projects">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">My Projects</h2>
+          <h2 className="text-3xl font-bold mb-4 text-gray-900">Featured Projects</h2>
           <p className="max-w-2xl mx-auto text-gray-600">Explore the projects I've been working on</p>
         </div>
-        
+
         {sortedProjects.length === 0 ? (
           <div className="text-center text-gray-500 bg-white border border-gray-200 rounded-lg p-8">
             <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -119,12 +121,25 @@ const Projects = ({ projects, loading }) => {
             <p>Check back soon for updates on my latest work!</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sortedProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </div>
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {sortedProjects.map((project) => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+
+            {/* Centered Button */}
+            <div className="mt-12 text-center">
+              <Link
+                to="/projects"
+                className="inline-block bg-black text-white px-6 py-3 rounded-lg shadow hover:bg-gray-800 transition-colors"
+              >
+                View all projects
+              </Link>
+            </div>
+          </>
         )}
+
       </div>
     </section>
   );

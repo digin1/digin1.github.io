@@ -52,7 +52,7 @@ const useGithubIssues = (label = null, issueNumber = null) => {
         }
       } else {
         // Fallback to the original metadata extraction for backward compatibility
-        const metadataRegex = /---([^:]+):\s*([\s\S]*?)(?=---(?:[^:]+):|$)/g;
+        const metadataRegex = /^---\s*([^\n:]+):\s*([\s\S]*?)(?=^---\s*[^\n:]+:\s*|$)/gm;
         let match;
         
         while ((match = metadataRegex.exec(issue.body)) !== null) {
@@ -60,6 +60,8 @@ const useGithubIssues = (label = null, issueNumber = null) => {
           const value = match[2].trim();
           processedIssue.metadata[key] = value;
         }
+        
+        
       }
       
       // Set label names for easy access

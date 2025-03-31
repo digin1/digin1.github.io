@@ -44,7 +44,7 @@ const Hero = ({ content, loading }) => {
     primaryCta = 'View My Work',
     primaryCtaLink = '/projects',
     secondaryCta = 'Contact Me',
-    secondaryCtaLink = '/contact',
+    secondaryCtaLink = '/about',
     technologies = '',
   } = content.metadata;
 
@@ -53,6 +53,39 @@ const Hero = ({ content, loading }) => {
   
   // Default subtitle text if none is provided
   const displaySubtitle = subtitle || 'I build modern, responsive websites and web applications.';
+  
+  // First, replace literal '\n' strings with actual newline characters
+  // This helps when metadata contains "\n" as text instead of actual newlines
+  const processedSubtitle = displaySubtitle.replace(/\\n/g, '\n');
+  
+  // Then split on actual newlines
+  let paragraphs = processedSubtitle.split('\n');
+  
+  // If we still only have one paragraph and it's long (> 200 chars), try to intelligently split it
+  if (paragraphs.length === 1 && processedSubtitle.length > 200) {
+    // Find a good splitting point - ideally at the end of a sentence in the middle third of the text
+    const lowerBound = Math.floor(processedSubtitle.length / 3);
+    const upperBound = Math.floor(processedSubtitle.length * 2 / 3);
+    
+    // Look for periods in the middle section of the text
+    let splitPoint = -1;
+    
+    // Find periods followed by spaces in the middle third of the text
+    for (let i = upperBound; i >= lowerBound; i--) {
+      if (processedSubtitle[i] === '.' && processedSubtitle[i+1] === ' ') {
+        splitPoint = i + 1;
+        break;
+      }
+    }
+    
+    // If we found a good split point, create paragraphs
+    if (splitPoint !== -1) {
+      paragraphs = [
+        processedSubtitle.substring(0, splitPoint).trim(),
+        processedSubtitle.substring(splitPoint).trim()
+      ];
+    }
+  }
 
   return (
     <section className="py-16 bg-white border-b border-gray-100">
@@ -70,7 +103,7 @@ const Hero = ({ content, loading }) => {
                 <p className="text-xl text-gray-800 font-medium">{title}</p>
                 {/* Render subtitle with support for multiple paragraphs */}
                 <div className="mt-2 text-lg text-gray-600 mt-4">
-                  {displaySubtitle.split('\n\n').map((paragraph, index) => (
+                  {paragraphs.map((paragraph, index) => (
                     <p key={index} className={index > 0 ? 'mt-4' : ''}>
                       {paragraph}
                     </p>

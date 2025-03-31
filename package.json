@@ -1,8 +1,8 @@
 {
-  "name": "portfolio-website",
+  "name": "digin1.github.io",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://digin1.github.io/portfolio-website",
+  "homepage": "https://digin1.github.io",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/dom": "^10.4.0",

@@ -14,9 +14,11 @@ import NotFoundPage from './pages/NotFoundPage';
 const App = () => {
   // Get the basename for GitHub Pages
   // When deployed to GitHub Pages, the app will be served from /{repo-name}/
-  const basename = process.env.REACT_APP_GITHUB_REPO
-    ? `/${process.env.REACT_APP_GITHUB_REPO}`
+  const repoName = process.env.REACT_APP_GITHUB_REPO;
+  const basename = repoName && repoName !== 'digin1.github.io'
+    ? `/${repoName}`
     : '';
+  
 
   return (
     <HelmetProvider> {/* Wrap the app with HelmetProvider */}

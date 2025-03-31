@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 const GITHUB_USERNAME = process.env.REACT_APP_GITHUB_USERNAME || 'digin1';
-const GITHUB_REPO = process.env.REACT_APP_GITHUB_REPO || 'portfolio-website';
+const GITHUB_REPO = process.env.REACT_APP_GITHUB_REPO || 'digin1.github.io';
 
 // Create an axios instance with GitHub API base URL without any token
 const axiosInstance = axios.create({

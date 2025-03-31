@@ -11,20 +11,13 @@ const useGithubIssues = (label = null, issueNumber = null) => {
   // GitHub API configuration
   const owner = 'digin1';
   const repo = 'portfolio-website';
-  const token = process.env.REACT_APP_GITHUB_TOKEN;
   
-  // Create headers with authorization if token exists
+  // Create headers without any authorization token
   const getHeaders = useCallback(() => {
-    const headers = {
+    return {
       'Accept': 'application/vnd.github.v3+json'
     };
-    
-    if (token) {
-      headers['Authorization'] = `token ${token}`;
-    }
-    
-    return headers;
-  }, [token]);
+  }, []);
   
   // Updated function to extract metadata from issue body with support for JSON format
   const processIssue = useCallback((issue) => {
@@ -60,8 +53,6 @@ const useGithubIssues = (label = null, issueNumber = null) => {
           const value = match[2].trim();
           processedIssue.metadata[key] = value;
         }
-        
-        
       }
       
       // Set label names for easy access

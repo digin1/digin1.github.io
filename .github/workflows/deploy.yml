@@ -28,10 +28,8 @@ jobs:
     
       - name: Build
         run: npm run build
-        env:
-          REACT_APP_GITHUB_TOKEN: ${{ secrets.REACT_APP_GITHUB_TOKEN }}
-          REACT_APP_GITHUB_USERNAME: ${{ secrets.REACT_APP_GITHUB_USERNAME }}
-          REACT_APP_GITHUB_REPO: ${{ secrets.REACT_APP_GITHUB_REPO }}
+        # Removed sensitive environment variables to prevent them from being embedded into the build.
+        # If your app can work without authentication (using unauthenticated API requests), this is safe.
     
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

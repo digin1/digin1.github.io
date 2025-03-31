@@ -3,12 +3,13 @@ import axios from 'axios';
 
 const GITHUB_USERNAME = process.env.REACT_APP_GITHUB_USERNAME || 'digin1';
 const GITHUB_REPO = process.env.REACT_APP_GITHUB_REPO || 'portfolio-website';
-const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
-// Create an axios instance with GitHub API base URL
+// Create an axios instance with GitHub API base URL without any token
 const axiosInstance = axios.create({
   baseURL: 'https://api.github.com',
-  headers: GITHUB_TOKEN ? { Authorization: `token ${GITHUB_TOKEN}` } : {}
+  headers: {
+    'Accept': 'application/vnd.github.v3+json'
+  }
 });
 
 /**
@@ -20,7 +21,6 @@ export const getIssuesByLabel = async (label) => {
   try {
     console.log(`Fetching issues with label: ${label}`);
     console.log(`Repository: ${GITHUB_USERNAME}/${GITHUB_REPO}`);
-    console.log(`Token available: ${Boolean(GITHUB_TOKEN)}`);
     
     const response = await axiosInstance.get(
       `/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/issues`,

@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4  # Update to latest version
+        uses: actions/checkout@v4
 
       - name: Configure Git
         run: |
@@ -28,8 +28,10 @@ jobs:
     
       - name: Build
         run: npm run build
-        # Removed sensitive environment variables to prevent them from being embedded into the build.
-        # If your app can work without authentication (using unauthenticated API requests), this is safe.
+    
+      # Add the CNAME file to the build output
+      - name: Create CNAME file
+        run: echo "digindominic.me" > ./build/CNAME
     
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

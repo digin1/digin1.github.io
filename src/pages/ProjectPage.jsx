@@ -11,6 +11,7 @@ const ProjectPage = () => {
   const issueNumber = parseInt(id, 10);
   const [loading, setLoading] = useState(true);
   const [processedContent, setProcessedContent] = useState('');
+  const [projectTags, setProjectTags] = useState([]);
 
   const { currentIssue: project, loading: issueLoading, error, fetchIssue } = useGithubIssues(
     null,
@@ -38,6 +39,14 @@ const ProjectPage = () => {
           .trim();
       }
       setProcessedContent(cleanedContent);
+      
+      // Extract and process tags if they exist
+      if (project.metadata?.tag) {
+        const tags = project.metadata.tag.split(',').map(tag => tag.trim());
+        setProjectTags(tags);
+      } else {
+        setProjectTags([]);
+      }
     }
   }, [project]);
 
@@ -96,7 +105,7 @@ const ProjectPage = () => {
           />
           <meta
             name="keywords"
-            content={`project, portfolio, ${project.labels?.map((label) => label.name).join(', ')}`}
+            content={`project, portfolio, ${project.labels?.map((label) => label.name).join(', ')}, ${projectTags.join(', ')}`}
           />
           <meta name="author" content={project.user?.login || 'Your Name'} />
           {/* Open Graph Tags */}
@@ -110,7 +119,7 @@ const ProjectPage = () => {
             }
           />
           <meta property="og:image" content={project.metadata?.image || 'https://yourdomain.com/default-image.jpg'} />
-          <meta property="og:url" content={`https://yourdomain.com/projects/${issueNumber}`} />
+          <meta property="og:url" content={`https://digindominic.me/projects/${issueNumber}`} />
           <meta property="og:type" content="article" />
           {/* Structured Data */}
           <script type="application/ld+json">{`
@@ -124,7 +133,8 @@ const ProjectPage = () => {
                 "@type": "Person",
                 "name": "${project.user?.login || 'Your Name'}"
               },
-              "url": "https://yourdomain.com/projects/${issueNumber}"
+              "keywords": "${projectTags.join(', ')}",
+              "url": "https://digindominic.me/projects/${issueNumber}"
             }
           `}</script>
         </Helmet>
@@ -153,7 +163,7 @@ const ProjectPage = () => {
               <img
                 src={project.metadata.image}
                 alt={project.title}
-                className="w-full object-cover object-center max-h-96"
+                className="w-full h-auto object-contain object-center"
                 loading="lazy" // Lazy load image
               />
             </figure>
@@ -161,7 +171,9 @@ const ProjectPage = () => {
           <header>
             <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">{project.title}</h1>
           </header>
-          <div className="flex flex-wrap gap-2 mb-2">
+          
+          {/* GitHub Labels */}
+          <div className="flex flex-wrap gap-2 mb-4">
             {project.labels &&
               project.labels.map(
                 (label) =>
@@ -175,6 +187,22 @@ const ProjectPage = () => {
                   )
               )}
           </div>
+          
+          {/* Custom Tags */}
+          {projectTags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-6">
+              {projectTags.map((tag, index) => (
+                <Link 
+                  key={index}
+                  to={`/projects?tag=${encodeURIComponent(tag)}`}
+                  className="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-700 border border-blue-200 hover:bg-blue-200 transition-colors"
+                >
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          )}
+          
           {project.metadata && (project.metadata.demo || project.metadata.github) && (
             <div className="flex flex-wrap gap-4 mb-8">
               {project.metadata.demo && (

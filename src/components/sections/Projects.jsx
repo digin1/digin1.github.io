@@ -1,6 +1,7 @@
 // src/components/sections/Projects.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { parseCustomDate, formatDateAsDDMMYYYY } from '../../utils/dateUtils'; // Adjust path if needed
 
 // ProjectCard component
 const ProjectCard = ({ project }) => {
@@ -41,6 +42,12 @@ const ProjectCard = ({ project }) => {
           {project.metadata?.summary || project.metadata?.description || 
             (project.rawContent && project.rawContent.substring(0, 120) + '...')}
         </p>
+        
+        {project.metadata?.date && (
+          <p className="text-sm text-gray-500 mb-3">
+            {formatDateAsDDMMYYYY(parseCustomDate(project.metadata.date))}
+          </p>
+        )}
         
         <div className="flex items-center text-gray-900 font-medium group-hover:text-gray-700 transition-colors">
           View Project
@@ -86,6 +93,15 @@ const Projects = ({ projects, loading }) => {
   // Make sure projects is an array before mapping over it
   const projectsArray = Array.isArray(projects) ? projects : [];
 
+  // Sort projects by date (newest first) and take only the first 6
+  const sortedProjects = [...projectsArray]
+    .sort((a, b) => {
+      const dateA = a.metadata?.date ? parseCustomDate(a.metadata.date) : new Date(0);
+      const dateB = b.metadata?.date ? parseCustomDate(b.metadata.date) : new Date(0);
+      return dateB - dateA; // For descending order (newest first)
+    })
+    .slice(0, 6); // Limit to 6 projects
+
   return (
     <section className="py-24 bg-gray-50" id="projects">
       <div className="container mx-auto px-4">
@@ -94,7 +110,7 @@ const Projects = ({ projects, loading }) => {
           <p className="max-w-2xl mx-auto text-gray-600">Explore the projects I've been working on</p>
         </div>
         
-        {projectsArray.length === 0 ? (
+        {sortedProjects.length === 0 ? (
           <div className="text-center text-gray-500 bg-white border border-gray-200 rounded-lg p-8">
             <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
@@ -104,7 +120,7 @@ const Projects = ({ projects, loading }) => {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projectsArray.map((project) => (
+            {sortedProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>

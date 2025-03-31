@@ -12,6 +12,7 @@ const BlogPostPage = () => {
   const issueNumber = parseInt(id, 10);
   const [loading, setLoading] = useState(true);
   const [processedContent, setProcessedContent] = useState('');
+  const [postTags, setPostTags] = useState([]);
 
   const { issues: blogPosts, loading: blogPostsLoading } = useGithubIssues('blog', null);
   const { currentIssue: post, loading: issueLoading, error, fetchIssue } = useGithubIssues(
@@ -40,6 +41,14 @@ const BlogPostPage = () => {
           .trim();
       }
       setProcessedContent(cleanedContent);
+      
+      // Extract and process tags if they exist
+      if (post.metadata?.tag) {
+        const tags = post.metadata.tag.split(',').map(tag => tag.trim());
+        setPostTags(tags);
+      } else {
+        setPostTags([]);
+      }
     }
   }, [post]);
 
@@ -108,18 +117,18 @@ const BlogPostPage = () => {
     <div className="bg-gray-50 min-h-screen">
       <section className="container mx-auto px-4 py-12">
         <Helmet>
-          <title>{`${post.title} | Your Portfolio Website`}</title>
+          <title>{`${post.title} | Portfolio Website`}</title>
           <meta
             name="description"
             content={
               post.metadata?.summary ||
               processedContent.substring(0, 160) ||
-              'Read this blog post on Your Portfolio Website.'
+              'Read this blog post on Portfolio Website.'
             }
           />
           <meta
             name="keywords"
-            content={`blog, article, ${post.labels?.map((label) => label.name).join(', ')}`}
+            content={`blog, article, ${post.labels?.map((label) => label.name).join(', ')}, ${postTags.join(', ')}`}
           />
           <meta name="author" content={post.user?.login || 'Your Name'} />
           {/* Open Graph Tags */}
@@ -133,7 +142,7 @@ const BlogPostPage = () => {
             }
           />
           <meta property="og:image" content={post.metadata?.image || 'https://yourdomain.com/default-image.jpg'} />
-          <meta property="og:url" content={`https://yourdomain.com/blog/${issueNumber}`} />
+          <meta property="og:url" content={`https://digindominic.me/blog/${issueNumber}`} />
           <meta property="og:type" content="article" />
           {/* Structured Data */}
           <script type="application/ld+json">{`
@@ -149,12 +158,13 @@ const BlogPostPage = () => {
               },
               "image": "${post.metadata?.image || 'https://yourdomain.com/default-image.jpg'}",
               "description": "${post.metadata?.summary || processedContent.substring(0, 160)}",
+              "keywords": "${postTags.join(', ')}",
               "publisher": {
                 "@type": "Organization",
-                "name": "Your Portfolio Website",
+                "name": "Portfolio Website",
                 "logo": {
                   "@type": "ImageObject",
-                  "url": "https://yourdomain.com/logo.png"
+                  "url": "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png"
                 }
               }
             }
@@ -219,7 +229,9 @@ const BlogPostPage = () => {
                 )}
               </div>
             </header>
-            <div className="flex flex-wrap gap-2 mb-6">
+            
+            {/* GitHub Labels */}
+            <div className="flex flex-wrap gap-2 mb-4">
               {post.labels &&
                 post.labels.map(
                   (label) =>
@@ -233,6 +245,22 @@ const BlogPostPage = () => {
                     )
                 )}
             </div>
+            
+            {/* Custom Tags */}
+            {postTags.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {postTags.map((tag, index) => (
+                  <Link 
+                    key={index}
+                    to={`/blog?tag=${encodeURIComponent(tag)}`}
+                    className="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-700 border border-blue-200 hover:bg-blue-200 transition-colors"
+                  >
+                    {tag}
+                  </Link>
+                ))}
+              </div>
+            )}
+            
             <section
               className="prose max-w-none"
               dangerouslySetInnerHTML={{ __html: marked.parse(processedContent) }}

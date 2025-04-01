@@ -2,7 +2,7 @@
   "name": "digin1.github.io",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://digin1.github.io",
+  "homepage": "https://digindominic.me",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/dom": "^10.4.0",

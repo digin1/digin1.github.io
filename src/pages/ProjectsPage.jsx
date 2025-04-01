@@ -52,7 +52,7 @@ const ProjectCard = ({ project }) => {
         
         <p className="text-gray-600 mb-4">
           {project.metadata?.summary || project.metadata?.description || 
-            (project.rawContent && project.rawContent.substring(0, 120) + '...')}
+            (project.rawContent && project.rawContent)}
         </p>
         
         {project.metadata?.date && (
@@ -69,6 +69,37 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
     </Link>
+  );
+};
+
+// Wrapper component to handle the background color
+const BgWrapper = ({ children }) => {
+  useEffect(() => {
+    // Add our bg-light class ensuring we don't duplicate it
+    if (!document.body.classList.contains('bg-light')) {
+      document.body.classList.add('bg-light');
+    }
+    
+    // Force a repaint to ensure styles take effect
+    document.body.style.display = 'none';
+    // Use the return value to avoid ESLint error
+    const reflow = document.body.offsetHeight;
+    document.body.style.display = '';
+    
+    // Prevent unused variable warning
+    console.log('Background applied', reflow);
+    
+    // Clean up function
+    return () => {
+      // Only remove our class, preserve others
+      document.body.classList.remove('bg-light');
+    };
+  }, []);
+  
+  return (
+    <div className="bg-light min-h-screen">
+      {children}
+    </div>
   );
 };
 
@@ -120,98 +151,107 @@ const ProjectsPage = () => {
     }
   };
 
-  if (projectsLoading) {
-    return (
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-gray-900">My Projects</h2>
-          <p className="max-w-2xl mx-auto text-gray-600">Explore the projects I've been working on</p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="rounded-lg border border-gray-200 bg-white px-6 py-8 animate-pulse">
-              <div className="bg-gray-200 h-48 w-full rounded-lg mb-6"></div>
-              <div className="h-6 bg-gray-200 rounded w-3/4 mb-3"></div>
-              <div className="flex gap-2 mb-3">
-                <div className="h-5 bg-gray-200 rounded w-16"></div>
-                <div className="h-5 bg-gray-200 rounded w-16"></div>
+  const renderContent = () => {
+    if (projectsLoading) {
+      return (
+        <div className="container mx-auto px-4 py-12 pt-28">
+          <div className="text-center mb-12">
+            <h2 className="title mb-4">My <span>Projects</span></h2>
+            <p className="max-w-2xl mx-auto text-gray-600">Explore the projects I've been working on</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="rounded-lg border border-gray-200 bg-white px-6 py-8 animate-pulse">
+                <div className="bg-gray-200 h-48 w-full rounded-lg mb-6"></div>
+                <div className="h-6 bg-gray-200 rounded w-3/4 mb-3"></div>
+                <div className="flex gap-2 mb-3">
+                  <div className="h-5 bg-gray-200 rounded w-16"></div>
+                  <div className="h-5 bg-gray-200 rounded w-16"></div>
+                </div>
+                <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
+                <div className="h-4 bg-gray-200 rounded w-2/3 mb-4"></div>
+                <div className="h-5 bg-gray-200 rounded w-28"></div>
               </div>
-              <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
-              <div className="h-4 bg-gray-200 rounded w-full mb-2"></div>
-              <div className="h-4 bg-gray-200 rounded w-2/3 mb-4"></div>
-              <div className="h-5 bg-gray-200 rounded w-28"></div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
-  const sortedProjects = [...filteredProjects].sort((a, b) => {
-    const dateA = a.metadata?.date ? parseCustomDate(a.metadata.date) : new Date(0);
-    const dateB = b.metadata?.date ? parseCustomDate(b.metadata.date) : new Date(0);
-    return dateB - dateA;
-  });
-
-  return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold mb-4 text-gray-900">My Projects</h2>
-        <p className="max-w-2xl mx-auto text-gray-600 mb-6">Explore the projects I've been working on</p>
-        
-        {/* Tags filter section */}
-        {allTags.length > 0 && (
-          <div className="flex flex-wrap justify-center gap-2 mt-6">
-            {allTags.map(tag => (
-              <button
-                key={tag}
-                onClick={() => handleTagClick(tag)}
-                className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                  activeTag === tag 
-                    ? 'bg-blue-600 text-white' 
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {tag}
-              </button>
             ))}
-            {activeTag && (
-              <button
-                onClick={() => handleTagClick(activeTag)}
-                className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
-              >
-                Clear Filter
-              </button>
+          </div>
+        </div>
+      );
+    }
+
+    const sortedProjects = [...filteredProjects].sort((a, b) => {
+      const dateA = a.metadata?.date ? parseCustomDate(a.metadata.date) : new Date(0);
+      const dateB = b.metadata?.date ? parseCustomDate(b.metadata.date) : new Date(0);
+      return dateB - dateA;
+    });
+
+    return (
+      <div className="container mx-auto px-4 py-12 pt-28">
+        <div className="text-center mb-8">
+          <h2 className="title mb-4">My <span>Projects</span></h2>
+          <p className="max-w-2xl mx-auto text-gray-600 mb-6">Explore the projects I've been working on</p>
+          
+          {/* Tags filter section */}
+          {allTags.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-2 mt-6">
+              {allTags.map(tag => (
+                <button
+                  key={tag}
+                  onClick={() => handleTagClick(tag)}
+                  className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                    activeTag === tag 
+                      ? 'bg-primary text-white' 
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+              {activeTag && (
+                <button
+                  onClick={() => handleTagClick(activeTag)}
+                  className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
+                >
+                  Clear Filter
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+        
+        {sortedProjects.length === 0 ? (
+          <div className="text-center text-gray-500 bg-white border border-gray-200 rounded-lg p-8">
+            <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+            {activeTag ? (
+              <>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">No projects found with tag: {activeTag}</h3>
+                <p>Try selecting a different tag or clear the filter.</p>
+              </>
+            ) : (
+              <>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">No projects available yet</h3>
+                <p>Check back soon for updates on my latest work!</p>
+              </>
             )}
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {sortedProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
           </div>
         )}
       </div>
-      
-      {sortedProjects.length === 0 ? (
-        <div className="text-center text-gray-500 bg-white border border-gray-200 rounded-lg p-8">
-          <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-          </svg>
-          {activeTag ? (
-            <>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">No projects found with tag: {activeTag}</h3>
-              <p>Try selecting a different tag or clear the filter.</p>
-            </>
-          ) : (
-            <>
-              <h3 className="text-xl font-semibold mb-2 text-gray-900">No projects available yet</h3>
-              <p>Check back soon for updates on my latest work!</p>
-            </>
-          )}
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sortedProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-      )}
-    </div>
+    );
+  };
+
+  // Wrap the entire component with our background wrapper
+  return (
+    <BgWrapper>
+      {renderContent()}
+    </BgWrapper>
   );
 };
 

@@ -23,7 +23,7 @@ const YouTubeVideo = ({ videoId, title = "YouTube video player" }) => {
 const About = ({ content, loading }) => {
   if (loading) {
     return (
-      <section className="py-16 bg-white">
+      <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             <div className="lg:w-1/3 animate-pulse">
@@ -42,9 +42,8 @@ const About = ({ content, loading }) => {
 
   if (!content) {
     return (
-      <section className="py-16 bg-white" id="about">
+      <section className="py-8" id="about">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">About Me</h2>
           <p className="text-gray-600 text-center">About content is not available. Please check the GitHub Issues.</p>
         </div>
       </section>
@@ -57,9 +56,8 @@ const About = ({ content, loading }) => {
 
   if (!hasAboutLabel) {
     return (
-      <section className="py-16 bg-white" id="about">
+      <section className="py-8" id="about">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-6 text-gray-900 text-center">About Me</h2>
           <p className="text-gray-600 text-center">
             About content is misconfigured. Please add the 'about' label to the GitHub Issue.
           </p>
@@ -91,7 +89,7 @@ const About = ({ content, loading }) => {
   const hasYouTubeVideo = Boolean(content.metadata?.youtubeId);
 
   return (
-    <section className="py-16 bg-white" id="about">
+    <section className="py-8" id="about">
       <div className="container mx-auto px-4">
         {/* Hero Media Section - Only Profile Image */}
         {image && (

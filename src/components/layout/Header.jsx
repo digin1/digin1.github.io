@@ -1,9 +1,10 @@
 // src/components/layout/Header.jsx
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   
   const navItems = [
@@ -17,35 +18,59 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Add scroll effect listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+    <header className={`bg-white/95 fixed w-full top-0 z-50 shadow-sm transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
+      <div className="container mx-auto px-8">
+        <nav className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="text-xl font-bold text-gray-900">
+          <Link to="/" className="text-2xl font-bold text-primary relative">
             Digin Dominic
+            <span className="absolute w-1.5 h-1.5 rounded-full bg-accent -bottom-0.5 -right-3"></span>
           </Link>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <ul className="hidden md:flex gap-8">
             {navItems.map((item) => (
-              <Link 
-                key={item.path}
-                to={item.path}
-                className={`transition-colors ${
-                  location.pathname === item.path 
-                    ? 'nav-link-active' 
-                    : 'nav-link'
-                }`}
-              >
-                {item.name}
-              </Link>
+              <li key={item.path}>
+                <Link 
+                  to={item.path}
+                  className={`font-medium relative py-2 transition-all duration-300 ${
+                    location.pathname === item.path 
+                      ? 'text-primary nav-link-active' 
+                      : 'text-text hover:text-secondary'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              </li>
             ))}
-          </nav>
+          </ul>
+          
+          {/* Contact Button */}
+          <Link to="/about" className="hidden md:block contact-btn">
+            Contact Me
+          </Link>
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-700 focus:outline-none"
+            className="md:hidden text-text focus:outline-none"
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
@@ -73,7 +98,7 @@ const Header = () => {
               )}
             </svg>
           </button>
-        </div>
+        </nav>
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -85,14 +110,21 @@ const Header = () => {
                   to={item.path}
                   className={`py-2 px-4 rounded-md transition-colors ${
                     location.pathname === item.path 
-                      ? 'bg-gray-100 text-gray-900 font-medium' 
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                      ? 'bg-gray-100 text-primary font-medium' 
+                      : 'text-text-light hover:bg-gray-100 hover:text-primary'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
+              <Link 
+                to="/about"
+                className="contact-btn mt-2 text-center"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact Me
+              </Link>
             </div>
           </nav>
         )}

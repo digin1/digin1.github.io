@@ -87,6 +87,37 @@ const BlogPostCard = ({ post }) => {
   );
 };
 
+// Wrapper component to handle the background color
+const BgWrapper = ({ children }) => {
+  useEffect(() => {
+    // Add our bg-light class ensuring we don't duplicate it
+    if (!document.body.classList.contains('bg-light')) {
+      document.body.classList.add('bg-light');
+    }
+    
+    // Force a repaint to ensure styles take effect
+    document.body.style.display = 'none';
+    // Use the return value to avoid ESLint error
+    const reflow = document.body.offsetHeight;
+    document.body.style.display = '';
+    
+    // Prevent unused variable warning
+    console.log('Background applied', reflow);
+    
+    // Clean up function
+    return () => {
+      // Only remove our class, preserve others
+      document.body.classList.remove('bg-light');
+    };
+  }, []);
+  
+  return (
+    <div className="bg-light min-h-screen">
+      {children}
+    </div>
+  );
+};
+
 const BlogPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeTag, setActiveTag] = useState(searchParams.get('tag') || '');
@@ -136,136 +167,143 @@ const BlogPage = () => {
 
   if (blogPostsLoading) {
     return (
-      <section className="py-12 bg-gray-50">
-        <Helmet>
-          <title>Loading Blog | Your Portfolio Website</title>
-          <meta name="description" content="Loading blog posts..." />
-        </Helmet>
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold mb-10 text-center text-gray-900">Blog</h1>
-          <div className="flex justify-center">
-            <Loader size="lg" color="gray" />
+      <BgWrapper>
+        <section className="py-12 pt-28">
+          <Helmet>
+            <title>Loading Blog | Your Portfolio Website</title>
+            <meta name="description" content="Loading blog posts..." />
+          </Helmet>
+          <div className="container mx-auto px-4">
+            <h1 className="title mb-4 text-center">My <span>Blog</span></h1>
+            <div className="flex justify-center">
+              <Loader size="lg" color="gray" />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </BgWrapper>
     );
   }
 
   if (error) {
     return (
-      <section className="py-12 bg-gray-50">
-        <Helmet>
-          <title>Blog Error | Your Portfolio Website</title>
-          <meta name="description" content="An error occurred while loading blog posts." />
-        </Helmet>
-        <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold mb-10 text-center text-gray-900">Blog</h1>
-          <div className="text-center text-red-600">
-            Error loading blog posts. Please try again later.
+      <BgWrapper>
+        <section className="py-12 pt-28">
+          <Helmet>
+            <title>Blog Error | Your Portfolio Website</title>
+            <meta name="description" content="An error occurred while loading blog posts." />
+          </Helmet>
+          <div className="container mx-auto px-4">
+            <h1 className="title mb-4 text-center">My <span>Blog</span></h1>
+            <div className="text-center text-red-600">
+              Error loading blog posts. Please try again later.
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </BgWrapper>
     );
   }
 
   return (
-    <section className="py-12 bg-gray-50">
-      <Helmet>
-        <title>{activeTag ? `${activeTag} Blog Posts | Your Portfolio Website` : 'Blog | Your Portfolio Website'}</title>
-        <meta
-          name="description"
-          content={activeTag 
-            ? `Explore ${activeTag} blog posts on Your Portfolio Website.` 
-            : 'Explore the latest blog posts on various topics from Your Portfolio Website.'}
-        />
-        <meta
-          name="keywords"
-          content={`blog, articles, ${activeTag || ''}, portfolio, Your Portfolio Website`}
-        />
-        {/* Open Graph Tags */}
-        <meta property="og:title" content={activeTag ? `${activeTag} Blog Posts | Your Portfolio Website` : 'Blog | Your Portfolio Website'} />
-        <meta
-          property="og:description"
-          content={activeTag 
-            ? `Explore ${activeTag} blog posts on Your Portfolio Website.` 
-            : 'Explore the latest blog posts on various topics from Your Portfolio Website.'}
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://yourdomain.com/blog${activeTag ? `?tag=${activeTag}` : ''}`} />
-        <meta
-          property="og:image"
-          content="https://yourdomain.com/default-blog-image.jpg"
-        />
-      </Helmet>
-      <div className="container mx-auto px-4">
-        <header>
-          <h1 className="text-3xl font-bold mb-6 text-center text-gray-900">Blog</h1>
+    <BgWrapper>
+      <section className="py-12 pt-28">
+        <Helmet>
+          <title>{activeTag ? `${activeTag} Blog Posts | Your Portfolio Website` : 'Blog | Your Portfolio Website'}</title>
+          <meta
+            name="description"
+            content={activeTag 
+              ? `Explore ${activeTag} blog posts on Your Portfolio Website.` 
+              : 'Explore the latest blog posts on various topics from Your Portfolio Website.'}
+          />
+          <meta
+            name="keywords"
+            content={`blog, articles, ${activeTag || ''}, portfolio, Your Portfolio Website`}
+          />
+          {/* Open Graph Tags */}
+          <meta property="og:title" content={activeTag ? `${activeTag} Blog Posts | Your Portfolio Website` : 'Blog | Your Portfolio Website'} />
+          <meta
+            property="og:description"
+            content={activeTag 
+              ? `Explore ${activeTag} blog posts on Your Portfolio Website.` 
+              : 'Explore the latest blog posts on various topics from Your Portfolio Website.'}
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={`https://yourdomain.com/blog${activeTag ? `?tag=${activeTag}` : ''}`} />
+          <meta
+            property="og:image"
+            content="https://yourdomain.com/default-blog-image.jpg"
+          />
+        </Helmet>
+        <div className="container mx-auto px-4">
+          <header className="text-center mb-8">
+            <h1 className="title mb-4">My <span>Blog</span></h1>
+            <p className="max-w-2xl mx-auto text-gray-600 mb-6">Explore my thoughts, insights, and experiences</p>
+            
+            {/* Tags filter section */}
+            {allTags.length > 0 && (
+              <div className="flex flex-wrap justify-center gap-2 mt-6">
+                {allTags.map(tag => (
+                  <button
+                    key={tag}
+                    onClick={() => handleTagClick(tag)}
+                    className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                      activeTag === tag 
+                        ? 'bg-primary text-white' 
+                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
+                  >
+                    {tag}
+                  </button>
+                ))}
+                {activeTag && (
+                  <button
+                    onClick={() => handleTagClick(activeTag)}
+                    className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
+                  >
+                    Clear Filter
+                  </button>
+                )}
+              </div>
+            )}
+          </header>
           
-          {/* Tags filter section */}
-          {allTags.length > 0 && (
-            <div className="flex flex-wrap justify-center gap-2 mb-10">
-              {allTags.map(tag => (
-                <button
-                  key={tag}
-                  onClick={() => handleTagClick(tag)}
-                  className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                    activeTag === tag 
-                      ? 'bg-blue-600 text-white' 
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
-              {activeTag && (
-                <button
-                  onClick={() => handleTagClick(activeTag)}
-                  className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
-                >
-                  Clear Filter
-                </button>
+          {filteredPosts.length === 0 ? (
+            <div className="text-center text-gray-600 bg-white border border-gray-200 rounded-lg p-8 max-w-2xl mx-auto">
+              <svg
+                className="w-12 h-12 mx-auto mb-4 text-gray-400"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
+                />
+              </svg>
+              {activeTag ? (
+                <>
+                  <h2 className="text-xl font-semibold mb-2">No blog posts found with tag: {activeTag}</h2>
+                  <p>Try selecting a different tag or clear the filter.</p>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-xl font-semibold mb-2">No blog posts available yet</h2>
+                  <p>Check back soon for new content!</p>
+                </>
               )}
             </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
+                <BlogPostCard key={post.id} post={post} />
+              ))}
+            </div>
           )}
-        </header>
-        
-        {filteredPosts.length === 0 ? (
-          <div className="text-center text-gray-600 bg-white border border-gray-200 rounded-lg p-8 max-w-2xl mx-auto">
-            <svg
-              className="w-12 h-12 mx-auto mb-4 text-gray-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-              />
-            </svg>
-            {activeTag ? (
-              <>
-                <h2 className="text-xl font-semibold mb-2">No blog posts found with tag: {activeTag}</h2>
-                <p>Try selecting a different tag or clear the filter.</p>
-              </>
-            ) : (
-              <>
-                <h2 className="text-xl font-semibold mb-2">No blog posts available yet</h2>
-                <p>Check back soon for new content!</p>
-              </>
-            )}
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post) => (
-              <BlogPostCard key={post.id} post={post} />
-            ))}
-          </div>
-        )}
-      </div>
-    </section>
+        </div>
+      </section>
+    </BgWrapper>
   );
 };
 

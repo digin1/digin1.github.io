@@ -79,7 +79,7 @@ const BlogPostPage = () => {
 
   if (loading) {
     return (
-      <div className="bg-gray-50 min-h-screen">
+      <div className="bg-gray-50 min-h-screen pt-20">
         <section className="container mx-auto px-4 py-16">
           <Helmet>
             <title>Loading Blog Post | Your Portfolio Website</title>
@@ -95,7 +95,7 @@ const BlogPostPage = () => {
 
   if (error || !post) {
     return (
-      <div className="bg-gray-50 min-h-screen">
+      <div className="bg-gray-50 min-h-screen pt-20">
         <section className="container mx-auto px-4 py-16">
           <Helmet>
             <title>Blog Post Not Found | Your Portfolio Website</title>
@@ -114,7 +114,7 @@ const BlogPostPage = () => {
   }
 
   return (
-    <div className="bg-gray-50 min-h-screen">
+    <div className="bg-gray-50 min-h-screen pt-20">
       <section className="container mx-auto px-4 py-12">
         <Helmet>
           <title>{`${post.title} | Portfolio Website`}</title>

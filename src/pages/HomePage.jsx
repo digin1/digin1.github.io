@@ -2,6 +2,7 @@
 import React from 'react';
 import Hero from '../components/sections/Hero';
 import Projects from '../components/sections/Projects';
+import Toolkit from '../components/sections/Toolkit';
 import useGithubIssues from '../hooks/useGithubIssues';
 
 const HomePage = () => {
@@ -70,6 +71,7 @@ const HomePage = () => {
     <>
       <Hero content={heroContent} loading={heroLoading} />
       <Projects projects={projects} loading={projectsLoading} />
+      <Toolkit />
     </>
   );
 };

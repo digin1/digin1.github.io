@@ -1,43 +1,37 @@
 // src/components/sections/Hero.jsx
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const Hero = ({ content, loading }) => {
-  // Debugging to see what's being received
-  useEffect(() => {
-    if (content && content.metadata) {
-      console.log('Hero content metadata:', content.metadata);
-      console.log('Subtitle value:', content.metadata.subtitle);
-    }
-  }, [content]);
-
   // Render loading state with a layout matching the final content structure
   if (loading) {
     return (
-      <section className="py-16 bg-white border-b border-gray-100">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col xl:flex-row items-start justify-between">
-            {/* Left side placeholder */}
-            <div className="max-w-2xl mb-12 xl:mb-0 animate-pulse">
-              <div className="h-10 bg-gray-200 rounded w-3/4 mb-4"></div>
-              <div className="h-6 bg-gray-200 rounded w-full mb-2"></div>
+      <section className="hero py-8 md:py-12">
+        <div className="container px-4 mx-auto">
+          <div className="hero-content flex flex-col md:flex-row items-center">
+            <div className="hero-text w-full md:w-3/5 animate-pulse mb-8 md:mb-0">
+              <div className="h-6 bg-gray-200 rounded w-1/3 mb-4"></div>
+              <div className="h-12 bg-gray-200 rounded w-3/4 mb-4"></div>
+              <div className="h-4 bg-gray-200 rounded w-2/3 mb-2"></div>
               <div className="h-4 bg-gray-200 rounded w-5/6 mb-2"></div>
               <div className="h-4 bg-gray-200 rounded w-4/6 mb-6"></div>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <div className="h-10 bg-gray-200 rounded-full w-full sm:w-32"></div>
+                <div className="h-10 bg-gray-200 rounded-full w-full sm:w-32"></div>
+              </div>
               <div className="flex gap-4">
-                <div className="h-10 bg-gray-200 rounded w-32"></div>
-                <div className="h-10 bg-gray-200 rounded w-24"></div>
+                <div className="h-8 w-8 bg-gray-200 rounded-full"></div>
+                <div className="h-8 w-8 bg-gray-200 rounded-full"></div>
+                <div className="h-8 w-8 bg-gray-200 rounded-full"></div>
               </div>
             </div>
-            {/* Right side placeholder for tech toolkit */}
-            <div className="w-full xl:w-1/2 animate-pulse">
-              <div className="h-8 bg-gray-200 rounded w-1/2 mx-auto mb-4"></div>
-              <div className="flex flex-wrap justify-center gap-2">
-                {Array.from({ length: 4 }).map((_, index) => (
-                  <div
-                    key={index}
-                    className="h-6 bg-gray-200 rounded w-16"
-                  ></div>
-                ))}
+            
+            <div className="hero-image w-full md:w-2/5 animate-pulse">
+              <div className="avatar mx-auto md:ml-auto md:mr-0 max-w-xs">
+                <div className="w-full h-full bg-gray-200 rounded-lg aspect-square"></div>
               </div>
             </div>
           </div>
@@ -46,107 +40,88 @@ const Hero = ({ content, loading }) => {
     );
   }
 
-  // Exit early if no content
-  if (!content || !content.metadata) {
-    console.error('Hero component received invalid content:', content);
-    return null;
-  }
+  // Default metadata for static demo
+  const defaultMetadata = {
+    name: 'Digin Dominic',
+    title: 'Software Engineer | Research Toolsmith | Data Workflow Architect',
+    subtitle: 'I build powerful tools that bridge science and software. From high-performance image segmentation apps to intuitive 3D data visualizations, I create solutions that turn complex research into accessible, interactive, and scalable applications. Whether it’s automating microscopy workflows or designing end-to-end pipelines for brain mapping, my work empowers scientists with the right technology—precise, efficient, and beautiful.',
+    profileImage: 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png',
+    primaryCta: 'View My Work',
+    primaryCtaLink: '/projects',
+    secondaryCta: 'Contact Me',
+    secondaryCtaLink: '/about'
+  };
 
-  // Extract values from metadata with explicit debugging
+  // Use content from props or fall back to default
+  const metadata = (content && content.metadata) ? content.metadata : defaultMetadata;
+  
+  // Extract values from metadata
   const {
-    name = 'Digin Dominic',
-    title = 'System Engineer & Web Developer',
-    subtitle,
-    primaryCta = 'View My Work',
-    primaryCtaLink = '/projects',
-    secondaryCta = 'Contact Me',
-    secondaryCtaLink = '/about',
-    technologies = '',
-  } = content.metadata;
-
-  // Parse technologies string into array
-  const techArray = technologies
-    ? technologies.split(',').map(tech => tech.trim()).filter(tech => tech !== '')
-    : [];
+    name = defaultMetadata.name,
+    title = defaultMetadata.title,
+    subtitle = defaultMetadata.subtitle,
+    profileImage = defaultMetadata.profileImage,
+    primaryCta = defaultMetadata.primaryCta,
+    primaryCtaLink = defaultMetadata.primaryCtaLink,
+    secondaryCta = defaultMetadata.secondaryCta,
+    secondaryCtaLink = defaultMetadata.secondaryCtaLink,
+  } = metadata;
   
-  // Default subtitle text if none is provided
-  const displaySubtitle = subtitle || 'I build modern, responsive websites and web applications.';
-  
-  // First, replace literal '\n' strings with actual newline characters
-  const processedSubtitle = displaySubtitle.replace(/\\n/g, '\n');
-  
-  // Then split on actual newlines
-  let paragraphs = processedSubtitle.split('\n');
-  
-  // If we still only have one paragraph and it's long (> 200 chars), try to intelligently split it
-  if (paragraphs.length === 1 && processedSubtitle.length > 200) {
-    const lowerBound = Math.floor(processedSubtitle.length / 3);
-    const upperBound = Math.floor(processedSubtitle.length * 2 / 3);
-    let splitPoint = -1;
-    for (let i = upperBound; i >= lowerBound; i--) {
-      if (processedSubtitle[i] === '.' && processedSubtitle[i+1] === ' ') {
-        splitPoint = i + 1;
-        break;
-      }
-    }
-    if (splitPoint !== -1) {
-      paragraphs = [
-        processedSubtitle.substring(0, splitPoint).trim(),
-        processedSubtitle.substring(splitPoint).trim()
-      ];
-    }
-  }
+  // Process subtitle for multiline support
+  const processedSubtitle = subtitle.replace(/\\n/g, '\n');
+  const paragraphs = processedSubtitle.split('\n').filter(p => p.trim() !== '');
 
   return (
-    <section className="py-16 bg-white border-b border-gray-100">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col xl:flex-row items-start justify-between">
-          {/* Left side text content */}
-          <div className="max-w-2xl mb-12 xl:mb-0">
-            <h1 className="text-5xl md:text-6xl font-bold mb-2 text-gray-900">
-              {name}
+    <section className="hero py-8 md:py-16">
+      <div className="container px-4 mx-auto">
+        <div className="hero-content flex flex-col md:flex-row items-center">
+          <div className="hero-text w-full md:w-3/4 lg:w-3/5 order-2 md:order-1 mt-8 md:mt-0">
+            <p className="subtitle text-base md:text-base lg:text-lg animate-fadeInUp whitespace-normal break-words leading-normal">{title}</p>
+            <h1 className="title text-3xl md:text-4xl lg:text-5xl font-bold mt-1 mb-3 animate-fadeInUp delay-100">
+              Building <span className="text-primary">impactful</span> digital solutions
             </h1>
-            {title && (
-              <div className="mb-8">
-                <p className="text-xl text-gray-800 font-medium">{title}</p>
-                <div className="mt-4 text-lg text-gray-600">
-                  {paragraphs.map((paragraph, index) => (
-                    <p key={index} className={index > 0 ? 'mt-4' : ''}>
-                      {paragraph}
-                    </p>
-                  ))}
-                </div>
-              </div>
-            )}
-            <div className="flex flex-wrap gap-4">
-              <Link to={primaryCtaLink} className="button-primary">
-                {primaryCta}
+            <div className="description text-sm md:text-base animate-fadeInUp delay-200">
+              {paragraphs.map((paragraph, index) => (
+                <p key={index} className={index > 0 ? 'mt-4' : ''}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 mt-6 mb-8 animate-fadeInUp delay-300">
+              <Link to={primaryCtaLink} className="cta-primary py-2 px-6 rounded-full bg-primary text-white text-center hover:bg-primary-dark transition">
+                <FontAwesomeIcon icon={faEye} size="sm" className="mr-2" /> {primaryCta}
               </Link>
               {secondaryCta && (
-                <Link to={secondaryCtaLink} className="button-secondary">
-                  {secondaryCta}
+                <Link to={secondaryCtaLink} className="cta-secondary py-2 px-6 rounded-full border border-primary text-primary text-center hover:bg-primary hover:text-white transition">
+                  <FontAwesomeIcon icon={faPaperPlane} size="sm" className="mr-2" /> {secondaryCta}
                 </Link>
               )}
             </div>
-          </div>
-          {/* Right side tech toolkit */}
-          {techArray.length > 0 && (
-            <div className="w-full xl:w-1/2 flex flex-col justify-center xl:justify-end mt-8 xl:mt-16">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-4 text-center">My Toolkit</h2>
-              <div className="w-full md:w-3/4 xl:w-2/3 text-center mx-auto">
-                <div className="flex flex-wrap justify-center gap-2">
-                  {techArray.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="inline-flex items-center px-3 py-1.5 rounded-md bg-white border border-gray-200 text-sm font-medium text-gray-700 shadow-sm hover:shadow hover:border-gray-300 transition-all duration-200"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            <div className="social-links flex gap-4 animate-fadeInUp delay-400">
+              <a href="https://github.com/digin1" className="social-link p-2 text-gray-600 hover:text-primary transition">
+                <FontAwesomeIcon icon={faGithub} size="lg" />
+              </a>
+              <a href="https://www.linkedin.com/in/digin/" className="social-link p-2 text-gray-600 hover:text-primary transition">
+                <FontAwesomeIcon icon={faLinkedinIn} size="lg" />
+              </a>
+              <a href="https://x.com/digin1" className="social-link p-2 text-gray-600 hover:text-primary transition">
+                <FontAwesomeIcon icon={faXTwitter} size="lg" />
+              </a>
             </div>
-          )}
+          </div>
+          <div className="hero-image w-full md:w-2/5 order-1 md:order-2 animate-fadeInUp delay-200 mt-8 md:mt-0">
+            <div className="avatar mx-auto md:ml-auto md:mr-0 max-w-xs">
+              <img 
+                src={profileImage} 
+                alt={name}
+                className="rounded-lg w-full shadow-lg"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/api/placeholder/400/400";
+                }} 
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 // src/App.jsx
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async'; // Import HelmetProvider
+import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/layout/Layout';
 import HomePage from './pages/HomePage';
 import ProjectsPage from './pages/ProjectsPage';
@@ -12,16 +12,29 @@ import BlogPostPage from './pages/BlogPostPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 const App = () => {
-  // Get the basename for GitHub Pages
-  // When deployed to GitHub Pages, the app will be served from /{repo-name}/
-  const repoName = process.env.REACT_APP_GITHUB_REPO;
-  const basename = repoName && repoName !== 'digin1.github.io'
-    ? `/${repoName}`
-    : '';
+  // Determine if we're running on GitHub Pages
+  const isGitHubPages = window.location.hostname.includes('github.io');
   
+  // Get the basename for GitHub Pages
+  let basename = '';
+  
+  if (isGitHubPages) {
+    // Extract repository name from the pathname if we're on GitHub Pages
+    // For a URL like https://username.github.io/repo-name/, we want '/repo-name'
+    // For a URL like https://username.github.io/, we want '' (empty string)
+    const pathSegments = window.location.pathname.split('/');
+    
+    // If the username.github.io is used as the main domain (username.github.io), 
+    // then no basename is needed
+    if (window.location.hostname !== `${process.env.REACT_APP_GITHUB_USERNAME}.github.io`) {
+      basename = `/${pathSegments[1]}`;
+    }
+  }
+
+  console.log('Using basename:', basename);
 
   return (
-    <HelmetProvider> {/* Wrap the app with HelmetProvider */}
+    <HelmetProvider>
       <Router basename={basename}>
         <Layout>
           <Routes>

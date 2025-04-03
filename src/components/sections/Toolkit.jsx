@@ -286,24 +286,100 @@ const SKILLS_DATA = [
   }
 ];
 
-// No custom icons needed anymore
+  // Skill Tag Component - Shows tooltip on hover
+const SkillTag = ({ skill }) => {
+  // Calculate level description based on skill level
+  const getLevelDescription = (level) => {
+    if (level >= 90) return "Expert";
+    if (level >= 80) return "Advanced";
+    if (level >= 70) return "Proficient";
+    if (level >= 50) return "Intermediate";
+    return "Beginner";
+  };
+
+  return (
+    <div className="group relative px-3 py-2 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md hover:bg-gray-50 transition-all">
+      {/* Static visible content */}
+      <div className="flex items-center">
+        <div className="text-primary text-lg">
+          <FontAwesomeIcon icon={skill.icon} />
+        </div>
+        <span className="ml-2 font-medium text-sm">{skill.name}</span>
+      </div>
+      
+      {/* Tooltip that appears on hover */}
+      <div className="invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute z-20 bottom-full left-1/2 transform -translate-x-1/2 mb-2 w-48">
+        <div className="bg-white rounded-lg shadow-lg border border-gray-200 p-3 text-sm">
+          <div className="flex items-center mb-2">
+            <div className="text-primary text-lg">
+              <FontAwesomeIcon icon={skill.icon} />
+            </div>
+            <span className="ml-2 font-semibold">{skill.name}</span>
+          </div>
+          
+          <div className="mb-2 flex justify-between">
+            <span className="text-gray-600 text-xs">{skill.experience}</span>
+            <span className="text-primary text-xs font-medium">{getLevelDescription(skill.level)}</span>
+          </div>
+          
+          <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden mb-2">
+            <div 
+              className="h-full bg-gradient-to-r from-primary to-secondary rounded-full" 
+              style={{ width: `${skill.level}%` }}
+            ></div>
+          </div>
+          
+          <div className="flex flex-wrap gap-1 mt-2">
+            {skill.categories.map(category => (
+              <span 
+                key={category} 
+                className="px-1.5 py-0.5 bg-gray-100 text-gray-700 rounded-full text-xs"
+              >
+                {category}
+              </span>
+            ))}
+          </div>
+          
+          {/* Arrow pointing down */}
+          <div className="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-white border-r border-b border-gray-200"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+// Modal removed - using tooltips instead
 
 const Toolkit = ({ content }) => {
-  console.log("Rendering Toolkit component");
   // State for active category filter
   const [activeCategory, setActiveCategory] = useState('all');
   
-  // Filter skills based on active category
+  // Filter skills based on active category only
   const filteredSkills = SKILLS_DATA.filter(skill => {
     return activeCategory === 'all' || skill.categories.includes(activeCategory);
   });
 
-  // Apply animation when category changes
-  useEffect(() => {
-    console.log(`Category changed to: ${activeCategory}`);
-    console.log(`Number of skills: ${filteredSkills.length}`);
-    // No additional logic needed - animation handled by CSS directly
-  }, [activeCategory, filteredSkills]);
+  // Group skills by categories for better organization (when showing all)
+  const groupedSkills = () => {
+    if (activeCategory !== 'all') {
+      return { 'Filtered Skills': filteredSkills };
+    }
+    
+    const groups = {};
+    SKILL_CATEGORIES.forEach(category => {
+      if (category.id !== 'all') {
+        const categorySkills = SKILLS_DATA.filter(skill => 
+          skill.categories.includes(category.id)
+        );
+        if (categorySkills.length > 0) {
+          groups[category.label] = categorySkills;
+        }
+      }
+    });
+    return groups;
+  };
+
+  // No longer need to handle skill clicks since we're using tooltips
 
   return (
     <section className="section-alt py-16" id="toolkit">
@@ -319,73 +395,71 @@ const Toolkit = ({ content }) => {
             The technologies and tools I use to build powerful, scalable, and efficient applications
           </p>
         </div>
-
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {SKILL_CATEGORIES.map(category => {
-            // Count skills in this category for the badge
-            const count = category.id === 'all' 
-              ? SKILLS_DATA.length 
-              : SKILLS_DATA.filter(skill => skill.categories.includes(category.id)).length;
-              
-            return (
-              <button
-                key={category.id}
-                className={`category-btn relative ${activeCategory === category.id ? 'active' : ''}`}
-                onClick={() => setActiveCategory(category.id)}
-              >
-                {category.label}
-                <span className={`ml-2 px-2 py-0.5 text-xs rounded-full inline-flex items-center justify-center ${
-                  activeCategory === category.id 
-                    ? 'bg-white text-primary' 
-                    : 'bg-gray-100 text-text-light'
-                }`}>
-                  {count}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {filteredSkills.map((skill, index) => (
-            <div 
-              key={skill.name} 
-              className="skill-card group animate-fadeInUp"
-              style={{ animationDelay: `${index * 0.05}s` }}
-            >
-              <div className="relative z-10 flex flex-col h-full">
-                <div className="skill-icon text-primary group-hover:text-white transition-colors duration-300">
-                  <FontAwesomeIcon icon={skill.icon} />
-                </div>
-                <h3 className="skill-name group-hover:text-white transition-colors duration-300">{skill.name}</h3>
-                <div className="skill-level mt-auto">
-                  <div className="skill-level-bar">
-                    <div 
-                      className="skill-level-progress bg-primary group-hover:bg-white transition-colors duration-300" 
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                  <div className="skill-experience group-hover:text-white/80 transition-colors duration-300">
-                    {skill.experience}
-                  </div>
-                </div>
-              </div>
-              
-              {/* Animated background overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary opacity-0 group-hover:opacity-90 transition-opacity duration-300 rounded-lg -z-0"></div>
+        
+        <div className="flex justify-center mb-8">
+          {/* Category selector - horizontal scrollable on mobile */}
+          <div className="flex overflow-x-auto pb-2 max-w-full">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {SKILL_CATEGORIES.map(category => {
+                const count = category.id === 'all' 
+                  ? SKILLS_DATA.length 
+                  : SKILLS_DATA.filter(skill => skill.categories.includes(category.id)).length;
+                  
+                return (
+                  <button
+                    key={category.id}
+                    className={`category-btn whitespace-nowrap ${activeCategory === category.id ? 'active' : ''}`}
+                    onClick={() => setActiveCategory(category.id)}
+                  >
+                    {category.label}
+                    <span className={`ml-1 px-1.5 py-0.5 text-xs rounded-full inline-flex items-center justify-center ${
+                      activeCategory === category.id 
+                        ? 'bg-white text-primary' 
+                        : 'bg-gray-100 text-text-light'
+                    }`}>
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
-          ))}
+          </div>
         </div>
+        
+        {/* Skills List - Now grouped by category when showing all */}
+        {Object.entries(groupedSkills()).map(([groupTitle, skills]) => (
+          <div key={groupTitle} className="mb-8">
+            {/* Only show group title if there are multiple groups */}
+            {Object.keys(groupedSkills()).length > 1 && (
+              <h3 className="text-lg font-medium text-gray-700 mb-3 border-b border-gray-200 pb-2">
+                {groupTitle}
+              </h3>
+            )}
+            
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
+              {skills.map(skill => (
+                <SkillTag 
+                  key={skill.name} 
+                  skill={skill}
+                />
+              ))}
+            </div>
+          </div>
+        ))}
         
         {filteredSkills.length === 0 && (
           <div className="text-center py-12 bg-white rounded-lg shadow-sm">
             <div className="bg-light p-6 rounded-full w-20 h-20 mx-auto mb-6 flex items-center justify-center">
               <FontAwesomeIcon icon={faTools} className="text-primary/60 text-3xl" />
             </div>
-            <h3 className="text-xl font-semibold mb-3 text-dark">No skills in this category</h3>
-            <p className="text-text-light max-w-md mx-auto">Try selecting a different category to see my skills.</p>
+            <h3 className="text-xl font-semibold mb-3 text-dark">No skills match your criteria</h3>
+            <p className="text-text-light max-w-md mx-auto">
+              Try selecting a different category or adjusting your search term.
+            </p>
           </div>
         )}
+        
+        {/* Removed modal, using tooltips instead */}
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
-// src/pages/ProjectsPage.jsx (Shows all projects with tag filtering)
+// src/pages/ProjectsPage.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import useGithubIssues from '../hooks/useGithubIssues';
 import { parseCustomDate, formatDateAsDDMMYYYY } from '../utils/dateUtils';
 
@@ -108,11 +109,21 @@ const ProjectsPage = () => {
   const [activeTag, setActiveTag] = useState(searchParams.get('tag') || '');
   const [allTags, setAllTags] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
+  const [pageTitle, setPageTitle] = useState('Projects | Digin Dominic');
   
   const { 
     issues: projects, 
     loading: projectsLoading 
   } = useGithubIssues('project', null);
+
+  // Update title when the active tag changes
+  useEffect(() => {
+    if (activeTag) {
+      setPageTitle(`${activeTag} Projects | Digin Dominic`);
+    } else {
+      setPageTitle('Projects | Digin Dominic');
+    }
+  }, [activeTag]);
 
   useEffect(() => {
     if (Array.isArray(projects) && projects.length > 0) {
@@ -155,6 +166,10 @@ const ProjectsPage = () => {
     if (projectsLoading) {
       return (
         <div className="container mx-auto px-4 py-12 pt-28">
+          <Helmet>
+            <title>Loading Projects | Digin Dominic</title>
+            <meta name="description" content="Browse my portfolio of projects and development work" />
+          </Helmet>
           <div className="text-center mb-12">
             <h2 className="title mb-4">My <span>Projects</span></h2>
             <p className="max-w-2xl mx-auto text-gray-600">Explore the projects I've been working on</p>
@@ -187,6 +202,28 @@ const ProjectsPage = () => {
 
     return (
       <div className="container mx-auto px-4 py-12 pt-28">
+        <Helmet>
+          <title>{pageTitle}</title>
+          <meta 
+            name="description" 
+            content={activeTag 
+              ? `Explore my ${activeTag} projects and portfolio work` 
+              : 'Browse my portfolio of projects, applications, and development work'
+            } 
+          />
+          {/* Open Graph Tags */}
+          <meta property="og:title" content={pageTitle} />
+          <meta 
+            property="og:description" 
+            content={activeTag 
+              ? `Explore my ${activeTag} projects and portfolio work` 
+              : 'Browse my portfolio of projects, applications, and development work'
+            } 
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={`https://digindominic.me/projects${activeTag ? `?tag=${activeTag}` : ''}`} />
+          <meta property="og:image" content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png" />
+        </Helmet>
         <div className="text-center mb-8">
           <h2 className="title mb-4">My <span>Projects</span></h2>
           <p className="max-w-2xl mx-auto text-gray-600 mb-6">Explore the projects I've been working on</p>

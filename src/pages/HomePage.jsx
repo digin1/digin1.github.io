@@ -1,5 +1,5 @@
-// src/pages/HomePage.jsx
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Hero from '../components/sections/Hero';
 import Projects from '../components/sections/Projects';
 import Toolkit from '../components/sections/Toolkit';
@@ -69,6 +69,10 @@ const HomePage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Digin Dominic | Software Engineer</title>
+        <meta name="description" content="Digin Dominic - Software Engineer, Research Toolsmith, and Data Workflow Architect" />
+      </Helmet>
       <Hero content={heroContent} loading={heroLoading} />
       <Projects projects={projects} loading={projectsLoading} />
       <Toolkit />

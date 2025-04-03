@@ -1,10 +1,14 @@
-// src/pages/NotFoundPage.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
 const NotFoundPage = () => {
   return (
     <div className="container mx-auto px-4 py-16">
+      <Helmet>
+        <title>Page Not Found | Digin Dominic</title>
+        <meta name="description" content="The page you are looking for doesn't exist or has been moved." />
+      </Helmet>
       <div className="max-w-lg mx-auto text-center">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">404 - Page Not Found</h1>
         <p className="text-gray-600 mb-8">

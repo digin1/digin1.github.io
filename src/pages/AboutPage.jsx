@@ -1,5 +1,5 @@
-// src/pages/AboutPage.jsx
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import About from '../components/sections/About';
 import useGithubIssues from '../hooks/useGithubIssues';
 
@@ -83,6 +83,10 @@ const AboutPage = () => {
 
   return (
     <BgWrapper>
+      <Helmet>
+        <title>About Me | Digin Dominic</title>
+        <meta name="description" content="Learn about Digin Dominic - my background, skills, and experience as a software engineer." />
+      </Helmet>
       <div className="pt-28">
         <header className="container mx-auto px-4 text-center mb-1">
           <h1 className="title mb-4">About <span>Me</span></h1>

@@ -123,8 +123,18 @@ const BlogPage = () => {
   const [activeTag, setActiveTag] = useState(searchParams.get('tag') || '');
   const [allTags, setAllTags] = useState([]);
   const [filteredPosts, setFilteredPosts] = useState([]);
+  const [pageTitle, setPageTitle] = useState('Blog | Digin Dominic');
   
   const { issues: blogPosts, loading: blogPostsLoading, error } = useGithubIssues('blog', null);
+  
+  // Update title when the active tag changes
+  useEffect(() => {
+    if (activeTag) {
+      setPageTitle(`${activeTag} Blog Posts | Digin Dominic`);
+    } else {
+      setPageTitle('Blog | Digin Dominic');
+    }
+  }, [activeTag]);
   
   useEffect(() => {
     if (Array.isArray(blogPosts) && blogPosts.length > 0) {
@@ -170,7 +180,7 @@ const BlogPage = () => {
       <BgWrapper>
         <section className="py-12 pt-28">
           <Helmet>
-            <title>Loading Blog | Your Portfolio Website</title>
+            <title>Loading Blog | Digin Dominic</title>
             <meta name="description" content="Loading blog posts..." />
           </Helmet>
           <div className="container mx-auto px-4">
@@ -189,7 +199,7 @@ const BlogPage = () => {
       <BgWrapper>
         <section className="py-12 pt-28">
           <Helmet>
-            <title>Blog Error | Your Portfolio Website</title>
+            <title>Blog Error | Digin Dominic</title>
             <meta name="description" content="An error occurred while loading blog posts." />
           </Helmet>
           <div className="container mx-auto px-4">
@@ -207,30 +217,30 @@ const BlogPage = () => {
     <BgWrapper>
       <section className="py-12 pt-28">
         <Helmet>
-          <title>{activeTag ? `${activeTag} Blog Posts | Your Portfolio Website` : 'Blog | Your Portfolio Website'}</title>
+          <title>{pageTitle}</title>
           <meta
             name="description"
             content={activeTag 
-              ? `Explore ${activeTag} blog posts on Your Portfolio Website.` 
-              : 'Explore the latest blog posts on various topics from Your Portfolio Website.'}
+              ? `Explore ${activeTag} blog posts by Digin Dominic.` 
+              : 'Explore the latest blog posts on various topics from Digin Dominic.'}
           />
           <meta
             name="keywords"
-            content={`blog, articles, ${activeTag || ''}, portfolio, Your Portfolio Website`}
+            content={`blog, articles, ${activeTag || ''}, portfolio, Digin Dominic`}
           />
           {/* Open Graph Tags */}
-          <meta property="og:title" content={activeTag ? `${activeTag} Blog Posts | Your Portfolio Website` : 'Blog | Your Portfolio Website'} />
+          <meta property="og:title" content={pageTitle} />
           <meta
             property="og:description"
             content={activeTag 
-              ? `Explore ${activeTag} blog posts on Your Portfolio Website.` 
-              : 'Explore the latest blog posts on various topics from Your Portfolio Website.'}
+              ? `Explore ${activeTag} blog posts by Digin Dominic.` 
+              : 'Explore the latest blog posts on various topics from Digin Dominic.'}
           />
           <meta property="og:type" content="website" />
-          <meta property="og:url" content={`https://yourdomain.com/blog${activeTag ? `?tag=${activeTag}` : ''}`} />
+          <meta property="og:url" content={`https://digindominic.me/blog${activeTag ? `?tag=${activeTag}` : ''}`} />
           <meta
             property="og:image"
-            content="https://yourdomain.com/default-blog-image.jpg"
+            content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png"
           />
         </Helmet>
         <div className="container mx-auto px-4">

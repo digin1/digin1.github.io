@@ -1,53 +1,39 @@
+// src/pages/HomePage.jsx
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Hero from '../components/sections/Hero';
 import Projects from '../components/sections/Projects';
 import Toolkit from '../components/sections/Toolkit';
-import useGithubIssues from '../hooks/useGithubIssues';
+import useMarkdownContent from '../hooks/useMarkdownContent';
 
 const HomePage = () => {
-  // Fetch hero content using the 'hero' label
+  // Fetch hero content using the local markdown files
   const { 
-    issues: heroIssues, 
+    content: heroContent, 
     loading: heroLoading,
     error: heroError 
-  } = useGithubIssues('hero', null);
+  } = useMarkdownContent('hero');
   
-  // Get the first hero issue
-  const heroContent = Array.isArray(heroIssues) && heroIssues.length > 0 
-    ? heroIssues[0] 
-    : null;
-  
-  // Fetch projects using the 'project' label
+  // Fetch projects content
   const { 
-    issues: projects, 
+    allContent: projects, 
     loading: projectsLoading,
     error: projectsError
-  } = useGithubIssues('project', null);
+  } = useMarkdownContent('projects');
   
-  // Fetch about content using the 'about' label
+  // Fetch about content
   const { 
-    issues: aboutIssues, 
+    content: aboutContent, 
     loading: aboutLoading,
     error: aboutError 
-  } = useGithubIssues('about', null);
+  } = useMarkdownContent('about');
   
-  // Get the first about issue
-  const aboutContent = Array.isArray(aboutIssues) && aboutIssues.length > 0 
-    ? aboutIssues[0] 
-    : null;
-  
-  // Fetch contact info using the 'contact' label
+  // Fetch contact info
   const { 
-    issues: contactIssues, 
+    content: contactContent, 
     loading: contactLoading,
     error: contactError 
-  } = useGithubIssues('contact', null);
-  
-  // Get the first contact issue
-  const contactContent = Array.isArray(contactIssues) && contactIssues.length > 0 
-    ? contactIssues[0] 
-    : null;
+  } = useMarkdownContent('contact');
 
   // Debug information  
   console.log('Homepage loaded');

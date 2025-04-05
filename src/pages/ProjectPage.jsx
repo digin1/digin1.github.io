@@ -1,81 +1,111 @@
 // src/pages/ProjectPage.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async'; // Import Helmet for SEO
-import { marked } from 'marked';
-import useGithubIssues from '../hooks/useGithubIssues';
+import { Helmet } from 'react-helmet-async';
+import useMarkdownContent from '../hooks/useMarkdownContent';
+import Loader from '../components/common/Loader';
 
 const ProjectPage = () => {
-  const { id } = useParams();
+  const { id } = useParams(); // This is now the project slug from the URL
   const navigate = useNavigate();
-  const issueNumber = parseInt(id, 10);
-  const [loading, setLoading] = useState(true);
-  const [processedContent, setProcessedContent] = useState('');
   const [projectTags, setProjectTags] = useState([]);
+  const [isValidProject, setIsValidProject] = useState(null);
 
-  const { currentIssue: project, loading: issueLoading, error, fetchIssue } = useGithubIssues(
-    null,
-    issueNumber
-  );
+  // Fetch the specific project using the id/slug from the URL
+  const { 
+    content: project, 
+    loading: projectLoading, 
+    error: projectError 
+  } = useMarkdownContent('projects', id);
 
+  // Fetch all projects to verify that the current project exists in the projects list
+  const { 
+    allContent: allProjects, 
+    loading: allProjectsLoading 
+  } = useMarkdownContent('projects');
+
+  // Comprehensive validation function
+  const validateProject = useCallback(() => {
+    // If still loading, don't make a determination yet
+    if (projectLoading || allProjectsLoading) {
+      return null;
+    }
+
+    // Check if project exists and is in the projects list
+    if (!project) {
+      console.log('No project found');
+      return false;
+    }
+
+    // Ensure all projects are loaded and an array
+    const projectIds = Array.isArray(allProjects) ? allProjects.map(p => p.id) : [];
+    
+    // Check if the current project ID is in the list of project IDs
+    const isValidProject = projectIds.includes(id);
+    
+    console.log('Project Validation checks:', {
+      projectExists: !!project,
+      projectInList: isValidProject,
+      projectIds,
+      currentId: id
+    });
+
+    return isValidProject;
+  }, [project, allProjects, id, projectLoading, allProjectsLoading]);
+
+  // Effect to validate project and handle navigation
   useEffect(() => {
-    if (issueNumber && !isNaN(issueNumber)) {
-      fetchIssue(issueNumber);
-    } else {
+    const valid = validateProject();
+    
+    // Set validation state
+    if (valid !== null) {
+      setIsValidProject(valid);
+    }
+  }, [validateProject]);
+
+  // Navigation effect
+  useEffect(() => {
+    // Only navigate if we've completed loading and determined project is invalid
+    if (isValidProject === false && !projectLoading && !allProjectsLoading) {
+      console.log('Navigating to not-found page');
       navigate('/not-found');
     }
-  }, [issueNumber, fetchIssue, navigate]);
+  }, [isValidProject, projectLoading, allProjectsLoading, navigate]);
 
+  // Process tags
   useEffect(() => {
-    if (project && project.rawContent) {
-      let cleanedContent = project.rawContent;
-      if (cleanedContent.includes('---content:')) {
-        cleanedContent = cleanedContent.split('---content:')[1].trim();
-      } else {
-        cleanedContent = cleanedContent
-          .replace(/^---summary:.*$/gm, '')
-          .replace(/^.*---image:.*$/gm, '')
-          .replace(/\n{3,}/g, '\n\n')
-          .trim();
-      }
-      setProcessedContent(cleanedContent);
-      
-      // Extract and process tags if they exist
-      if (project.metadata?.tag) {
-        const tags = project.metadata.tag.split(',').map(tag => tag.trim());
-        setProjectTags(tags);
-      } else {
-        setProjectTags([]);
-      }
+    if (project && project.metadata?.tag) {
+      const tags = project.metadata.tag.split(',').map(tag => tag.trim());
+      setProjectTags(tags);
+    } else {
+      setProjectTags([]);
     }
   }, [project]);
 
-  useEffect(() => {
-    setLoading(issueLoading);
-  }, [issueLoading]);
-
-  if (loading) {
+  // Loading state
+  if (projectLoading || allProjectsLoading || isValidProject === null) {
     return (
       <div className="bg-gray-50 min-h-screen pt-20">
         <section className="container mx-auto px-4 py-12">
           <Helmet>
-            <title>Loading Project | Your Portfolio Website</title>
+            <title>Loading Project | Digin Dominic</title>
             <meta name="description" content="Loading project details..." />
           </Helmet>
           <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-gray-900"></div>
+            <Loader size="lg" color="gray" />
           </div>
         </section>
       </div>
     );
   }
 
-  if (error || !project) {
+  // Error or invalid project state
+  if (projectError || !project || isValidProject === false) {
     return (
       <div className="bg-gray-50 min-h-screen pt-20">
         <section className="container mx-auto px-4 py-12">
           <Helmet>
-            <title>Project Not Found | Your Portfolio Website</title>
+            <title>Project Not Found | Digin Dominic</title>
             <meta name="description" content="The requested project could not be found." />
           </Helmet>
           <div className="text-center">
@@ -94,47 +124,39 @@ const ProjectPage = () => {
     <div className="bg-gray-50 min-h-screen pt-20">
       <section className="container mx-auto px-4 py-12">
         <Helmet>
-          <title>{`${project.title} | Your Portfolio Website`}</title>
+          <title>{`${project.metadata.title || 'Project'} | Digin Dominic`}</title>
           <meta
             name="description"
-            content={
-              project.metadata?.summary ||
-              processedContent.substring(0, 160) ||
-              'View this project on Your Portfolio Website.'
-            }
+            content={project.metadata?.summary || (project.content && project.content.substring(0, 160)) || 'View this project on Digin Dominic\'s Portfolio Website.'}
           />
           <meta
             name="keywords"
-            content={`project, portfolio, ${project.labels?.map((label) => label.name).join(', ')}, ${projectTags.join(', ')}`}
+            content={`project, portfolio, ${projectTags.join(', ')}`}
           />
-          <meta name="author" content={project.user?.login || 'Your Name'} />
+          <meta name="author" content="Digin Dominic" />
           {/* Open Graph Tags */}
-          <meta property="og:title" content={project.title} />
+          <meta property="og:title" content={project.metadata.title} />
           <meta
             property="og:description"
-            content={
-              project.metadata?.summary ||
-              processedContent.substring(0, 160) ||
-              'View this project on Your Portfolio Website.'
-            }
+            content={project.metadata?.summary || (project.content && project.content.substring(0, 160)) || 'View this project on Digin Dominic\'s Portfolio Website.'}
           />
-          <meta property="og:image" content={project.metadata?.image || 'https://yourdomain.com/default-image.jpg'} />
-          <meta property="og:url" content={`https://digindominic.me/projects/${issueNumber}`} />
+          <meta property="og:image" content={project.metadata?.image || 'https://digindominic.me/default-image.jpg'} />
+          <meta property="og:url" content={`https://digindominic.me/projects/${id}`} />
           <meta property="og:type" content="article" />
           {/* Structured Data */}
           <script type="application/ld+json">{`
             {
               "@context": "https://schema.org",
               "@type": "CreativeWork",
-              "name": "${project.title}",
-              "description": "${project.metadata?.summary || processedContent.substring(0, 160)}",
-              "image": "${project.metadata?.image || 'https://yourdomain.com/default-image.jpg'}",
+              "name": "${project.metadata.title}",
+              "description": "${project.metadata?.summary || ''}",
+              "image": "${project.metadata?.image || 'https://digindominic.me/default-image.jpg'}",
               "author": {
                 "@type": "Person",
-                "name": "${project.user?.login || 'Your Name'}"
+                "name": "Digin Dominic"
               },
               "keywords": "${projectTags.join(', ')}",
-              "url": "https://digindominic.me/projects/${issueNumber}"
+              "url": "https://digindominic.me/projects/${id}"
             }
           `}</script>
         </Helmet>
@@ -162,31 +184,15 @@ const ProjectPage = () => {
             <figure className="mb-8 -mx-6 -mt-8 overflow-hidden rounded-t-lg">
               <img
                 src={project.metadata.image}
-                alt={project.title}
+                alt={project.metadata.title}
                 className="w-full h-auto object-contain object-center"
-                loading="lazy" // Lazy load image
+                loading="lazy"
               />
             </figure>
           )}
           <header>
-            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">{project.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">{project.metadata.title}</h1>
           </header>
-          
-          {/* GitHub Labels */}
-          <div className="flex flex-wrap gap-2 mb-4">
-            {project.labels &&
-              project.labels.map(
-                (label) =>
-                  label.name !== 'project' && (
-                    <span
-                      key={label.id}
-                      className="px-3 py-1 text-sm rounded-full bg-gray-100 text-gray-700 border border-gray-200"
-                    >
-                      {label.name}
-                    </span>
-                  )
-              )}
-          </div>
           
           {/* Custom Tags */}
           {projectTags.length > 0 && (
@@ -203,6 +209,7 @@ const ProjectPage = () => {
             </div>
           )}
           
+          {/* Project Links */}
           {project.metadata && (project.metadata.demo || project.metadata.github) && (
             <div className="flex flex-wrap gap-4 mb-8">
               {project.metadata.demo && (
@@ -229,7 +236,7 @@ const ProjectPage = () => {
           )}
           <section
             className="text-gray-700 prose max-w-none"
-            dangerouslySetInnerHTML={{ __html: marked.parse(processedContent) }}
+            dangerouslySetInnerHTML={{ __html: project.content }}
           />
         </article>
       </section>

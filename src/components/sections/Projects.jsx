@@ -4,8 +4,8 @@ import { parseCustomDate, formatDateAsDDMMYYYY } from '../../utils/dateUtils';
 
 // Individual slide component
 const ProjectSlide = ({ project, isActive }) => {
-  // Extract the issue number from the URL
-  const issueNumber = project.number;
+  // Extract the ID from the project
+  const projectId = project.id || project.slug || project.number;
   
   // Get summary text with increased character limit
   const summaryText = project.metadata?.summary || project.metadata?.description ||
@@ -24,7 +24,7 @@ const ProjectSlide = ({ project, isActive }) => {
             <div className="h-72 md:h-full flex items-center justify-center bg-gray-50">
               <img
                 src={project.metadata.image}
-                alt={project.title}
+                alt={project.title || project.metadata?.title}
                 className="max-w-full max-h-full object-contain"
               />
             </div>
@@ -38,16 +38,16 @@ const ProjectSlide = ({ project, isActive }) => {
           
           {/* Tags overlay */}
           <div className="absolute bottom-4 left-4 flex flex-wrap gap-2 max-w-[90%]">
-            {project.labels && project.labels.map(label => (
-              label.name !== 'project' && (
+            {project.metadata?.tag && 
+              project.metadata.tag.split(',').map((tag, idx) => (
                 <span
-                  key={label.id}
+                  key={idx}
                   className="px-3 py-1 text-xs font-medium rounded-full bg-white/90 text-primary border border-primary/20 shadow-sm"
                 >
-                  {label.name}
+                  {tag.trim()}
                 </span>
-              )
-            ))}
+              ))
+            }
           </div>
         </div>
         
@@ -60,7 +60,7 @@ const ProjectSlide = ({ project, isActive }) => {
               </p>
             )}
             <h3 className="text-2xl md:text-3xl font-bold mb-4 text-dark">
-              {project.title}
+              {project.title || project.metadata?.title}
             </h3>
           </div>
 
@@ -70,7 +70,7 @@ const ProjectSlide = ({ project, isActive }) => {
 
           <div className="mt-auto">
             <Link
-              to={`/projects/${issueNumber}`}
+              to={`/projects/${projectId}`}
               className="button-primary inline-flex items-center group"
             >
               View Project Details
@@ -227,7 +227,7 @@ const Projects = ({ projects, loading }) => {
               {/* Slides */}
               {sortedProjects.map((project, index) => (
                 <ProjectSlide 
-                  key={project.id} 
+                  key={project.id || project.slug || index} 
                   project={project} 
                   isActive={index === activeIndex} 
                 />

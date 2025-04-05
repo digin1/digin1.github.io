@@ -1,53 +1,38 @@
-// src/pages/BlogPage.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async'; // Import Helmet for SEO
-import useGithubIssues from '../hooks/useGithubIssues';
-import Loader from '../components/common/Loader';
+import { Helmet } from 'react-helmet-async';
+import useMarkdownContent from '../hooks/useMarkdownContent';
+import { parseCustomDate, formatDateAsDDMMYYYY } from '../utils/dateUtils';
 
 const BlogPostCard = ({ post }) => {
-  const issueNumber = post.number;
-
-  const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString(undefined, options);
-  };
-
+  const postSlug = post.id;
+  
   return (
-    <Link to={`/blog/${issueNumber}`} className="block">
-      <article className="card hover:shadow-md transition-all">
-        {post.metadata?.image && (
-          <figure className="flex justify-center">
-            <img
-              src={post.metadata.image}
-              alt={post.title}
-              className="w-full max-w-full h-48 object-cover object-center rounded-t-lg mb-6"
-              loading="lazy" // Lazy load images
+    <div className="blog-card flex flex-col md:flex-row items-stretch bg-white rounded-xl overflow-hidden shadow-md mb-8">
+      {/* Image Section - Always on the left */}
+      {post.metadata?.image && (
+        <div className="md:w-1/2 relative">
+          <div className="h-64 md:h-auto flex items-center justify-center bg-gray-50 overflow-hidden">
+            <img 
+              src={post.metadata.image} 
+              alt={post.metadata.title || post.title} 
+              className="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" 
+              loading="lazy"
             />
-          </figure>
-        )}
-        <div className="p-0">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h2>
-          <time className="text-sm text-gray-500 mb-3" dateTime={post.created_at}>
-            {formatDate(post.created_at)}
-          </time>
-          <div className="flex flex-wrap gap-2 mb-3">
-            {post.labels &&
-              post.labels.map(
-                (label) =>
-                  label.name !== 'blog' && (
-                    <span
-                      key={label.id}
-                      className="px-2 py-1 text-xs rounded-full bg-gray-100 text-gray-600"
-                    >
-                      {label.name}
-                    </span>
-                  )
-              )}
           </div>
+        </div>
+      )}
+      
+      {/* Content Section */}
+      <div className="md:w-1/2 p-6 md:p-8 flex flex-col justify-between">
+        <div>
+          <h3 className="text-2xl font-bold mb-3 text-gray-900 hover:text-gray-700 transition-colors">
+            {post.metadata.title || post.title}
+          </h3>
           
+          {/* Tags */}
           {post.metadata?.tag && (
-            <div className="flex flex-wrap gap-2 mb-3">
+            <div className="flex flex-wrap gap-2 mb-4">
               {post.metadata.tag.split(',').map((tag, index) => (
                 <span 
                   key={index} 
@@ -59,35 +44,47 @@ const BlogPostCard = ({ post }) => {
             </div>
           )}
           
-          <p className="text-gray-600 mb-4">
-            {post.metadata?.summary ||
-              post.metadata?.description ||
-              (post.rawContent && post.rawContent.substring(0, 150) + '...')}
+          {/* Date */}
+          {post.metadata?.date && (
+            <p className="text-sm text-gray-500 mb-3">
+              {formatDateAsDDMMYYYY(parseCustomDate(post.metadata.date))}
+            </p>
+          )}
+          
+          {/* Summary */}
+          <p className="text-gray-600 mb-4 line-clamp-4">
+            {post.metadata?.summary || post.metadata?.description || 
+              (post.rawContent && post.rawContent.substring(0, 250) + '...')}
           </p>
-          <div className="text-gray-900 hover:text-gray-700 font-medium inline-flex items-center">
-            Read More
-            <svg
-              className="w-4 h-4 ml-1"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M14 5l7 7m0 0l-7 7m7-7H3"
-              />
-            </svg>
-          </div>
         </div>
-      </article>
-    </Link>
+        
+        {/* Read More Link */}
+        <Link 
+          to={`/blog/${postSlug}`} 
+          className="inline-flex items-center text-primary font-medium hover:text-secondary group mt-4"
+        >
+          Read More
+          <svg 
+            className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24" 
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              d="M14 5l7 7m0 0l-7 7m7-7H3"
+            />
+          </svg>
+        </Link>
+      </div>
+    </div>
   );
 };
 
-// Wrapper component to handle the background color
+// Wrapper component to handle the background color (kept from previous version)
 const BgWrapper = ({ children }) => {
   useEffect(() => {
     // Add our bg-light class ensuring we don't duplicate it
@@ -125,7 +122,7 @@ const BlogPage = () => {
   const [filteredPosts, setFilteredPosts] = useState([]);
   const [pageTitle, setPageTitle] = useState('Blog | Digin Dominic');
   
-  const { issues: blogPosts, loading: blogPostsLoading, error } = useGithubIssues('blog', null);
+  const { allContent: blogPosts, loading: blogPostsLoading } = useMarkdownContent('blog');
   
   // Update title when the active tag changes
   useEffect(() => {
@@ -175,47 +172,44 @@ const BlogPage = () => {
     }
   };
 
-  if (blogPostsLoading) {
-    return (
-      <BgWrapper>
-        <section className="py-12 pt-28">
+  const sortedPosts = [...filteredPosts].sort((a, b) => {
+    const dateA = a.metadata?.date ? parseCustomDate(a.metadata.date) : new Date(0);
+    const dateB = b.metadata?.date ? parseCustomDate(b.metadata.date) : new Date(0);
+    return dateB - dateA;
+  });
+
+  const renderContent = () => {
+    if (blogPostsLoading) {
+      return (
+        <div className="container mx-auto px-4 py-12 pt-28">
           <Helmet>
             <title>Loading Blog | Digin Dominic</title>
-            <meta name="description" content="Loading blog posts..." />
+            <meta name="description" content="Browse my blog posts" />
           </Helmet>
-          <div className="container mx-auto px-4">
-            <h1 className="title mb-4 text-center">My <span>Blog</span></h1>
-            <div className="flex justify-center">
-              <Loader size="lg" color="gray" />
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="title mb-4">My <span>Blog</span></h2>
+            <p className="max-w-2xl mx-auto text-gray-600">Explore my thoughts and experiences</p>
           </div>
-        </section>
-      </BgWrapper>
-    );
-  }
+          <div className="space-y-8">
+            {[1, 2, 3].map((i) => (
+              <div key={i} className="flex flex-col md:flex-row bg-white rounded-xl overflow-hidden animate-pulse">
+                <div className="md:w-1/2 bg-gray-200 h-64 md:h-80"></div>
+                <div className="md:w-1/2 p-8 space-y-4">
+                  <div className="h-8 bg-gray-200 rounded w-3/4"></div>
+                  <div className="h-4 bg-gray-200 rounded w-full"></div>
+                  <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+                  <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+                  <div className="h-10 bg-gray-200 rounded w-1/3 mt-auto"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      );
+    }
 
-  if (error) {
     return (
-      <BgWrapper>
-        <section className="py-12 pt-28">
-          <Helmet>
-            <title>Blog Error | Digin Dominic</title>
-            <meta name="description" content="An error occurred while loading blog posts." />
-          </Helmet>
-          <div className="container mx-auto px-4">
-            <h1 className="title mb-4 text-center">My <span>Blog</span></h1>
-            <div className="text-center text-red-600">
-              Error loading blog posts. Please try again later.
-            </div>
-          </div>
-        </section>
-      </BgWrapper>
-    );
-  }
-
-  return (
-    <BgWrapper>
-      <section className="py-12 pt-28">
+      <div className="container mx-auto px-4 py-12 pt-28">
         <Helmet>
           <title>{pageTitle}</title>
           <meta
@@ -243,76 +237,70 @@ const BlogPage = () => {
             content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png"
           />
         </Helmet>
-        <div className="container mx-auto px-4">
-          <header className="text-center mb-8">
-            <h1 className="title mb-4">My <span>Blog</span></h1>
-            <p className="max-w-2xl mx-auto text-gray-600 mb-6">Explore my thoughts, insights, and experiences</p>
-            
-            {/* Tags filter section */}
-            {allTags.length > 0 && (
-              <div className="flex flex-wrap justify-center gap-2 mt-6">
-                {allTags.map(tag => (
-                  <button
-                    key={tag}
-                    onClick={() => handleTagClick(tag)}
-                    className={`px-3 py-1 rounded-full text-sm transition-colors ${
-                      activeTag === tag 
-                        ? 'bg-primary text-white' 
-                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                    }`}
-                  >
-                    {tag}
-                  </button>
-                ))}
-                {activeTag && (
-                  <button
-                    onClick={() => handleTagClick(activeTag)}
-                    className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
-                  >
-                    Clear Filter
-                  </button>
-                )}
-              </div>
-            )}
-          </header>
+        <div className="text-center mb-8">
+          <h2 className="title mb-4">My <span>Blog</span></h2>
+          <p className="max-w-2xl mx-auto text-gray-600 mb-6">Explore my thoughts, insights, and experiences</p>
           
-          {filteredPosts.length === 0 ? (
-            <div className="text-center text-gray-600 bg-white border border-gray-200 rounded-lg p-8 max-w-2xl mx-auto">
-              <svg
-                className="w-12 h-12 mx-auto mb-4 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"
-                />
-              </svg>
-              {activeTag ? (
-                <>
-                  <h2 className="text-xl font-semibold mb-2">No blog posts found with tag: {activeTag}</h2>
-                  <p>Try selecting a different tag or clear the filter.</p>
-                </>
-              ) : (
-                <>
-                  <h2 className="text-xl font-semibold mb-2">No blog posts available yet</h2>
-                  <p>Check back soon for new content!</p>
-                </>
-              )}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <BlogPostCard key={post.id} post={post} />
+          {/* Tags filter section */}
+          {allTags.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-2 mt-6">
+              {allTags.map(tag => (
+                <button
+                  key={tag}
+                  onClick={() => handleTagClick(tag)}
+                  className={`px-3 py-1 rounded-full text-sm transition-colors ${
+                    activeTag === tag 
+                      ? 'bg-primary text-white' 
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {tag}
+                </button>
               ))}
+              {activeTag && (
+                <button
+                  onClick={() => handleTagClick(activeTag)}
+                  className="px-3 py-1 rounded-full text-sm bg-red-100 text-red-600 hover:bg-red-200 transition-colors"
+                >
+                  Clear Filter
+                </button>
+              )}
             </div>
           )}
         </div>
-      </section>
+        
+        {sortedPosts.length === 0 ? (
+          <div className="text-center text-gray-500 bg-white border border-gray-200 rounded-lg p-8">
+            <svg className="w-16 h-16 mx-auto mb-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+            {activeTag ? (
+              <>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">No blog posts found with tag: {activeTag}</h3>
+                <p>Try selecting a different tag or clear the filter.</p>
+              </>
+            ) : (
+              <>
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">No blog posts available yet</h3>
+                <p>Check back soon for new content!</p>
+              </>
+            )}
+          </div>
+        ) : (
+          <div className="space-y-8">
+            {sortedPosts.map((post) => (
+              <BlogPostCard key={post.id} post={post} />
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  // Wrap the entire component with our background wrapper
+  return (
+    <BgWrapper>
+      {renderContent()}
     </BgWrapper>
   );
 };

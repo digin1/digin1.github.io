@@ -19,6 +19,7 @@ const Hero = ({ content, loading }) => {
     secondaryCtaLink: '/about'
   };
 
+  // The structure of content from markdown files should be compatible with the existing code
   const metadata = (content && content.metadata) ? content.metadata : defaultMetadata;
   const {
     name = defaultMetadata.name,

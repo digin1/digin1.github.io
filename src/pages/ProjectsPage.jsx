@@ -166,6 +166,9 @@ const ProjectsPage = () => {
               ? `Explore my ${activeTag} projects and portfolio work`
               : 'Browse my portfolio of projects, applications, and development work'
           } />
+          <link rel="canonical" href="https://digindominic.me/projects" />
+
+          {/* Open Graph */}
           <meta property="og:title" content={pageTitle} />
           <meta property="og:description" content={
             activeTag
@@ -175,6 +178,17 @@ const ProjectsPage = () => {
           <meta property="og:type" content="website" />
           <meta property="og:url" content={`https://digindominic.me/projects${activeTag ? `?tag=${activeTag}` : ''}`} />
           <meta property="og:image" content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png" />
+          <meta property="og:site_name" content="Digin Dominic" />
+
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={pageTitle} />
+          <meta name="twitter:description" content={
+            activeTag
+              ? `Explore my ${activeTag} projects and portfolio work`
+              : 'Browse my portfolio of projects, applications, and development work'
+          } />
+          <meta name="twitter:image" content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png" />
         </Helmet>
         <div className="text-center mb-8">
           <h2 className="title mb-4">My <span>Projects</span></h2>

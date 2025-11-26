@@ -60,6 +60,21 @@ const AboutPage = () => {
       <Helmet>
         <title>About Me | Digin Dominic</title>
         <meta name="description" content="Learn about Digin Dominic - my background, skills, and experience as a software engineer." />
+        <link rel="canonical" href="https://digindominic.me/about" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="About Me | Digin Dominic" />
+        <meta property="og:description" content="Learn about Digin Dominic - my background, skills, and experience as a software engineer." />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://digindominic.me/about" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp" />
+        <meta property="og:site_name" content="Digin Dominic" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Me | Digin Dominic" />
+        <meta name="twitter:description" content="Learn about Digin Dominic - my background, skills, and experience as a software engineer." />
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp" />
       </Helmet>
       <div className="pt-28">
         <header className="container mx-auto px-4 text-center mb-1">

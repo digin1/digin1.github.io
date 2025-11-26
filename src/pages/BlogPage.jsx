@@ -222,12 +222,14 @@ const BlogPage = () => {
             name="keywords"
             content={`blog, articles, ${activeTag || ''}, portfolio, Digin Dominic`}
           />
+          <link rel="canonical" href="https://digindominic.me/blog" />
+
           {/* Open Graph Tags */}
           <meta property="og:title" content={pageTitle} />
           <meta
             property="og:description"
-            content={activeTag 
-              ? `Explore ${activeTag} blog posts by Digin Dominic.` 
+            content={activeTag
+              ? `Explore ${activeTag} blog posts by Digin Dominic.`
               : 'Explore the latest blog posts on various topics from Digin Dominic.'}
           />
           <meta property="og:type" content="website" />
@@ -236,6 +238,15 @@ const BlogPage = () => {
             property="og:image"
             content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png"
           />
+          <meta property="og:site_name" content="Digin Dominic" />
+
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={pageTitle} />
+          <meta name="twitter:description" content={activeTag
+            ? `Explore ${activeTag} blog posts by Digin Dominic.`
+            : 'Explore the latest blog posts on various topics.'} />
+          <meta name="twitter:image" content="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png" />
         </Helmet>
         <div className="text-center mb-8">
           <h2 className="title mb-4">My <span>Blog</span></h2>

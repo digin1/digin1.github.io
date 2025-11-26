@@ -145,7 +145,49 @@ const BlogPostPage = () => {
             content={`blog, article, ${postTags.join(', ')}`}
           />
           <meta name="author" content="Digin Dominic" />
-          {/* Open Graph and Structured Data tags remain the same */}
+          <link rel="canonical" href={`https://digindominic.me/blog/${id}`} />
+
+          {/* Open Graph */}
+          <meta property="og:title" content={post.metadata.title || 'Blog Post'} />
+          <meta property="og:description" content={post.metadata?.summary || post.content.substring(0, 160)} />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={`https://digindominic.me/blog/${id}`} />
+          <meta property="og:image" content={post.metadata?.image || 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp'} />
+          <meta property="og:site_name" content="Digin Dominic" />
+          <meta property="article:published_time" content={post.metadata?.date} />
+          <meta property="article:author" content="Digin Dominic" />
+
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={post.metadata.title || 'Blog Post'} />
+          <meta name="twitter:description" content={post.metadata?.summary || post.content.substring(0, 160)} />
+          <meta name="twitter:image" content={post.metadata?.image || 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp'} />
+
+          {/* Article Schema */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              "headline": post.metadata.title,
+              "description": post.metadata?.summary || post.content.substring(0, 160),
+              "image": post.metadata?.image,
+              "datePublished": post.metadata?.date,
+              "author": {
+                "@type": "Person",
+                "name": "Digin Dominic",
+                "url": "https://digindominic.me"
+              },
+              "publisher": {
+                "@type": "Person",
+                "name": "Digin Dominic"
+              },
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://digindominic.me/blog/${id}`
+              },
+              "keywords": postTags.join(', ')
+            })}
+          </script>
         </Helmet>
 
         <Link to="/blog" className="inline-flex items-center text-gray-900 hover:underline mb-8">

@@ -134,31 +134,42 @@ const ProjectPage = () => {
             content={`project, portfolio, ${projectTags.join(', ')}`}
           />
           <meta name="author" content="Digin Dominic" />
+          <link rel="canonical" href={`https://digindominic.me/projects/${id}`} />
+
           {/* Open Graph Tags */}
           <meta property="og:title" content={project.metadata.title} />
           <meta
             property="og:description"
             content={project.metadata?.summary || (project.content && project.content.substring(0, 160)) || 'View this project on Digin Dominic\'s Portfolio Website.'}
           />
-          <meta property="og:image" content={project.metadata?.image || 'https://digindominic.me/default-image.jpg'} />
+          <meta property="og:image" content={project.metadata?.image || 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp'} />
           <meta property="og:url" content={`https://digindominic.me/projects/${id}`} />
           <meta property="og:type" content="article" />
+          <meta property="og:site_name" content="Digin Dominic" />
+
+          {/* Twitter Card */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={project.metadata.title || 'Project'} />
+          <meta name="twitter:description" content={project.metadata?.summary || 'View this project on Digin Dominic\'s Portfolio.'} />
+          <meta name="twitter:image" content={project.metadata?.image || 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp'} />
+
           {/* Structured Data */}
-          <script type="application/ld+json">{`
-            {
+          <script type="application/ld+json">
+            {JSON.stringify({
               "@context": "https://schema.org",
               "@type": "CreativeWork",
-              "name": "${project.metadata.title}",
-              "description": "${project.metadata?.summary || ''}",
-              "image": "${project.metadata?.image || 'https://digindominic.me/default-image.jpg'}",
+              "name": project.metadata.title,
+              "description": project.metadata?.summary || '',
+              "image": project.metadata?.image || 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp',
               "author": {
                 "@type": "Person",
-                "name": "Digin Dominic"
+                "name": "Digin Dominic",
+                "url": "https://digindominic.me"
               },
-              "keywords": "${projectTags.join(', ')}",
-              "url": "https://digindominic.me/projects/${id}"
-            }
-          `}</script>
+              "keywords": projectTags.join(', '),
+              "url": `https://digindominic.me/projects/${id}`
+            })}
+          </script>
         </Helmet>
 
         <Link to="/projects" className="inline-flex items-center text-gray-900 hover:underline mb-12">

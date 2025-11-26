@@ -1,7 +1,10 @@
 import './globals.css';
+import Script from 'next/script';
 import { ThemeProvider } from '@/context/ThemeContext';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+
+const GA_MEASUREMENT_ID = 'G-9KKL3BNRNY';
 
 const siteUrl = 'https://digindominic.me';
 const siteName = 'Digin Dominic';
@@ -133,6 +136,19 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen flex flex-col">
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
         <ThemeProvider>
           <Header />
           <main className="flex-1 pt-20">

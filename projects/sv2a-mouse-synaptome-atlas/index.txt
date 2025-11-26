@@ -1,0 +1,220 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-a103402a46f71b56.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-a103402a46f71b56.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-a103402a46f71b56.js"],"default"]
+9:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+a:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-a103402a46f71b56.js"],"default"]
+4:["id","sv2a-mouse-synaptome-atlas","d"]
+0:["7iFNfLDfY8xMk8GDLkZbR",[[["",{"children":["projects",{"children":[["id","sv2a-mouse-synaptome-atlas","d"],{"children":["__PAGE__?{\"id\":\"sv2a-mouse-synaptome-atlas\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","sv2a-mouse-synaptome-atlas","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L9",null,{}],"notFoundStyles":[]}]}],["$","$La",null,{}]]}]]}]]}]],null],null],["$Lb",null]]]]
+c:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+d:T16f4,<h2>Project Overview</h2>
+<p>The SV2A Mouse Synaptome Atlas is a modern web application for visualizing research data on Synaptic Vesicle Glycoprotein 2A (SV2A) protein diversity across the mouse brain. The platform enables researchers to explore how synaptic vesicle protein density and intensity vary across brain regions, developmental stages, and between sexes through an interactive brain atlas interface.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>Next.js 14 (App Router)</li>
+<li>TypeScript</li>
+<li>React 18</li>
+<li>Tailwind CSS</li>
+<li>SVG Manipulation</li>
+<li>Allen Brain Atlas Integration</li>
+<li>GitLab CI/CD</li>
+<li>Static Site Generation</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Interactive Brain Atlas</strong>: SVG-based mouse brain visualization with clickable regions, color-coded by SV2A measurements</li>
+<li><strong>Dual Metric Analysis</strong>: Toggle between SV2A density and intensity measurements</li>
+<li><strong>Sex Differences Analysis</strong>: View data for male, female, or combined cohorts to reveal sex-specific patterns</li>
+<li><strong>Multi-Age Comparison</strong>: Compare data across 3 developmental stages (6 weeks, 6 months, 18 months)</li>
+<li><strong>Region Search</strong>: Autocomplete search functionality to quickly find specific brain regions</li>
+<li><strong>Dynamic Color Mapping</strong>: Real-time color scale visualization based on selected metric and filters</li>
+<li><strong>Regional Data Table</strong>: Sortable list of brain regions with measurement values</li>
+<li><strong>Selected Region Details</strong>: Floating panel showing comprehensive data across all conditions</li>
+<li><strong>Dataset Download</strong>: Excel file export of complete research data</li>
+<li><strong>Methodology Documentation</strong>: Detailed research methodology and data analysis procedures</li>
+<li><strong>Responsive Design</strong>: Full mobile/tablet support with optimized touch controls</li>
+</ul>
+<h3>Development Process</h3>
+<p>Developed as the web developer for the Grant Lab at University of Edinburgh to present their synaptic vesicle protein research in an accessible, interactive format.</p>
+<h4>Frontend Architecture</h4>
+<p>Built with Next.js 14 App Router and TypeScript:</p>
+<ul>
+<li><strong>Component Structure</strong>:
+<ul>
+<li><code>BrainAtlas.tsx</code> - Interactive SVG brain visualization with dynamic coloring</li>
+<li><code>ControlPanel.tsx</code> - Metric, age, and sex selection controls</li>
+<li><code>RegionalDataTable.tsx</code> - Filterable table of brain regions with values</li>
+</ul>
+</li>
+<li><strong>Data Management</strong>:
+<ul>
+<li>Separate JSON datasets for density and intensity measurements</li>
+<li>Sex-stratified data (male, female, combined)</li>
+<li>Allen Brain Atlas structure hierarchy integration</li>
+</ul>
+</li>
+<li><strong>State Management</strong>:
+<ul>
+<li>Metric selection (density/intensity)</li>
+<li>Age group filtering (6W, 6M, 18M)</li>
+<li>Sex cohort selection (male/female/combined)</li>
+<li>Region selection and hover states</li>
+</ul>
+</li>
+</ul>
+<h4>Data Visualization</h4>
+<ul>
+<li><strong>Color Scale</strong>: Custom gradient mapping for SV2A measurement values</li>
+<li><strong>Multi-dimensional Filtering</strong>: Combine metric, age, and sex filters</li>
+<li><strong>Interactive Tooltips</strong>: Hover information with region details and current values</li>
+<li><strong>Comparison Views</strong>: Side-by-side analysis across different conditions</li>
+</ul>
+<h3>Technical Highlights</h3>
+<ul>
+<li><strong>Type-Safe Development</strong>: Full TypeScript implementation with interfaces for brain data and component props</li>
+<li><strong>Dual Dataset Architecture</strong>: Separate density and intensity data files with unified visualization</li>
+<li><strong>Sex-Stratified Analysis</strong>: Built-in support for male/female/combined cohort comparisons</li>
+<li><strong>Allen Brain Atlas Integration</strong>: Maps research data to standardized brain structure IDs</li>
+<li><strong>Static Export</strong>: Generates fully static site for GitLab Pages deployment</li>
+</ul>
+<h3>Research Context</h3>
+<p>The application visualizes research data on SV2A synaptic vesicle proteins:</p>
+<ul>
+<li><strong>Target Protein</strong>: SV2A (Synaptic Vesicle Glycoprotein 2A) - essential for neurotransmitter release and synaptic vesicle trafficking</li>
+<li><strong>Measurements</strong>: Density and intensity values across brain regions</li>
+<li><strong>Developmental Stages</strong>: 6 weeks, 6 months, 18 months</li>
+<li><strong>Sample Size</strong>: Data from 33 mice total</li>
+<li><strong>Sex Analysis</strong>: Separate cohorts for male, female, and combined analysis</li>
+<li><strong>Brain Coverage</strong>: Multiple anatomically defined regions from Allen Mouse Brain Atlas</li>
+</ul>
+<h2>Scientific Impact</h2>
+<p>The atlas serves the neuroscience research community by providing:</p>
+<ul>
+<li>Interactive exploration of synaptic vesicle protein distribution across the brain</li>
+<li>Sex-specific analysis revealing differences in synaptic protein expression</li>
+<li>Developmental trajectory visualization across three life stages</li>
+<li>Downloadable datasets for further analysis</li>
+</ul>
+<h2>Deployment</h2>
+<ul>
+<li><strong>Platform</strong>: GitLab Pages with CI/CD pipeline</li>
+<li><strong>Build</strong>: Static export via Next.js for optimal performance</li>
+<li><strong>URL</strong>: Hosted on University of Edinburgh GitLab infrastructure</li>
+</ul>
+<h2>Funding</h2>
+<p>Research supported by:</p>
+<ul>
+<li>Wellcome Trust</li>
+<li>University of Edinburgh</li>
+</ul>
+<h2>Project Context</h2>
+<p>Developed for Professor Seth G.N. Grant's lab at the Centre for Clinical Brain Sciences, University of Edinburgh, to make their SV2A synaptic vesicle protein research accessible through modern web visualization.</p>
+e:T12de,
+## Project Overview
+
+The SV2A Mouse Synaptome Atlas is a modern web application for visualizing research data on Synaptic Vesicle Glycoprotein 2A (SV2A) protein diversity across the mouse brain. The platform enables researchers to explore how synaptic vesicle protein density and intensity vary across brain regions, developmental stages, and between sexes through an interactive brain atlas interface.
+
+## Project Details
+
+### Technologies Used
+
+* Next.js 14 (App Router)
+* TypeScript
+* React 18
+* Tailwind CSS
+* SVG Manipulation
+* Allen Brain Atlas Integration
+* GitLab CI/CD
+* Static Site Generation
+
+### Key Features
+
+* **Interactive Brain Atlas**: SVG-based mouse brain visualization with clickable regions, color-coded by SV2A measurements
+* **Dual Metric Analysis**: Toggle between SV2A density and intensity measurements
+* **Sex Differences Analysis**: View data for male, female, or combined cohorts to reveal sex-specific patterns
+* **Multi-Age Comparison**: Compare data across 3 developmental stages (6 weeks, 6 months, 18 months)
+* **Region Search**: Autocomplete search functionality to quickly find specific brain regions
+* **Dynamic Color Mapping**: Real-time color scale visualization based on selected metric and filters
+* **Regional Data Table**: Sortable list of brain regions with measurement values
+* **Selected Region Details**: Floating panel showing comprehensive data across all conditions
+* **Dataset Download**: Excel file export of complete research data
+* **Methodology Documentation**: Detailed research methodology and data analysis procedures
+* **Responsive Design**: Full mobile/tablet support with optimized touch controls
+
+### Development Process
+
+Developed as the web developer for the Grant Lab at University of Edinburgh to present their synaptic vesicle protein research in an accessible, interactive format.
+
+#### Frontend Architecture
+
+Built with Next.js 14 App Router and TypeScript:
+
+* **Component Structure**:
+  * `BrainAtlas.tsx` - Interactive SVG brain visualization with dynamic coloring
+  * `ControlPanel.tsx` - Metric, age, and sex selection controls
+  * `RegionalDataTable.tsx` - Filterable table of brain regions with values
+* **Data Management**:
+  * Separate JSON datasets for density and intensity measurements
+  * Sex-stratified data (male, female, combined)
+  * Allen Brain Atlas structure hierarchy integration
+* **State Management**:
+  * Metric selection (density/intensity)
+  * Age group filtering (6W, 6M, 18M)
+  * Sex cohort selection (male/female/combined)
+  * Region selection and hover states
+
+#### Data Visualization
+
+* **Color Scale**: Custom gradient mapping for SV2A measurement values
+* **Multi-dimensional Filtering**: Combine metric, age, and sex filters
+* **Interactive Tooltips**: Hover information with region details and current values
+* **Comparison Views**: Side-by-side analysis across different conditions
+
+### Technical Highlights
+
+* **Type-Safe Development**: Full TypeScript implementation with interfaces for brain data and component props
+* **Dual Dataset Architecture**: Separate density and intensity data files with unified visualization
+* **Sex-Stratified Analysis**: Built-in support for male/female/combined cohort comparisons
+* **Allen Brain Atlas Integration**: Maps research data to standardized brain structure IDs
+* **Static Export**: Generates fully static site for GitLab Pages deployment
+
+### Research Context
+
+The application visualizes research data on SV2A synaptic vesicle proteins:
+
+* **Target Protein**: SV2A (Synaptic Vesicle Glycoprotein 2A) - essential for neurotransmitter release and synaptic vesicle trafficking
+* **Measurements**: Density and intensity values across brain regions
+* **Developmental Stages**: 6 weeks, 6 months, 18 months
+* **Sample Size**: Data from 33 mice total
+* **Sex Analysis**: Separate cohorts for male, female, and combined analysis
+* **Brain Coverage**: Multiple anatomically defined regions from Allen Mouse Brain Atlas
+
+## Scientific Impact
+
+The atlas serves the neuroscience research community by providing:
+
+* Interactive exploration of synaptic vesicle protein distribution across the brain
+* Sex-specific analysis revealing differences in synaptic protein expression
+* Developmental trajectory visualization across three life stages
+* Downloadable datasets for further analysis
+
+## Deployment
+
+* **Platform**: GitLab Pages with CI/CD pipeline
+* **Build**: Static export via Next.js for optimal performance
+* **URL**: Hosted on University of Edinburgh GitLab infrastructure
+
+## Funding
+
+Research supported by:
+* Wellcome Trust
+* University of Edinburgh
+
+## Project Context
+
+Developed for Professor Seth G.N. Grant's lab at the Centre for Clinical Brain Sciences, University of Edinburgh, to make their SV2A synaptic vesicle protein research accessible through modern web visualization.
+2:["$","$Lc",null,{"project":{"id":"sv2a-mouse-synaptome-atlas","metadata":{"title":"SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization","date":"2025-11-26","summary":"An interactive web application for visualizing SV2A synaptic vesicle protein density and intensity measurements across mouse brain regions, developmental stages, and sex differences. Built for the Grant Lab at University of Edinburgh, featuring dual-metric analysis and comprehensive sex-specific data visualization.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/sv2amousesynaptomeatlas.jpg","tag":"Next.js, TypeScript, React, Tailwind CSS, SVG, Data Visualization, Neuroscience","demo":"https://git-pages.ecdf.ed.ac.uk/grantlab/sv2a-mouse-synaptome-atlas/"},"content":"$d","rawContent":"$e"}}]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization | Digin Dominic"}],["$","meta","3",{"name":"description","content":"An interactive web application for visualizing SV2A synaptic vesicle protein density and intensity measurements across mouse brain regions, developmental stages, and sex differences. Built for the Grant Lab at University of Edinburgh, featuring dual-metric analysis and comprehensive sex-specific data visualization."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/sv2a-mouse-synaptome-atlas/"}],["$","meta","11",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","12",{"property":"og:title","content":"SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization | Digin Dominic"}],["$","meta","13",{"property":"og:description","content":"An interactive web application for visualizing SV2A synaptic vesicle protein density and intensity measurements across mouse brain regions, developmental stages, and sex differences. Built for the Grant Lab at University of Edinburgh, featuring dual-metric analysis and comprehensive sex-specific data visualization."}],["$","meta","14",{"property":"og:url","content":"https://digindominic.me/projects/sv2a-mouse-synaptome-atlas/"}],["$","meta","15",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/sv2amousesynaptomeatlas.jpg"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization | Digin Dominic"}],["$","meta","22",{"name":"twitter:description","content":"An interactive web application for visualizing SV2A synaptic vesicle protein density and intensity measurements across mouse brain regions, developmental stages, and sex differences. Built for the Grant Lab at University of Edinburgh, featuring dual-metric analysis and comprehensive sex-specific data visualization."}],["$","meta","23",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/sv2amousesynaptomeatlas.jpg"}]]
+1:null

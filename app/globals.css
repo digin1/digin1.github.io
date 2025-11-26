@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body antialiased;
+    @apply bg-light-bg text-light-text;
+    @apply transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-deep-space text-ghost-white;
+  }
+}
+
+@layer components {
+  /* Glass card effect */
+  .glass-card {
+    @apply rounded-xl backdrop-blur-sm border transition-all duration-300;
+    @apply bg-white/80 border-light-border shadow-card;
+  }
+
+  .dark .glass-card {
+    @apply bg-midnight-steel/80 border-slate-700/50;
+  }
+
+  /* Section styles */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-header {
+    @apply mb-12 text-center;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4;
+    @apply text-light-text;
+  }
+
+  .dark .section-title {
+    @apply text-ghost-white;
+  }
+
+  .section-title span {
+    @apply bg-gradient-to-r from-neural-blue to-synapse-cyan bg-clip-text text-transparent;
+  }
+
+  /* Gradient text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-neural-blue to-synapse-cyan bg-clip-text text-transparent;
+  }
+
+  /* Button styles */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium;
+    @apply bg-gradient-to-r from-neural-blue to-synapse-cyan text-white;
+    @apply hover:shadow-glow-blue hover:-translate-y-0.5 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium;
+    @apply border transition-all duration-300;
+    @apply bg-light-surface border-light-border text-light-text hover:border-neural-blue/50 hover:bg-neural-blue/5;
+  }
+
+  .dark .btn-secondary {
+    @apply bg-midnight-steel/80 border-slate-700/50 text-ghost-white hover:border-neural-blue/50 hover:bg-neural-blue/10;
+  }
+
+  /* Description text */
+  .description {
+    @apply text-light-text-secondary max-w-2xl;
+  }
+
+  .dark .description {
+    @apply text-muted-steel;
+  }
+
+  /* Skeleton loader */
+  .skeleton {
+    @apply animate-pulse rounded;
+    @apply bg-light-border;
+  }
+
+  .dark .skeleton {
+    @apply bg-slate-700/50;
+  }
+
+  /* Tag styles */
+  .tag {
+    @apply px-3 py-1.5 text-sm font-mono rounded-full;
+    @apply bg-neural-blue/10 text-neural-blue border border-neural-blue/20;
+  }
+
+  /* Card hover effect */
+  .card-hover {
+    @apply transition-all duration-300;
+    @apply hover:-translate-y-1 hover:shadow-card-hover;
+  }
+
+  .dark .card-hover {
+    @apply hover:border-neural-blue/30;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* White glow for images in dark mode (useful for PNGs with transparency) */
+  .dark .img-glow {
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.15));
+  }
+
+  .dark .img-glow-strong {
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.25));
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-light-surface;
+}
+
+.dark ::-webkit-scrollbar-track {
+  @apply bg-deep-space;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-light-border rounded-full;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  @apply bg-slate-700;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neural-blue/50;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

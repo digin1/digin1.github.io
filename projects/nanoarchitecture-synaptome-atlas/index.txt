@@ -1,0 +1,226 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-a103402a46f71b56.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-a103402a46f71b56.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-a103402a46f71b56.js"],"default"]
+9:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+a:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-a103402a46f71b56.js"],"default"]
+4:["id","nanoarchitecture-synaptome-atlas","d"]
+0:["AnKDAAT4R-quPv5a2qq_b",[[["",{"children":["projects",{"children":[["id","nanoarchitecture-synaptome-atlas","d"],{"children":["__PAGE__?{\"id\":\"nanoarchitecture-synaptome-atlas\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","nanoarchitecture-synaptome-atlas","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L9",null,{}],"notFoundStyles":[]}]}],["$","$La",null,{}]]}]]}]]}]],null],null],["$Lb",null]]]]
+c:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+d:T1852,<h2>Project Overview</h2>
+<p>The Nanoarchitecture Synaptome Atlas is a modern web application for visualizing research data on PSD95 protein proximity within synaptic structures across the mouse brain. The platform enables researchers to explore how synaptic molecular organization varies across brain regions and developmental stages through an interactive brain atlas interface.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>Next.js 14 (App Router)</li>
+<li>TypeScript</li>
+<li>React 18</li>
+<li>Tailwind CSS</li>
+<li>SVG Manipulation</li>
+<li>Allen Brain Atlas Integration</li>
+<li>GitLab CI/CD</li>
+<li>Static Site Generation</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Interactive Brain Atlas</strong>: SVG-based mouse brain visualization with clickable and hoverable regions, color-coded by PSD95 proximity index values</li>
+<li><strong>Multi-Age Comparison</strong>: View and compare data across 4 developmental stages (2W, 4M, 12M, 18M)</li>
+<li><strong>Region Search</strong>: Autocomplete search functionality to quickly find specific brain regions by name or classification</li>
+<li><strong>Dynamic Color Mapping</strong>: Real-time color scale visualization mapping proximity index values (15-40) to a gradient color scheme</li>
+<li><strong>Regional Data Table</strong>: Sortable list of all 43 brain regions with proximity index values</li>
+<li><strong>Selected Region Details</strong>: Floating panel showing comprehensive data for selected regions across all age groups</li>
+<li><strong>Dataset Download</strong>: Excel file export of complete research data</li>
+<li><strong>Methodology Documentation</strong>: Detailed research methodology including animal model, measurement techniques, and data analysis procedures</li>
+<li><strong>Responsive Design</strong>: Full mobile/tablet support with collapsible sidebar and touch-optimized controls</li>
+</ul>
+<h3>Development Process</h3>
+<p>Developed as the web developer for the Grant Lab at University of Edinburgh to present their neuroscience research data in an accessible, interactive format.</p>
+<h4>Frontend Architecture</h4>
+<p>Built with Next.js 14 App Router and TypeScript for type-safe development:</p>
+<ul>
+<li><strong>Component Structure</strong>:
+<ul>
+<li><code>BrainAtlas.tsx</code> - Interactive SVG brain visualization with mouse event handling, color mapping, and region highlighting</li>
+<li><code>RegionalDataTable.tsx</code> - Filterable, searchable table of brain regions with proximity index values</li>
+</ul>
+</li>
+<li><strong>Data Flow</strong>:
+<ul>
+<li>JSON-based research data with 43 brain regions and 4 age groups</li>
+<li>Allen Brain Atlas structure hierarchy for region mapping</li>
+<li>Real-time filtering and search with autocomplete suggestions</li>
+</ul>
+</li>
+<li><strong>SVG Manipulation</strong>:
+<ul>
+<li>Dynamic color application based on proximity index values</li>
+<li>Hover and selection state management</li>
+<li>Parent-child region hierarchy support for nested brain structures</li>
+</ul>
+</li>
+</ul>
+<h4>Data Visualization</h4>
+<ul>
+<li><strong>Color Scale Algorithm</strong>: Custom gradient mapping from blue (low values) through green/yellow to orange/red (high values)</li>
+<li><strong>Value Range</strong>: Normalized visualization for PSD95 proximity index values (15-40 range)</li>
+<li><strong>Interactive Tooltips</strong>: Hover information showing region name, classification, and current age value</li>
+<li><strong>Selection Panel</strong>: Detailed view of selected region with values across all developmental stages</li>
+</ul>
+<h4>SEO &#x26; Accessibility</h4>
+<ul>
+<li>Comprehensive JSON-LD structured data for Dataset schema</li>
+<li>Semantic HTML with proper heading hierarchy</li>
+<li>Keyboard navigation support (ESC to deselect)</li>
+<li>Mobile-first responsive design</li>
+</ul>
+<h3>Technical Highlights</h3>
+<ul>
+<li><strong>Type-Safe Development</strong>: Full TypeScript implementation with proper interfaces for brain data, region mappings, and component props</li>
+<li><strong>Performance Optimization</strong>: Memoized components, efficient SVG updates, and debounced search</li>
+<li><strong>Static Export</strong>: Generates fully static site for GitLab Pages deployment</li>
+<li><strong>Allen Brain Atlas Integration</strong>: Maps research data to standardized brain structure IDs for consistent visualization</li>
+<li><strong>Hierarchical Region Mapping</strong>: Supports parent-child relationships in brain structure hierarchy</li>
+</ul>
+<h3>Research Context</h3>
+<p>The application visualizes actual research data on PSD95–PSD95 Supercomplex Proximity Index:</p>
+<ul>
+<li><strong>Measurement Method</strong>: FRET efficiency between PSD95 molecules labeled with JF552 and JFX650 fluorophores</li>
+<li><strong>Animal Model</strong>: PSD95 (Halo/Halo) knock-in mice with HaloTag labeling technology</li>
+<li><strong>Brain Coverage</strong>: 43 anatomically defined regions from the Allen Mouse Brain Atlas</li>
+<li><strong>Replication</strong>: Data from six biological replicates per condition</li>
+<li><strong>Publication</strong>: Associated with eLife publication (Morris K., et al. 2024)</li>
+</ul>
+<h2>Scientific Impact</h2>
+<p>The atlas serves the neuroscience research community by providing:</p>
+<ul>
+<li>Interactive exploration of synaptic protein organization across the brain</li>
+<li>Comparison of molecular architecture changes during development</li>
+<li>Downloadable datasets for further analysis</li>
+<li>Visual representation of complex FRET measurement data</li>
+</ul>
+<h2>Deployment</h2>
+<ul>
+<li><strong>Platform</strong>: GitLab Pages with CI/CD pipeline</li>
+<li><strong>Build</strong>: Static export via Next.js for optimal performance</li>
+<li><strong>URL</strong>: Hosted on University of Edinburgh GitLab infrastructure</li>
+</ul>
+<h2>Funding</h2>
+<p>Research supported by:</p>
+<ul>
+<li>Uehara Memorial Foundation</li>
+<li>Marie Skłodowska-Curie Actions</li>
+<li>Wellcome Trust</li>
+</ul>
+<h2>Project Context</h2>
+<p>Developed for Professor Seth G.N. Grant's lab at the Centre for Clinical Brain Sciences, University of Edinburgh, to make their synaptic nanoarchitecture research accessible through modern web visualization.</p>
+e:T1458,
+## Project Overview
+
+The Nanoarchitecture Synaptome Atlas is a modern web application for visualizing research data on PSD95 protein proximity within synaptic structures across the mouse brain. The platform enables researchers to explore how synaptic molecular organization varies across brain regions and developmental stages through an interactive brain atlas interface.
+
+## Project Details
+
+### Technologies Used
+
+* Next.js 14 (App Router)
+* TypeScript
+* React 18
+* Tailwind CSS
+* SVG Manipulation
+* Allen Brain Atlas Integration
+* GitLab CI/CD
+* Static Site Generation
+
+### Key Features
+
+* **Interactive Brain Atlas**: SVG-based mouse brain visualization with clickable and hoverable regions, color-coded by PSD95 proximity index values
+* **Multi-Age Comparison**: View and compare data across 4 developmental stages (2W, 4M, 12M, 18M)
+* **Region Search**: Autocomplete search functionality to quickly find specific brain regions by name or classification
+* **Dynamic Color Mapping**: Real-time color scale visualization mapping proximity index values (15-40) to a gradient color scheme
+* **Regional Data Table**: Sortable list of all 43 brain regions with proximity index values
+* **Selected Region Details**: Floating panel showing comprehensive data for selected regions across all age groups
+* **Dataset Download**: Excel file export of complete research data
+* **Methodology Documentation**: Detailed research methodology including animal model, measurement techniques, and data analysis procedures
+* **Responsive Design**: Full mobile/tablet support with collapsible sidebar and touch-optimized controls
+
+### Development Process
+
+Developed as the web developer for the Grant Lab at University of Edinburgh to present their neuroscience research data in an accessible, interactive format.
+
+#### Frontend Architecture
+
+Built with Next.js 14 App Router and TypeScript for type-safe development:
+
+* **Component Structure**:
+  * `BrainAtlas.tsx` - Interactive SVG brain visualization with mouse event handling, color mapping, and region highlighting
+  * `RegionalDataTable.tsx` - Filterable, searchable table of brain regions with proximity index values
+* **Data Flow**:
+  * JSON-based research data with 43 brain regions and 4 age groups
+  * Allen Brain Atlas structure hierarchy for region mapping
+  * Real-time filtering and search with autocomplete suggestions
+* **SVG Manipulation**:
+  * Dynamic color application based on proximity index values
+  * Hover and selection state management
+  * Parent-child region hierarchy support for nested brain structures
+
+#### Data Visualization
+
+* **Color Scale Algorithm**: Custom gradient mapping from blue (low values) through green/yellow to orange/red (high values)
+* **Value Range**: Normalized visualization for PSD95 proximity index values (15-40 range)
+* **Interactive Tooltips**: Hover information showing region name, classification, and current age value
+* **Selection Panel**: Detailed view of selected region with values across all developmental stages
+
+#### SEO & Accessibility
+
+* Comprehensive JSON-LD structured data for Dataset schema
+* Semantic HTML with proper heading hierarchy
+* Keyboard navigation support (ESC to deselect)
+* Mobile-first responsive design
+
+### Technical Highlights
+
+* **Type-Safe Development**: Full TypeScript implementation with proper interfaces for brain data, region mappings, and component props
+* **Performance Optimization**: Memoized components, efficient SVG updates, and debounced search
+* **Static Export**: Generates fully static site for GitLab Pages deployment
+* **Allen Brain Atlas Integration**: Maps research data to standardized brain structure IDs for consistent visualization
+* **Hierarchical Region Mapping**: Supports parent-child relationships in brain structure hierarchy
+
+### Research Context
+
+The application visualizes actual research data on PSD95–PSD95 Supercomplex Proximity Index:
+
+* **Measurement Method**: FRET efficiency between PSD95 molecules labeled with JF552 and JFX650 fluorophores
+* **Animal Model**: PSD95 (Halo/Halo) knock-in mice with HaloTag labeling technology
+* **Brain Coverage**: 43 anatomically defined regions from the Allen Mouse Brain Atlas
+* **Replication**: Data from six biological replicates per condition
+* **Publication**: Associated with eLife publication (Morris K., et al. 2024)
+
+## Scientific Impact
+
+The atlas serves the neuroscience research community by providing:
+
+* Interactive exploration of synaptic protein organization across the brain
+* Comparison of molecular architecture changes during development
+* Downloadable datasets for further analysis
+* Visual representation of complex FRET measurement data
+
+## Deployment
+
+* **Platform**: GitLab Pages with CI/CD pipeline
+* **Build**: Static export via Next.js for optimal performance
+* **URL**: Hosted on University of Edinburgh GitLab infrastructure
+
+## Funding
+
+Research supported by:
+* Uehara Memorial Foundation
+* Marie Skłodowska-Curie Actions
+* Wellcome Trust
+
+## Project Context
+
+Developed for Professor Seth G.N. Grant's lab at the Centre for Clinical Brain Sciences, University of Edinburgh, to make their synaptic nanoarchitecture research accessible through modern web visualization.
+2:["$","$Lc",null,{"project":{"id":"nanoarchitecture-synaptome-atlas","metadata":{"title":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization","date":"2025-11-24","summary":"An interactive web application for visualizing PSD95 proximity index measurements across 43 mouse brain regions and 4 developmental stages. Built for the Grant Lab at University of Edinburgh, featuring SVG-based brain atlas, real-time data visualization, and comprehensive research methodology documentation.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/nanoarchitecturesynaptomeatlas.jpg","tag":"Next.js, TypeScript, React, Tailwind CSS, SVG, Data Visualization, Neuroscience","demo":"https://git-pages.ecdf.ed.ac.uk/grantlab/nanoarchitecture-synaptome-atlas/"},"content":"$d","rawContent":"$e"}}]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization | Digin Dominic"}],["$","meta","3",{"name":"description","content":"An interactive web application for visualizing PSD95 proximity index measurements across 43 mouse brain regions and 4 developmental stages. Built for the Grant Lab at University of Edinburgh, featuring SVG-based brain atlas, real-time data visualization, and comprehensive research methodology documentation."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/nanoarchitecture-synaptome-atlas/"}],["$","meta","11",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","12",{"property":"og:title","content":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization | Digin Dominic"}],["$","meta","13",{"property":"og:description","content":"An interactive web application for visualizing PSD95 proximity index measurements across 43 mouse brain regions and 4 developmental stages. Built for the Grant Lab at University of Edinburgh, featuring SVG-based brain atlas, real-time data visualization, and comprehensive research methodology documentation."}],["$","meta","14",{"property":"og:url","content":"https://digindominic.me/projects/nanoarchitecture-synaptome-atlas/"}],["$","meta","15",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/nanoarchitecturesynaptomeatlas.jpg"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization | Digin Dominic"}],["$","meta","22",{"name":"twitter:description","content":"An interactive web application for visualizing PSD95 proximity index measurements across 43 mouse brain regions and 4 developmental stages. Built for the Grant Lab at University of Edinburgh, featuring SVG-based brain atlas, real-time data visualization, and comprehensive research methodology documentation."}],["$","meta","23",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/nanoarchitecturesynaptomeatlas.jpg"}]]
+1:null

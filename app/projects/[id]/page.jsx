@@ -11,13 +11,33 @@ export async function generateMetadata({ params }) {
   const project = await getContentById('projects', params.id);
   if (!project) return { title: 'Project Not Found' };
 
+  const { title, summary, image, technologies } = project.metadata;
+  const projectUrl = `https://digindominic.me/projects/${params.id}`;
+
   return {
-    title: `${project.metadata.title} | Digin Dominic`,
-    description: project.metadata.summary || '',
+    title: title,
+    description: summary || `${title} - A project by Digin Dominic`,
+    keywords: technologies || [],
     openGraph: {
-      title: project.metadata.title,
-      description: project.metadata.summary || '',
-      images: project.metadata.image ? [project.metadata.image] : [],
+      title: `${title} | Digin Dominic`,
+      description: summary || '',
+      url: projectUrl,
+      type: 'article',
+      images: image ? [{
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: title,
+      }] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | Digin Dominic`,
+      description: summary || '',
+      images: image ? [image] : [],
+    },
+    alternates: {
+      canonical: projectUrl,
     },
   };
 }

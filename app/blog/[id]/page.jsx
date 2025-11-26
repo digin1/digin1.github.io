@@ -11,14 +11,35 @@ export async function generateMetadata({ params }) {
   const post = await getContentById('blog', params.id);
   if (!post) return { title: 'Blog Post Not Found' };
 
+  const { title, summary, image, date, tags } = post.metadata;
+  const postUrl = `https://digindominic.me/blog/${params.id}`;
+
   return {
-    title: `${post.metadata.title} | Digin Dominic`,
-    description: post.metadata.summary || '',
+    title: title,
+    description: summary || `${title} - Blog post by Digin Dominic`,
+    keywords: tags || [],
     openGraph: {
-      title: post.metadata.title,
-      description: post.metadata.summary || '',
+      title: `${title} | Digin Dominic`,
+      description: summary || '',
+      url: postUrl,
       type: 'article',
-      images: post.metadata.image ? [post.metadata.image] : [],
+      publishedTime: date || undefined,
+      authors: ['Digin Dominic'],
+      images: image ? [{
+        url: image,
+        width: 1200,
+        height: 630,
+        alt: title,
+      }] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | Digin Dominic`,
+      description: summary || '',
+      images: image ? [image] : [],
+    },
+    alternates: {
+      canonical: postUrl,
     },
   };
 }

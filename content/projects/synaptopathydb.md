@@ -1,5 +1,5 @@
 ---
-title: "SynaptopathyDB - Synapse Disease Database"
+title: "SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research"
 date: "2025-06-27"
 summary: "A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access."
 image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/synaptopathydb.png"

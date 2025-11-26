@@ -1,0 +1,82 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","boot-factory-e-commerce-platform-development","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","boot-factory-e-commerce-platform-development","d"],{"children":["__PAGE__?{\"id\":\"boot-factory-e-commerce-platform-development\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","boot-factory-e-commerce-platform-development","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:Tb45,<h2>Project Overview</h2>
+<p>Boot Factory is an e-commerce web application developed as coursework using the ASP.NET MVC framework and C#. The project demonstrates my ability to build scalable, secure, and user-friendly web applications from the ground up. The platform allows users to browse a catalogue of footwear products, add items to their shopping basket, and proceed through a complete checkout process.</p>
+<h2>Technical Stack</h2>
+<ul>
+<li><strong>Backend</strong>: C# with ASP.NET MVC framework</li>
+<li><strong>Frontend</strong>: HTML5, CSS3, Bootstrap for responsive design</li>
+<li><strong>Database</strong>: SQL Server for product data and user management</li>
+<li><strong>Authentication</strong>: ASP.NET Identity for secure user login and registration</li>
+<li><strong>Version Control</strong>: Git for source code management</li>
+</ul>
+<h2>Key Features Implemented</h2>
+<ul>
+<li><strong>User Authentication System</strong>: Secure login, registration, and user profile management with email confirmation</li>
+<li><strong>Product Catalogue</strong>: Categorized browsing with filtering and search functionality</li>
+<li><strong>Shopping Basket</strong>: AJAX-powered add/remove functionality with real-time total calculation</li>
+<li><strong>Order Processing</strong>: Complete checkout flow with address collection and order confirmation</li>
+<li><strong>Admin Dashboard</strong>: Product management interface for adding, editing, and removing products</li>
+<li><strong>Responsive Design</strong>: Mobile-friendly interface that adapts to different screen sizes</li>
+</ul>
+<h2>Development Challenges</h2>
+<p>The most significant challenges I encountered during development included implementing session management for the shopping basket functionality and ensuring proper validation of user input throughout the application. I overcame these by leveraging ASP.NET session state management and implementing robust model validation.</p>
+<h2>What I Learned</h2>
+<p>This project significantly improved my understanding of:</p>
+<ul>
+<li>MVC architecture pattern and its practical implementation</li>
+<li>Entity Framework for database operations</li>
+<li>Authentication and authorization in web applications</li>
+<li>Frontend-backend integration using Razor views</li>
+<li>Form validation and security best practices</li>
+<li>User experience design for e-commerce platforms</li>
+</ul>
+<h2>Conclusion</h2>
+<p>The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.</p>
+<h2>GitHub Repository</h2>
+<p>[<a href="https://github.com/digin1/Boot-Factory">digin1/Boot-Factory</a>](https://github.com/digin1/Boot-Factory)</p>
+d:T9cc,
+## Project Overview
+Boot Factory is an e-commerce web application developed as coursework using the ASP.NET MVC framework and C#. The project demonstrates my ability to build scalable, secure, and user-friendly web applications from the ground up. The platform allows users to browse a catalogue of footwear products, add items to their shopping basket, and proceed through a complete checkout process.
+
+## Technical Stack
+* **Backend**: C# with ASP.NET MVC framework
+* **Frontend**: HTML5, CSS3, Bootstrap for responsive design
+* **Database**: SQL Server for product data and user management
+* **Authentication**: ASP.NET Identity for secure user login and registration
+* **Version Control**: Git for source code management
+
+## Key Features Implemented
+* **User Authentication System**: Secure login, registration, and user profile management with email confirmation
+* **Product Catalogue**: Categorized browsing with filtering and search functionality
+* **Shopping Basket**: AJAX-powered add/remove functionality with real-time total calculation
+* **Order Processing**: Complete checkout flow with address collection and order confirmation
+* **Admin Dashboard**: Product management interface for adding, editing, and removing products
+* **Responsive Design**: Mobile-friendly interface that adapts to different screen sizes
+
+## Development Challenges
+The most significant challenges I encountered during development included implementing session management for the shopping basket functionality and ensuring proper validation of user input throughout the application. I overcame these by leveraging ASP.NET session state management and implementing robust model validation.
+
+## What I Learned
+This project significantly improved my understanding of:
+* MVC architecture pattern and its practical implementation
+* Entity Framework for database operations
+* Authentication and authorization in web applications
+* Frontend-backend integration using Razor views
+* Form validation and security best practices
+* User experience design for e-commerce platforms
+
+## Conclusion
+The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.
+
+## GitHub Repository
+[[digin1/Boot-Factory](https://github.com/digin1/Boot-Factory)](https://github.com/digin1/Boot-Factory)2:["$","$Lb",null,{"project":{"id":"boot-factory-e-commerce-platform-development","metadata":{"title":"Boot Factory: E-Commerce Platform Development with ASP.NET MVC","date":"2021-05-31","summary":"Designed and built a fully functional e-commerce platform for footwear using C# ASP.NET MVC architecture. This coursework project demonstrates proficiency in web development frameworks, database integration, user authentication, and shopping cart functionality while following industry best practices.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/bootfactory.png","tag":"ASP.NET, C#, MVC","github":"https://github.com/digin1/Boot-Factory"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Boot Factory: E-Commerce Platform Development with ASP.NET MVC | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Designed and built a fully functional e-commerce platform for footwear using C# ASP.NET MVC architecture. This coursework project demonstrates proficiency in web development frameworks, database integration, user authentication, and shopping cart functionality while following industry best practices."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"Boot Factory: E-Commerce Platform Development with ASP.NET MVC"}],["$","meta","7",{"property":"og:description","content":"Designed and built a fully functional e-commerce platform for footwear using C# ASP.NET MVC architecture. This coursework project demonstrates proficiency in web development frameworks, database integration, user authentication, and shopping cart functionality while following industry best practices."}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/bootfactory.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/bootfactory.png"}]]
+1:null

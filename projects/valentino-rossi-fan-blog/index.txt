@@ -1,0 +1,146 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","valentino-rossi-fan-blog","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","valentino-rossi-fan-blog","d"],{"children":["__PAGE__?{\"id\":\"valentino-rossi-fan-blog\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","valentino-rossi-fan-blog","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:T1288,<h2>Project Overview</h2>
+<p>A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.</p>
+<h2>Project Details</h2>
+<h3>Technologies &#x26; Platforms Used</h3>
+<ul>
+<li>Blogger/Blogspot CMS</li>
+<li>HTML/CSS customization</li>
+<li>JavaScript for dynamic elements</li>
+<li>Responsive design principles</li>
+<li>Social media integration</li>
+<li>Google Analytics</li>
+<li>Custom domain configuration</li>
+<li>SEO optimization</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Multi-category Content Layout</strong>: Organized sections for different types of racing news and Rossi updates</li>
+<li><strong>Custom Navigation Menu</strong>: Easy access to store, tickets, official websites, and social channels</li>
+<li><strong>Responsive Grid Layout</strong>: Adaptable content display for all device sizes</li>
+<li><strong>Featured Posts Carousel</strong>: Highlighting important race updates and rider interactions</li>
+<li><strong>Social Media Integration</strong>: Direct links to MotoGP and Rossi's official social channels</li>
+<li><strong>Comment System</strong>: Community engagement through discussion threads</li>
+<li><strong>Post Categorization</strong>: Organized content by year, event type, and rider interactions</li>
+<li><strong>Page View Counter</strong>: Tracking blog popularity and audience engagement</li>
+<li><strong>Media-Rich Articles</strong>: High-quality images from races and events</li>
+</ul>
+<h3>Development Process</h3>
+<p>The blog was built on Blogger's platform with extensive customization to create a professional sports news site appearance. Key steps included:</p>
+<ol>
+<li><strong>Platform Selection</strong>: Chose Blogger for its reliability and customization options</li>
+<li><strong>Template Customization</strong>: Modified a base template with MotoGP-inspired colors and layout</li>
+<li><strong>Navigation Structure</strong>: Created a comprehensive menu system linking to relevant MotoGP resources</li>
+<li><strong>Content Strategy</strong>: Developed a consistent posting schedule around race events and news</li>
+<li><strong>Performance Optimization</strong>: Implemented image compression and lazy loading for faster page loads</li>
+<li><strong>SEO Implementation</strong>: Optimized posts with appropriate keywords related to Valentino Rossi and MotoGP</li>
+</ol>
+<h3>Special Features</h3>
+<ul>
+<li><strong>Race Coverage</strong>: Detailed articles about Rossi's performances in MotoGP races</li>
+<li><strong>Rider Interactions</strong>: Coverage of special moments between Rossi and other racers, particularly Lewis Hamilton</li>
+<li><strong>Event Calendar</strong>: Updates on upcoming races and appearances</li>
+<li><strong>Historical Content</strong>: Articles about Rossi's career milestones and achievements</li>
+<li><strong>Fan Community</strong>: Space for Rossi enthusiasts to connect and discuss</li>
+</ul>
+<h3>Results</h3>
+<ul>
+<li>Established a dedicated platform for English-speaking Valentino Rossi fans</li>
+<li>Created a comprehensive archive of race coverage and career highlights</li>
+<li>Built a community of engaged MotoGP enthusiasts</li>
+<li>Developed content management and publishing skills</li>
+<li>Gained experience in sports content creation and audience building</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>Custom CSS Modifications</strong>: Enhanced the standard Blogger template with racing-themed design elements</li>
+<li><strong>Responsive Grid Layout</strong>: Implemented a flexible content grid that adapts to various screen sizes</li>
+<li><strong>Category-Based Navigation</strong>: Created an intuitive content organization system</li>
+<li><strong>Image Optimization</strong>: Implemented techniques to balance quality and loading speed</li>
+<li><strong>Cross-Posting Integration</strong>: Connected blog content with social media platforms</li>
+</ul>
+<h2>Achievements</h2>
+<ul>
+<li>Consistent content production spanning multiple MotoGP seasons</li>
+<li>Coverage of special events like the Rossi-Hamilton vehicle swap</li>
+<li>Built a loyal readership of motorcycle racing enthusiasts</li>
+<li>Developed expertise in motorsport content creation</li>
+<li>Practical application of web publishing and content management skills</li>
+</ul>
+<p>The <a href="https://46vale.info">46vale.info</a> fan blog demonstrates my ability to create and maintain a content-rich website focused on a specific interest area, implement appropriate design elements for the subject matter, and build an engaged community around shared passions.</p>
+d:Tf84,
+## Project Overview
+A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.
+
+## Project Details
+
+### Technologies & Platforms Used
+* Blogger/Blogspot CMS
+* HTML/CSS customization
+* JavaScript for dynamic elements
+* Responsive design principles
+* Social media integration
+* Google Analytics
+* Custom domain configuration
+* SEO optimization
+
+### Key Features
+* **Multi-category Content Layout**: Organized sections for different types of racing news and Rossi updates
+* **Custom Navigation Menu**: Easy access to store, tickets, official websites, and social channels
+* **Responsive Grid Layout**: Adaptable content display for all device sizes
+* **Featured Posts Carousel**: Highlighting important race updates and rider interactions
+* **Social Media Integration**: Direct links to MotoGP and Rossi's official social channels
+* **Comment System**: Community engagement through discussion threads
+* **Post Categorization**: Organized content by year, event type, and rider interactions
+* **Page View Counter**: Tracking blog popularity and audience engagement
+* **Media-Rich Articles**: High-quality images from races and events
+
+### Development Process
+The blog was built on Blogger's platform with extensive customization to create a professional sports news site appearance. Key steps included:
+
+1. **Platform Selection**: Chose Blogger for its reliability and customization options
+2. **Template Customization**: Modified a base template with MotoGP-inspired colors and layout
+3. **Navigation Structure**: Created a comprehensive menu system linking to relevant MotoGP resources
+4. **Content Strategy**: Developed a consistent posting schedule around race events and news
+5. **Performance Optimization**: Implemented image compression and lazy loading for faster page loads
+6. **SEO Implementation**: Optimized posts with appropriate keywords related to Valentino Rossi and MotoGP
+
+### Special Features
+* **Race Coverage**: Detailed articles about Rossi's performances in MotoGP races
+* **Rider Interactions**: Coverage of special moments between Rossi and other racers, particularly Lewis Hamilton
+* **Event Calendar**: Updates on upcoming races and appearances
+* **Historical Content**: Articles about Rossi's career milestones and achievements
+* **Fan Community**: Space for Rossi enthusiasts to connect and discuss
+
+### Results
+* Established a dedicated platform for English-speaking Valentino Rossi fans
+* Created a comprehensive archive of race coverage and career highlights
+* Built a community of engaged MotoGP enthusiasts
+* Developed content management and publishing skills
+* Gained experience in sports content creation and audience building
+
+## Technical Highlights
+* **Custom CSS Modifications**: Enhanced the standard Blogger template with racing-themed design elements
+* **Responsive Grid Layout**: Implemented a flexible content grid that adapts to various screen sizes
+* **Category-Based Navigation**: Created an intuitive content organization system 
+* **Image Optimization**: Implemented techniques to balance quality and loading speed
+* **Cross-Posting Integration**: Connected blog content with social media platforms
+
+## Achievements
+* Consistent content production spanning multiple MotoGP seasons
+* Coverage of special events like the Rossi-Hamilton vehicle swap
+* Built a loyal readership of motorcycle racing enthusiasts
+* Developed expertise in motorsport content creation
+* Practical application of web publishing and content management skills
+
+The [46vale.info](https://46vale.info) fan blog demonstrates my ability to create and maintain a content-rich website focused on a specific interest area, implement appropriate design elements for the subject matter, and build an engaged community around shared passions.2:["$","$Lb",null,{"project":{"id":"valentino-rossi-fan-blog","metadata":{"title":"46vale.info - Valentino Rossi Fan Blog","date":"2013-03-15","summary":"A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/46vale.png","tag":"Blogger, XML","demo":"https://46vale.info"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"46vale.info - Valentino Rossi Fan Blog | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"46vale.info - Valentino Rossi Fan Blog"}],["$","meta","7",{"property":"og:description","content":"A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events."}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/46vale.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/46vale.png"}]]
+1:null

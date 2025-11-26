@@ -1,0 +1,1787 @@
+3:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+4:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+5:I[4707,[],""]
+6:I[6423,[],""]
+7:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+8:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L3",null,{"children":[["$","$L4",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L7",null,{}],"notFoundStyles":[]}]}],["$","$L8",null,{}]]}]}]]}]],null],null],["$L9",null]]]]
+a:I[1785,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","33","static/chunks/33-353e7490214619b7.js","931","static/chunks/app/page-029e0c34db45f27e.js"],"default"]
+b:I[6568,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","33","static/chunks/33-353e7490214619b7.js","931","static/chunks/app/page-029e0c34db45f27e.js"],"default"]
+20:I[8648,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","33","static/chunks/33-353e7490214619b7.js","931","static/chunks/app/page-029e0c34db45f27e.js"],"default"]
+c:T229a,<h2>Project Overview</h2>
+<p>SynaptopathyDB is an online resource designed to facilitate research into the genetic basis and clinical manifestations of synaptopathies — brain and behavioural disorders caused by mutations in genes encoding synaptic proteins. The platform integrates data from 64 mammalian synapse proteomic studies with multiple genetic and phenotypic resources, enabling researchers to explore connections between synaptic proteins, genetic variants, and human disease phenotypes.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>React.js</li>
+<li>Tailwind CSS</li>
+<li>Flask (Python)</li>
+<li>Flask-SQLAlchemy</li>
+<li>SQLite</li>
+<li>Recharts (Data Visualization)</li>
+<li>Docker</li>
+<li>nginx</li>
+<li>RESTful API</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Gene Search Interface</strong>: Comprehensive exploration of individual genes with detailed information including multiple species identifiers, associated publications, disease associations, mutation details, and synaptic compartment localization</li>
+<li><strong>Disease Search Interface</strong>: Explore diseases and their associated synaptic genes with detailed mutation information, publication links, and downloadable reports</li>
+<li><strong>Publication Search</strong>: Retrieve scientific publications with gene-disease connections, with filtering by associated genes and mutations</li>
+<li><strong>Autocomplete Search</strong>: Real-time suggestions supporting multiple identifier types including Human/Mouse/Rat Entrez, MGI, Ensembl ID, and gene aliases</li>
+<li><strong>Interactive Data Visualizations</strong>: Disease classification trends, protein localization history, discovery rate analyses, and compartment-specific protein distributions</li>
+<li><strong>CSV Data Export</strong>: Structured datasets including synapse proteome lists for further analysis</li>
+<li><strong>RESTful API</strong>: Programmatic access to raw data and complex queries with full documentation</li>
+<li><strong>Consensus Filtering</strong>: Filter results by protein localization within synaptic compartments</li>
+</ul>
+<h3>Development Process</h3>
+<p>As lead web developer, I built the full-stack web application while collaborating with researchers at the University of Edinburgh who provided the underlying databases and scientific data.</p>
+<h4>Frontend Architecture</h4>
+<p>Built a modular React.js application with custom hooks for reusable logic:</p>
+<ul>
+<li><strong>Custom Hooks</strong>:
+<ul>
+<li><code>useSearch</code> - Manages search state, autocomplete suggestions with debouncing (300ms), pagination, and tab data loading</li>
+<li><code>useConsensusFilter</code> - Filters search results to show only consensus genes (proteins found in 5+ studies)</li>
+<li><code>useToggle</code> - Handles expandable cards and collapsible sections</li>
+</ul>
+</li>
+<li><strong>Search Implementation</strong>:
+<ul>
+<li>Real-time autocomplete using lodash debounce</li>
+<li>Protein name detection with MyGene.info API integration for protein-to-gene symbol resolution</li>
+<li>Multi-identifier support (Entrez, MGI, Ensembl, UniProt)</li>
+<li>URL query parameter support for shareable searches</li>
+</ul>
+</li>
+<li><strong>Component Structure</strong>:
+<ul>
+<li>18 page components including GeneSearch (119KB), DiseaseSearch, PaperSearch</li>
+<li>Reusable components: SearchForm, Pagination, DownloadButton, NoResults</li>
+<li>Visualization components using Recharts for interactive charts</li>
+</ul>
+</li>
+</ul>
+<h4>Backend Architecture</h4>
+<p>Developed a Flask REST API with modular route blueprints:</p>
+<ul>
+<li><strong>Database Layer</strong>:
+<ul>
+<li>SQLAlchemy ORM with SQLite backend (~770MB database)</li>
+<li>Complex JOIN queries across Gene, Disease, Paper, Mutation, and PaperGene tables</li>
+<li>Connection pooling with 300-second timeout for long-running queries</li>
+<li>SQL trace logging for debugging</li>
+</ul>
+</li>
+<li><strong>API Endpoints</strong>:
+<ul>
+<li><code>/api/gene/search</code> - Gene search with pagination and filtering</li>
+<li><code>/api/gene/&#x3C;id>/tab/&#x3C;type></code> - Lazy-loaded tab data (papers, diseases, mutations)</li>
+<li><code>/api/disease/search</code> - Disease search with gene associations</li>
+<li><code>/api/paper/search</code> - Publication search with gene/mutation counts</li>
+<li><code>/api/consensus/genes</code> - Returns 3,437 consensus gene IDs</li>
+<li><code>/api/protein/lookup</code> - MyGene.info integration for protein name resolution</li>
+<li><code>/api/stats/*</code> - Chart data endpoints for visualizations</li>
+<li><code>/api/autocomplete</code> - Multi-type autocomplete suggestions</li>
+</ul>
+</li>
+<li><strong>Data Processing</strong>:
+<ul>
+<li>Consensus gene loading from Human_syn_top5.txt at startup</li>
+<li>CSV/Excel export with pandas and XlsxWriter</li>
+<li>Concurrent request handling with ThreadPoolExecutor</li>
+</ul>
+</li>
+</ul>
+<h4>Data Visualization</h4>
+<p>Implemented interactive charts for research insights:</p>
+<ul>
+<li><strong>Disease Discovery Trends</strong>: Year-by-year new disease counts and cumulative totals</li>
+<li><strong>Synaptic Compartment Distribution</strong>: Protein localization across presynaptic/postsynaptic compartments</li>
+<li><strong>ICD-11 Chapter Classification</strong>: Disease categorization visualizations</li>
+<li><strong>Brain Region Distribution</strong>: Protein distribution across brain regions</li>
+</ul>
+<h4>Deployment Infrastructure</h4>
+<ul>
+<li><strong>Docker Compose</strong>: Multi-container setup with backend, frontend, and nginx services</li>
+<li><strong>nginx</strong>: Reverse proxy configuration for production deployment</li>
+<li><strong>SSL Support</strong>: Separate docker-compose.ssl.yml for HTTPS configuration</li>
+<li><strong>Environment Variables</strong>: Secure handling of API keys (NIH_KEY)</li>
+</ul>
+<h2>Scientific Impact</h2>
+<p>The database serves the neuroscience research community by providing:</p>
+<ul>
+<li>A consensus set of 3,437 mammalian synapse proteins from presynaptic and postsynaptic compartments</li>
+<li>Mapping of 954 genes encoding synaptic proteins to 1,266 OMIM diseases of the central and peripheral nervous system</li>
+<li>Tools for understanding the pervasive role of synaptic gene variants in neurological, psychiatric, developmental, and systemic disorders</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>Large-Scale Data Handling</strong>: Efficiently manages queries against a 770MB+ SQLite database containing data from 64 proteomic studies with optimized JOIN queries and connection pooling</li>
+<li><strong>Intelligent Search</strong>: Protein-to-gene resolution using MyGene.info API, debounced autocomplete, and multi-identifier support (Entrez, MGI, Ensembl, UniProt across Human, Mouse, and Rat)</li>
+<li><strong>Lazy Loading Architecture</strong>: Tab data (papers, diseases, mutations) loaded on-demand to optimize initial page load performance</li>
+<li><strong>Real-Time Analytics</strong>: Built-in visit tracking with dedicated stats database and API usage analytics dashboard</li>
+<li><strong>Modular Codebase</strong>: Custom React hooks for reusable search logic, Flask blueprints for organized API routes</li>
+<li><strong>Export Capabilities</strong>: CSV and Excel export using pandas and XlsxWriter for researcher data analysis</li>
+<li><strong>Responsive Design</strong>: Tailwind CSS with mobile-first approach for cross-device accessibility</li>
+</ul>
+<h3>Database Schema</h3>
+<p>The SQLite database integrates multiple biological data sources:</p>
+<ul>
+<li><strong>Gene Table</strong>: Human/Mouse/Rat Entrez IDs, gene names, Ensembl IDs, UniProt accessions</li>
+<li><strong>Disease Table</strong>: HDOID (Human Disease Ontology), descriptions, OMIM mappings</li>
+<li><strong>Paper Table</strong>: PMID, publication year, title, description from 64 proteomic studies</li>
+<li><strong>Mutation Table</strong>: Chromosome, position, variant, cDNA/protein variants, ClinVar annotations</li>
+<li><strong>Junction Tables</strong>: PaperGene, DiseaseGene, PaperMutation for many-to-many relationships</li>
+<li><strong>Reference Tables</strong>: Species (TaxID), BrainRegion, Localisation, Method</li>
+</ul>
+<h2>Achievements</h2>
+<ul>
+<li><strong>Equal Contribution Author</strong> on the bioRxiv preprint: "SynaptopathyDB: a resource for studying the genetic and synaptic basis of nervous system disorders" (doi: 10.1101/2025.06.27.661932)</li>
+<li>Funded by The Wellcome Trust [218293/Z/19/Z]</li>
+<li>Collaboration with the Genes to Cognition Programme at the University of Edinburgh</li>
+<li>Platform used by researchers studying the molecular basis of brain diseases including schizophrenia, depression, and neurodevelopmental disorders</li>
+</ul>
+<h2>Project URL</h2>
+<p><a href="https://www.synaptopathydb.org">SynaptopathyDB</a></p>
+d:T1d40,
+## Project Overview
+
+SynaptopathyDB is an online resource designed to facilitate research into the genetic basis and clinical manifestations of synaptopathies — brain and behavioural disorders caused by mutations in genes encoding synaptic proteins. The platform integrates data from 64 mammalian synapse proteomic studies with multiple genetic and phenotypic resources, enabling researchers to explore connections between synaptic proteins, genetic variants, and human disease phenotypes.
+
+## Project Details
+
+### Technologies Used
+
+* React.js
+* Tailwind CSS
+* Flask (Python)
+* Flask-SQLAlchemy
+* SQLite
+* Recharts (Data Visualization)
+* Docker
+* nginx
+* RESTful API
+
+### Key Features
+
+* **Gene Search Interface**: Comprehensive exploration of individual genes with detailed information including multiple species identifiers, associated publications, disease associations, mutation details, and synaptic compartment localization
+* **Disease Search Interface**: Explore diseases and their associated synaptic genes with detailed mutation information, publication links, and downloadable reports
+* **Publication Search**: Retrieve scientific publications with gene-disease connections, with filtering by associated genes and mutations
+* **Autocomplete Search**: Real-time suggestions supporting multiple identifier types including Human/Mouse/Rat Entrez, MGI, Ensembl ID, and gene aliases
+* **Interactive Data Visualizations**: Disease classification trends, protein localization history, discovery rate analyses, and compartment-specific protein distributions
+* **CSV Data Export**: Structured datasets including synapse proteome lists for further analysis
+* **RESTful API**: Programmatic access to raw data and complex queries with full documentation
+* **Consensus Filtering**: Filter results by protein localization within synaptic compartments
+
+### Development Process
+
+As lead web developer, I built the full-stack web application while collaborating with researchers at the University of Edinburgh who provided the underlying databases and scientific data.
+
+#### Frontend Architecture
+
+Built a modular React.js application with custom hooks for reusable logic:
+
+* **Custom Hooks**:
+  * `useSearch` - Manages search state, autocomplete suggestions with debouncing (300ms), pagination, and tab data loading
+  * `useConsensusFilter` - Filters search results to show only consensus genes (proteins found in 5+ studies)
+  * `useToggle` - Handles expandable cards and collapsible sections
+* **Search Implementation**:
+  * Real-time autocomplete using lodash debounce
+  * Protein name detection with MyGene.info API integration for protein-to-gene symbol resolution
+  * Multi-identifier support (Entrez, MGI, Ensembl, UniProt)
+  * URL query parameter support for shareable searches
+* **Component Structure**:
+  * 18 page components including GeneSearch (119KB), DiseaseSearch, PaperSearch
+  * Reusable components: SearchForm, Pagination, DownloadButton, NoResults
+  * Visualization components using Recharts for interactive charts
+
+#### Backend Architecture
+
+Developed a Flask REST API with modular route blueprints:
+
+* **Database Layer**:
+  * SQLAlchemy ORM with SQLite backend (~770MB database)
+  * Complex JOIN queries across Gene, Disease, Paper, Mutation, and PaperGene tables
+  * Connection pooling with 300-second timeout for long-running queries
+  * SQL trace logging for debugging
+* **API Endpoints**:
+  * `/api/gene/search` - Gene search with pagination and filtering
+  * `/api/gene/<id>/tab/<type>` - Lazy-loaded tab data (papers, diseases, mutations)
+  * `/api/disease/search` - Disease search with gene associations
+  * `/api/paper/search` - Publication search with gene/mutation counts
+  * `/api/consensus/genes` - Returns 3,437 consensus gene IDs
+  * `/api/protein/lookup` - MyGene.info integration for protein name resolution
+  * `/api/stats/*` - Chart data endpoints for visualizations
+  * `/api/autocomplete` - Multi-type autocomplete suggestions
+* **Data Processing**:
+  * Consensus gene loading from Human_syn_top5.txt at startup
+  * CSV/Excel export with pandas and XlsxWriter
+  * Concurrent request handling with ThreadPoolExecutor
+
+#### Data Visualization
+
+Implemented interactive charts for research insights:
+
+* **Disease Discovery Trends**: Year-by-year new disease counts and cumulative totals
+* **Synaptic Compartment Distribution**: Protein localization across presynaptic/postsynaptic compartments
+* **ICD-11 Chapter Classification**: Disease categorization visualizations
+* **Brain Region Distribution**: Protein distribution across brain regions
+
+#### Deployment Infrastructure
+
+* **Docker Compose**: Multi-container setup with backend, frontend, and nginx services
+* **nginx**: Reverse proxy configuration for production deployment
+* **SSL Support**: Separate docker-compose.ssl.yml for HTTPS configuration
+* **Environment Variables**: Secure handling of API keys (NIH_KEY)
+
+## Scientific Impact
+
+The database serves the neuroscience research community by providing:
+
+* A consensus set of 3,437 mammalian synapse proteins from presynaptic and postsynaptic compartments
+* Mapping of 954 genes encoding synaptic proteins to 1,266 OMIM diseases of the central and peripheral nervous system
+* Tools for understanding the pervasive role of synaptic gene variants in neurological, psychiatric, developmental, and systemic disorders
+
+## Technical Highlights
+
+* **Large-Scale Data Handling**: Efficiently manages queries against a 770MB+ SQLite database containing data from 64 proteomic studies with optimized JOIN queries and connection pooling
+* **Intelligent Search**: Protein-to-gene resolution using MyGene.info API, debounced autocomplete, and multi-identifier support (Entrez, MGI, Ensembl, UniProt across Human, Mouse, and Rat)
+* **Lazy Loading Architecture**: Tab data (papers, diseases, mutations) loaded on-demand to optimize initial page load performance
+* **Real-Time Analytics**: Built-in visit tracking with dedicated stats database and API usage analytics dashboard
+* **Modular Codebase**: Custom React hooks for reusable search logic, Flask blueprints for organized API routes
+* **Export Capabilities**: CSV and Excel export using pandas and XlsxWriter for researcher data analysis
+* **Responsive Design**: Tailwind CSS with mobile-first approach for cross-device accessibility
+
+### Database Schema
+
+The SQLite database integrates multiple biological data sources:
+
+* **Gene Table**: Human/Mouse/Rat Entrez IDs, gene names, Ensembl IDs, UniProt accessions
+* **Disease Table**: HDOID (Human Disease Ontology), descriptions, OMIM mappings
+* **Paper Table**: PMID, publication year, title, description from 64 proteomic studies
+* **Mutation Table**: Chromosome, position, variant, cDNA/protein variants, ClinVar annotations
+* **Junction Tables**: PaperGene, DiseaseGene, PaperMutation for many-to-many relationships
+* **Reference Tables**: Species (TaxID), BrainRegion, Localisation, Method
+
+## Achievements
+
+* **Equal Contribution Author** on the bioRxiv preprint: "SynaptopathyDB: a resource for studying the genetic and synaptic basis of nervous system disorders" (doi: 10.1101/2025.06.27.661932)
+* Funded by The Wellcome Trust [218293/Z/19/Z]
+* Collaboration with the Genes to Cognition Programme at the University of Edinburgh
+* Platform used by researchers studying the molecular basis of brain diseases including schizophrenia, depression, and neurodevelopmental disorders
+
+## Project URL
+
+[SynaptopathyDB](https://www.synaptopathydb.org)
+e:T1f47,<h2>Project Overview</h2>
+<p>S3 Bucket Viewer is a web application designed to simplify browsing and previewing files stored in public S3-compatible buckets. It provides an intuitive interface for navigating bucket contents, previewing various file types directly in the browser, and generating shareable links or AWS CLI commands for batch operations.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>React.js</li>
+<li>Tailwind CSS</li>
+<li>Flask (Python)</li>
+<li>boto3 (AWS SDK)</li>
+<li>Docker &#x26; Docker Compose</li>
+<li>nginx</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Directory Navigation</strong>: Browse bucket contents with breadcrumb navigation and pagination support using S3 continuation tokens</li>
+<li><strong>Multi-Format File Preview</strong>: In-browser preview support for text files, images (including TIFF conversion), CSV, XLSX, and DOCX documents</li>
+<li><strong>Resizable Panel Layout</strong>: Adjustable split-view interface with draggable dividers for customizing the browsing experience</li>
+<li><strong>Shareable URLs</strong>: Generate URLs that preserve the current endpoint, bucket, and path configuration for easy sharing</li>
+<li><strong>AWS CLI Sync Commands</strong>: Automatically generate <code>aws s3 sync</code> commands for batch downloading files</li>
+<li><strong>Configuration Persistence</strong>: Hierarchical config system using URL parameters, localStorage, and backend fallback</li>
+<li><strong>File Size Display</strong>: Human-readable file sizes with appropriate unit formatting</li>
+</ul>
+<h3>Development Process</h3>
+<h4>Frontend Architecture</h4>
+<p>Built a React.js single-page application with sophisticated state management:</p>
+<ul>
+<li>
+<p><strong>App.js (Main Component)</strong>:</p>
+<ul>
+<li>Manages global state including endpoint configuration, current path, and selected file</li>
+<li>Implements resizable panel layout using mouse event handlers for drag functionality</li>
+<li>Configuration persistence with priority: URL params > localStorage > backend config</li>
+<li>Panel width constraints with minimum/maximum boundaries</li>
+</ul>
+</li>
+<li>
+<p><strong>BucketExplorer Component</strong>:</p>
+<ul>
+<li>Directory listing with pagination using S3 continuation tokens</li>
+<li>Breadcrumb navigation for quick directory traversal</li>
+<li>File size formatting and sorting capabilities</li>
+<li>Click handling for both directories and files</li>
+</ul>
+</li>
+<li>
+<p><strong>FileViewer Component</strong>:</p>
+<ul>
+<li>Dispatcher component that routes files to appropriate handlers based on MIME type</li>
+<li>Supports lazy loading of file content for performance</li>
+</ul>
+</li>
+<li>
+<p><strong>FileTypeHandlers</strong>:</p>
+<ul>
+<li><code>TextViewer</code>: Syntax-highlighted code and plain text display</li>
+<li><code>ImageViewer</code>: Image preview with TIFF-to-PNG conversion support</li>
+<li><code>CsvViewer</code>: Tabular display of CSV data with headers</li>
+<li><code>XlsxViewer</code>: Excel spreadsheet rendering</li>
+<li><code>DocxViewer</code>: Word document preview</li>
+</ul>
+</li>
+<li>
+<p><strong>Utility Components</strong>:</p>
+<ul>
+<li><code>ConfigPanel</code>: S3 endpoint and bucket configuration interface</li>
+<li><code>ShareableLink</code>: URL generation for current view state</li>
+<li><code>SyncCommandBox</code>: AWS CLI command generation for batch operations</li>
+</ul>
+</li>
+</ul>
+<h4>Backend Architecture</h4>
+<p>Developed a Flask REST API for S3 interactions:</p>
+<ul>
+<li>
+<p><strong>API Endpoints</strong>:</p>
+<ul>
+<li><code>GET/POST/DELETE /api/config</code> - Manage S3 connection configuration with validation</li>
+<li><code>GET /api/list</code> - List bucket contents with pagination (500 items per page)</li>
+<li><code>GET /api/file</code> - Download or stream files for preview</li>
+<li><code>GET /api/fileinfo</code> - Retrieve file metadata including size and content type</li>
+</ul>
+</li>
+<li>
+<p><strong>S3 Integration</strong>:</p>
+<ul>
+<li>Uses boto3 with <code>UNSIGNED</code> signature configuration for public bucket access</li>
+<li>Handles S3-compatible endpoints (AWS, MinIO, Wasabi, etc.)</li>
+<li>Continuation token management for large directory listings</li>
+</ul>
+</li>
+<li>
+<p><strong>File Processing (file_handlers.py)</strong>:</p>
+<ul>
+<li>MIME type detection using python-magic</li>
+<li>Text file preview with encoding detection</li>
+<li>Image processing with TIFF-to-PNG conversion using Pillow</li>
+<li>CSV parsing with pandas for structured display</li>
+<li>XLSX extraction with openpyxl</li>
+<li>DOCX text extraction with python-docx</li>
+<li>100MB size limit for preview operations</li>
+</ul>
+</li>
+</ul>
+<h4>Deployment Infrastructure</h4>
+<ul>
+<li>
+<p><strong>Docker Compose Configuration</strong>:</p>
+<ul>
+<li>Backend service: Flask app on port 5000 (exposed as 5050)</li>
+<li>Frontend service: nginx serving React build on port 80 (exposed as 8080)</li>
+<li>Resource limits: CPU and memory constraints for production stability</li>
+<li>Health checks for backend service monitoring</li>
+<li>Shared bridge network for inter-service communication</li>
+</ul>
+</li>
+<li>
+<p><strong>Volume Management</strong>:</p>
+<ul>
+<li>Development hot-reload with mounted source directories</li>
+<li>Separate node_modules volume to prevent conflicts</li>
+</ul>
+</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>Public Bucket Access</strong>: Implements unsigned S3 requests using boto3's <code>UNSIGNED</code> signature, eliminating the need for AWS credentials when accessing public buckets</li>
+<li><strong>Format Conversion</strong>: Server-side TIFF-to-PNG conversion enables web display of formats not natively supported by browsers</li>
+<li><strong>Efficient Pagination</strong>: Leverages S3's native continuation tokens for efficient navigation of buckets with thousands of objects</li>
+<li><strong>Flexible Configuration</strong>: Three-tier configuration system (URL > localStorage > backend) enables both shareable links and persistent user preferences</li>
+<li><strong>Responsive Design</strong>: Tailwind CSS utilities provide mobile-friendly layouts with consistent styling</li>
+<li><strong>Container Orchestration</strong>: Docker Compose setup enables single-command deployment with proper service dependencies and resource management</li>
+</ul>
+<h3>Architecture Diagram</h3>
+<pre><code>┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Browser       │────▶│   nginx (80)    │────▶│   React App     │
+│                 │     │   Frontend      │     │   (Static)      │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+                                │
+                                ▼
+                        ┌─────────────────┐     ┌─────────────────┐
+                        │   Flask API     │────▶│   S3 Bucket     │
+                        │   (5000)        │     │   (Public)      │
+                        └─────────────────┘     └─────────────────┘
+</code></pre>
+<h2>Use Cases</h2>
+<ul>
+<li><strong>Data Exploration</strong>: Quickly browse and preview files in public datasets without downloading</li>
+<li><strong>Team Sharing</strong>: Generate shareable links to specific files or directories</li>
+<li><strong>Batch Downloads</strong>: Generate AWS CLI commands for downloading multiple files efficiently</li>
+<li><strong>Cross-Platform Access</strong>: Web-based interface works on any device with a browser</li>
+</ul>
+<h2>Project URL</h2>
+<p><a href="https://github.com/digin1/s3-bucket-viewer">GitHub Repository</a></p>
+f:T1a28,
+## Project Overview
+
+S3 Bucket Viewer is a web application designed to simplify browsing and previewing files stored in public S3-compatible buckets. It provides an intuitive interface for navigating bucket contents, previewing various file types directly in the browser, and generating shareable links or AWS CLI commands for batch operations.
+
+## Project Details
+
+### Technologies Used
+
+* React.js
+* Tailwind CSS
+* Flask (Python)
+* boto3 (AWS SDK)
+* Docker & Docker Compose
+* nginx
+
+### Key Features
+
+* **Directory Navigation**: Browse bucket contents with breadcrumb navigation and pagination support using S3 continuation tokens
+* **Multi-Format File Preview**: In-browser preview support for text files, images (including TIFF conversion), CSV, XLSX, and DOCX documents
+* **Resizable Panel Layout**: Adjustable split-view interface with draggable dividers for customizing the browsing experience
+* **Shareable URLs**: Generate URLs that preserve the current endpoint, bucket, and path configuration for easy sharing
+* **AWS CLI Sync Commands**: Automatically generate `aws s3 sync` commands for batch downloading files
+* **Configuration Persistence**: Hierarchical config system using URL parameters, localStorage, and backend fallback
+* **File Size Display**: Human-readable file sizes with appropriate unit formatting
+
+### Development Process
+
+#### Frontend Architecture
+
+Built a React.js single-page application with sophisticated state management:
+
+* **App.js (Main Component)**:
+  * Manages global state including endpoint configuration, current path, and selected file
+  * Implements resizable panel layout using mouse event handlers for drag functionality
+  * Configuration persistence with priority: URL params > localStorage > backend config
+  * Panel width constraints with minimum/maximum boundaries
+
+* **BucketExplorer Component**:
+  * Directory listing with pagination using S3 continuation tokens
+  * Breadcrumb navigation for quick directory traversal
+  * File size formatting and sorting capabilities
+  * Click handling for both directories and files
+
+* **FileViewer Component**:
+  * Dispatcher component that routes files to appropriate handlers based on MIME type
+  * Supports lazy loading of file content for performance
+
+* **FileTypeHandlers**:
+  * `TextViewer`: Syntax-highlighted code and plain text display
+  * `ImageViewer`: Image preview with TIFF-to-PNG conversion support
+  * `CsvViewer`: Tabular display of CSV data with headers
+  * `XlsxViewer`: Excel spreadsheet rendering
+  * `DocxViewer`: Word document preview
+
+* **Utility Components**:
+  * `ConfigPanel`: S3 endpoint and bucket configuration interface
+  * `ShareableLink`: URL generation for current view state
+  * `SyncCommandBox`: AWS CLI command generation for batch operations
+
+#### Backend Architecture
+
+Developed a Flask REST API for S3 interactions:
+
+* **API Endpoints**:
+  * `GET/POST/DELETE /api/config` - Manage S3 connection configuration with validation
+  * `GET /api/list` - List bucket contents with pagination (500 items per page)
+  * `GET /api/file` - Download or stream files for preview
+  * `GET /api/fileinfo` - Retrieve file metadata including size and content type
+
+* **S3 Integration**:
+  * Uses boto3 with `UNSIGNED` signature configuration for public bucket access
+  * Handles S3-compatible endpoints (AWS, MinIO, Wasabi, etc.)
+  * Continuation token management for large directory listings
+
+* **File Processing (file_handlers.py)**:
+  * MIME type detection using python-magic
+  * Text file preview with encoding detection
+  * Image processing with TIFF-to-PNG conversion using Pillow
+  * CSV parsing with pandas for structured display
+  * XLSX extraction with openpyxl
+  * DOCX text extraction with python-docx
+  * 100MB size limit for preview operations
+
+#### Deployment Infrastructure
+
+* **Docker Compose Configuration**:
+  * Backend service: Flask app on port 5000 (exposed as 5050)
+  * Frontend service: nginx serving React build on port 80 (exposed as 8080)
+  * Resource limits: CPU and memory constraints for production stability
+  * Health checks for backend service monitoring
+  * Shared bridge network for inter-service communication
+
+* **Volume Management**:
+  * Development hot-reload with mounted source directories
+  * Separate node_modules volume to prevent conflicts
+
+## Technical Highlights
+
+* **Public Bucket Access**: Implements unsigned S3 requests using boto3's `UNSIGNED` signature, eliminating the need for AWS credentials when accessing public buckets
+* **Format Conversion**: Server-side TIFF-to-PNG conversion enables web display of formats not natively supported by browsers
+* **Efficient Pagination**: Leverages S3's native continuation tokens for efficient navigation of buckets with thousands of objects
+* **Flexible Configuration**: Three-tier configuration system (URL > localStorage > backend) enables both shareable links and persistent user preferences
+* **Responsive Design**: Tailwind CSS utilities provide mobile-friendly layouts with consistent styling
+* **Container Orchestration**: Docker Compose setup enables single-command deployment with proper service dependencies and resource management
+
+### Architecture Diagram
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Browser       │────▶│   nginx (80)    │────▶│   React App     │
+│                 │     │   Frontend      │     │   (Static)      │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+                                │
+                                ▼
+                        ┌─────────────────┐     ┌─────────────────┐
+                        │   Flask API     │────▶│   S3 Bucket     │
+                        │   (5000)        │     │   (Public)      │
+                        └─────────────────┘     └─────────────────┘
+```
+
+## Use Cases
+
+* **Data Exploration**: Quickly browse and preview files in public datasets without downloading
+* **Team Sharing**: Generate shareable links to specific files or directories
+* **Batch Downloads**: Generate AWS CLI commands for downloading multiple files efficiently
+* **Cross-Platform Access**: Web-based interface works on any device with a browser
+
+## Project URL
+
+[GitHub Repository](https://github.com/digin1/s3-bucket-viewer)
+10:Td07,<h2>Project Overview</h2>
+<p>The Deep Chill Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>Bootstrap</li>
+<li>JavaScript/jQuery</li>
+<li>HTML5/CSS3</li>
+<li>AJAX</li>
+<li>Responsive Design</li>
+<li>Mobile-optimized UI</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Multi-location Inventory Tracking</strong>: Monitor products across different storage areas (Deep Chill, Dawson, Holding, Blast 1, Blast 2, Tottle)</li>
+<li><strong>Quick Quantity Management</strong>: Intuitive plus/minus buttons and preset quantity options (5, 10, 16, 32, 40)</li>
+<li><strong>Tray and Pie Quantity Tracking</strong>: Separate columns for tracking different product container types</li>
+<li><strong>Automatic Total Calculation</strong>: Real-time updates of total inventory based on entered quantities</li>
+<li><strong>Date Tracking</strong>: Records when products were entered or modified</li>
+<li><strong>Save Functionality</strong>: One-click saving of inventory changes</li>
+<li><strong>User Authentication</strong>: Secure login system with logout functionality</li>
+<li><strong>Query Data</strong>: Generate reports and retrieve historical inventory information</li>
+<li><strong>Responsive Design</strong>: Optimized for tablet use in warehouse/cold storage environments</li>
+</ul>
+<h3>Problem Solved</h3>
+<p>This application was developed for a friend working in a cold storage/freezing facility who needed to:</p>
+<ol>
+<li>Quickly calculate product quantities across different storage locations</li>
+<li>Track inventory movements between different freezing/cooling stages</li>
+<li>Generate reports for management</li>
+<li>Have a mobile solution that works efficiently in a cold environment where staff often wear gloves</li>
+<li>Replace inefficient paper-based tracking systems</li>
+</ol>
+<h3>Implementation Details</h3>
+<ul>
+<li><strong>Bootstrap Framework</strong>: Utilized for responsive design and touch-friendly UI elements</li>
+<li><strong>PHP Backend</strong>: Handles all calculations, data storage, and retrieval logic</li>
+<li><strong>MySQL Database</strong>: Structured to efficiently store product information, quantities, and location data</li>
+<li><strong>AJAX Requests</strong>: Enables real-time updates without page refreshes for a smoother user experience</li>
+<li><strong>Large Touch Targets</strong>: Designed with larger buttons and controls for easy use with gloves or in cold environments</li>
+</ul>
+<h3>Results</h3>
+<ul>
+<li>Significantly reduced time spent on manual calculations and inventory tracking</li>
+<li>Minimized data entry errors common with previous paper-based system</li>
+<li>Improved inventory visibility across different storage areas</li>
+<li>Enhanced reporting capabilities for management</li>
+<li>Streamlined daily workflow for warehouse staff</li>
+</ul>
+<h2>License</h2>
+<p>This project was developed as a custom solution for cold storage inventory management.</p>
+11:Tb07,
+## Project Overview
+The Deep Chill Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.
+
+## Project Details
+
+### Technologies Used
+* PHP
+* MySQL
+* Bootstrap
+* JavaScript/jQuery
+* HTML5/CSS3
+* AJAX
+* Responsive Design
+* Mobile-optimized UI
+
+### Key Features
+* **Multi-location Inventory Tracking**: Monitor products across different storage areas (Deep Chill, Dawson, Holding, Blast 1, Blast 2, Tottle)
+* **Quick Quantity Management**: Intuitive plus/minus buttons and preset quantity options (5, 10, 16, 32, 40)
+* **Tray and Pie Quantity Tracking**: Separate columns for tracking different product container types
+* **Automatic Total Calculation**: Real-time updates of total inventory based on entered quantities
+* **Date Tracking**: Records when products were entered or modified
+* **Save Functionality**: One-click saving of inventory changes
+* **User Authentication**: Secure login system with logout functionality
+* **Query Data**: Generate reports and retrieve historical inventory information
+* **Responsive Design**: Optimized for tablet use in warehouse/cold storage environments
+
+### Problem Solved
+This application was developed for a friend working in a cold storage/freezing facility who needed to:
+1. Quickly calculate product quantities across different storage locations
+2. Track inventory movements between different freezing/cooling stages
+3. Generate reports for management
+4. Have a mobile solution that works efficiently in a cold environment where staff often wear gloves
+5. Replace inefficient paper-based tracking systems
+
+### Implementation Details
+* **Bootstrap Framework**: Utilized for responsive design and touch-friendly UI elements
+* **PHP Backend**: Handles all calculations, data storage, and retrieval logic
+* **MySQL Database**: Structured to efficiently store product information, quantities, and location data
+* **AJAX Requests**: Enables real-time updates without page refreshes for a smoother user experience
+* **Large Touch Targets**: Designed with larger buttons and controls for easy use with gloves or in cold environments
+
+### Results
+* Significantly reduced time spent on manual calculations and inventory tracking
+* Minimized data entry errors common with previous paper-based system
+* Improved inventory visibility across different storage areas
+* Enhanced reporting capabilities for management
+* Streamlined daily workflow for warehouse staff
+
+## License
+This project was developed as a custom solution for cold storage inventory management. 12:T20b8,<h2><strong>Introduction</strong></h2>
+<p>Infrastructure automation is a critical aspect of modern system administration. My project focused on using <strong>Ansible</strong> to automate essential administrative tasks such as:</p>
+<ul>
+<li><strong>Managing SSH Key Authentication</strong></li>
+<li><strong>Creating and Removing Users Securely</strong></li>
+<li><strong>Configuring Sudoers for Role-Based Access Control</strong></li>
+<li><strong>Monitoring and Logging Sudo Actions</strong></li>
+<li><strong>Deploying Security Enhancements (Safe Deletion, Password Policies, etc.)</strong></li>
+</ul>
+<p>The primary goal was to create an automated, repeatable, and scalable solution for managing user access and securing the infrastructure.</p>
+<hr>
+<h2><strong>1. SSH Key Management and Secure Access Automation</strong></h2>
+<p>One of the core challenges in multi-node environments is <strong>secure authentication</strong>. Instead of relying on password-based access, I automated <strong>SSH key generation, distribution, and configuration</strong>.</p>
+<h3><strong>Generating and Distributing SSH Keys</strong></h3>
+<p>Ansible was used to generate SSH keys for different hosts and copy them to the appropriate machines.</p>
+<p><strong>Playbook for Generating SSH Keys (Conditional Execution to Avoid Overwriting):</strong></p>
+<pre><code class="language-yaml">- name: Generate SSH keys for root if they don’t exist
+  hosts: all
+  become: false
+  tasks:
+    - name: Check if root SSH key exists
+      stat:
+        path: "~/.ssh/id_rsa"
+      register: ssh_key_check
+
+    - name: Generate SSH key for root
+      shell: ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
+      when: not ssh_key_check.stat.exists
+</code></pre>
+<h3><strong>Copying SSH Keys to Ansible Host</strong></h3>
+<p>To allow secure, password-less communication between machines, public keys were copied to the <strong>Ansible control machine</strong>:</p>
+<pre><code class="language-yaml">- name: Copy SSH keys to Ansible control machine
+  hosts: awsnodes
+  become: true
+  tasks:
+    - name: Fetch public SSH key from nodes
+      fetch:
+        src: "~/.ssh/id_rsa.pub"
+        dest: "/root/awskeys/{{ inventory_hostname }}_id_rsa.pub"
+        flat: yes
+</code></pre>
+<h3><strong>Copying SSH Keys to Target Nodes</strong></h3>
+<pre><code class="language-yaml">- name: Copy SSH keys to authorized_keys on target nodes
+  hosts: logserver
+  become: true
+  vars:
+    key_dir: /root/awskeys
+  tasks:
+    - name: Ensure .ssh directory exists
+      file:
+        path: "/root/.ssh"
+        state: directory
+        mode: "0700"
+
+    - name: Add public SSH keys
+      authorized_key:
+        user: "root"
+        key: "{{ lookup('file', item) }}"
+        state: present
+      with_fileglob: "{{ key_dir }}/*_id_rsa.pub"
+</code></pre>
+<h3><strong>Outcome</strong></h3>
+<p>✅ <strong>Password-less authentication</strong> across all servers<br>
+✅ <strong>Hardened security</strong> by eliminating password-based access<br>
+✅ <strong>Automated onboarding</strong> for new machines with SSH authentication</p>
+<hr>
+<h2><strong>2. Automated User and Sudoers Management</strong></h2>
+<p>Managing users manually across multiple servers can lead to inconsistencies and security risks. Ansible was used to automate <strong>user creation, privilege assignment, and sudoers configuration</strong>.</p>
+<h3><strong>Creating Users</strong></h3>
+<pre><code class="language-yaml">- name: Create users on all nodes
+  hosts: all
+  become: true
+  vars:
+    users:
+      - alice
+      - bob
+      - charlie
+  tasks:
+    - name: Add users
+      user:
+        name: "{{ item }}"
+        create_home: yes
+        state: present
+      loop: "{{ users }}"
+</code></pre>
+<h3><strong>Granting Sudo Privileges</strong></h3>
+<p>To enforce <strong>role-based access control</strong>, users were assigned to the sudoers file <strong>with strict validation</strong>:</p>
+<pre><code class="language-yaml">- name: Configure sudoers for specific users
+  hosts: all
+  become: true
+  tasks:
+    - name: Add users to sudoers
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        line: "{{ item }} ALL=(ALL) NOPASSWD: ALL"
+        validate: "/usr/sbin/visudo -cf %s"
+      loop: "{{ users }}"
+</code></pre>
+<p><strong>Outcome</strong>:
+✅ <strong>Role-based access management</strong><br>
+✅ <strong>Automated onboarding &#x26; offboarding</strong> of users<br>
+✅ <strong>Strict sudoers validation</strong> to prevent misconfigurations</p>
+<hr>
+<h2><strong>3. Monitoring Sudo Commands and Logging Activity</strong></h2>
+<p>To improve security, all <code>sudo</code> activity needed to be logged and monitored remotely.</p>
+<h3><strong>Playbook for Enabling Sudo Logging</strong></h3>
+<pre><code class="language-yaml">- name: Configure sudo logging
+  hosts: all
+  become: true
+  tasks:
+    - name: Add sudo replay logging
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        insertafter: '^# Defaults.*visiblepw'
+        line: |
+          Defaults log_output
+          Defaults!/usr/bin/sudoreplay !log_output
+          Defaults!/sbin/reboot !log_output
+</code></pre>
+<h3><strong>Automated Log Collection and Sync</strong></h3>
+<p>A script was deployed to <strong>automatically sync logs</strong> from all nodes to a remote monitoring server.</p>
+<pre><code class="language-bash">#!/bin/bash
+SRC="/var/log/sudo-io/"
+DEST_DIR="/root/sudologs/{{ inventory_hostname }}/"
+DEST_HOST="root@18.218.206.77"
+SSH_PORT=4956
+
+ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$DEST_HOST" "mkdir -p $DEST_DIR"
+rsync -avz -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" "$SRC" "$DEST_HOST:$DEST_DIR"
+</code></pre>
+<p>A <strong>cron job</strong> was configured to run this script <strong>every 12 hours</strong>.</p>
+<pre><code class="language-yaml">- name: Schedule sudo log monitoring script
+  cron:
+    name: "Monitor Sudo Logs"
+    minute: "0"
+    hour: "*/12"
+    job: "/root/monitor_sudo_logs.sh >> /var/log/monitor_sudo_logs.log 2>&#x26;1"
+    state: present
+</code></pre>
+<h3><strong>Outcome</strong></h3>
+<p>✅ <strong>Centralized sudo activity monitoring</strong><br>
+✅ <strong>Regular log synchronization</strong> for auditing<br>
+✅ <strong>Prevention of privilege escalation attempts</strong></p>
+<hr>
+<h2><strong>4. Enhancing Security with Safe Deletion Policies</strong></h2>
+<p>Accidental file deletions can cause <strong>irreversible damage</strong>. To prevent this, I implemented a <strong>safe deletion wrapper script</strong>.</p>
+<h3><strong>Safe <code>rm</code> Script</strong></h3>
+<pre><code class="language-bash">#!/bin/bash
+echo "Warning: You are using the 'rm' command which deletes files permanently!"
+echo "Files to be deleted: $@"
+read -p "Are you sure you want to continue? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    /bin/rm "$@"
+else
+    echo "Operation cancelled."
+fi
+</code></pre>
+<h3><strong>Deploying Safe <code>rm</code> Script Using Ansible</strong></h3>
+<pre><code class="language-yaml">- name: Deploy safe_rm script
+  hosts: all
+  become: true
+  tasks:
+    - name: Copy safe_rm script
+      copy:
+        src: safe_rm.sh
+        dest: /usr/local/bin/safe_rm
+        mode: "0755"
+
+    - name: Alias rm to safe_rm
+      blockinfile:
+        path: /etc/profile
+        block: |
+          alias rm='safe_rm'
+        create: yes
+</code></pre>
+<h3><strong>Outcome</strong></h3>
+<p>✅ <strong>Prevention of accidental file deletions</strong><br>
+✅ <strong>Enhanced safety while using <code>rm</code> command</strong><br>
+✅ <strong>Forced user confirmation before permanent deletions</strong></p>
+<hr>
+<h2><strong>Final Takeaways</strong></h2>
+<p>By implementing Ansible automation, I was able to <strong>streamline</strong> system administration across multiple nodes, ensuring:</p>
+<p>✔ <strong>Secure and password-less authentication</strong> using SSH keys<br>
+✔ <strong>Automated user management</strong> with structured onboarding &#x26; offboarding<br>
+✔ <strong>Centralized sudo monitoring</strong> with periodic log collection<br>
+✔ <strong>Strict sudoers file management</strong> with validation to prevent errors<br>
+✔ <strong>A safer file deletion process</strong> with <code>safe_rm</code></p>
+<p>This project reinforced my skills in <strong>infrastructure automation, security hardening, and scalable system management</strong>. 🚀</p>
+13:T1b3d,
+## **Introduction**
+
+Infrastructure automation is a critical aspect of modern system administration. My project focused on using **Ansible** to automate essential administrative tasks such as:
+
+- **Managing SSH Key Authentication**
+- **Creating and Removing Users Securely**
+- **Configuring Sudoers for Role-Based Access Control**
+- **Monitoring and Logging Sudo Actions**
+- **Deploying Security Enhancements (Safe Deletion, Password Policies, etc.)**
+
+The primary goal was to create an automated, repeatable, and scalable solution for managing user access and securing the infrastructure.
+
+---
+
+## **1. SSH Key Management and Secure Access Automation**
+
+One of the core challenges in multi-node environments is **secure authentication**. Instead of relying on password-based access, I automated **SSH key generation, distribution, and configuration**.
+
+### **Generating and Distributing SSH Keys**
+Ansible was used to generate SSH keys for different hosts and copy them to the appropriate machines.
+
+**Playbook for Generating SSH Keys (Conditional Execution to Avoid Overwriting):**
+```yaml
+- name: Generate SSH keys for root if they don’t exist
+  hosts: all
+  become: false
+  tasks:
+    - name: Check if root SSH key exists
+      stat:
+        path: "~/.ssh/id_rsa"
+      register: ssh_key_check
+
+    - name: Generate SSH key for root
+      shell: ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
+      when: not ssh_key_check.stat.exists
+```
+
+### **Copying SSH Keys to Ansible Host**
+To allow secure, password-less communication between machines, public keys were copied to the **Ansible control machine**:
+
+```yaml
+- name: Copy SSH keys to Ansible control machine
+  hosts: awsnodes
+  become: true
+  tasks:
+    - name: Fetch public SSH key from nodes
+      fetch:
+        src: "~/.ssh/id_rsa.pub"
+        dest: "/root/awskeys/{{ inventory_hostname }}_id_rsa.pub"
+        flat: yes
+```
+
+### **Copying SSH Keys to Target Nodes**
+```yaml
+- name: Copy SSH keys to authorized_keys on target nodes
+  hosts: logserver
+  become: true
+  vars:
+    key_dir: /root/awskeys
+  tasks:
+    - name: Ensure .ssh directory exists
+      file:
+        path: "/root/.ssh"
+        state: directory
+        mode: "0700"
+
+    - name: Add public SSH keys
+      authorized_key:
+        user: "root"
+        key: "{{ lookup('file', item) }}"
+        state: present
+      with_fileglob: "{{ key_dir }}/*_id_rsa.pub"
+```
+
+### **Outcome**
+✅ **Password-less authentication** across all servers  
+✅ **Hardened security** by eliminating password-based access  
+✅ **Automated onboarding** for new machines with SSH authentication  
+
+---
+
+## **2. Automated User and Sudoers Management**
+
+Managing users manually across multiple servers can lead to inconsistencies and security risks. Ansible was used to automate **user creation, privilege assignment, and sudoers configuration**.
+
+### **Creating Users**
+```yaml
+- name: Create users on all nodes
+  hosts: all
+  become: true
+  vars:
+    users:
+      - alice
+      - bob
+      - charlie
+  tasks:
+    - name: Add users
+      user:
+        name: "{{ item }}"
+        create_home: yes
+        state: present
+      loop: "{{ users }}"
+```
+
+### **Granting Sudo Privileges**
+To enforce **role-based access control**, users were assigned to the sudoers file **with strict validation**:
+
+```yaml
+- name: Configure sudoers for specific users
+  hosts: all
+  become: true
+  tasks:
+    - name: Add users to sudoers
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        line: "{{ item }} ALL=(ALL) NOPASSWD: ALL"
+        validate: "/usr/sbin/visudo -cf %s"
+      loop: "{{ users }}"
+```
+
+**Outcome**:
+✅ **Role-based access management**  
+✅ **Automated onboarding & offboarding** of users  
+✅ **Strict sudoers validation** to prevent misconfigurations  
+
+---
+
+## **3. Monitoring Sudo Commands and Logging Activity**
+
+To improve security, all `sudo` activity needed to be logged and monitored remotely.
+
+### **Playbook for Enabling Sudo Logging**
+```yaml
+- name: Configure sudo logging
+  hosts: all
+  become: true
+  tasks:
+    - name: Add sudo replay logging
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        insertafter: '^# Defaults.*visiblepw'
+        line: |
+          Defaults log_output
+          Defaults!/usr/bin/sudoreplay !log_output
+          Defaults!/sbin/reboot !log_output
+```
+
+### **Automated Log Collection and Sync**
+A script was deployed to **automatically sync logs** from all nodes to a remote monitoring server.
+
+```bash
+#!/bin/bash
+SRC="/var/log/sudo-io/"
+DEST_DIR="/root/sudologs/{{ inventory_hostname }}/"
+DEST_HOST="root@18.218.206.77"
+SSH_PORT=4956
+
+ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$DEST_HOST" "mkdir -p $DEST_DIR"
+rsync -avz -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" "$SRC" "$DEST_HOST:$DEST_DIR"
+```
+
+A **cron job** was configured to run this script **every 12 hours**.
+
+```yaml
+- name: Schedule sudo log monitoring script
+  cron:
+    name: "Monitor Sudo Logs"
+    minute: "0"
+    hour: "*/12"
+    job: "/root/monitor_sudo_logs.sh >> /var/log/monitor_sudo_logs.log 2>&1"
+    state: present
+```
+
+### **Outcome**
+✅ **Centralized sudo activity monitoring**  
+✅ **Regular log synchronization** for auditing  
+✅ **Prevention of privilege escalation attempts**  
+
+---
+
+## **4. Enhancing Security with Safe Deletion Policies**
+
+Accidental file deletions can cause **irreversible damage**. To prevent this, I implemented a **safe deletion wrapper script**.
+
+### **Safe `rm` Script**
+```bash
+#!/bin/bash
+echo "Warning: You are using the 'rm' command which deletes files permanently!"
+echo "Files to be deleted: $@"
+read -p "Are you sure you want to continue? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    /bin/rm "$@"
+else
+    echo "Operation cancelled."
+fi
+```
+
+### **Deploying Safe `rm` Script Using Ansible**
+```yaml
+- name: Deploy safe_rm script
+  hosts: all
+  become: true
+  tasks:
+    - name: Copy safe_rm script
+      copy:
+        src: safe_rm.sh
+        dest: /usr/local/bin/safe_rm
+        mode: "0755"
+
+    - name: Alias rm to safe_rm
+      blockinfile:
+        path: /etc/profile
+        block: |
+          alias rm='safe_rm'
+        create: yes
+```
+
+### **Outcome**
+✅ **Prevention of accidental file deletions**  
+✅ **Enhanced safety while using `rm` command**  
+✅ **Forced user confirmation before permanent deletions**  
+
+---
+
+## **Final Takeaways**
+
+By implementing Ansible automation, I was able to **streamline** system administration across multiple nodes, ensuring:
+
+✔ **Secure and password-less authentication** using SSH keys  
+✔ **Automated user management** with structured onboarding & offboarding  
+✔ **Centralized sudo monitoring** with periodic log collection  
+✔ **Strict sudoers file management** with validation to prevent errors  
+✔ **A safer file deletion process** with `safe_rm`  
+
+This project reinforced my skills in **infrastructure automation, security hardening, and scalable system management**. 🚀14:T1642,<blockquote>
+<p><strong>Best Project Award Winner</strong><br>
+MSc Cyber Security – Nottingham Trent University</p>
+</blockquote>
+<hr>
+<h2>🚀 About the Project</h2>
+<p><strong>Code-Pad.me</strong> is an online code execution web platform designed to help learners, educators, and developers write, share, and execute code effortlessly from any device—without the need to install a local compiler or development environment.</p>
+<p>Whether you're coding from a desktop, tablet, or even a mobile browser, Code-Pad.me empowers users to share challenges, test code snippets, and learn collaboratively—all within a sleek, browser-based interface.</p>
+<hr>
+<h2>🧠 Inspiration</h2>
+<p>During the COVID-19 pandemic, e-learning became a lifeline for education. However, coding education suffered due to setup issues—like incompatible compilers, platform dependencies, and device limitations (especially for iOS users).<br>
+This inspired me to develop <strong>Code-Pad.me</strong>—a zero-setup, responsive, cloud-based code runner that works anywhere, anytime.</p>
+<hr>
+<h2>🎯 Project Goals</h2>
+<ul>
+<li>Build a <strong>web-based code execution platform</strong> supporting multiple programming languages.</li>
+<li>Eliminate setup barriers by offering <strong>compiler-less code execution</strong>.</li>
+<li>Enable users to <strong>create and share coding challenges</strong> for peer learning.</li>
+<li>Encourage coding collaboration with <strong>shareable links &#x26; QR codes</strong>.</li>
+<li>Ensure cross-platform access with a <strong>responsive, mobile-first design</strong>.</li>
+</ul>
+<hr>
+<h2>💡 Key Features</h2>
+<ul>
+<li>🖥️ <strong>Multi-language Code Execution</strong> (via Judge0 API)</li>
+<li>🔒 <strong>Secure, Containerized Execution</strong> (Docker-based sandboxing)</li>
+<li>📱 <strong>Mobile &#x26; Desktop Friendly</strong> (Responsive UI using Bootstrap 5)</li>
+<li>📤 <strong>Code Sharing with QR &#x26; Short URLs</strong></li>
+<li>🎯 <strong>Custom &#x26; Random Challenges</strong> for continuous learning</li>
+<li>📥 <strong>Downloadable Code</strong> with proper file extensions</li>
+<li>🔢 <strong>Code View Metrics</strong> to track engagement</li>
+<li>💬 <strong>User Feedback Integration</strong> during development</li>
+</ul>
+<hr>
+<h2>🏗️ Architecture Overview</h2>
+<p>The app uses a modern stack with continuous delivery pipelines:</p>
+<ul>
+<li><strong>Backend</strong>: Python (Django)</li>
+<li><strong>Frontend</strong>: Bootstrap, JavaScript, JQuery, CodeMirror Editor</li>
+<li><strong>API</strong>: Judge0 for secure multi-language code execution</li>
+<li><strong>CI/CD</strong>: GitLab Runner, Docker</li>
+<li><strong>Database</strong>: SQLite (Dev), PostgreSQL (Production)</li>
+<li><strong>Deployment</strong>: Docker containers on Ubuntu VM</li>
+</ul>
+<hr>
+<h2>🧪 Testing &#x26; Evaluation</h2>
+<ul>
+<li>✅ <strong>Unit &#x26; System Testing</strong>: Validated core functionality, user interactions, and system behavior.</li>
+<li>📈 <strong>Performance Testing</strong>: Tested with up to 1000 concurrent users using <code>httperf</code>.</li>
+<li>📋 <strong>User Feedback Surveys</strong>: Guided feature additions like:
+<ul>
+<li>Dark mode (Planned)</li>
+<li>Challenge system</li>
+<li>QR code sharing</li>
+<li>Code readability improvements via CodeMirror</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🔍 Screenshots</h2>
+<h3><em>Home Interface</em></h3>
+<p><img src="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG" alt="Home Screenshot"></p>
+<h3><em>QR Code Sharing Modal</em></h3>
+<p><img src="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG" alt="QR Code Screenshot"></p>
+<hr>
+<h2>📈 Achievements</h2>
+<ul>
+<li>🏆 <strong>Best Project Award</strong> - Nottingham Trent University, 2025</li>
+<li>🎓 Successfully presented to academic panels and peers</li>
+<li>💬 Positive feedback from students, developers, and educators</li>
+</ul>
+<hr>
+<h2>🧩 Future Roadmap</h2>
+<ul>
+<li>🌑 <strong>Dark Mode Toggle</strong></li>
+<li>🔼 <strong>Like &#x26; Cheer Buttons</strong></li>
+<li>📊 <strong>Ranking System</strong> for competitive users</li>
+<li>📚 <strong>Knowledge Base &#x26; Tutorials</strong></li>
+<li>🆘 <strong>Help &#x26; Troubleshooting Center</strong></li>
+<li>📥 <strong>Feedback Form</strong></li>
+</ul>
+<hr>
+<h2>📚 Technologies Used</h2>
+<ul>
+<li><strong>Python</strong>, <strong>Django</strong></li>
+<li><strong>Judge0 API</strong></li>
+<li><strong>Bootstrap</strong>, <strong>JavaScript</strong>, <strong>JQuery</strong>, <strong>CodeMirror</strong></li>
+<li><strong>Docker</strong>, <strong>Heroku</strong></li>
+<li><strong>GitLab CI/CD</strong>, <strong>TravisCI</strong>, <strong>BetterCodeHub</strong></li>
+<li><strong>SQLite</strong>, <strong>PostgreSQL</strong></li>
+</ul>
+<hr>
+<h2>Award Certificate</h2>
+<p><img src="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/projectaward.png" alt="Award Certificate"></p>
+<hr>
+<h2>🔗 Live Demo</h2>
+<p>🌐 <a href="https://code-pad.me">https://code-pad.me</a><br>
+Try it live! Create, run, and share your code today.</p>
+<hr>
+<h2>🙌 Acknowledgements</h2>
+<p>Special thanks to my supervisor <a href="https://shah.fyi/">Dr. Madasar Shah</a> and Nottingham Trent University's School of Science and Technology for their support. And to every beta tester who gave invaluable feedback—thank you!</p>
+<hr>
+<blockquote>
+<p><em>“This project wasn't just about building a code runner—it's about empowering anyone, anywhere, to learn and write code without barriers.”</em><br>
+— <strong>Digin Dominic</strong></p>
+</blockquote>
+15:T112c,
+> **Best Project Award Winner**  
+> MSc Cyber Security – Nottingham Trent University  
+
+---
+
+## 🚀 About the Project
+
+**Code-Pad.me** is an online code execution web platform designed to help learners, educators, and developers write, share, and execute code effortlessly from any device—without the need to install a local compiler or development environment.
+
+Whether you're coding from a desktop, tablet, or even a mobile browser, Code-Pad.me empowers users to share challenges, test code snippets, and learn collaboratively—all within a sleek, browser-based interface.
+
+---
+
+## 🧠 Inspiration
+
+During the COVID-19 pandemic, e-learning became a lifeline for education. However, coding education suffered due to setup issues—like incompatible compilers, platform dependencies, and device limitations (especially for iOS users).  
+This inspired me to develop **Code-Pad.me**—a zero-setup, responsive, cloud-based code runner that works anywhere, anytime.
+
+---
+
+## 🎯 Project Goals
+
+- Build a **web-based code execution platform** supporting multiple programming languages.
+- Eliminate setup barriers by offering **compiler-less code execution**.
+- Enable users to **create and share coding challenges** for peer learning.
+- Encourage coding collaboration with **shareable links & QR codes**.
+- Ensure cross-platform access with a **responsive, mobile-first design**.
+
+---
+
+## 💡 Key Features
+
+- 🖥️ **Multi-language Code Execution** (via Judge0 API)
+- 🔒 **Secure, Containerized Execution** (Docker-based sandboxing)
+- 📱 **Mobile & Desktop Friendly** (Responsive UI using Bootstrap 5)
+- 📤 **Code Sharing with QR & Short URLs**
+- 🎯 **Custom & Random Challenges** for continuous learning
+- 📥 **Downloadable Code** with proper file extensions
+- 🔢 **Code View Metrics** to track engagement
+- 💬 **User Feedback Integration** during development
+
+---
+
+## 🏗️ Architecture Overview
+
+The app uses a modern stack with continuous delivery pipelines:
+
+- **Backend**: Python (Django)
+- **Frontend**: Bootstrap, JavaScript, JQuery, CodeMirror Editor
+- **API**: Judge0 for secure multi-language code execution
+- **CI/CD**: GitLab Runner, Docker
+- **Database**: SQLite (Dev), PostgreSQL (Production)
+- **Deployment**: Docker containers on Ubuntu VM
+
+---
+
+## 🧪 Testing & Evaluation
+
+- ✅ **Unit & System Testing**: Validated core functionality, user interactions, and system behavior.
+- 📈 **Performance Testing**: Tested with up to 1000 concurrent users using `httperf`.
+- 📋 **User Feedback Surveys**: Guided feature additions like:
+  - Dark mode (Planned)
+  - Challenge system
+  - QR code sharing
+  - Code readability improvements via CodeMirror
+
+---
+
+## 🔍 Screenshots
+
+### _Home Interface_  
+![Home Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG)
+
+### _QR Code Sharing Modal_  
+![QR Code Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG)
+
+---
+
+## 📈 Achievements
+
+- 🏆 **Best Project Award** - Nottingham Trent University, 2025
+- 🎓 Successfully presented to academic panels and peers
+- 💬 Positive feedback from students, developers, and educators
+
+---
+
+## 🧩 Future Roadmap
+
+- 🌑 **Dark Mode Toggle**
+- 🔼 **Like & Cheer Buttons**
+- 📊 **Ranking System** for competitive users
+- 📚 **Knowledge Base & Tutorials**
+- 🆘 **Help & Troubleshooting Center**
+- 📥 **Feedback Form**
+
+---
+
+## 📚 Technologies Used
+
+- **Python**, **Django**
+- **Judge0 API**
+- **Bootstrap**, **JavaScript**, **JQuery**, **CodeMirror**
+- **Docker**, **Heroku**
+- **GitLab CI/CD**, **TravisCI**, **BetterCodeHub**
+- **SQLite**, **PostgreSQL**
+
+---
+## Award Certificate
+
+![Award Certificate](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/projectaward.png)
+
+---
+
+## 🔗 Live Demo
+
+🌐 [https://code-pad.me](https://code-pad.me)  
+Try it live! Create, run, and share your code today.
+
+---
+
+## 🙌 Acknowledgements
+
+Special thanks to my supervisor [Dr. Madasar Shah](https://shah.fyi/) and Nottingham Trent University's School of Science and Technology for their support. And to every beta tester who gave invaluable feedback—thank you!
+
+---
+
+> _“This project wasn't just about building a code runner—it's about empowering anyone, anywhere, to learn and write code without barriers.”_  
+> — **Digin Dominic**
+
+16:Tb45,<h2>Project Overview</h2>
+<p>Boot Factory is an e-commerce web application developed as coursework using the ASP.NET MVC framework and C#. The project demonstrates my ability to build scalable, secure, and user-friendly web applications from the ground up. The platform allows users to browse a catalogue of footwear products, add items to their shopping basket, and proceed through a complete checkout process.</p>
+<h2>Technical Stack</h2>
+<ul>
+<li><strong>Backend</strong>: C# with ASP.NET MVC framework</li>
+<li><strong>Frontend</strong>: HTML5, CSS3, Bootstrap for responsive design</li>
+<li><strong>Database</strong>: SQL Server for product data and user management</li>
+<li><strong>Authentication</strong>: ASP.NET Identity for secure user login and registration</li>
+<li><strong>Version Control</strong>: Git for source code management</li>
+</ul>
+<h2>Key Features Implemented</h2>
+<ul>
+<li><strong>User Authentication System</strong>: Secure login, registration, and user profile management with email confirmation</li>
+<li><strong>Product Catalogue</strong>: Categorized browsing with filtering and search functionality</li>
+<li><strong>Shopping Basket</strong>: AJAX-powered add/remove functionality with real-time total calculation</li>
+<li><strong>Order Processing</strong>: Complete checkout flow with address collection and order confirmation</li>
+<li><strong>Admin Dashboard</strong>: Product management interface for adding, editing, and removing products</li>
+<li><strong>Responsive Design</strong>: Mobile-friendly interface that adapts to different screen sizes</li>
+</ul>
+<h2>Development Challenges</h2>
+<p>The most significant challenges I encountered during development included implementing session management for the shopping basket functionality and ensuring proper validation of user input throughout the application. I overcame these by leveraging ASP.NET session state management and implementing robust model validation.</p>
+<h2>What I Learned</h2>
+<p>This project significantly improved my understanding of:</p>
+<ul>
+<li>MVC architecture pattern and its practical implementation</li>
+<li>Entity Framework for database operations</li>
+<li>Authentication and authorization in web applications</li>
+<li>Frontend-backend integration using Razor views</li>
+<li>Form validation and security best practices</li>
+<li>User experience design for e-commerce platforms</li>
+</ul>
+<h2>Conclusion</h2>
+<p>The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.</p>
+<h2>GitHub Repository</h2>
+<p>[<a href="https://github.com/digin1/Boot-Factory">digin1/Boot-Factory</a>](https://github.com/digin1/Boot-Factory)</p>
+17:T9cc,
+## Project Overview
+Boot Factory is an e-commerce web application developed as coursework using the ASP.NET MVC framework and C#. The project demonstrates my ability to build scalable, secure, and user-friendly web applications from the ground up. The platform allows users to browse a catalogue of footwear products, add items to their shopping basket, and proceed through a complete checkout process.
+
+## Technical Stack
+* **Backend**: C# with ASP.NET MVC framework
+* **Frontend**: HTML5, CSS3, Bootstrap for responsive design
+* **Database**: SQL Server for product data and user management
+* **Authentication**: ASP.NET Identity for secure user login and registration
+* **Version Control**: Git for source code management
+
+## Key Features Implemented
+* **User Authentication System**: Secure login, registration, and user profile management with email confirmation
+* **Product Catalogue**: Categorized browsing with filtering and search functionality
+* **Shopping Basket**: AJAX-powered add/remove functionality with real-time total calculation
+* **Order Processing**: Complete checkout flow with address collection and order confirmation
+* **Admin Dashboard**: Product management interface for adding, editing, and removing products
+* **Responsive Design**: Mobile-friendly interface that adapts to different screen sizes
+
+## Development Challenges
+The most significant challenges I encountered during development included implementing session management for the shopping basket functionality and ensuring proper validation of user input throughout the application. I overcame these by leveraging ASP.NET session state management and implementing robust model validation.
+
+## What I Learned
+This project significantly improved my understanding of:
+* MVC architecture pattern and its practical implementation
+* Entity Framework for database operations
+* Authentication and authorization in web applications
+* Frontend-backend integration using Razor views
+* Form validation and security best practices
+* User experience design for e-commerce platforms
+
+## Conclusion
+The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.
+
+## GitHub Repository
+[[digin1/Boot-Factory](https://github.com/digin1/Boot-Factory)](https://github.com/digin1/Boot-Factory)18:Tc5f,<h2>Project Overview</h2>
+<p>An IoT integrated hydrogen leakage detection infrastructure developed for Deakin University (Victoria, Australia) to ensure the safety of the Hycel precinct. The system utilizes Google BigData to visualize real-time sensor data on interactive maps, providing critical monitoring capabilities for hydrogen-related safety systems.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>JavaScript</li>
+<li>Bootstrap</li>
+<li>Google Maps API</li>
+<li>BigData Integration</li>
+<li>IoT Sensor Integration</li>
+<li>SQL</li>
+</ul>
+<h3>Key Contributions</h3>
+<ul>
+<li>Developed an interactive mapping system that displays real-time sensor data with color-coded markers</li>
+<li>Implemented a sensor information panel that provides detailed metrics including temperature, humidity, sampling frequency, and system status</li>
+<li>Created a data visualization system showing warning and danger thresholds for critical measurements</li>
+<li>Built a comment/chat system allowing team members to communicate about specific sensor readings</li>
+<li>Designed a responsive interface accessible across multiple devices for monitoring on-the-go</li>
+<li>Integrated Google BigData for efficient storage and retrieval of large volumes of sensor data</li>
+<li>Implemented SQL queries to filter and display relevant sensor information based on location and status</li>
+<li>Set up real-time data refreshing to ensure the latest safety information is always available</li>
+</ul>
+<h3>Features</h3>
+<ul>
+<li>Interactive map with sensor location markers</li>
+<li>Detailed sensor information panels showing:
+<ul>
+<li>Temperature and humidity readings</li>
+<li>Precise GPS location coordinates</li>
+<li>Timestamp of readings</li>
+<li>Sampling frequency</li>
+<li>System ID and manufacturer details</li>
+<li>Operating specifications</li>
+</ul>
+</li>
+<li>Color-coded warning system for identifying potential issues</li>
+<li>Data visualization tools for monitoring trends</li>
+<li>User comment system for team communication</li>
+<li>Admin controls for system management</li>
+</ul>
+<h3>Results</h3>
+<ul>
+<li>Provided Deakin University with a comprehensive safety monitoring system for hydrogen facilities</li>
+<li>Enhanced safety protocols through early detection of potential leaks or abnormal readings</li>
+<li>Improved communication among team members regarding sensor status and maintenance</li>
+<li>Created a scalable system that can accommodate additional sensors as the Hycel precinct expands</li>
+</ul>
+<h2>Process</h2>
+<p>This project was developed as an outsourced engagement for Deakin University's Hycel initiative. The development focused primarily on functionality, ensuring reliable data transfer from sensors to the visualization platform. The system was designed to handle large volumes of IoT data while maintaining responsive performance for users monitoring the facility.</p>
+<h2>Project URL</h2>
+<p>[<a href="https://hycelassetmanagement.space/">Hycel Asset Management System</a>](https://hycelassetmanagement.space)</p>
+<h2>License</h2>
+<p>This project was developed for Deakin University's Hycel initiative.</p>
+19:Tb02,
+## Project Overview
+An IoT integrated hydrogen leakage detection infrastructure developed for Deakin University (Victoria, Australia) to ensure the safety of the Hycel precinct. The system utilizes Google BigData to visualize real-time sensor data on interactive maps, providing critical monitoring capabilities for hydrogen-related safety systems.
+
+## Project Details
+
+### Technologies Used
+* PHP
+* MySQL
+* JavaScript
+* Bootstrap
+* Google Maps API
+* BigData Integration
+* IoT Sensor Integration
+* SQL
+
+### Key Contributions
+* Developed an interactive mapping system that displays real-time sensor data with color-coded markers
+* Implemented a sensor information panel that provides detailed metrics including temperature, humidity, sampling frequency, and system status
+* Created a data visualization system showing warning and danger thresholds for critical measurements
+* Built a comment/chat system allowing team members to communicate about specific sensor readings
+* Designed a responsive interface accessible across multiple devices for monitoring on-the-go
+* Integrated Google BigData for efficient storage and retrieval of large volumes of sensor data
+* Implemented SQL queries to filter and display relevant sensor information based on location and status
+* Set up real-time data refreshing to ensure the latest safety information is always available
+
+### Features
+* Interactive map with sensor location markers
+* Detailed sensor information panels showing:
+  * Temperature and humidity readings
+  * Precise GPS location coordinates
+  * Timestamp of readings
+  * Sampling frequency
+  * System ID and manufacturer details
+  * Operating specifications
+* Color-coded warning system for identifying potential issues
+* Data visualization tools for monitoring trends
+* User comment system for team communication
+* Admin controls for system management
+
+### Results
+* Provided Deakin University with a comprehensive safety monitoring system for hydrogen facilities
+* Enhanced safety protocols through early detection of potential leaks or abnormal readings
+* Improved communication among team members regarding sensor status and maintenance
+* Created a scalable system that can accommodate additional sensors as the Hycel precinct expands
+
+## Process
+This project was developed as an outsourced engagement for Deakin University's Hycel initiative. The development focused primarily on functionality, ensuring reliable data transfer from sensors to the visualization platform. The system was designed to handle large volumes of IoT data while maintaining responsive performance for users monitoring the facility.
+
+## Project URL
+[[Hycel Asset Management System](https://hycelassetmanagement.space/)](https://hycelassetmanagement.space)
+
+## License
+This project was developed for Deakin University's Hycel initiative.1a:T8ce,<h2>Project Overview</h2>
+<p>A comprehensive knowledge base system designed for Veeble.com to provide organized technical documentation for clients. The system features categorized articles across various hosting technologies with intuitive navigation and powerful search functionality.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>WordPress CMS</li>
+<li>PHP</li>
+<li>MySQL</li>
+<li>HTML/CSS</li>
+<li>JavaScript</li>
+</ul>
+<h3>Key Contributions</h3>
+<ul>
+<li>Designed the information architecture for the Knowledge Base, organizing content into logical categories including Apache, cPanel, Developer's Stuff, and Firewall/Security</li>
+<li>Implemented user-friendly search functionality allowing clients to quickly find technical solutions</li>
+<li>Created a clean, responsive interface that presents complex technical information in an accessible format</li>
+<li>Developed category-based navigation to improve user experience and content discoverability</li>
+<li>Optimized database queries and page loading performance for faster access to documentation</li>
+<li>Ensured proper indexing of knowledge articles for improved searchability</li>
+<li>Integrated the Knowledge Base seamlessly with Veeble's existing brand identity and website structure</li>
+</ul>
+<h3>Results</h3>
+<ul>
+<li>Reduced support ticket volume by providing self-service solutions to common technical issues</li>
+<li>Improved client satisfaction through 24/7 access to technical documentation</li>
+<li>Enhanced Veeble's professional image by showcasing technical expertise</li>
+<li>Created a scalable platform that supports ongoing content additions as new hosting solutions evolve</li>
+</ul>
+<h2>Process</h2>
+<p>The Knowledge Base was built as a custom WordPress implementation, requiring significant modifications to standard templates and database structures. Special attention was paid to performance optimization, ensuring that clients could quickly access critical information during potential server issues when page load times are particularly important.</p>
+<h2>Project URL</h2>
+<p>[<a href="https://www.veeble.com/kb/">Knowledge Base - Veeble Hosting</a>](https://www.veeble.com/kb/)</p>
+<h2>License</h2>
+<p>This project was developed for Veeble.com.</p>
+1b:T7f0,
+## Project Overview
+A comprehensive knowledge base system designed for Veeble.com to provide organized technical documentation for clients. The system features categorized articles across various hosting technologies with intuitive navigation and powerful search functionality.
+
+## Project Details
+
+### Technologies Used
+* WordPress CMS
+* PHP
+* MySQL
+* HTML/CSS
+* JavaScript
+
+### Key Contributions
+* Designed the information architecture for the Knowledge Base, organizing content into logical categories including Apache, cPanel, Developer's Stuff, and Firewall/Security
+* Implemented user-friendly search functionality allowing clients to quickly find technical solutions
+* Created a clean, responsive interface that presents complex technical information in an accessible format
+* Developed category-based navigation to improve user experience and content discoverability
+* Optimized database queries and page loading performance for faster access to documentation
+* Ensured proper indexing of knowledge articles for improved searchability
+* Integrated the Knowledge Base seamlessly with Veeble's existing brand identity and website structure
+
+### Results
+* Reduced support ticket volume by providing self-service solutions to common technical issues
+* Improved client satisfaction through 24/7 access to technical documentation
+* Enhanced Veeble's professional image by showcasing technical expertise
+* Created a scalable platform that supports ongoing content additions as new hosting solutions evolve
+
+## Process
+The Knowledge Base was built as a custom WordPress implementation, requiring significant modifications to standard templates and database structures. Special attention was paid to performance optimization, ensuring that clients could quickly access critical information during potential server issues when page load times are particularly important.
+
+## Project URL
+[[Knowledge Base - Veeble Hosting](https://www.veeble.com/kb/)](https://www.veeble.com/kb/)
+
+## License
+This project was developed for Veeble.com.1c:T744,<h2>Project Overview</h2>
+<p>A technical content platform built with WordPress CMS, focusing on database technologies, programming tutorials, and systems administration topics.</p>
+<h2>Features</h2>
+<ul>
+<li>Comprehensive technical tutorials across multiple IT domains</li>
+<li>Custom theme implementation for technical content presentation</li>
+<li>Category-based content organization (Databases, Programming, Operating Systems, etc.)</li>
+<li>Search functionality for efficient content discovery</li>
+<li>Responsive design for cross-device compatibility</li>
+</ul>
+<h2>Technical Stack</h2>
+<ul>
+<li><strong>CMS</strong>: WordPress</li>
+<li><strong>Programming</strong>: PHP</li>
+<li><strong>Database</strong>: MySQL</li>
+<li><strong>Frontend</strong>: HTML, CSS, JavaScript</li>
+<li><strong>Hosting</strong>: cPanel Server Environment</li>
+</ul>
+<h2>Implementation Details</h2>
+<ul>
+<li>Configured WordPress CMS from scratch on cPanel hosting</li>
+<li>Customized WordPress themes to match technical content requirements</li>
+<li>Created structured content taxonomies for improved organization</li>
+<li>Implemented responsive design elements for mobile compatibility</li>
+<li>Optimized database queries for improved performance</li>
+</ul>
+<h2>Learning Outcomes</h2>
+<ul>
+<li>Mastered WordPress CMS configuration and customization</li>
+<li>Gained practical experience with PHP in WordPress framework</li>
+<li>Developed skills in technical content creation and organization</li>
+<li>Enhanced understanding of web hosting and domain management</li>
+<li>Improved database administration capabilities</li>
+</ul>
+<h2>Archive</h2>
+<p>You can still explore a snapshot of the website via the [<a href="https://web.archive.org/web/20151011113825/http://clearstacknow.com/">Internet Archive</a>](https://web.archive.org/web/20151011113825/http://clearstacknow.com/)</p>
+1d:T616,
+## Project Overview
+A technical content platform built with WordPress CMS, focusing on database technologies, programming tutorials, and systems administration topics.
+
+## Features
+- Comprehensive technical tutorials across multiple IT domains
+- Custom theme implementation for technical content presentation
+- Category-based content organization (Databases, Programming, Operating Systems, etc.)
+- Search functionality for efficient content discovery
+- Responsive design for cross-device compatibility
+
+## Technical Stack
+- **CMS**: WordPress
+- **Programming**: PHP
+- **Database**: MySQL
+- **Frontend**: HTML, CSS, JavaScript
+- **Hosting**: cPanel Server Environment
+
+## Implementation Details
+- Configured WordPress CMS from scratch on cPanel hosting
+- Customized WordPress themes to match technical content requirements
+- Created structured content taxonomies for improved organization
+- Implemented responsive design elements for mobile compatibility
+- Optimized database queries for improved performance
+
+## Learning Outcomes
+- Mastered WordPress CMS configuration and customization
+- Gained practical experience with PHP in WordPress framework
+- Developed skills in technical content creation and organization
+- Enhanced understanding of web hosting and domain management
+- Improved database administration capabilities
+
+## Archive
+
+You can still explore a snapshot of the website via the [[Internet Archive](https://web.archive.org/web/20151011113825/http://clearstacknow.com/)](https://web.archive.org/web/20151011113825/http://clearstacknow.com/)
+
+1e:T1288,<h2>Project Overview</h2>
+<p>A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.</p>
+<h2>Project Details</h2>
+<h3>Technologies &#x26; Platforms Used</h3>
+<ul>
+<li>Blogger/Blogspot CMS</li>
+<li>HTML/CSS customization</li>
+<li>JavaScript for dynamic elements</li>
+<li>Responsive design principles</li>
+<li>Social media integration</li>
+<li>Google Analytics</li>
+<li>Custom domain configuration</li>
+<li>SEO optimization</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Multi-category Content Layout</strong>: Organized sections for different types of racing news and Rossi updates</li>
+<li><strong>Custom Navigation Menu</strong>: Easy access to store, tickets, official websites, and social channels</li>
+<li><strong>Responsive Grid Layout</strong>: Adaptable content display for all device sizes</li>
+<li><strong>Featured Posts Carousel</strong>: Highlighting important race updates and rider interactions</li>
+<li><strong>Social Media Integration</strong>: Direct links to MotoGP and Rossi's official social channels</li>
+<li><strong>Comment System</strong>: Community engagement through discussion threads</li>
+<li><strong>Post Categorization</strong>: Organized content by year, event type, and rider interactions</li>
+<li><strong>Page View Counter</strong>: Tracking blog popularity and audience engagement</li>
+<li><strong>Media-Rich Articles</strong>: High-quality images from races and events</li>
+</ul>
+<h3>Development Process</h3>
+<p>The blog was built on Blogger's platform with extensive customization to create a professional sports news site appearance. Key steps included:</p>
+<ol>
+<li><strong>Platform Selection</strong>: Chose Blogger for its reliability and customization options</li>
+<li><strong>Template Customization</strong>: Modified a base template with MotoGP-inspired colors and layout</li>
+<li><strong>Navigation Structure</strong>: Created a comprehensive menu system linking to relevant MotoGP resources</li>
+<li><strong>Content Strategy</strong>: Developed a consistent posting schedule around race events and news</li>
+<li><strong>Performance Optimization</strong>: Implemented image compression and lazy loading for faster page loads</li>
+<li><strong>SEO Implementation</strong>: Optimized posts with appropriate keywords related to Valentino Rossi and MotoGP</li>
+</ol>
+<h3>Special Features</h3>
+<ul>
+<li><strong>Race Coverage</strong>: Detailed articles about Rossi's performances in MotoGP races</li>
+<li><strong>Rider Interactions</strong>: Coverage of special moments between Rossi and other racers, particularly Lewis Hamilton</li>
+<li><strong>Event Calendar</strong>: Updates on upcoming races and appearances</li>
+<li><strong>Historical Content</strong>: Articles about Rossi's career milestones and achievements</li>
+<li><strong>Fan Community</strong>: Space for Rossi enthusiasts to connect and discuss</li>
+</ul>
+<h3>Results</h3>
+<ul>
+<li>Established a dedicated platform for English-speaking Valentino Rossi fans</li>
+<li>Created a comprehensive archive of race coverage and career highlights</li>
+<li>Built a community of engaged MotoGP enthusiasts</li>
+<li>Developed content management and publishing skills</li>
+<li>Gained experience in sports content creation and audience building</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>Custom CSS Modifications</strong>: Enhanced the standard Blogger template with racing-themed design elements</li>
+<li><strong>Responsive Grid Layout</strong>: Implemented a flexible content grid that adapts to various screen sizes</li>
+<li><strong>Category-Based Navigation</strong>: Created an intuitive content organization system</li>
+<li><strong>Image Optimization</strong>: Implemented techniques to balance quality and loading speed</li>
+<li><strong>Cross-Posting Integration</strong>: Connected blog content with social media platforms</li>
+</ul>
+<h2>Achievements</h2>
+<ul>
+<li>Consistent content production spanning multiple MotoGP seasons</li>
+<li>Coverage of special events like the Rossi-Hamilton vehicle swap</li>
+<li>Built a loyal readership of motorcycle racing enthusiasts</li>
+<li>Developed expertise in motorsport content creation</li>
+<li>Practical application of web publishing and content management skills</li>
+</ul>
+<p>The <a href="https://46vale.info">46vale.info</a> fan blog demonstrates my ability to create and maintain a content-rich website focused on a specific interest area, implement appropriate design elements for the subject matter, and build an engaged community around shared passions.</p>
+1f:Tf84,
+## Project Overview
+A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.
+
+## Project Details
+
+### Technologies & Platforms Used
+* Blogger/Blogspot CMS
+* HTML/CSS customization
+* JavaScript for dynamic elements
+* Responsive design principles
+* Social media integration
+* Google Analytics
+* Custom domain configuration
+* SEO optimization
+
+### Key Features
+* **Multi-category Content Layout**: Organized sections for different types of racing news and Rossi updates
+* **Custom Navigation Menu**: Easy access to store, tickets, official websites, and social channels
+* **Responsive Grid Layout**: Adaptable content display for all device sizes
+* **Featured Posts Carousel**: Highlighting important race updates and rider interactions
+* **Social Media Integration**: Direct links to MotoGP and Rossi's official social channels
+* **Comment System**: Community engagement through discussion threads
+* **Post Categorization**: Organized content by year, event type, and rider interactions
+* **Page View Counter**: Tracking blog popularity and audience engagement
+* **Media-Rich Articles**: High-quality images from races and events
+
+### Development Process
+The blog was built on Blogger's platform with extensive customization to create a professional sports news site appearance. Key steps included:
+
+1. **Platform Selection**: Chose Blogger for its reliability and customization options
+2. **Template Customization**: Modified a base template with MotoGP-inspired colors and layout
+3. **Navigation Structure**: Created a comprehensive menu system linking to relevant MotoGP resources
+4. **Content Strategy**: Developed a consistent posting schedule around race events and news
+5. **Performance Optimization**: Implemented image compression and lazy loading for faster page loads
+6. **SEO Implementation**: Optimized posts with appropriate keywords related to Valentino Rossi and MotoGP
+
+### Special Features
+* **Race Coverage**: Detailed articles about Rossi's performances in MotoGP races
+* **Rider Interactions**: Coverage of special moments between Rossi and other racers, particularly Lewis Hamilton
+* **Event Calendar**: Updates on upcoming races and appearances
+* **Historical Content**: Articles about Rossi's career milestones and achievements
+* **Fan Community**: Space for Rossi enthusiasts to connect and discuss
+
+### Results
+* Established a dedicated platform for English-speaking Valentino Rossi fans
+* Created a comprehensive archive of race coverage and career highlights
+* Built a community of engaged MotoGP enthusiasts
+* Developed content management and publishing skills
+* Gained experience in sports content creation and audience building
+
+## Technical Highlights
+* **Custom CSS Modifications**: Enhanced the standard Blogger template with racing-themed design elements
+* **Responsive Grid Layout**: Implemented a flexible content grid that adapts to various screen sizes
+* **Category-Based Navigation**: Created an intuitive content organization system 
+* **Image Optimization**: Implemented techniques to balance quality and loading speed
+* **Cross-Posting Integration**: Connected blog content with social media platforms
+
+## Achievements
+* Consistent content production spanning multiple MotoGP seasons
+* Coverage of special events like the Rossi-Hamilton vehicle swap
+* Built a loyal readership of motorcycle racing enthusiasts
+* Developed expertise in motorsport content creation
+* Practical application of web publishing and content management skills
+
+The [46vale.info](https://46vale.info) fan blog demonstrates my ability to create and maintain a content-rich website focused on a specific interest area, implement appropriate design elements for the subject matter, and build an engaged community around shared passions.2:[["$","$La",null,{"content":{"id":"hero","metadata":{"name":"Digin Dominic","title":"Software Engineer | Research Toolsmith | Data Workflow Architect","subtitle":"I build powerful tools that bridge science and software. From high-performance image segmentation apps to intuitive 3D data visualizations, I create solutions that turn complex research into accessible, interactive, and scalable applications. Whether it's automating microscopy workflows or designing end-to-end pipelines for brain mapping, my work empowers scientists with the right technology—precise, efficient, and beautiful.","profileImage":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png","primaryCta":"View My Work","primaryCtaLink":"/projects","secondaryCta":"Contact Me","secondaryCtaLink":"/about"},"content":"<h1>Hero Section</h1>\n<p>This is the hero section of my personal portfolio website. The content here will be displayed prominently at the top of the homepage.</p>\n<h2>Key Features</h2>\n<ul>\n<li>Professional introduction</li>\n<li>Brief overview of my expertise</li>\n<li>Call-to-action buttons for portfolio exploration</li>\n<li>Professional profile image</li>\n</ul>\n","rawContent":"\n# Hero Section\n\nThis is the hero section of my personal portfolio website. The content here will be displayed prominently at the top of the homepage.\n\n## Key Features\n\n- Professional introduction\n- Brief overview of my expertise\n- Call-to-action buttons for portfolio exploration\n- Professional profile image"}}],["$","$Lb",null,{"projects":[{"id":"synaptopathydb","metadata":{"title":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research","date":"2025-06-27","summary":"A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/synaptopathydb.png","tag":"React, Flask, Python, SQLite, Tailwind CSS, REST API, Data Visualization","demo":"https://www.synaptopathydb.org"},"content":"$c","rawContent":"$d"},{"id":"s3-bucket-viewer","metadata":{"title":"S3 Bucket Viewer - Web-Based S3 File Browser","date":"2025-01-15","summary":"A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation.","image":"https://raw.githubusercontent.com/digin1/s3-bucket-viewer/refs/heads/main/images/screenshot1.png","tag":"React, Flask, Python, Tailwind CSS, Docker, AWS S3, boto3","demo":"https://github.com/digin1/s3-bucket-viewer"},"content":"$e","rawContent":"$f"},{"id":"deep-chill-inventory-management-system","metadata":{"title":"Deep Chill Inventory Management System","date":"2022-04-01","summary":"The Deep Chill Inventory Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/inventory-management-system.png","tag":"php, bootstrap, MySQL"},"content":"$10","rawContent":"$11"},{"id":"automating-secure-infrastructure-with-ansible-project","metadata":{"title":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control","date":"2021-12-12","summary":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC). 🚀","image":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png","tag":"ansible, ubuntu","featured":"yes"},"content":"$12","rawContent":"$13"},{"id":"code-pad-me--online-code-execution-system","metadata":{"title":"Code-Pad.me - Award-Winning Online Code Execution System","date":"2021-11-15","summary":"Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it’s perfect for coding challenges, teaching, and collaboration.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad.png","tag":"Django, bootstrap, JQuery, Docker, SQLite, PostgreSQL, GitLab, Judge0","featured":"yes","github":"https://gitlab.com/digin13dominic/code-pad.me","demo":"https://code-pad.me"},"content":"$14","rawContent":"$15"},{"id":"boot-factory-e-commerce-platform-development","metadata":{"title":"Boot Factory: E-Commerce Platform Development with ASP.NET MVC","date":"2021-05-31","summary":"Designed and built a fully functional e-commerce platform for footwear using C# ASP.NET MVC architecture. This coursework project demonstrates proficiency in web development frameworks, database integration, user authentication, and shopping cart functionality while following industry best practices.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/bootfactory.png","tag":"ASP.NET, C#, MVC","github":"https://github.com/digin1/Boot-Factory"},"content":"$16","rawContent":"$17"},{"id":"hycel-asset-management-system","metadata":{"title":"Hycel Asset Management System","date":"2021-04-15","summary":"The Hycel Asset Management System is an IoT-integrated hydrogen leakage detection infrastructure built for Deakin University that visualizes real-time sensor data on interactive Google Maps. Using PHP, MySQL, JavaScript, and BigData integration, the system displays color-coded map markers with detailed sensor information panels showing temperature, humidity, and system status. The project features custom SQL queries for efficient data retrieval, a responsive interface for cross-device monitoring, and a built-in comment system for team communication. This safety-critical system enables early detection of potential hydrogen leaks, enhancing facility safety protocols and creating a scalable platform for the university's expanding Hycel precinct.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/hycel.png","tag":"php, bootstrap, Google Big Data, Google Maps API, IoT, MySQL"},"content":"$18","rawContent":"$19"},{"id":"veeble-knowledge-base-web-development-project","metadata":{"title":"Veeble Knowledge Base - Web Development Project","date":"2020-03-01","summary":"Designed and implemented a comprehensive Knowledge Base system for Veeble.com, creating an organized repository of technical documentation accessible to clients. The system features categorized articles spanning various hosting technologies with an intuitive navigation structure and search functionality. Performance optimizations were implemented to ensure quick access to critical support information.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/kbveeble.png","tag":"php, wordpress","demo":"https://kb.veeble.org"},"content":"$1a","rawContent":"$1b"},{"id":"wordpress-cms-development-clearstacknow-com","metadata":{"title":"WordPress CMS Development: ClearStackNow.com","date":"2015-10-11","summary":"Developed and deployed a technical content platform using WordPress CMS, focusing on database technologies and systems administration topics. Customized themes and functionality to create an intuitive knowledge-sharing platform for programming and IT operations.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/clearstacknow.png","tag":"php, wordpress","demo":"https://web.archive.org/web/20151011113825/http://clearstacknow.com/"},"content":"$1c","rawContent":"$1d"},{"id":"valentino-rossi-fan-blog","metadata":{"title":"46vale.info - Valentino Rossi Fan Blog","date":"2013-03-15","summary":"A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/46vale.png","tag":"Blogger, XML","demo":"https://46vale.info"},"content":"$1e","rawContent":"$1f"}]}],["$","$L20",null,{"content":{"id":"skills","metadata":{"title":"Tech Toolkit","subtitle":"My Expertise","description":"The technologies and tools I use to build powerful, scalable, and efficient applications","skills":[{"name":"React","icon":"faReact","level":95,"experience":"4+ years","categories":["frontend"]},{"name":"JavaScript","icon":"faJs","level":90,"experience":"5+ years","categories":["frontend","backend"]},{"name":"HTML5","icon":"faHtml5","level":100,"experience":"6+ years","categories":["frontend"]},{"name":"CSS3","icon":"faCss3Alt","level":90,"experience":"6+ years","categories":["frontend"]},{"name":"Bootstrap","icon":"faBootstrap","level":95,"experience":"5+ years","categories":["frontend"]},{"name":"Three.js","icon":"faLaptopCode","level":85,"experience":"3+ years","categories":["frontend"]},{"name":"Chart.js","icon":"faChartBar","level":90,"experience":"4+ years","categories":["frontend"]},{"name":"WebGL","icon":"faLaptopCode","level":80,"experience":"3+ years","categories":["frontend"]},{"name":"Node.js","icon":"faNodeJs","level":85,"experience":"4+ years","categories":["backend"]},{"name":"Python","icon":"faPython","level":95,"experience":"5+ years","categories":["backend","datascience"]},{"name":"Flask","icon":"faCode","level":90,"experience":"4+ years","categories":["backend"]},{"name":"MongoDB","icon":"faDatabase","level":80,"experience":"3+ years","categories":["backend"]},{"name":"SQLite","icon":"faDatabase","level":85,"experience":"4+ years","categories":["backend"]},{"name":"PostgreSQL","icon":"faDatabase","level":85,"experience":"4+ years","categories":["backend"]},{"name":"Celery","icon":"faLayerGroup","level":85,"experience":"3+ years","categories":["backend"]},{"name":"Docker","icon":"faDocker","level":90,"experience":"4+ years","categories":["devops"]},{"name":"AWS","icon":"faAws","level":85,"experience":"3+ years","categories":["devops"]},{"name":"Git","icon":"faGitAlt","level":95,"experience":"5+ years","categories":["devops"]},{"name":"GitHub","icon":"faGithub","level":95,"experience":"5+ years","categories":["devops"]},{"name":"GitLab CI","icon":"faGitlab","level":85,"experience":"3+ years","categories":["devops"]},{"name":"Linux/Ubuntu","icon":"faLinux","level":90,"experience":"5+ years","categories":["devops"]},{"name":"Ansible","icon":"faCog","level":85,"experience":"3+ years","categories":["devops"]},{"name":"Prometheus","icon":"faChartLine","level":80,"experience":"2+ years","categories":["devops"]},{"name":"Grafana","icon":"faChartBar","level":80,"experience":"2+ years","categories":["devops"]},{"name":"OpenVZ","icon":"faServer","level":75,"experience":"2+ years","categories":["devops"]},{"name":"KVM","icon":"faServer","level":75,"experience":"2+ years","categories":["devops"]},{"name":"Xen","icon":"faServer","level":70,"experience":"2+ years","categories":["devops"]},{"name":"Nagios","icon":"faNetworkWired","level":75,"experience":"2+ years","categories":["devops"]},{"name":"rclone","icon":"faCloudUploadAlt","level":85,"experience":"3+ years","categories":["devops"]},{"name":"TensorFlow","icon":"faBrain","level":80,"experience":"3+ years","categories":["datascience"]},{"name":"PyTorch","icon":"faBrain","level":85,"experience":"3+ years","categories":["datascience"]},{"name":"OpenCV","icon":"faEye","level":90,"experience":"4+ years","categories":["datascience"]},{"name":"MATLAB","icon":"faTable","level":85,"experience":"3+ years","categories":["datascience"]},{"name":"Dask","icon":"faLayerGroup","level":80,"experience":"2+ years","categories":["datascience"]},{"name":"RadiantKit","icon":"faChartLine","level":75,"experience":"2+ years","categories":["datascience"]},{"name":"VSCode","icon":"faCode","level":95,"experience":"5+ years","categories":["tools"]}]},"content":"<h1>Technical Skills</h1>\n<p>This section outlines the various technologies and tools I'm proficient in, categorized by domain. These skills have been developed through professional experience, personal projects, and continuous learning.</p>\n<h2>Frontend Development</h2>\n<p>My frontend skills focus on creating responsive, intuitive user interfaces with modern JavaScript frameworks.</p>\n<h2>Backend Development</h2>\n<p>On the backend, I specialize in building scalable, maintainable services and APIs.</p>\n<h2>DevOps &#x26; Infrastructure</h2>\n<p>I have extensive experience setting up and maintaining development infrastructure and deployment pipelines.</p>\n<h2>Data Science &#x26; Analysis</h2>\n<p>I apply computational and statistical methods to extract insights from complex datasets.</p>\n<h2>Tools &#x26; Environment</h2>\n<p>I'm proficient with various development tools and environments that enhance productivity.</p>\n","rawContent":"\n# Technical Skills\n\nThis section outlines the various technologies and tools I'm proficient in, categorized by domain. These skills have been developed through professional experience, personal projects, and continuous learning.\n\n## Frontend Development\n\nMy frontend skills focus on creating responsive, intuitive user interfaces with modern JavaScript frameworks.\n\n## Backend Development\n\nOn the backend, I specialize in building scalable, maintainable services and APIs.\n\n## DevOps & Infrastructure\n\nI have extensive experience setting up and maintaining development infrastructure and deployment pipelines.\n\n## Data Science & Analysis\n\nI apply computational and statistical methods to extract insights from complex datasets.\n\n## Tools & Environment\n\nI'm proficient with various development tools and environments that enhance productivity."}}]]
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Digin Dominic | Software Engineer"}],["$","meta","3",{"name":"description","content":"Software Engineer, Research Toolsmith, and Data Workflow Architect. Building impactful digital solutions with React, Python, and modern web technologies."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"Digin Dominic | Software Engineer"}],["$","meta","7",{"property":"og:description","content":"Software Engineer, Research Toolsmith, and Data Workflow Architect."}],["$","meta","8",{"property":"og:url","content":"https://digindominic.me/"}],["$","meta","9",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp"}],["$","meta","10",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","11",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","12",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","13",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp"}]]
+1:null

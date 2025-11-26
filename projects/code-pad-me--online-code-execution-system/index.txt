@@ -1,0 +1,248 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","code-pad-me--online-code-execution-system","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","code-pad-me--online-code-execution-system","d"],{"children":["__PAGE__?{\"id\":\"code-pad-me--online-code-execution-system\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","code-pad-me--online-code-execution-system","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:T1642,<blockquote>
+<p><strong>Best Project Award Winner</strong><br>
+MSc Cyber Security – Nottingham Trent University</p>
+</blockquote>
+<hr>
+<h2>🚀 About the Project</h2>
+<p><strong>Code-Pad.me</strong> is an online code execution web platform designed to help learners, educators, and developers write, share, and execute code effortlessly from any device—without the need to install a local compiler or development environment.</p>
+<p>Whether you're coding from a desktop, tablet, or even a mobile browser, Code-Pad.me empowers users to share challenges, test code snippets, and learn collaboratively—all within a sleek, browser-based interface.</p>
+<hr>
+<h2>🧠 Inspiration</h2>
+<p>During the COVID-19 pandemic, e-learning became a lifeline for education. However, coding education suffered due to setup issues—like incompatible compilers, platform dependencies, and device limitations (especially for iOS users).<br>
+This inspired me to develop <strong>Code-Pad.me</strong>—a zero-setup, responsive, cloud-based code runner that works anywhere, anytime.</p>
+<hr>
+<h2>🎯 Project Goals</h2>
+<ul>
+<li>Build a <strong>web-based code execution platform</strong> supporting multiple programming languages.</li>
+<li>Eliminate setup barriers by offering <strong>compiler-less code execution</strong>.</li>
+<li>Enable users to <strong>create and share coding challenges</strong> for peer learning.</li>
+<li>Encourage coding collaboration with <strong>shareable links &#x26; QR codes</strong>.</li>
+<li>Ensure cross-platform access with a <strong>responsive, mobile-first design</strong>.</li>
+</ul>
+<hr>
+<h2>💡 Key Features</h2>
+<ul>
+<li>🖥️ <strong>Multi-language Code Execution</strong> (via Judge0 API)</li>
+<li>🔒 <strong>Secure, Containerized Execution</strong> (Docker-based sandboxing)</li>
+<li>📱 <strong>Mobile &#x26; Desktop Friendly</strong> (Responsive UI using Bootstrap 5)</li>
+<li>📤 <strong>Code Sharing with QR &#x26; Short URLs</strong></li>
+<li>🎯 <strong>Custom &#x26; Random Challenges</strong> for continuous learning</li>
+<li>📥 <strong>Downloadable Code</strong> with proper file extensions</li>
+<li>🔢 <strong>Code View Metrics</strong> to track engagement</li>
+<li>💬 <strong>User Feedback Integration</strong> during development</li>
+</ul>
+<hr>
+<h2>🏗️ Architecture Overview</h2>
+<p>The app uses a modern stack with continuous delivery pipelines:</p>
+<ul>
+<li><strong>Backend</strong>: Python (Django)</li>
+<li><strong>Frontend</strong>: Bootstrap, JavaScript, JQuery, CodeMirror Editor</li>
+<li><strong>API</strong>: Judge0 for secure multi-language code execution</li>
+<li><strong>CI/CD</strong>: GitLab Runner, Docker</li>
+<li><strong>Database</strong>: SQLite (Dev), PostgreSQL (Production)</li>
+<li><strong>Deployment</strong>: Docker containers on Ubuntu VM</li>
+</ul>
+<hr>
+<h2>🧪 Testing &#x26; Evaluation</h2>
+<ul>
+<li>✅ <strong>Unit &#x26; System Testing</strong>: Validated core functionality, user interactions, and system behavior.</li>
+<li>📈 <strong>Performance Testing</strong>: Tested with up to 1000 concurrent users using <code>httperf</code>.</li>
+<li>📋 <strong>User Feedback Surveys</strong>: Guided feature additions like:
+<ul>
+<li>Dark mode (Planned)</li>
+<li>Challenge system</li>
+<li>QR code sharing</li>
+<li>Code readability improvements via CodeMirror</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>🔍 Screenshots</h2>
+<h3><em>Home Interface</em></h3>
+<p><img src="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG" alt="Home Screenshot"></p>
+<h3><em>QR Code Sharing Modal</em></h3>
+<p><img src="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG" alt="QR Code Screenshot"></p>
+<hr>
+<h2>📈 Achievements</h2>
+<ul>
+<li>🏆 <strong>Best Project Award</strong> - Nottingham Trent University, 2025</li>
+<li>🎓 Successfully presented to academic panels and peers</li>
+<li>💬 Positive feedback from students, developers, and educators</li>
+</ul>
+<hr>
+<h2>🧩 Future Roadmap</h2>
+<ul>
+<li>🌑 <strong>Dark Mode Toggle</strong></li>
+<li>🔼 <strong>Like &#x26; Cheer Buttons</strong></li>
+<li>📊 <strong>Ranking System</strong> for competitive users</li>
+<li>📚 <strong>Knowledge Base &#x26; Tutorials</strong></li>
+<li>🆘 <strong>Help &#x26; Troubleshooting Center</strong></li>
+<li>📥 <strong>Feedback Form</strong></li>
+</ul>
+<hr>
+<h2>📚 Technologies Used</h2>
+<ul>
+<li><strong>Python</strong>, <strong>Django</strong></li>
+<li><strong>Judge0 API</strong></li>
+<li><strong>Bootstrap</strong>, <strong>JavaScript</strong>, <strong>JQuery</strong>, <strong>CodeMirror</strong></li>
+<li><strong>Docker</strong>, <strong>Heroku</strong></li>
+<li><strong>GitLab CI/CD</strong>, <strong>TravisCI</strong>, <strong>BetterCodeHub</strong></li>
+<li><strong>SQLite</strong>, <strong>PostgreSQL</strong></li>
+</ul>
+<hr>
+<h2>Award Certificate</h2>
+<p><img src="https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/projectaward.png" alt="Award Certificate"></p>
+<hr>
+<h2>🔗 Live Demo</h2>
+<p>🌐 <a href="https://code-pad.me">https://code-pad.me</a><br>
+Try it live! Create, run, and share your code today.</p>
+<hr>
+<h2>🙌 Acknowledgements</h2>
+<p>Special thanks to my supervisor <a href="https://shah.fyi/">Dr. Madasar Shah</a> and Nottingham Trent University's School of Science and Technology for their support. And to every beta tester who gave invaluable feedback—thank you!</p>
+<hr>
+<blockquote>
+<p><em>“This project wasn't just about building a code runner—it's about empowering anyone, anywhere, to learn and write code without barriers.”</em><br>
+— <strong>Digin Dominic</strong></p>
+</blockquote>
+d:T112c,
+> **Best Project Award Winner**  
+> MSc Cyber Security – Nottingham Trent University  
+
+---
+
+## 🚀 About the Project
+
+**Code-Pad.me** is an online code execution web platform designed to help learners, educators, and developers write, share, and execute code effortlessly from any device—without the need to install a local compiler or development environment.
+
+Whether you're coding from a desktop, tablet, or even a mobile browser, Code-Pad.me empowers users to share challenges, test code snippets, and learn collaboratively—all within a sleek, browser-based interface.
+
+---
+
+## 🧠 Inspiration
+
+During the COVID-19 pandemic, e-learning became a lifeline for education. However, coding education suffered due to setup issues—like incompatible compilers, platform dependencies, and device limitations (especially for iOS users).  
+This inspired me to develop **Code-Pad.me**—a zero-setup, responsive, cloud-based code runner that works anywhere, anytime.
+
+---
+
+## 🎯 Project Goals
+
+- Build a **web-based code execution platform** supporting multiple programming languages.
+- Eliminate setup barriers by offering **compiler-less code execution**.
+- Enable users to **create and share coding challenges** for peer learning.
+- Encourage coding collaboration with **shareable links & QR codes**.
+- Ensure cross-platform access with a **responsive, mobile-first design**.
+
+---
+
+## 💡 Key Features
+
+- 🖥️ **Multi-language Code Execution** (via Judge0 API)
+- 🔒 **Secure, Containerized Execution** (Docker-based sandboxing)
+- 📱 **Mobile & Desktop Friendly** (Responsive UI using Bootstrap 5)
+- 📤 **Code Sharing with QR & Short URLs**
+- 🎯 **Custom & Random Challenges** for continuous learning
+- 📥 **Downloadable Code** with proper file extensions
+- 🔢 **Code View Metrics** to track engagement
+- 💬 **User Feedback Integration** during development
+
+---
+
+## 🏗️ Architecture Overview
+
+The app uses a modern stack with continuous delivery pipelines:
+
+- **Backend**: Python (Django)
+- **Frontend**: Bootstrap, JavaScript, JQuery, CodeMirror Editor
+- **API**: Judge0 for secure multi-language code execution
+- **CI/CD**: GitLab Runner, Docker
+- **Database**: SQLite (Dev), PostgreSQL (Production)
+- **Deployment**: Docker containers on Ubuntu VM
+
+---
+
+## 🧪 Testing & Evaluation
+
+- ✅ **Unit & System Testing**: Validated core functionality, user interactions, and system behavior.
+- 📈 **Performance Testing**: Tested with up to 1000 concurrent users using `httperf`.
+- 📋 **User Feedback Surveys**: Guided feature additions like:
+  - Dark mode (Planned)
+  - Challenge system
+  - QR code sharing
+  - Code readability improvements via CodeMirror
+
+---
+
+## 🔍 Screenshots
+
+### _Home Interface_  
+![Home Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG)
+
+### _QR Code Sharing Modal_  
+![QR Code Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG)
+
+---
+
+## 📈 Achievements
+
+- 🏆 **Best Project Award** - Nottingham Trent University, 2025
+- 🎓 Successfully presented to academic panels and peers
+- 💬 Positive feedback from students, developers, and educators
+
+---
+
+## 🧩 Future Roadmap
+
+- 🌑 **Dark Mode Toggle**
+- 🔼 **Like & Cheer Buttons**
+- 📊 **Ranking System** for competitive users
+- 📚 **Knowledge Base & Tutorials**
+- 🆘 **Help & Troubleshooting Center**
+- 📥 **Feedback Form**
+
+---
+
+## 📚 Technologies Used
+
+- **Python**, **Django**
+- **Judge0 API**
+- **Bootstrap**, **JavaScript**, **JQuery**, **CodeMirror**
+- **Docker**, **Heroku**
+- **GitLab CI/CD**, **TravisCI**, **BetterCodeHub**
+- **SQLite**, **PostgreSQL**
+
+---
+## Award Certificate
+
+![Award Certificate](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/projectaward.png)
+
+---
+
+## 🔗 Live Demo
+
+🌐 [https://code-pad.me](https://code-pad.me)  
+Try it live! Create, run, and share your code today.
+
+---
+
+## 🙌 Acknowledgements
+
+Special thanks to my supervisor [Dr. Madasar Shah](https://shah.fyi/) and Nottingham Trent University's School of Science and Technology for their support. And to every beta tester who gave invaluable feedback—thank you!
+
+---
+
+> _“This project wasn't just about building a code runner—it's about empowering anyone, anywhere, to learn and write code without barriers.”_  
+> — **Digin Dominic**
+
+2:["$","$Lb",null,{"project":{"id":"code-pad-me--online-code-execution-system","metadata":{"title":"Code-Pad.me - Award-Winning Online Code Execution System","date":"2021-11-15","summary":"Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it’s perfect for coding challenges, teaching, and collaboration.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad.png","tag":"Django, bootstrap, JQuery, Docker, SQLite, PostgreSQL, GitLab, Judge0","featured":"yes","github":"https://gitlab.com/digin13dominic/code-pad.me","demo":"https://code-pad.me"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Code-Pad.me - Award-Winning Online Code Execution System | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it’s perfect for coding challenges, teaching, and collaboration."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"Code-Pad.me - Award-Winning Online Code Execution System"}],["$","meta","7",{"property":"og:description","content":"Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it’s perfect for coding challenges, teaching, and collaboration."}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad.png"}]]
+1:null

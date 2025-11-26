@@ -1,0 +1,296 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","s3-bucket-viewer","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","s3-bucket-viewer","d"],{"children":["__PAGE__?{\"id\":\"s3-bucket-viewer\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","s3-bucket-viewer","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:T1f47,<h2>Project Overview</h2>
+<p>S3 Bucket Viewer is a web application designed to simplify browsing and previewing files stored in public S3-compatible buckets. It provides an intuitive interface for navigating bucket contents, previewing various file types directly in the browser, and generating shareable links or AWS CLI commands for batch operations.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>React.js</li>
+<li>Tailwind CSS</li>
+<li>Flask (Python)</li>
+<li>boto3 (AWS SDK)</li>
+<li>Docker &#x26; Docker Compose</li>
+<li>nginx</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Directory Navigation</strong>: Browse bucket contents with breadcrumb navigation and pagination support using S3 continuation tokens</li>
+<li><strong>Multi-Format File Preview</strong>: In-browser preview support for text files, images (including TIFF conversion), CSV, XLSX, and DOCX documents</li>
+<li><strong>Resizable Panel Layout</strong>: Adjustable split-view interface with draggable dividers for customizing the browsing experience</li>
+<li><strong>Shareable URLs</strong>: Generate URLs that preserve the current endpoint, bucket, and path configuration for easy sharing</li>
+<li><strong>AWS CLI Sync Commands</strong>: Automatically generate <code>aws s3 sync</code> commands for batch downloading files</li>
+<li><strong>Configuration Persistence</strong>: Hierarchical config system using URL parameters, localStorage, and backend fallback</li>
+<li><strong>File Size Display</strong>: Human-readable file sizes with appropriate unit formatting</li>
+</ul>
+<h3>Development Process</h3>
+<h4>Frontend Architecture</h4>
+<p>Built a React.js single-page application with sophisticated state management:</p>
+<ul>
+<li>
+<p><strong>App.js (Main Component)</strong>:</p>
+<ul>
+<li>Manages global state including endpoint configuration, current path, and selected file</li>
+<li>Implements resizable panel layout using mouse event handlers for drag functionality</li>
+<li>Configuration persistence with priority: URL params > localStorage > backend config</li>
+<li>Panel width constraints with minimum/maximum boundaries</li>
+</ul>
+</li>
+<li>
+<p><strong>BucketExplorer Component</strong>:</p>
+<ul>
+<li>Directory listing with pagination using S3 continuation tokens</li>
+<li>Breadcrumb navigation for quick directory traversal</li>
+<li>File size formatting and sorting capabilities</li>
+<li>Click handling for both directories and files</li>
+</ul>
+</li>
+<li>
+<p><strong>FileViewer Component</strong>:</p>
+<ul>
+<li>Dispatcher component that routes files to appropriate handlers based on MIME type</li>
+<li>Supports lazy loading of file content for performance</li>
+</ul>
+</li>
+<li>
+<p><strong>FileTypeHandlers</strong>:</p>
+<ul>
+<li><code>TextViewer</code>: Syntax-highlighted code and plain text display</li>
+<li><code>ImageViewer</code>: Image preview with TIFF-to-PNG conversion support</li>
+<li><code>CsvViewer</code>: Tabular display of CSV data with headers</li>
+<li><code>XlsxViewer</code>: Excel spreadsheet rendering</li>
+<li><code>DocxViewer</code>: Word document preview</li>
+</ul>
+</li>
+<li>
+<p><strong>Utility Components</strong>:</p>
+<ul>
+<li><code>ConfigPanel</code>: S3 endpoint and bucket configuration interface</li>
+<li><code>ShareableLink</code>: URL generation for current view state</li>
+<li><code>SyncCommandBox</code>: AWS CLI command generation for batch operations</li>
+</ul>
+</li>
+</ul>
+<h4>Backend Architecture</h4>
+<p>Developed a Flask REST API for S3 interactions:</p>
+<ul>
+<li>
+<p><strong>API Endpoints</strong>:</p>
+<ul>
+<li><code>GET/POST/DELETE /api/config</code> - Manage S3 connection configuration with validation</li>
+<li><code>GET /api/list</code> - List bucket contents with pagination (500 items per page)</li>
+<li><code>GET /api/file</code> - Download or stream files for preview</li>
+<li><code>GET /api/fileinfo</code> - Retrieve file metadata including size and content type</li>
+</ul>
+</li>
+<li>
+<p><strong>S3 Integration</strong>:</p>
+<ul>
+<li>Uses boto3 with <code>UNSIGNED</code> signature configuration for public bucket access</li>
+<li>Handles S3-compatible endpoints (AWS, MinIO, Wasabi, etc.)</li>
+<li>Continuation token management for large directory listings</li>
+</ul>
+</li>
+<li>
+<p><strong>File Processing (file_handlers.py)</strong>:</p>
+<ul>
+<li>MIME type detection using python-magic</li>
+<li>Text file preview with encoding detection</li>
+<li>Image processing with TIFF-to-PNG conversion using Pillow</li>
+<li>CSV parsing with pandas for structured display</li>
+<li>XLSX extraction with openpyxl</li>
+<li>DOCX text extraction with python-docx</li>
+<li>100MB size limit for preview operations</li>
+</ul>
+</li>
+</ul>
+<h4>Deployment Infrastructure</h4>
+<ul>
+<li>
+<p><strong>Docker Compose Configuration</strong>:</p>
+<ul>
+<li>Backend service: Flask app on port 5000 (exposed as 5050)</li>
+<li>Frontend service: nginx serving React build on port 80 (exposed as 8080)</li>
+<li>Resource limits: CPU and memory constraints for production stability</li>
+<li>Health checks for backend service monitoring</li>
+<li>Shared bridge network for inter-service communication</li>
+</ul>
+</li>
+<li>
+<p><strong>Volume Management</strong>:</p>
+<ul>
+<li>Development hot-reload with mounted source directories</li>
+<li>Separate node_modules volume to prevent conflicts</li>
+</ul>
+</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>Public Bucket Access</strong>: Implements unsigned S3 requests using boto3's <code>UNSIGNED</code> signature, eliminating the need for AWS credentials when accessing public buckets</li>
+<li><strong>Format Conversion</strong>: Server-side TIFF-to-PNG conversion enables web display of formats not natively supported by browsers</li>
+<li><strong>Efficient Pagination</strong>: Leverages S3's native continuation tokens for efficient navigation of buckets with thousands of objects</li>
+<li><strong>Flexible Configuration</strong>: Three-tier configuration system (URL > localStorage > backend) enables both shareable links and persistent user preferences</li>
+<li><strong>Responsive Design</strong>: Tailwind CSS utilities provide mobile-friendly layouts with consistent styling</li>
+<li><strong>Container Orchestration</strong>: Docker Compose setup enables single-command deployment with proper service dependencies and resource management</li>
+</ul>
+<h3>Architecture Diagram</h3>
+<pre><code>┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Browser       │────▶│   nginx (80)    │────▶│   React App     │
+│                 │     │   Frontend      │     │   (Static)      │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+                                │
+                                ▼
+                        ┌─────────────────┐     ┌─────────────────┐
+                        │   Flask API     │────▶│   S3 Bucket     │
+                        │   (5000)        │     │   (Public)      │
+                        └─────────────────┘     └─────────────────┘
+</code></pre>
+<h2>Use Cases</h2>
+<ul>
+<li><strong>Data Exploration</strong>: Quickly browse and preview files in public datasets without downloading</li>
+<li><strong>Team Sharing</strong>: Generate shareable links to specific files or directories</li>
+<li><strong>Batch Downloads</strong>: Generate AWS CLI commands for downloading multiple files efficiently</li>
+<li><strong>Cross-Platform Access</strong>: Web-based interface works on any device with a browser</li>
+</ul>
+<h2>Project URL</h2>
+<p><a href="https://github.com/digin1/s3-bucket-viewer">GitHub Repository</a></p>
+d:T1a28,
+## Project Overview
+
+S3 Bucket Viewer is a web application designed to simplify browsing and previewing files stored in public S3-compatible buckets. It provides an intuitive interface for navigating bucket contents, previewing various file types directly in the browser, and generating shareable links or AWS CLI commands for batch operations.
+
+## Project Details
+
+### Technologies Used
+
+* React.js
+* Tailwind CSS
+* Flask (Python)
+* boto3 (AWS SDK)
+* Docker & Docker Compose
+* nginx
+
+### Key Features
+
+* **Directory Navigation**: Browse bucket contents with breadcrumb navigation and pagination support using S3 continuation tokens
+* **Multi-Format File Preview**: In-browser preview support for text files, images (including TIFF conversion), CSV, XLSX, and DOCX documents
+* **Resizable Panel Layout**: Adjustable split-view interface with draggable dividers for customizing the browsing experience
+* **Shareable URLs**: Generate URLs that preserve the current endpoint, bucket, and path configuration for easy sharing
+* **AWS CLI Sync Commands**: Automatically generate `aws s3 sync` commands for batch downloading files
+* **Configuration Persistence**: Hierarchical config system using URL parameters, localStorage, and backend fallback
+* **File Size Display**: Human-readable file sizes with appropriate unit formatting
+
+### Development Process
+
+#### Frontend Architecture
+
+Built a React.js single-page application with sophisticated state management:
+
+* **App.js (Main Component)**:
+  * Manages global state including endpoint configuration, current path, and selected file
+  * Implements resizable panel layout using mouse event handlers for drag functionality
+  * Configuration persistence with priority: URL params > localStorage > backend config
+  * Panel width constraints with minimum/maximum boundaries
+
+* **BucketExplorer Component**:
+  * Directory listing with pagination using S3 continuation tokens
+  * Breadcrumb navigation for quick directory traversal
+  * File size formatting and sorting capabilities
+  * Click handling for both directories and files
+
+* **FileViewer Component**:
+  * Dispatcher component that routes files to appropriate handlers based on MIME type
+  * Supports lazy loading of file content for performance
+
+* **FileTypeHandlers**:
+  * `TextViewer`: Syntax-highlighted code and plain text display
+  * `ImageViewer`: Image preview with TIFF-to-PNG conversion support
+  * `CsvViewer`: Tabular display of CSV data with headers
+  * `XlsxViewer`: Excel spreadsheet rendering
+  * `DocxViewer`: Word document preview
+
+* **Utility Components**:
+  * `ConfigPanel`: S3 endpoint and bucket configuration interface
+  * `ShareableLink`: URL generation for current view state
+  * `SyncCommandBox`: AWS CLI command generation for batch operations
+
+#### Backend Architecture
+
+Developed a Flask REST API for S3 interactions:
+
+* **API Endpoints**:
+  * `GET/POST/DELETE /api/config` - Manage S3 connection configuration with validation
+  * `GET /api/list` - List bucket contents with pagination (500 items per page)
+  * `GET /api/file` - Download or stream files for preview
+  * `GET /api/fileinfo` - Retrieve file metadata including size and content type
+
+* **S3 Integration**:
+  * Uses boto3 with `UNSIGNED` signature configuration for public bucket access
+  * Handles S3-compatible endpoints (AWS, MinIO, Wasabi, etc.)
+  * Continuation token management for large directory listings
+
+* **File Processing (file_handlers.py)**:
+  * MIME type detection using python-magic
+  * Text file preview with encoding detection
+  * Image processing with TIFF-to-PNG conversion using Pillow
+  * CSV parsing with pandas for structured display
+  * XLSX extraction with openpyxl
+  * DOCX text extraction with python-docx
+  * 100MB size limit for preview operations
+
+#### Deployment Infrastructure
+
+* **Docker Compose Configuration**:
+  * Backend service: Flask app on port 5000 (exposed as 5050)
+  * Frontend service: nginx serving React build on port 80 (exposed as 8080)
+  * Resource limits: CPU and memory constraints for production stability
+  * Health checks for backend service monitoring
+  * Shared bridge network for inter-service communication
+
+* **Volume Management**:
+  * Development hot-reload with mounted source directories
+  * Separate node_modules volume to prevent conflicts
+
+## Technical Highlights
+
+* **Public Bucket Access**: Implements unsigned S3 requests using boto3's `UNSIGNED` signature, eliminating the need for AWS credentials when accessing public buckets
+* **Format Conversion**: Server-side TIFF-to-PNG conversion enables web display of formats not natively supported by browsers
+* **Efficient Pagination**: Leverages S3's native continuation tokens for efficient navigation of buckets with thousands of objects
+* **Flexible Configuration**: Three-tier configuration system (URL > localStorage > backend) enables both shareable links and persistent user preferences
+* **Responsive Design**: Tailwind CSS utilities provide mobile-friendly layouts with consistent styling
+* **Container Orchestration**: Docker Compose setup enables single-command deployment with proper service dependencies and resource management
+
+### Architecture Diagram
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   Browser       │────▶│   nginx (80)    │────▶│   React App     │
+│                 │     │   Frontend      │     │   (Static)      │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+                                │
+                                ▼
+                        ┌─────────────────┐     ┌─────────────────┐
+                        │   Flask API     │────▶│   S3 Bucket     │
+                        │   (5000)        │     │   (Public)      │
+                        └─────────────────┘     └─────────────────┘
+```
+
+## Use Cases
+
+* **Data Exploration**: Quickly browse and preview files in public datasets without downloading
+* **Team Sharing**: Generate shareable links to specific files or directories
+* **Batch Downloads**: Generate AWS CLI commands for downloading multiple files efficiently
+* **Cross-Platform Access**: Web-based interface works on any device with a browser
+
+## Project URL
+
+[GitHub Repository](https://github.com/digin1/s3-bucket-viewer)
+2:["$","$Lb",null,{"project":{"id":"s3-bucket-viewer","metadata":{"title":"S3 Bucket Viewer - Web-Based S3 File Browser","date":"2025-01-15","summary":"A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation.","image":"https://raw.githubusercontent.com/digin1/s3-bucket-viewer/refs/heads/main/images/screenshot1.png","tag":"React, Flask, Python, Tailwind CSS, Docker, AWS S3, boto3","demo":"https://github.com/digin1/s3-bucket-viewer"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"S3 Bucket Viewer - Web-Based S3 File Browser | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"S3 Bucket Viewer - Web-Based S3 File Browser"}],["$","meta","7",{"property":"og:description","content":"A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation."}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/s3-bucket-viewer/refs/heads/main/images/screenshot1.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/s3-bucket-viewer/refs/heads/main/images/screenshot1.png"}]]
+1:null

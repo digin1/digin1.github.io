@@ -1,0 +1,121 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","hycel-asset-management-system","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","hycel-asset-management-system","d"],{"children":["__PAGE__?{\"id\":\"hycel-asset-management-system\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","hycel-asset-management-system","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:Tc5f,<h2>Project Overview</h2>
+<p>An IoT integrated hydrogen leakage detection infrastructure developed for Deakin University (Victoria, Australia) to ensure the safety of the Hycel precinct. The system utilizes Google BigData to visualize real-time sensor data on interactive maps, providing critical monitoring capabilities for hydrogen-related safety systems.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>JavaScript</li>
+<li>Bootstrap</li>
+<li>Google Maps API</li>
+<li>BigData Integration</li>
+<li>IoT Sensor Integration</li>
+<li>SQL</li>
+</ul>
+<h3>Key Contributions</h3>
+<ul>
+<li>Developed an interactive mapping system that displays real-time sensor data with color-coded markers</li>
+<li>Implemented a sensor information panel that provides detailed metrics including temperature, humidity, sampling frequency, and system status</li>
+<li>Created a data visualization system showing warning and danger thresholds for critical measurements</li>
+<li>Built a comment/chat system allowing team members to communicate about specific sensor readings</li>
+<li>Designed a responsive interface accessible across multiple devices for monitoring on-the-go</li>
+<li>Integrated Google BigData for efficient storage and retrieval of large volumes of sensor data</li>
+<li>Implemented SQL queries to filter and display relevant sensor information based on location and status</li>
+<li>Set up real-time data refreshing to ensure the latest safety information is always available</li>
+</ul>
+<h3>Features</h3>
+<ul>
+<li>Interactive map with sensor location markers</li>
+<li>Detailed sensor information panels showing:
+<ul>
+<li>Temperature and humidity readings</li>
+<li>Precise GPS location coordinates</li>
+<li>Timestamp of readings</li>
+<li>Sampling frequency</li>
+<li>System ID and manufacturer details</li>
+<li>Operating specifications</li>
+</ul>
+</li>
+<li>Color-coded warning system for identifying potential issues</li>
+<li>Data visualization tools for monitoring trends</li>
+<li>User comment system for team communication</li>
+<li>Admin controls for system management</li>
+</ul>
+<h3>Results</h3>
+<ul>
+<li>Provided Deakin University with a comprehensive safety monitoring system for hydrogen facilities</li>
+<li>Enhanced safety protocols through early detection of potential leaks or abnormal readings</li>
+<li>Improved communication among team members regarding sensor status and maintenance</li>
+<li>Created a scalable system that can accommodate additional sensors as the Hycel precinct expands</li>
+</ul>
+<h2>Process</h2>
+<p>This project was developed as an outsourced engagement for Deakin University's Hycel initiative. The development focused primarily on functionality, ensuring reliable data transfer from sensors to the visualization platform. The system was designed to handle large volumes of IoT data while maintaining responsive performance for users monitoring the facility.</p>
+<h2>Project URL</h2>
+<p>[<a href="https://hycelassetmanagement.space/">Hycel Asset Management System</a>](https://hycelassetmanagement.space)</p>
+<h2>License</h2>
+<p>This project was developed for Deakin University's Hycel initiative.</p>
+d:Tb02,
+## Project Overview
+An IoT integrated hydrogen leakage detection infrastructure developed for Deakin University (Victoria, Australia) to ensure the safety of the Hycel precinct. The system utilizes Google BigData to visualize real-time sensor data on interactive maps, providing critical monitoring capabilities for hydrogen-related safety systems.
+
+## Project Details
+
+### Technologies Used
+* PHP
+* MySQL
+* JavaScript
+* Bootstrap
+* Google Maps API
+* BigData Integration
+* IoT Sensor Integration
+* SQL
+
+### Key Contributions
+* Developed an interactive mapping system that displays real-time sensor data with color-coded markers
+* Implemented a sensor information panel that provides detailed metrics including temperature, humidity, sampling frequency, and system status
+* Created a data visualization system showing warning and danger thresholds for critical measurements
+* Built a comment/chat system allowing team members to communicate about specific sensor readings
+* Designed a responsive interface accessible across multiple devices for monitoring on-the-go
+* Integrated Google BigData for efficient storage and retrieval of large volumes of sensor data
+* Implemented SQL queries to filter and display relevant sensor information based on location and status
+* Set up real-time data refreshing to ensure the latest safety information is always available
+
+### Features
+* Interactive map with sensor location markers
+* Detailed sensor information panels showing:
+  * Temperature and humidity readings
+  * Precise GPS location coordinates
+  * Timestamp of readings
+  * Sampling frequency
+  * System ID and manufacturer details
+  * Operating specifications
+* Color-coded warning system for identifying potential issues
+* Data visualization tools for monitoring trends
+* User comment system for team communication
+* Admin controls for system management
+
+### Results
+* Provided Deakin University with a comprehensive safety monitoring system for hydrogen facilities
+* Enhanced safety protocols through early detection of potential leaks or abnormal readings
+* Improved communication among team members regarding sensor status and maintenance
+* Created a scalable system that can accommodate additional sensors as the Hycel precinct expands
+
+## Process
+This project was developed as an outsourced engagement for Deakin University's Hycel initiative. The development focused primarily on functionality, ensuring reliable data transfer from sensors to the visualization platform. The system was designed to handle large volumes of IoT data while maintaining responsive performance for users monitoring the facility.
+
+## Project URL
+[[Hycel Asset Management System](https://hycelassetmanagement.space/)](https://hycelassetmanagement.space)
+
+## License
+This project was developed for Deakin University's Hycel initiative.2:["$","$Lb",null,{"project":{"id":"hycel-asset-management-system","metadata":{"title":"Hycel Asset Management System","date":"2021-04-15","summary":"The Hycel Asset Management System is an IoT-integrated hydrogen leakage detection infrastructure built for Deakin University that visualizes real-time sensor data on interactive Google Maps. Using PHP, MySQL, JavaScript, and BigData integration, the system displays color-coded map markers with detailed sensor information panels showing temperature, humidity, and system status. The project features custom SQL queries for efficient data retrieval, a responsive interface for cross-device monitoring, and a built-in comment system for team communication. This safety-critical system enables early detection of potential hydrogen leaks, enhancing facility safety protocols and creating a scalable platform for the university's expanding Hycel precinct.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/hycel.png","tag":"php, bootstrap, Google Big Data, Google Maps API, IoT, MySQL"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Hycel Asset Management System | Digin Dominic"}],["$","meta","3",{"name":"description","content":"The Hycel Asset Management System is an IoT-integrated hydrogen leakage detection infrastructure built for Deakin University that visualizes real-time sensor data on interactive Google Maps. Using PHP, MySQL, JavaScript, and BigData integration, the system displays color-coded map markers with detailed sensor information panels showing temperature, humidity, and system status. The project features custom SQL queries for efficient data retrieval, a responsive interface for cross-device monitoring, and a built-in comment system for team communication. This safety-critical system enables early detection of potential hydrogen leaks, enhancing facility safety protocols and creating a scalable platform for the university's expanding Hycel precinct."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"Hycel Asset Management System"}],["$","meta","7",{"property":"og:description","content":"The Hycel Asset Management System is an IoT-integrated hydrogen leakage detection infrastructure built for Deakin University that visualizes real-time sensor data on interactive Google Maps. Using PHP, MySQL, JavaScript, and BigData integration, the system displays color-coded map markers with detailed sensor information panels showing temperature, humidity, and system status. The project features custom SQL queries for efficient data retrieval, a responsive interface for cross-device monitoring, and a built-in comment system for team communication. This safety-critical system enables early detection of potential hydrogen leaks, enhancing facility safety protocols and creating a scalable platform for the university's expanding Hycel precinct."}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/hycel.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/hycel.png"}]]
+1:null

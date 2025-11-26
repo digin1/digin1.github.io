@@ -1,0 +1,69 @@
+3:I[4707,[],""]
+4:I[6423,[],""]
+5:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+6:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+7:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+8:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["about",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["about",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","about","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L5",null,{"children":[["$","$L6",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L7",null,{}],"notFoundStyles":[]}]}],["$","$L8",null,{}]]}]}]]}]],null],null],["$L9",null]]]]
+a:I[1039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","301","static/chunks/app/about/page-435c19be77a7a003.js"],"default"]
+b:T7c7,<h1>About Me</h1>
+<p>Hello! I'm a versatile IT professional with experience spanning system engineering, web development, and IT security. I'm passionate about creating robust, secure applications and maintaining efficient systems.</p>
+<h2>Professional Background</h2>
+<p>With over 8 years of experience in the tech industry, I've had the opportunity to work across different domains:</p>
+<ul>
+<li>Currently working as a <strong>System Engineer &#x26; Web Developer</strong> at the University of Edinburgh (2022-Present)</li>
+<li>Previously worked as a <strong>Junior C# Developer</strong> at U2A Solutions Ltd in the UK (06/2022-08/2022)</li>
+<li>Served as a <strong>PHP Developer</strong> at Veeble Softtech Pvt Ltd in India (2021-2022)</li>
+<li>Spent 5 years as a <strong>Linux System Administrator</strong> at Veeble Softtech Pvt Ltd in India (2016-2021)</li>
+</ul>
+<h2>Education</h2>
+<ul>
+<li><strong>Masters Degree in IT Security</strong> from Nottingham Trent University, United Kingdom (2021-2022)</li>
+<li><strong>Bachelors Degree in Information Technology</strong> from Mahatma Gandhi University, India (2012-2016)</li>
+</ul>
+<h2>Technical Skills</h2>
+<p>My diverse background has allowed me to develop expertise in multiple areas including:</p>
+<ul>
+<li>Front-end development with React and modern JavaScript</li>
+<li>Back-end development using C# and PHP</li>
+<li>Linux system administration and server management</li>
+<li>IT security assessment and implementation</li>
+<li>Web application architecture and optimization</li>
+</ul>
+<p>I'm always eager to learn new technologies and methodologies to enhance my skill set and deliver better solutions.</p>
+<h2>Graduation</h2>
+<p>I completed my Masters Degree in IT Security at Nottingham Trent University in 2022. The video below shows a special moment from my graduation ceremony. This achievement represents a significant milestone in my academic journey and has been instrumental in shaping my professional career in the UK.</p>
+c:T6ce,
+# About Me
+
+Hello! I'm a versatile IT professional with experience spanning system engineering, web development, and IT security. I'm passionate about creating robust, secure applications and maintaining efficient systems.
+
+## Professional Background
+
+With over 8 years of experience in the tech industry, I've had the opportunity to work across different domains:
+- Currently working as a **System Engineer & Web Developer** at the University of Edinburgh (2022-Present)
+- Previously worked as a **Junior C# Developer** at U2A Solutions Ltd in the UK (06/2022-08/2022)
+- Served as a **PHP Developer** at Veeble Softtech Pvt Ltd in India (2021-2022)
+- Spent 5 years as a **Linux System Administrator** at Veeble Softtech Pvt Ltd in India (2016-2021)
+
+## Education
+
+- **Masters Degree in IT Security** from Nottingham Trent University, United Kingdom (2021-2022)
+- **Bachelors Degree in Information Technology** from Mahatma Gandhi University, India (2012-2016)
+
+## Technical Skills
+
+My diverse background has allowed me to develop expertise in multiple areas including:
+- Front-end development with React and modern JavaScript
+- Back-end development using C# and PHP
+- Linux system administration and server management
+- IT security assessment and implementation
+- Web application architecture and optimization
+
+I'm always eager to learn new technologies and methodologies to enhance my skill set and deliver better solutions.
+
+## Graduation
+
+I completed my Masters Degree in IT Security at Nottingham Trent University in 2022. The video below shows a special moment from my graduation ceremony. This achievement represents a significant milestone in my academic journey and has been instrumental in shaping my professional career in the UK.2:["$","$La",null,{"content":{"id":"about","metadata":{"title":"About Me","name":"Digin Dominic","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png","skills":"React, JavaScript, Node.js, HTML, CSS, Bootstrap, Git, GitHub, GitLab CI, MongoDB, SQLite, PostgreSQL, AWS, Linux/Ubuntu, Docker, Flask, Python, Dask, Celery, Ansible, Prometheus, Grafana, MATLAB, Three.js, Chart.js, WebGL, PyTorch, TensorFlow, OpenCV, RadiantKit, rclone, VSCode, OpenVZ, KVM, Xen, Nagios","email":"digin13dominic@gmail.com","phone":"+44 7424003671","location":"Edinburgh, United Kingdom","languages":"English, Malayalam","youtubeId":"LurUb1p8Cns","youtubeTitle":"My Masters Graduation at Nottingham Trent University"},"content":"$b","rawContent":"$c"}}]
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"About | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Learn more about Digin Dominic - Full Stack Developer with expertise in React, Node.js, and modern web technologies."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"About | Digin Dominic"}],["$","meta","7",{"property":"og:description","content":"Learn more about Digin Dominic - Full Stack Developer."}],["$","meta","8",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","9",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","10",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}]]
+1:null

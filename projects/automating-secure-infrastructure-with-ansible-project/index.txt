@@ -1,0 +1,443 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","automating-secure-infrastructure-with-ansible-project","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","automating-secure-infrastructure-with-ansible-project","d"],{"children":["__PAGE__?{\"id\":\"automating-secure-infrastructure-with-ansible-project\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","automating-secure-infrastructure-with-ansible-project","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:T20b8,<h2><strong>Introduction</strong></h2>
+<p>Infrastructure automation is a critical aspect of modern system administration. My project focused on using <strong>Ansible</strong> to automate essential administrative tasks such as:</p>
+<ul>
+<li><strong>Managing SSH Key Authentication</strong></li>
+<li><strong>Creating and Removing Users Securely</strong></li>
+<li><strong>Configuring Sudoers for Role-Based Access Control</strong></li>
+<li><strong>Monitoring and Logging Sudo Actions</strong></li>
+<li><strong>Deploying Security Enhancements (Safe Deletion, Password Policies, etc.)</strong></li>
+</ul>
+<p>The primary goal was to create an automated, repeatable, and scalable solution for managing user access and securing the infrastructure.</p>
+<hr>
+<h2><strong>1. SSH Key Management and Secure Access Automation</strong></h2>
+<p>One of the core challenges in multi-node environments is <strong>secure authentication</strong>. Instead of relying on password-based access, I automated <strong>SSH key generation, distribution, and configuration</strong>.</p>
+<h3><strong>Generating and Distributing SSH Keys</strong></h3>
+<p>Ansible was used to generate SSH keys for different hosts and copy them to the appropriate machines.</p>
+<p><strong>Playbook for Generating SSH Keys (Conditional Execution to Avoid Overwriting):</strong></p>
+<pre><code class="language-yaml">- name: Generate SSH keys for root if they don’t exist
+  hosts: all
+  become: false
+  tasks:
+    - name: Check if root SSH key exists
+      stat:
+        path: "~/.ssh/id_rsa"
+      register: ssh_key_check
+
+    - name: Generate SSH key for root
+      shell: ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
+      when: not ssh_key_check.stat.exists
+</code></pre>
+<h3><strong>Copying SSH Keys to Ansible Host</strong></h3>
+<p>To allow secure, password-less communication between machines, public keys were copied to the <strong>Ansible control machine</strong>:</p>
+<pre><code class="language-yaml">- name: Copy SSH keys to Ansible control machine
+  hosts: awsnodes
+  become: true
+  tasks:
+    - name: Fetch public SSH key from nodes
+      fetch:
+        src: "~/.ssh/id_rsa.pub"
+        dest: "/root/awskeys/{{ inventory_hostname }}_id_rsa.pub"
+        flat: yes
+</code></pre>
+<h3><strong>Copying SSH Keys to Target Nodes</strong></h3>
+<pre><code class="language-yaml">- name: Copy SSH keys to authorized_keys on target nodes
+  hosts: logserver
+  become: true
+  vars:
+    key_dir: /root/awskeys
+  tasks:
+    - name: Ensure .ssh directory exists
+      file:
+        path: "/root/.ssh"
+        state: directory
+        mode: "0700"
+
+    - name: Add public SSH keys
+      authorized_key:
+        user: "root"
+        key: "{{ lookup('file', item) }}"
+        state: present
+      with_fileglob: "{{ key_dir }}/*_id_rsa.pub"
+</code></pre>
+<h3><strong>Outcome</strong></h3>
+<p>✅ <strong>Password-less authentication</strong> across all servers<br>
+✅ <strong>Hardened security</strong> by eliminating password-based access<br>
+✅ <strong>Automated onboarding</strong> for new machines with SSH authentication</p>
+<hr>
+<h2><strong>2. Automated User and Sudoers Management</strong></h2>
+<p>Managing users manually across multiple servers can lead to inconsistencies and security risks. Ansible was used to automate <strong>user creation, privilege assignment, and sudoers configuration</strong>.</p>
+<h3><strong>Creating Users</strong></h3>
+<pre><code class="language-yaml">- name: Create users on all nodes
+  hosts: all
+  become: true
+  vars:
+    users:
+      - alice
+      - bob
+      - charlie
+  tasks:
+    - name: Add users
+      user:
+        name: "{{ item }}"
+        create_home: yes
+        state: present
+      loop: "{{ users }}"
+</code></pre>
+<h3><strong>Granting Sudo Privileges</strong></h3>
+<p>To enforce <strong>role-based access control</strong>, users were assigned to the sudoers file <strong>with strict validation</strong>:</p>
+<pre><code class="language-yaml">- name: Configure sudoers for specific users
+  hosts: all
+  become: true
+  tasks:
+    - name: Add users to sudoers
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        line: "{{ item }} ALL=(ALL) NOPASSWD: ALL"
+        validate: "/usr/sbin/visudo -cf %s"
+      loop: "{{ users }}"
+</code></pre>
+<p><strong>Outcome</strong>:
+✅ <strong>Role-based access management</strong><br>
+✅ <strong>Automated onboarding &#x26; offboarding</strong> of users<br>
+✅ <strong>Strict sudoers validation</strong> to prevent misconfigurations</p>
+<hr>
+<h2><strong>3. Monitoring Sudo Commands and Logging Activity</strong></h2>
+<p>To improve security, all <code>sudo</code> activity needed to be logged and monitored remotely.</p>
+<h3><strong>Playbook for Enabling Sudo Logging</strong></h3>
+<pre><code class="language-yaml">- name: Configure sudo logging
+  hosts: all
+  become: true
+  tasks:
+    - name: Add sudo replay logging
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        insertafter: '^# Defaults.*visiblepw'
+        line: |
+          Defaults log_output
+          Defaults!/usr/bin/sudoreplay !log_output
+          Defaults!/sbin/reboot !log_output
+</code></pre>
+<h3><strong>Automated Log Collection and Sync</strong></h3>
+<p>A script was deployed to <strong>automatically sync logs</strong> from all nodes to a remote monitoring server.</p>
+<pre><code class="language-bash">#!/bin/bash
+SRC="/var/log/sudo-io/"
+DEST_DIR="/root/sudologs/{{ inventory_hostname }}/"
+DEST_HOST="root@18.218.206.77"
+SSH_PORT=4956
+
+ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$DEST_HOST" "mkdir -p $DEST_DIR"
+rsync -avz -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" "$SRC" "$DEST_HOST:$DEST_DIR"
+</code></pre>
+<p>A <strong>cron job</strong> was configured to run this script <strong>every 12 hours</strong>.</p>
+<pre><code class="language-yaml">- name: Schedule sudo log monitoring script
+  cron:
+    name: "Monitor Sudo Logs"
+    minute: "0"
+    hour: "*/12"
+    job: "/root/monitor_sudo_logs.sh >> /var/log/monitor_sudo_logs.log 2>&#x26;1"
+    state: present
+</code></pre>
+<h3><strong>Outcome</strong></h3>
+<p>✅ <strong>Centralized sudo activity monitoring</strong><br>
+✅ <strong>Regular log synchronization</strong> for auditing<br>
+✅ <strong>Prevention of privilege escalation attempts</strong></p>
+<hr>
+<h2><strong>4. Enhancing Security with Safe Deletion Policies</strong></h2>
+<p>Accidental file deletions can cause <strong>irreversible damage</strong>. To prevent this, I implemented a <strong>safe deletion wrapper script</strong>.</p>
+<h3><strong>Safe <code>rm</code> Script</strong></h3>
+<pre><code class="language-bash">#!/bin/bash
+echo "Warning: You are using the 'rm' command which deletes files permanently!"
+echo "Files to be deleted: $@"
+read -p "Are you sure you want to continue? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    /bin/rm "$@"
+else
+    echo "Operation cancelled."
+fi
+</code></pre>
+<h3><strong>Deploying Safe <code>rm</code> Script Using Ansible</strong></h3>
+<pre><code class="language-yaml">- name: Deploy safe_rm script
+  hosts: all
+  become: true
+  tasks:
+    - name: Copy safe_rm script
+      copy:
+        src: safe_rm.sh
+        dest: /usr/local/bin/safe_rm
+        mode: "0755"
+
+    - name: Alias rm to safe_rm
+      blockinfile:
+        path: /etc/profile
+        block: |
+          alias rm='safe_rm'
+        create: yes
+</code></pre>
+<h3><strong>Outcome</strong></h3>
+<p>✅ <strong>Prevention of accidental file deletions</strong><br>
+✅ <strong>Enhanced safety while using <code>rm</code> command</strong><br>
+✅ <strong>Forced user confirmation before permanent deletions</strong></p>
+<hr>
+<h2><strong>Final Takeaways</strong></h2>
+<p>By implementing Ansible automation, I was able to <strong>streamline</strong> system administration across multiple nodes, ensuring:</p>
+<p>✔ <strong>Secure and password-less authentication</strong> using SSH keys<br>
+✔ <strong>Automated user management</strong> with structured onboarding &#x26; offboarding<br>
+✔ <strong>Centralized sudo monitoring</strong> with periodic log collection<br>
+✔ <strong>Strict sudoers file management</strong> with validation to prevent errors<br>
+✔ <strong>A safer file deletion process</strong> with <code>safe_rm</code></p>
+<p>This project reinforced my skills in <strong>infrastructure automation, security hardening, and scalable system management</strong>. 🚀</p>
+d:T1b3d,
+## **Introduction**
+
+Infrastructure automation is a critical aspect of modern system administration. My project focused on using **Ansible** to automate essential administrative tasks such as:
+
+- **Managing SSH Key Authentication**
+- **Creating and Removing Users Securely**
+- **Configuring Sudoers for Role-Based Access Control**
+- **Monitoring and Logging Sudo Actions**
+- **Deploying Security Enhancements (Safe Deletion, Password Policies, etc.)**
+
+The primary goal was to create an automated, repeatable, and scalable solution for managing user access and securing the infrastructure.
+
+---
+
+## **1. SSH Key Management and Secure Access Automation**
+
+One of the core challenges in multi-node environments is **secure authentication**. Instead of relying on password-based access, I automated **SSH key generation, distribution, and configuration**.
+
+### **Generating and Distributing SSH Keys**
+Ansible was used to generate SSH keys for different hosts and copy them to the appropriate machines.
+
+**Playbook for Generating SSH Keys (Conditional Execution to Avoid Overwriting):**
+```yaml
+- name: Generate SSH keys for root if they don’t exist
+  hosts: all
+  become: false
+  tasks:
+    - name: Check if root SSH key exists
+      stat:
+        path: "~/.ssh/id_rsa"
+      register: ssh_key_check
+
+    - name: Generate SSH key for root
+      shell: ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
+      when: not ssh_key_check.stat.exists
+```
+
+### **Copying SSH Keys to Ansible Host**
+To allow secure, password-less communication between machines, public keys were copied to the **Ansible control machine**:
+
+```yaml
+- name: Copy SSH keys to Ansible control machine
+  hosts: awsnodes
+  become: true
+  tasks:
+    - name: Fetch public SSH key from nodes
+      fetch:
+        src: "~/.ssh/id_rsa.pub"
+        dest: "/root/awskeys/{{ inventory_hostname }}_id_rsa.pub"
+        flat: yes
+```
+
+### **Copying SSH Keys to Target Nodes**
+```yaml
+- name: Copy SSH keys to authorized_keys on target nodes
+  hosts: logserver
+  become: true
+  vars:
+    key_dir: /root/awskeys
+  tasks:
+    - name: Ensure .ssh directory exists
+      file:
+        path: "/root/.ssh"
+        state: directory
+        mode: "0700"
+
+    - name: Add public SSH keys
+      authorized_key:
+        user: "root"
+        key: "{{ lookup('file', item) }}"
+        state: present
+      with_fileglob: "{{ key_dir }}/*_id_rsa.pub"
+```
+
+### **Outcome**
+✅ **Password-less authentication** across all servers  
+✅ **Hardened security** by eliminating password-based access  
+✅ **Automated onboarding** for new machines with SSH authentication  
+
+---
+
+## **2. Automated User and Sudoers Management**
+
+Managing users manually across multiple servers can lead to inconsistencies and security risks. Ansible was used to automate **user creation, privilege assignment, and sudoers configuration**.
+
+### **Creating Users**
+```yaml
+- name: Create users on all nodes
+  hosts: all
+  become: true
+  vars:
+    users:
+      - alice
+      - bob
+      - charlie
+  tasks:
+    - name: Add users
+      user:
+        name: "{{ item }}"
+        create_home: yes
+        state: present
+      loop: "{{ users }}"
+```
+
+### **Granting Sudo Privileges**
+To enforce **role-based access control**, users were assigned to the sudoers file **with strict validation**:
+
+```yaml
+- name: Configure sudoers for specific users
+  hosts: all
+  become: true
+  tasks:
+    - name: Add users to sudoers
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        line: "{{ item }} ALL=(ALL) NOPASSWD: ALL"
+        validate: "/usr/sbin/visudo -cf %s"
+      loop: "{{ users }}"
+```
+
+**Outcome**:
+✅ **Role-based access management**  
+✅ **Automated onboarding & offboarding** of users  
+✅ **Strict sudoers validation** to prevent misconfigurations  
+
+---
+
+## **3. Monitoring Sudo Commands and Logging Activity**
+
+To improve security, all `sudo` activity needed to be logged and monitored remotely.
+
+### **Playbook for Enabling Sudo Logging**
+```yaml
+- name: Configure sudo logging
+  hosts: all
+  become: true
+  tasks:
+    - name: Add sudo replay logging
+      lineinfile:
+        path: /etc/sudoers
+        state: present
+        insertafter: '^# Defaults.*visiblepw'
+        line: |
+          Defaults log_output
+          Defaults!/usr/bin/sudoreplay !log_output
+          Defaults!/sbin/reboot !log_output
+```
+
+### **Automated Log Collection and Sync**
+A script was deployed to **automatically sync logs** from all nodes to a remote monitoring server.
+
+```bash
+#!/bin/bash
+SRC="/var/log/sudo-io/"
+DEST_DIR="/root/sudologs/{{ inventory_hostname }}/"
+DEST_HOST="root@18.218.206.77"
+SSH_PORT=4956
+
+ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$DEST_HOST" "mkdir -p $DEST_DIR"
+rsync -avz -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" "$SRC" "$DEST_HOST:$DEST_DIR"
+```
+
+A **cron job** was configured to run this script **every 12 hours**.
+
+```yaml
+- name: Schedule sudo log monitoring script
+  cron:
+    name: "Monitor Sudo Logs"
+    minute: "0"
+    hour: "*/12"
+    job: "/root/monitor_sudo_logs.sh >> /var/log/monitor_sudo_logs.log 2>&1"
+    state: present
+```
+
+### **Outcome**
+✅ **Centralized sudo activity monitoring**  
+✅ **Regular log synchronization** for auditing  
+✅ **Prevention of privilege escalation attempts**  
+
+---
+
+## **4. Enhancing Security with Safe Deletion Policies**
+
+Accidental file deletions can cause **irreversible damage**. To prevent this, I implemented a **safe deletion wrapper script**.
+
+### **Safe `rm` Script**
+```bash
+#!/bin/bash
+echo "Warning: You are using the 'rm' command which deletes files permanently!"
+echo "Files to be deleted: $@"
+read -p "Are you sure you want to continue? (y/n) " -n 1 -r
+echo
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    /bin/rm "$@"
+else
+    echo "Operation cancelled."
+fi
+```
+
+### **Deploying Safe `rm` Script Using Ansible**
+```yaml
+- name: Deploy safe_rm script
+  hosts: all
+  become: true
+  tasks:
+    - name: Copy safe_rm script
+      copy:
+        src: safe_rm.sh
+        dest: /usr/local/bin/safe_rm
+        mode: "0755"
+
+    - name: Alias rm to safe_rm
+      blockinfile:
+        path: /etc/profile
+        block: |
+          alias rm='safe_rm'
+        create: yes
+```
+
+### **Outcome**
+✅ **Prevention of accidental file deletions**  
+✅ **Enhanced safety while using `rm` command**  
+✅ **Forced user confirmation before permanent deletions**  
+
+---
+
+## **Final Takeaways**
+
+By implementing Ansible automation, I was able to **streamline** system administration across multiple nodes, ensuring:
+
+✔ **Secure and password-less authentication** using SSH keys  
+✔ **Automated user management** with structured onboarding & offboarding  
+✔ **Centralized sudo monitoring** with periodic log collection  
+✔ **Strict sudoers file management** with validation to prevent errors  
+✔ **A safer file deletion process** with `safe_rm`  
+
+This project reinforced my skills in **infrastructure automation, security hardening, and scalable system management**. 🚀2:["$","$Lb",null,{"project":{"id":"automating-secure-infrastructure-with-ansible-project","metadata":{"title":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control","date":"2021-12-12","summary":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC). 🚀","image":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png","tag":"ansible, ubuntu","featured":"yes"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC). 🚀"}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control"}],["$","meta","7",{"property":"og:description","content":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC). 🚀"}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png"}]]
+1:null

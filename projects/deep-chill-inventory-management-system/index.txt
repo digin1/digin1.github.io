@@ -1,0 +1,115 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","deep-chill-inventory-management-system","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","deep-chill-inventory-management-system","d"],{"children":["__PAGE__?{\"id\":\"deep-chill-inventory-management-system\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","deep-chill-inventory-management-system","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:Td07,<h2>Project Overview</h2>
+<p>The Deep Chill Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>PHP</li>
+<li>MySQL</li>
+<li>Bootstrap</li>
+<li>JavaScript/jQuery</li>
+<li>HTML5/CSS3</li>
+<li>AJAX</li>
+<li>Responsive Design</li>
+<li>Mobile-optimized UI</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Multi-location Inventory Tracking</strong>: Monitor products across different storage areas (Deep Chill, Dawson, Holding, Blast 1, Blast 2, Tottle)</li>
+<li><strong>Quick Quantity Management</strong>: Intuitive plus/minus buttons and preset quantity options (5, 10, 16, 32, 40)</li>
+<li><strong>Tray and Pie Quantity Tracking</strong>: Separate columns for tracking different product container types</li>
+<li><strong>Automatic Total Calculation</strong>: Real-time updates of total inventory based on entered quantities</li>
+<li><strong>Date Tracking</strong>: Records when products were entered or modified</li>
+<li><strong>Save Functionality</strong>: One-click saving of inventory changes</li>
+<li><strong>User Authentication</strong>: Secure login system with logout functionality</li>
+<li><strong>Query Data</strong>: Generate reports and retrieve historical inventory information</li>
+<li><strong>Responsive Design</strong>: Optimized for tablet use in warehouse/cold storage environments</li>
+</ul>
+<h3>Problem Solved</h3>
+<p>This application was developed for a friend working in a cold storage/freezing facility who needed to:</p>
+<ol>
+<li>Quickly calculate product quantities across different storage locations</li>
+<li>Track inventory movements between different freezing/cooling stages</li>
+<li>Generate reports for management</li>
+<li>Have a mobile solution that works efficiently in a cold environment where staff often wear gloves</li>
+<li>Replace inefficient paper-based tracking systems</li>
+</ol>
+<h3>Implementation Details</h3>
+<ul>
+<li><strong>Bootstrap Framework</strong>: Utilized for responsive design and touch-friendly UI elements</li>
+<li><strong>PHP Backend</strong>: Handles all calculations, data storage, and retrieval logic</li>
+<li><strong>MySQL Database</strong>: Structured to efficiently store product information, quantities, and location data</li>
+<li><strong>AJAX Requests</strong>: Enables real-time updates without page refreshes for a smoother user experience</li>
+<li><strong>Large Touch Targets</strong>: Designed with larger buttons and controls for easy use with gloves or in cold environments</li>
+</ul>
+<h3>Results</h3>
+<ul>
+<li>Significantly reduced time spent on manual calculations and inventory tracking</li>
+<li>Minimized data entry errors common with previous paper-based system</li>
+<li>Improved inventory visibility across different storage areas</li>
+<li>Enhanced reporting capabilities for management</li>
+<li>Streamlined daily workflow for warehouse staff</li>
+</ul>
+<h2>License</h2>
+<p>This project was developed as a custom solution for cold storage inventory management.</p>
+d:Tb07,
+## Project Overview
+The Deep Chill Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.
+
+## Project Details
+
+### Technologies Used
+* PHP
+* MySQL
+* Bootstrap
+* JavaScript/jQuery
+* HTML5/CSS3
+* AJAX
+* Responsive Design
+* Mobile-optimized UI
+
+### Key Features
+* **Multi-location Inventory Tracking**: Monitor products across different storage areas (Deep Chill, Dawson, Holding, Blast 1, Blast 2, Tottle)
+* **Quick Quantity Management**: Intuitive plus/minus buttons and preset quantity options (5, 10, 16, 32, 40)
+* **Tray and Pie Quantity Tracking**: Separate columns for tracking different product container types
+* **Automatic Total Calculation**: Real-time updates of total inventory based on entered quantities
+* **Date Tracking**: Records when products were entered or modified
+* **Save Functionality**: One-click saving of inventory changes
+* **User Authentication**: Secure login system with logout functionality
+* **Query Data**: Generate reports and retrieve historical inventory information
+* **Responsive Design**: Optimized for tablet use in warehouse/cold storage environments
+
+### Problem Solved
+This application was developed for a friend working in a cold storage/freezing facility who needed to:
+1. Quickly calculate product quantities across different storage locations
+2. Track inventory movements between different freezing/cooling stages
+3. Generate reports for management
+4. Have a mobile solution that works efficiently in a cold environment where staff often wear gloves
+5. Replace inefficient paper-based tracking systems
+
+### Implementation Details
+* **Bootstrap Framework**: Utilized for responsive design and touch-friendly UI elements
+* **PHP Backend**: Handles all calculations, data storage, and retrieval logic
+* **MySQL Database**: Structured to efficiently store product information, quantities, and location data
+* **AJAX Requests**: Enables real-time updates without page refreshes for a smoother user experience
+* **Large Touch Targets**: Designed with larger buttons and controls for easy use with gloves or in cold environments
+
+### Results
+* Significantly reduced time spent on manual calculations and inventory tracking
+* Minimized data entry errors common with previous paper-based system
+* Improved inventory visibility across different storage areas
+* Enhanced reporting capabilities for management
+* Streamlined daily workflow for warehouse staff
+
+## License
+This project was developed as a custom solution for cold storage inventory management. 2:["$","$Lb",null,{"project":{"id":"deep-chill-inventory-management-system","metadata":{"title":"Deep Chill Inventory Management System","date":"2022-04-01","summary":"The Deep Chill Inventory Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/inventory-management-system.png","tag":"php, bootstrap, MySQL"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Deep Chill Inventory Management System | Digin Dominic"}],["$","meta","3",{"name":"description","content":"The Deep Chill Inventory Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"Deep Chill Inventory Management System"}],["$","meta","7",{"property":"og:description","content":"The Deep Chill Inventory Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations."}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/inventory-management-system.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/inventory-management-system.png"}]]
+1:null

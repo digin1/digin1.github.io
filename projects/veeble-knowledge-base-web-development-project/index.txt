@@ -1,0 +1,81 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","veeble-knowledge-base-web-development-project","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","veeble-knowledge-base-web-development-project","d"],{"children":["__PAGE__?{\"id\":\"veeble-knowledge-base-web-development-project\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","veeble-knowledge-base-web-development-project","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:T8ce,<h2>Project Overview</h2>
+<p>A comprehensive knowledge base system designed for Veeble.com to provide organized technical documentation for clients. The system features categorized articles across various hosting technologies with intuitive navigation and powerful search functionality.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>WordPress CMS</li>
+<li>PHP</li>
+<li>MySQL</li>
+<li>HTML/CSS</li>
+<li>JavaScript</li>
+</ul>
+<h3>Key Contributions</h3>
+<ul>
+<li>Designed the information architecture for the Knowledge Base, organizing content into logical categories including Apache, cPanel, Developer's Stuff, and Firewall/Security</li>
+<li>Implemented user-friendly search functionality allowing clients to quickly find technical solutions</li>
+<li>Created a clean, responsive interface that presents complex technical information in an accessible format</li>
+<li>Developed category-based navigation to improve user experience and content discoverability</li>
+<li>Optimized database queries and page loading performance for faster access to documentation</li>
+<li>Ensured proper indexing of knowledge articles for improved searchability</li>
+<li>Integrated the Knowledge Base seamlessly with Veeble's existing brand identity and website structure</li>
+</ul>
+<h3>Results</h3>
+<ul>
+<li>Reduced support ticket volume by providing self-service solutions to common technical issues</li>
+<li>Improved client satisfaction through 24/7 access to technical documentation</li>
+<li>Enhanced Veeble's professional image by showcasing technical expertise</li>
+<li>Created a scalable platform that supports ongoing content additions as new hosting solutions evolve</li>
+</ul>
+<h2>Process</h2>
+<p>The Knowledge Base was built as a custom WordPress implementation, requiring significant modifications to standard templates and database structures. Special attention was paid to performance optimization, ensuring that clients could quickly access critical information during potential server issues when page load times are particularly important.</p>
+<h2>Project URL</h2>
+<p>[<a href="https://www.veeble.com/kb/">Knowledge Base - Veeble Hosting</a>](https://www.veeble.com/kb/)</p>
+<h2>License</h2>
+<p>This project was developed for Veeble.com.</p>
+d:T7f0,
+## Project Overview
+A comprehensive knowledge base system designed for Veeble.com to provide organized technical documentation for clients. The system features categorized articles across various hosting technologies with intuitive navigation and powerful search functionality.
+
+## Project Details
+
+### Technologies Used
+* WordPress CMS
+* PHP
+* MySQL
+* HTML/CSS
+* JavaScript
+
+### Key Contributions
+* Designed the information architecture for the Knowledge Base, organizing content into logical categories including Apache, cPanel, Developer's Stuff, and Firewall/Security
+* Implemented user-friendly search functionality allowing clients to quickly find technical solutions
+* Created a clean, responsive interface that presents complex technical information in an accessible format
+* Developed category-based navigation to improve user experience and content discoverability
+* Optimized database queries and page loading performance for faster access to documentation
+* Ensured proper indexing of knowledge articles for improved searchability
+* Integrated the Knowledge Base seamlessly with Veeble's existing brand identity and website structure
+
+### Results
+* Reduced support ticket volume by providing self-service solutions to common technical issues
+* Improved client satisfaction through 24/7 access to technical documentation
+* Enhanced Veeble's professional image by showcasing technical expertise
+* Created a scalable platform that supports ongoing content additions as new hosting solutions evolve
+
+## Process
+The Knowledge Base was built as a custom WordPress implementation, requiring significant modifications to standard templates and database structures. Special attention was paid to performance optimization, ensuring that clients could quickly access critical information during potential server issues when page load times are particularly important.
+
+## Project URL
+[[Knowledge Base - Veeble Hosting](https://www.veeble.com/kb/)](https://www.veeble.com/kb/)
+
+## License
+This project was developed for Veeble.com.2:["$","$Lb",null,{"project":{"id":"veeble-knowledge-base-web-development-project","metadata":{"title":"Veeble Knowledge Base - Web Development Project","date":"2020-03-01","summary":"Designed and implemented a comprehensive Knowledge Base system for Veeble.com, creating an organized repository of technical documentation accessible to clients. The system features categorized articles spanning various hosting technologies with an intuitive navigation structure and search functionality. Performance optimizations were implemented to ensure quick access to critical support information.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/kbveeble.png","tag":"php, wordpress","demo":"https://kb.veeble.org"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Veeble Knowledge Base - Web Development Project | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Designed and implemented a comprehensive Knowledge Base system for Veeble.com, creating an organized repository of technical documentation accessible to clients. The system features categorized articles spanning various hosting technologies with an intuitive navigation structure and search functionality. Performance optimizations were implemented to ensure quick access to critical support information."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"Veeble Knowledge Base - Web Development Project"}],["$","meta","7",{"property":"og:description","content":"Designed and implemented a comprehensive Knowledge Base system for Veeble.com, creating an organized repository of technical documentation accessible to clients. The system features categorized articles spanning various hosting technologies with an intuitive navigation structure and search functionality. Performance optimizations were implemented to ensure quick access to critical support information."}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/kbveeble.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/kbveeble.png"}]]
+1:null

@@ -1,0 +1,84 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[9567,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"ThemeProvider"]
+7:I[7212,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-c0c7afedf3e8e023.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","185","static/chunks/app/layout-816bbea02691d155.js"],"default"]
+4:["id","wordpress-cms-development-clearstacknow-com","d"]
+0:["VQe5sekYha_-nAbhDwPbf",[[["",{"children":["projects",{"children":[["id","wordpress-cms-development-clearstacknow-com","d"],{"children":["__PAGE__?{\"id\":\"wordpress-cms-development-clearstacknow-com\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","wordpress-cms-development-clearstacknow-com","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/ddcf33dc0eac78c6.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","link",null,{"rel":"icon","href":"/favicon.ico"}]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]}]]}]],null],null],["$La",null]]]]
+b:I[850,["676","static/chunks/870fdd6f-2e1ba06dbb163b2e.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-e903bbdb8b222807.js"],"default"]
+c:T744,<h2>Project Overview</h2>
+<p>A technical content platform built with WordPress CMS, focusing on database technologies, programming tutorials, and systems administration topics.</p>
+<h2>Features</h2>
+<ul>
+<li>Comprehensive technical tutorials across multiple IT domains</li>
+<li>Custom theme implementation for technical content presentation</li>
+<li>Category-based content organization (Databases, Programming, Operating Systems, etc.)</li>
+<li>Search functionality for efficient content discovery</li>
+<li>Responsive design for cross-device compatibility</li>
+</ul>
+<h2>Technical Stack</h2>
+<ul>
+<li><strong>CMS</strong>: WordPress</li>
+<li><strong>Programming</strong>: PHP</li>
+<li><strong>Database</strong>: MySQL</li>
+<li><strong>Frontend</strong>: HTML, CSS, JavaScript</li>
+<li><strong>Hosting</strong>: cPanel Server Environment</li>
+</ul>
+<h2>Implementation Details</h2>
+<ul>
+<li>Configured WordPress CMS from scratch on cPanel hosting</li>
+<li>Customized WordPress themes to match technical content requirements</li>
+<li>Created structured content taxonomies for improved organization</li>
+<li>Implemented responsive design elements for mobile compatibility</li>
+<li>Optimized database queries for improved performance</li>
+</ul>
+<h2>Learning Outcomes</h2>
+<ul>
+<li>Mastered WordPress CMS configuration and customization</li>
+<li>Gained practical experience with PHP in WordPress framework</li>
+<li>Developed skills in technical content creation and organization</li>
+<li>Enhanced understanding of web hosting and domain management</li>
+<li>Improved database administration capabilities</li>
+</ul>
+<h2>Archive</h2>
+<p>You can still explore a snapshot of the website via the [<a href="https://web.archive.org/web/20151011113825/http://clearstacknow.com/">Internet Archive</a>](https://web.archive.org/web/20151011113825/http://clearstacknow.com/)</p>
+d:T616,
+## Project Overview
+A technical content platform built with WordPress CMS, focusing on database technologies, programming tutorials, and systems administration topics.
+
+## Features
+- Comprehensive technical tutorials across multiple IT domains
+- Custom theme implementation for technical content presentation
+- Category-based content organization (Databases, Programming, Operating Systems, etc.)
+- Search functionality for efficient content discovery
+- Responsive design for cross-device compatibility
+
+## Technical Stack
+- **CMS**: WordPress
+- **Programming**: PHP
+- **Database**: MySQL
+- **Frontend**: HTML, CSS, JavaScript
+- **Hosting**: cPanel Server Environment
+
+## Implementation Details
+- Configured WordPress CMS from scratch on cPanel hosting
+- Customized WordPress themes to match technical content requirements
+- Created structured content taxonomies for improved organization
+- Implemented responsive design elements for mobile compatibility
+- Optimized database queries for improved performance
+
+## Learning Outcomes
+- Mastered WordPress CMS configuration and customization
+- Gained practical experience with PHP in WordPress framework
+- Developed skills in technical content creation and organization
+- Enhanced understanding of web hosting and domain management
+- Improved database administration capabilities
+
+## Archive
+
+You can still explore a snapshot of the website via the [[Internet Archive](https://web.archive.org/web/20151011113825/http://clearstacknow.com/)](https://web.archive.org/web/20151011113825/http://clearstacknow.com/)
+
+2:["$","$Lb",null,{"project":{"id":"wordpress-cms-development-clearstacknow-com","metadata":{"title":"WordPress CMS Development: ClearStackNow.com","date":"2015-10-11","summary":"Developed and deployed a technical content platform using WordPress CMS, focusing on database technologies and systems administration topics. Customized themes and functionality to create an intuitive knowledge-sharing platform for programming and IT operations.","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/clearstacknow.png","tag":"php, wordpress","demo":"https://web.archive.org/web/20151011113825/http://clearstacknow.com/"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"WordPress CMS Development: ClearStackNow.com | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Developed and deployed a technical content platform using WordPress CMS, focusing on database technologies and systems administration topics. Customized themes and functionality to create an intuitive knowledge-sharing platform for programming and IT operations."}],["$","meta","4",{"name":"author","content":"Digin Dominic"}],["$","meta","5",{"name":"keywords","content":"Digin Dominic,Full Stack Developer,React,Node.js,Portfolio"}],["$","meta","6",{"property":"og:title","content":"WordPress CMS Development: ClearStackNow.com"}],["$","meta","7",{"property":"og:description","content":"Developed and deployed a technical content platform using WordPress CMS, focusing on database technologies and systems administration topics. Customized themes and functionality to create an intuitive knowledge-sharing platform for programming and IT operations."}],["$","meta","8",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/clearstacknow.png"}],["$","meta","9",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","10",{"name":"twitter:title","content":"Digin Dominic | Full Stack Developer"}],["$","meta","11",{"name":"twitter:description","content":"Portfolio website of Digin Dominic"}],["$","meta","12",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/clearstacknow.png"}]]
+1:null

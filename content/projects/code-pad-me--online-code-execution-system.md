@@ -2,7 +2,7 @@
 title: "Code-Pad.me - Award-Winning Online Code Execution System"
 date: "2021-11-15"
 summary: "Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it’s perfect for coding challenges, teaching, and collaboration."
-image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad.png"
+image: "https://raw.githubusercontent.com/digin1/web-images/faaa6dbcde8ce15b59bab289aba47626114a5a05/code-pad.png"
 tag: "Django, bootstrap, JQuery, Docker, SQLite, PostgreSQL, GitLab, Judge0"
 featured: "yes"
 github: "https://gitlab.com/digin13dominic/code-pad.me"
@@ -83,7 +83,7 @@ The app uses a modern stack with continuous delivery pipelines:
 ![Home Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG)
 
 ### _QR Code Sharing Modal_  
-![QR Code Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG)
+![QR Code Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-qr.PNG.jpg)
 
 ---
 

@@ -1,6 +1,6 @@
-# https://www.robotstxt.org/robotstxt.html
-User-agent: *
-Disallow:
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
 
-# Sitemap
 Sitemap: https://digindominic.me/sitemap.xml

@@ -1,0 +1,27 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563EB"/>
+      <stop offset="100%" style="stop-color:#0891B2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="url(#gradient)"/>
+
+  <!-- Inner subtle border -->
+  <rect x="32" y="32" width="448" height="448" rx="80" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+
+  <!-- Letter D - stylized -->
+  <path d="M140 140 L140 372 L220 372 C300 372 340 312 340 256 C340 200 300 140 220 140 L140 140 Z M180 180 L220 180 C270 180 300 210 300 256 C300 302 270 332 220 332 L180 332 L180 180 Z" fill="white"/>
+
+  <!-- Letter D - second, offset -->
+  <path d="M200 140 L200 372 L280 372 C360 372 400 312 400 256 C400 200 360 140 280 140 L200 140 Z M240 180 L280 180 C330 180 360 210 360 256 C360 302 330 332 280 332 L240 332 L240 180 Z" fill="rgba(255,255,255,0.6)"/>
+
+  <!-- Accent dot -->
+  <circle cx="420" cy="380" r="24" fill="white"/>
+</svg>

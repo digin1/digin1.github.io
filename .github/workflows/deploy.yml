@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
-  workflow_dispatch:  # Allow manual triggering
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -12,32 +12,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Configure Git
-        run: |
-          git config --global user.name 'GitHub Actions'
-          git config --global user.email 'actions@github.com'
-    
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-    
+
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps
-    
+        run: npm ci
+
       - name: Build
         run: npm run build
-    
-      # Add the CNAME file to the build output
-      - name: Create CNAME file
-        run: echo "digindominic.me" > ./build/CNAME
-    
+
+      - name: Add .nojekyll
+        run: touch ./out/.nojekyll
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
-          user_name: 'GitHub Actions'
-          user_email: 'actions@github.com'
+          publish_dir: ./out
+          cname: digindominic.me
           commit_message: ${{ github.event.head_commit.message }}

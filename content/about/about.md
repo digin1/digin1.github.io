@@ -11,8 +11,6 @@ youtubeId: "LurUb1p8Cns"
 youtubeTitle: "My Masters Graduation at Nottingham Trent University"
 ---
 
-# About Me
-
 Hello! I'm a versatile IT professional with experience spanning system engineering, web development, and IT security. I'm passionate about creating robust, secure applications and maintaining efficient systems.
 
 ## Professional Background
@@ -28,14 +26,13 @@ With over 8 years of experience in the tech industry, I've had the opportunity t
 - **Masters Degree in IT Security** from Nottingham Trent University, United Kingdom (2021-2022)
 - **Bachelors Degree in Information Technology** from Mahatma Gandhi University, India (2012-2016)
 
-## Technical Skills
+## What I Do
 
-My diverse background has allowed me to develop expertise in multiple areas including:
-- Front-end development with React and modern JavaScript
-- Back-end development using C# and PHP
-- Linux system administration and server management
-- IT security assessment and implementation
-- Web application architecture and optimization
+My diverse background has allowed me to develop expertise in multiple areas:
+- **Full-Stack Development**: Building modern web applications with React, Node.js, Flask, and Python
+- **Research Tools**: Creating specialized tools for scientific data visualization and analysis
+- **System Administration**: Managing Linux servers, Docker containers, and cloud infrastructure
+- **IT Security**: Implementing security best practices and conducting assessments
 
 I'm always eager to learn new technologies and methodologies to enhance my skill set and deliver better solutions.
 

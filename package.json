@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-sitemap.js",
     "build": "next build && cp CNAME out/ && cp out/404/index.html out/404.html",
     "start": "next start",
     "lint": "next lint",
+    "sitemap": "node scripts/generate-sitemap.js",
     "deploy": "npm run build && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {

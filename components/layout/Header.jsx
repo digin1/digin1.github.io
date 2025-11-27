@@ -19,6 +19,7 @@ export default function Header() {
     { name: 'Projects', path: '/projects' },
     { name: 'Blog', path: '/blog' },
     { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   useEffect(() => {
@@ -97,7 +98,7 @@ export default function Header() {
 
             {/* Contact Button */}
             <Link
-              href="/about"
+              href="/contact"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-neural-blue to-synapse-cyan text-white font-medium text-sm transition-all duration-300 hover:shadow-glow-blue hover:-translate-y-0.5"
             >
               <span className="w-2 h-2 rounded-full bg-white/80" />
@@ -192,7 +193,7 @@ export default function Header() {
                   transition={{ delay: navItems.length * 0.05 }}
                 >
                   <Link
-                    href="/about"
+                    href="/contact"
                     className="block mt-2 py-3 px-4 rounded-lg bg-gradient-to-r from-neural-blue to-synapse-cyan text-white font-medium text-center"
                     onClick={() => setIsMenuOpen(false)}
                   >

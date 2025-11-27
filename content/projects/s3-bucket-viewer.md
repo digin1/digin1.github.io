@@ -1,6 +1,8 @@
 ---
 title: "S3 Bucket Viewer - Web-Based S3 File Browser"
 date: "2025-01-15"
+featured: true
+featuredOrder: 3
 summary: "A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation."
 image: "https://raw.githubusercontent.com/digin1/s3-bucket-viewer/refs/heads/main/images/screenshot1.png"
 tag: "React, Flask, Python, Tailwind CSS, Docker, AWS S3, boto3"

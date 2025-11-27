@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 const fadeInLeft = {
@@ -38,8 +38,8 @@ export default function Hero({ content }) {
     profileImage: 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png',
     primaryCta: 'View Projects',
     primaryCtaLink: '/projects',
-    secondaryCta: 'Download CV',
-    secondaryCtaLink: '/about'
+    secondaryCta: 'Get In Touch',
+    secondaryCtaLink: '/contact'
   };
 
   const metadata = content?.metadata || defaultMetadata;
@@ -72,7 +72,7 @@ export default function Hero({ content }) {
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto py-12 relative z-10">
         {showContent && (
           <motion.div
-            className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16"
+            className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16"
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
@@ -121,7 +121,7 @@ export default function Hero({ content }) {
                 </Link>
                 {secondaryCta && (
                   <Link href={secondaryCtaLink} className="btn-secondary inline-flex items-center gap-2">
-                    <FontAwesomeIcon icon={faDownload} />
+                    <FontAwesomeIcon icon={faEnvelope} />
                     {secondaryCta}
                   </Link>
                 )}

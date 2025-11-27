@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFolder, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faFolder, faTimes, faChevronRight, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function ProjectCard({ project, index }) {
   const { title, image, summary, description, date, tag } = project.metadata || {};
@@ -73,6 +73,7 @@ function ProjectCard({ project, index }) {
 
 export default function ProjectsClient({ projects = [] }) {
   const [activeTag, setActiveTag] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const allTags = useMemo(() => {
     const tagsSet = new Set();
@@ -85,13 +86,31 @@ export default function ProjectsClient({ projects = [] }) {
   }, [projects]);
 
   const filteredProjects = useMemo(() => {
-    if (!activeTag) return projects;
-    return projects.filter(proj => {
-      if (!proj.metadata?.tag) return false;
-      const projTags = proj.metadata.tag.split(',').map(t => t.trim());
-      return projTags.includes(activeTag);
-    });
-  }, [projects, activeTag]);
+    let result = projects;
+
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(proj => {
+        const title = proj.metadata?.title?.toLowerCase() || '';
+        const summary = proj.metadata?.summary?.toLowerCase() || '';
+        const description = proj.metadata?.description?.toLowerCase() || '';
+        const tags = proj.metadata?.tag?.toLowerCase() || '';
+        return title.includes(query) || summary.includes(query) || description.includes(query) || tags.includes(query);
+      });
+    }
+
+    // Filter by tag
+    if (activeTag) {
+      result = result.filter(proj => {
+        if (!proj.metadata?.tag) return false;
+        const projTags = proj.metadata.tag.split(',').map(t => t.trim());
+        return projTags.includes(activeTag);
+      });
+    }
+
+    return result;
+  }, [projects, activeTag, searchQuery]);
 
   const sortedProjects = useMemo(() => {
     return [...filteredProjects].sort((a, b) => {
@@ -100,6 +119,13 @@ export default function ProjectsClient({ projects = [] }) {
       return dateB - dateA;
     });
   }, [filteredProjects]);
+
+  const clearFilters = () => {
+    setActiveTag('');
+    setSearchQuery('');
+  };
+
+  const hasActiveFilters = activeTag || searchQuery.trim();
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -119,6 +145,34 @@ export default function ProjectsClient({ projects = [] }) {
           Explore the projects I've been working on
         </p>
 
+        {/* Search Input */}
+        <div className="max-w-md mx-auto mb-6">
+          <div className="relative">
+            <FontAwesomeIcon
+              icon={faSearch}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-light-text-secondary dark:text-muted-steel"
+            />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search projects by title, description, or technology..."
+              className="w-full pl-11 pr-4 py-3 rounded-lg bg-light-surface dark:bg-midnight-steel/50 border border-light-border dark:border-slate-700/50 text-light-text dark:text-ghost-white placeholder-light-text-secondary dark:placeholder-muted-steel focus:outline-none focus:ring-2 focus:ring-neural-blue focus:border-transparent transition-all"
+              aria-label="Search projects"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white transition-colors"
+                aria-label="Clear search"
+              >
+                <FontAwesomeIcon icon={faTimes} className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+        </div>
+
+        {/* Tag Filters */}
         {allTags.length > 0 && (
           <div className="flex flex-wrap justify-center gap-2">
             {allTags.map(tag => (
@@ -136,18 +190,25 @@ export default function ProjectsClient({ projects = [] }) {
                 {tag}
               </motion.button>
             ))}
-            {activeTag && (
+            {hasActiveFilters && (
               <motion.button
-                onClick={() => setActiveTag('')}
+                onClick={clearFilters}
                 className="px-4 py-2 rounded-lg text-sm font-medium bg-red-500/10 text-red-500 border border-red-500/20 hover:bg-red-500/20 transition-colors"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <FontAwesomeIcon icon={faTimes} className="mr-2" />
-                Clear
+                Clear All
               </motion.button>
             )}
           </div>
+        )}
+
+        {/* Results count */}
+        {hasActiveFilters && (
+          <p className="text-center mt-4 text-sm text-light-text-secondary dark:text-muted-steel">
+            Showing {sortedProjects.length} of {projects.length} projects
+          </p>
         )}
       </motion.div>
 

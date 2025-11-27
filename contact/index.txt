@@ -1,0 +1,65 @@
+3:I[4707,[],""]
+4:I[6423,[],""]
+5:I[8003,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-9d2c6b7fe3b22e9a.js"],""]
+6:I[9567,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-9d2c6b7fe3b22e9a.js"],"ThemeProvider"]
+7:I[1794,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-9d2c6b7fe3b22e9a.js"],"default"]
+8:I[3039,["676","static/chunks/870fdd6f-f1313cd613627b67.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-17af5df19496b0bb.js"],"default"]
+9:I[9547,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-9d2c6b7fe3b22e9a.js"],"default"]
+0:["At9cxPaK9CbEXjPr0QUf2",[[["",{"children":["contact",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["contact",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","contact","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/527bdc2f5737f58b.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L5",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L5",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]]}]]}]],null],null],["$La",null]]]]
+b:I[2343,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","327","static/chunks/app/contact/page-ef53137b15cce928.js"],"default"]
+c:T85a,<p>Hello! I'm a versatile IT professional with experience spanning system engineering, web development, and IT security. I'm passionate about creating robust, secure applications and maintaining efficient systems.</p>
+<h2>Professional Background</h2>
+<p>With over 8 years of experience in the tech industry, I've had the opportunity to work across different domains:</p>
+<ul>
+<li>Currently working as a <strong>System Engineer &#x26; Web Developer</strong> at the University of Edinburgh (2022-Present)</li>
+<li>Previously worked as a <strong>Junior C# Developer</strong> at U2A Solutions Ltd in the UK (06/2022-08/2022)</li>
+<li>Served as a <strong>PHP Developer</strong> at Veeble Softtech Pvt Ltd in India (2021-2022)</li>
+<li>Spent 5 years as a <strong>Linux System Administrator</strong> at Veeble Softtech Pvt Ltd in India (2016-2021)</li>
+</ul>
+<h2>Education</h2>
+<ul>
+<li><strong>Masters Degree in IT Security</strong> from Nottingham Trent University, United Kingdom (2021-2022)</li>
+<li><strong>Bachelors Degree in Information Technology</strong> from Mahatma Gandhi University, India (2012-2016)</li>
+</ul>
+<h2>What I Do</h2>
+<p>My diverse background has allowed me to develop expertise in multiple areas:</p>
+<ul>
+<li><strong>Full-Stack Development</strong>: Building modern web applications with React, Node.js, Flask, and Python</li>
+<li><strong>Research Tools</strong>: Creating specialized tools for scientific data visualization and analysis</li>
+<li><strong>System Administration</strong>: Managing Linux servers, Docker containers, and cloud infrastructure</li>
+<li><strong>IT Security</strong>: Implementing security best practices and conducting assessments</li>
+</ul>
+<p>I'm always eager to learn new technologies and methodologies to enhance my skill set and deliver better solutions.</p>
+<h2>Graduation</h2>
+<p>I completed my Masters Degree in IT Security at Nottingham Trent University in 2022. The video below shows a special moment from my graduation ceremony. This achievement represents a significant milestone in my academic journey and has been instrumental in shaping my professional career in the UK.</p>
+d:T73a,
+Hello! I'm a versatile IT professional with experience spanning system engineering, web development, and IT security. I'm passionate about creating robust, secure applications and maintaining efficient systems.
+
+## Professional Background
+
+With over 8 years of experience in the tech industry, I've had the opportunity to work across different domains:
+- Currently working as a **System Engineer & Web Developer** at the University of Edinburgh (2022-Present)
+- Previously worked as a **Junior C# Developer** at U2A Solutions Ltd in the UK (06/2022-08/2022)
+- Served as a **PHP Developer** at Veeble Softtech Pvt Ltd in India (2021-2022)
+- Spent 5 years as a **Linux System Administrator** at Veeble Softtech Pvt Ltd in India (2016-2021)
+
+## Education
+
+- **Masters Degree in IT Security** from Nottingham Trent University, United Kingdom (2021-2022)
+- **Bachelors Degree in Information Technology** from Mahatma Gandhi University, India (2012-2016)
+
+## What I Do
+
+My diverse background has allowed me to develop expertise in multiple areas:
+- **Full-Stack Development**: Building modern web applications with React, Node.js, Flask, and Python
+- **Research Tools**: Creating specialized tools for scientific data visualization and analysis
+- **System Administration**: Managing Linux servers, Docker containers, and cloud infrastructure
+- **IT Security**: Implementing security best practices and conducting assessments
+
+I'm always eager to learn new technologies and methodologies to enhance my skill set and deliver better solutions.
+
+## Graduation
+
+I completed my Masters Degree in IT Security at Nottingham Trent University in 2022. The video below shows a special moment from my graduation ceremony. This achievement represents a significant milestone in my academic journey and has been instrumental in shaping my professional career in the UK.2:["$","$Lb",null,{"aboutContent":{"id":"about","metadata":{"title":"About Me","name":"Digin Dominic","image":"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png","skills":"React, JavaScript, Node.js, HTML, CSS, Bootstrap, Git, GitHub, GitLab CI, MongoDB, SQLite, PostgreSQL, AWS, Linux/Ubuntu, Docker, Flask, Python, Dask, Celery, Ansible, Prometheus, Grafana, MATLAB, Three.js, Chart.js, WebGL, PyTorch, TensorFlow, OpenCV, RadiantKit, rclone, VSCode, OpenVZ, KVM, Xen, Nagios","email":"digin13dominic@gmail.com","phone":"+44 7424003671","location":"Edinburgh, United Kingdom","languages":"English, Malayalam","youtubeId":"LurUb1p8Cns","youtubeTitle":"My Masters Graduation at Nottingham Trent University"},"content":"$c","rawContent":"$d"}}]
+a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Contact | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Get in touch with Digin Dominic. Send a message or connect via email, phone, or social media for collaboration opportunities."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"keywords","content":"contact,Digin Dominic,hire developer,freelance,collaboration,get in touch"}],["$","meta","7",{"name":"creator","content":"Digin Dominic"}],["$","meta","8",{"name":"publisher","content":"Digin Dominic"}],["$","meta","9",{"name":"robots","content":"index, follow"}],["$","meta","10",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","11",{"rel":"canonical","href":"https://digindominic.me/contact/"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Contact | Digin Dominic"}],["$","meta","14",{"property":"og:description","content":"Get in touch with Digin Dominic for collaboration opportunities."}],["$","meta","15",{"property":"og:url","content":"https://digindominic.me/contact/"}],["$","meta","16",{"property":"og:type","content":"website"}],["$","meta","17",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","18",{"name":"twitter:title","content":"Contact | Digin Dominic"}],["$","meta","19",{"name":"twitter:description","content":"Get in touch with Digin Dominic for collaboration opportunities."}]]
+1:null

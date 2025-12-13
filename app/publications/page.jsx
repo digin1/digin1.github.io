@@ -25,7 +25,7 @@ export const metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp',
+        url: '/images/digin.png',
         width: 1200,
         height: 630,
         alt: 'Digin Dominic - Research Publications',
@@ -36,7 +36,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Publications | Digin Dominic',
     description: 'Academic publications, peer-reviewed research papers, and preprints in neuroscience and bioinformatics.',
-    images: ['https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp'],
+    images: ['/images/digin.png'],
   },
   alternates: {
     canonical: `${siteUrl}/publications`,

@@ -4,12 +4,6 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'raw.githubusercontent.com',
-      },
-    ],
   },
   // For GitHub Pages deployment
   basePath: process.env.NODE_ENV === 'production' ? '' : '',

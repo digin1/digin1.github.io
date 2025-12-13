@@ -14,7 +14,7 @@ export const metadata = {
     title: 'Digin Dominic | Software Engineer & Research Toolsmith',
     description: 'Software Engineer, Research Toolsmith, and Data Workflow Architect. Building tools that transform how researchers interact with data.',
     url: 'https://digindominic.me',
-    images: ['https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp'],
+    images: ['/images/digin.png'],
   },
 };
 
@@ -22,8 +22,8 @@ export const metadata = {
 const sections = [
   { id: 'hero', label: 'Home' },
   { id: 'journey-intro', label: 'Journey' },
-  { id: 'timeline', label: 'Timeline' },
   { id: 'impact-showcase', label: 'Projects' },
+  { id: 'timeline', label: 'Timeline' },
   { id: 'toolkit', label: 'Skills' },
   { id: 'cta', label: 'Contact' },
 ];
@@ -56,11 +56,11 @@ export default async function HomePage() {
         yearsExperience={yearsExperience}
       />
 
-      {/* Timeline - Career journey */}
-      <Timeline />
-
       {/* Impact Showcase - Featured projects with storytelling */}
       <ImpactShowcase projects={projects} />
+
+      {/* Timeline - Career journey */}
+      <Timeline />
 
       {/* Toolkit - Skills and technologies */}
       <Toolkit content={toolkitContent} />

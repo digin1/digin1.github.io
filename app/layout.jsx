@@ -9,7 +9,7 @@ const GA_MEASUREMENT_ID = 'G-9KKL3BNRNY';
 const siteUrl = 'https://digindominic.me';
 const siteName = 'Digin Dominic';
 const siteDescription = 'Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.';
-const siteImage = 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp';
+const siteImage = '/images/digin.png';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),

@@ -2,7 +2,7 @@
 title: "InvisibleHacker.com — My First Ever Website"
 date: "2012-04-05"
 summary: "Despite its intriguing name, the site focused on ethical programming resources, particularly C language tutorials and exercises. The project featured a responsive layout with a dark-themed UI inspired by early 2000s 'hacker aesthetics,' custom navigation, and categorized sections for programming content. This entirely hand-coded project established strong web development fundamentals and ignited a lasting passion for software development. An archived version remains accessible via the Internet Archive."
-image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/invisiblehacker.png"
+image: "/images/invisiblehacker.png"
 tag: "pilot, html"
 demo: "https://web.archive.org/web/20180211034924/http://www.invisiblehacker.com/"
 ---

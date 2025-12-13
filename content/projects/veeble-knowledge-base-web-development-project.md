@@ -4,7 +4,7 @@ date: "2020-03-01"
 featured: false
 category: "commercial"
 summary: "Designed and implemented a comprehensive Knowledge Base system for Veeble.com, creating an organized repository of technical documentation accessible to clients. The system features categorized articles spanning various hosting technologies with an intuitive navigation structure and search functionality. Performance optimizations were implemented to ensure quick access to critical support information."
-image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/kbveeble.png"
+image: "/images/kbveeble.png"
 tag: "PHP, WordPress, MySQL, HTML, CSS, JavaScript"
 demo: "https://kb.veeble.org"
 role: "WordPress Developer"

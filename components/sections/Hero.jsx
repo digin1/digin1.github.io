@@ -28,7 +28,7 @@ export default function Hero({ content }) {
     name: 'Digin Dominic',
     title: 'Software Engineer | Research Toolsmith | Data Workflow Architect',
     subtitle: 'Building tools that transform how researchers interact with data. From high-performance image segmentation to intuitive 3D visualizations, I create solutions that turn complex research into accessible, interactive applications.',
-    profileImage: 'https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/digin.png',
+    profileImage: '/images/digin.png',
     primaryCta: 'View My Work',
     primaryCtaLink: '#impact-showcase',
     secondaryCta: 'Get In Touch',

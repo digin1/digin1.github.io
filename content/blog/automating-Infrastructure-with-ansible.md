@@ -2,7 +2,7 @@
 title: "Lessons Learned from Automating Infrastructure with Ansible"
 date: "2024-01-15"
 summary: "Working on this project provided invaluable hands-on experience in infrastructure automation, security hardening, and user access management using Ansible. While I had a solid foundation in system administration, implementing automation at scale required me to refine my approach, adapt to challenges, and adopt best practices that I had not previously considered."
-image: https://raw.githubusercontent.com/digin1/web-images/main/ansible.png
+image: /images/ansible.png
 tag: "ansible, ubuntu"
 ---
 

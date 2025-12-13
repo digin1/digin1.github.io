@@ -4,7 +4,7 @@ date: "2022-04-01"
 featured: false
 category: "commercial"
 summary: "The Deep Chill Inventory Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations."
-image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/inventory-management-system.png"
+image: "/images/inventory-management-system.png"
 tag: "PHP, Bootstrap, MySQL, JavaScript, jQuery, AJAX"
 role: "Full Stack Developer"
 duration: "2 months"

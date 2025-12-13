@@ -5,7 +5,7 @@ featured: true
 featuredOrder: 3
 category: "personal"
 summary: "A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation."
-image: "https://raw.githubusercontent.com/digin1/s3-bucket-viewer/refs/heads/main/images/screenshot1.png"
+image: "/images/s3bucketviewer.png"
 tag: "React, Flask, Python, Tailwind CSS, Docker, AWS S3, boto3"
 github: "https://github.com/digin1/s3-bucket-viewer"
 role: "Solo Developer"

@@ -14,7 +14,7 @@ export default function JourneyIntro({
     { value: yearsExperience, suffix: '+', label: 'Years Experience', description: 'In the tech industry' },
     { value: projectCount, suffix: '', label: 'Projects Built', description: 'Research & commercial' },
     { value: skillsCount, suffix: '+', label: 'Technologies', description: 'Mastered & applied' },
-    { value: 2, suffix: '', label: 'Countries', description: 'India & UK' },
+    { value: 2, suffix: '', label: 'Countries', description: 'India & United Kingdom' },
   ];
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });

@@ -5,7 +5,7 @@ featured: true
 featuredOrder: 5
 category: "research"
 summary: "An interactive web application for visualizing PSD95 proximity index measurements across 43 mouse brain regions and 4 developmental stages. Built for the Grant Lab at University of Edinburgh, featuring SVG-based brain atlas, real-time data visualization, and comprehensive research methodology documentation."
-image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/nanoarchitecturesynaptomeatlas.jpg"
+image: "/images/nanoarchitecturesynaptomeatlas.jpg"
 tag: "Next.js, TypeScript, React, Tailwind CSS, SVG, Data Visualization, Neuroscience"
 demo: "https://git-pages.ecdf.ed.ac.uk/grantlab/nanoarchitecture-synaptome-atlas/"
 role: "Lead Developer"

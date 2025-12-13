@@ -5,7 +5,7 @@ featured: true
 featuredOrder: 4
 category: "personal"
 summary: "Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it's perfect for coding challenges, teaching, and collaboration."
-image: "https://raw.githubusercontent.com/digin1/web-images/faaa6dbcde8ce15b59bab289aba47626114a5a05/code-pad.png"
+image: "/images/code-pad.png"
 tag: "Django, bootstrap, JQuery, Docker, SQLite, PostgreSQL, GitLab, Judge0"
 github: "https://gitlab.com/digin13dominic/code-pad.me"
 demo: "https://code-pad.me"
@@ -84,10 +84,10 @@ The app uses a modern stack with continuous delivery pipelines:
 ## 🔍 Screenshots
 
 ### _Home Interface_  
-![Home Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-screenshot.PNG)
+![Home Screenshot](/images/code-pad-screenshot.PNG)
 
 ### _QR Code Sharing Modal_  
-![QR Code Screenshot](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/code-pad-qr.PNG.jpg)
+![QR Code Screenshot](/images/code-pad-qr.PNG.jpg)
 
 ---
 
@@ -122,7 +122,7 @@ The app uses a modern stack with continuous delivery pipelines:
 ---
 ## Award Certificate
 
-![Award Certificate](https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/projectaward.png)
+![Award Certificate](/images/projectaward.png)
 
 ---
 

@@ -4,7 +4,7 @@ date: "2021-05-31"
 featured: false
 category: "education"
 summary: "Designed and built a fully functional e-commerce platform for footwear using C# ASP.NET MVC architecture. This coursework project demonstrates proficiency in web development frameworks, database integration, user authentication, and shopping cart functionality while following industry best practices."
-image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/bootfactory.png"
+image: "/images/bootfactory.png"
 tag: "ASP.NET, C#, MVC, SQL Server, Bootstrap, Entity Framework"
 github: "https://github.com/digin1/Boot-Factory"
 role: "Full Stack Developer"

@@ -36,8 +36,13 @@ function SkillTag({ skill }) {
     >
       <motion.div
         className="relative px-4 py-3 rounded-lg bg-light-surface dark:bg-midnight-steel/50 border border-light-border dark:border-slate-700/50 cursor-pointer overflow-hidden"
-        whileHover={{ scale: 1.02, borderColor: 'rgba(59, 130, 246, 0.3)' }}
-        transition={{ duration: 0.2 }}
+        whileHover={{
+          scale: 1.05,
+          y: -4,
+          borderColor: 'rgba(59, 130, 246, 0.5)',
+          boxShadow: '0 12px 24px rgba(59, 130, 246, 0.15), 0 0 0 1px rgba(59, 130, 246, 0.1)'
+        }}
+        transition={{ type: 'spring', stiffness: 400, damping: 20 }}
       >
         <motion.div
           className="absolute inset-0 bg-gradient-to-r from-neural-blue/5 to-synapse-cyan/5"
@@ -92,8 +97,8 @@ export default function Toolkit({ content }) {
 
   return (
     <section className="section relative overflow-hidden" id="toolkit">
-      <div className="absolute top-1/3 -right-64 w-96 h-96 bg-synapse-cyan/5 rounded-full filter blur-[100px]" />
-      <div className="absolute bottom-1/3 -left-64 w-96 h-96 bg-plasma-purple/5 rounded-full filter blur-[100px]" />
+      <div className="absolute top-1/3 -right-64 w-96 h-96 bg-synapse-cyan/15 dark:bg-synapse-cyan/5 rounded-full filter blur-[100px]" />
+      <div className="absolute bottom-1/3 -left-64 w-96 h-96 bg-plasma-purple/15 dark:bg-plasma-purple/5 rounded-full filter blur-[100px]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -133,11 +138,14 @@ export default function Toolkit({ content }) {
                   key={category.id}
                   className={`relative px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 ${
                     activeCategory === category.id
-                      ? 'text-white'
+                      ? 'text-white shadow-glow-blue'
                       : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white'
                   }`}
                   onClick={() => setActiveCategory(category.id)}
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: activeCategory !== category.id ? '0 8px 20px rgba(59, 130, 246, 0.15)' : undefined
+                  }}
                   whileTap={{ scale: 0.98 }}
                 >
                   {activeCategory === category.id && (

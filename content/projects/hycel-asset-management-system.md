@@ -1,9 +1,14 @@
 ---
 title: "Hycel Asset Management System"
 date: "2021-04-15"
+featured: false
+category: "commercial"
 summary: "The Hycel Asset Management System is an IoT-integrated hydrogen leakage detection infrastructure built for Deakin University that visualizes real-time sensor data on interactive Google Maps. Using PHP, MySQL, JavaScript, and BigData integration, the system displays color-coded map markers with detailed sensor information panels showing temperature, humidity, and system status. The project features custom SQL queries for efficient data retrieval, a responsive interface for cross-device monitoring, and a built-in comment system for team communication. This safety-critical system enables early detection of potential hydrogen leaks, enhancing facility safety protocols and creating a scalable platform for the university's expanding Hycel precinct."
 image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/hycel.png"
-tag: "php, bootstrap, Google Big Data, Google Maps API, IoT, MySQL"
+tag: "PHP, Bootstrap, Google BigQuery, Google Maps API, IoT, MySQL, JavaScript"
+demo: "https://hycelassetmanagement.space/"
+role: "Full Stack Developer"
+duration: "3 months"
 ---
 
 ## Project Overview
@@ -53,9 +58,6 @@ An IoT integrated hydrogen leakage detection infrastructure developed for Deakin
 
 ## Process
 This project was developed as an outsourced engagement for Deakin University's Hycel initiative. The development focused primarily on functionality, ensuring reliable data transfer from sensors to the visualization platform. The system was designed to handle large volumes of IoT data while maintaining responsive performance for users monitoring the facility.
-
-## Project URL
-[[Hycel Asset Management System](https://hycelassetmanagement.space/)](https://hycelassetmanagement.space)
 
 ## License
 This project was developed for Deakin University's Hycel initiative.

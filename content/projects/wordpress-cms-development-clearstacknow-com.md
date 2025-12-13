@@ -1,10 +1,14 @@
 ---
 title: "WordPress CMS Development: ClearStackNow.com"
 date: "2015-10-11"
+featured: false
+category: "personal"
 summary: "Developed and deployed a technical content platform using WordPress CMS, focusing on database technologies and systems administration topics. Customized themes and functionality to create an intuitive knowledge-sharing platform for programming and IT operations."
 image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/clearstacknow.png"
-tag: "php, wordpress"
+tag: "PHP, WordPress, MySQL, HTML, CSS, JavaScript"
 demo: "https://web.archive.org/web/20151011113825/http://clearstacknow.com/"
+role: "Full Stack Developer"
+duration: "3 months"
 ---
 
 ## Project Overview
@@ -40,5 +44,5 @@ A technical content platform built with WordPress CMS, focusing on database tech
 
 ## Archive
 
-You can still explore a snapshot of the website via the [[Internet Archive](https://web.archive.org/web/20151011113825/http://clearstacknow.com/)](https://web.archive.org/web/20151011113825/http://clearstacknow.com/)
+You can still explore a snapshot of the website via the [Internet Archive](https://web.archive.org/web/20151011113825/http://clearstacknow.com/).
 

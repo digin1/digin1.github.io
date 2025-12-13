@@ -3,9 +3,12 @@ title: "MontageROI Segmenter - Web-Based ROI Annotation Tool"
 date: "2025-11-13"
 featured: true
 featuredOrder: 1
+category: "research"
 summary: "A powerful web-based application for viewing high-resolution montage TIFF images and creating, editing, and managing Region of Interest (ROI) overlays. Built for the Grant Lab at University of Edinburgh, featuring Three.js WebGL rendering, comprehensive editing tools, and ImageJ-compatible export."
 image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/montageroisegmenter.jpg"
 tag: "Flask, Python, Three.js, WebGL, JavaScript, Bootstrap, Docker, ImageJ, TIFF Processing"
+role: "Lead Developer"
+duration: "Ongoing"
 ---
 
 ## Project Overview

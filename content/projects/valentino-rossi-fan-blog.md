@@ -3,10 +3,13 @@ title: "46vale.info - Valentino Rossi Fan Blog"
 date: "2013-03-15"
 featured: true
 featuredOrder: 7
+category: "personal"
 summary: "A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events."
-image: https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/46vale.png
+image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/46vale.png"
 tag: "Blogger, XML"
 demo: "https://46vale.info"
+role: "Creator & Writer"
+duration: "Ongoing since 2013"
 ---
 
 ## Project Overview

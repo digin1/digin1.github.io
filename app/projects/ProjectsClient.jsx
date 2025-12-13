@@ -28,7 +28,7 @@ function ProjectCard({ project, index }) {
       transition={{ duration: 0.4, delay: index * 0.1 }}
     >
       <Link href={`/projects/${project.id}`} className="block">
-        <div className="relative rounded-xl overflow-hidden bg-white dark:bg-midnight-steel/80 border border-light-border dark:border-slate-700/50 hover:border-neural-blue/30 transition-all duration-300 cursor-pointer card-hover">
+        <div className="relative rounded-xl overflow-hidden bg-white dark:bg-midnight-steel/80 border border-light-border dark:border-slate-700/50 hover:border-neural-blue/30 cursor-pointer hover-card">
           <div className="absolute inset-0 bg-gradient-to-r from-neural-blue/5 to-synapse-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
           {image && (
@@ -181,10 +181,13 @@ export default function ProjectsClient({ projects = [] }) {
                 onClick={() => setActiveTag(activeTag === tag ? '' : tag)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeTag === tag
-                    ? 'bg-gradient-to-r from-neural-blue to-synapse-cyan text-white'
+                    ? 'bg-gradient-to-r from-neural-blue to-synapse-cyan text-white shadow-glow-blue'
                     : 'bg-light-surface dark:bg-midnight-steel/50 text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white border border-light-border dark:border-slate-700/50 hover:border-neural-blue/30'
                 }`}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: activeTag !== tag ? '0 8px 20px rgba(59, 130, 246, 0.15)' : undefined
+                }}
                 whileTap={{ scale: 0.98 }}
               >
                 {tag}
@@ -194,7 +197,7 @@ export default function ProjectsClient({ projects = [] }) {
               <motion.button
                 onClick={clearFilters}
                 className="px-4 py-2 rounded-lg text-sm font-medium bg-red-500/10 text-red-500 border border-red-500/20 hover:bg-red-500/20 transition-colors"
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(239, 68, 68, 0.2)' }}
                 whileTap={{ scale: 0.98 }}
               >
                 <FontAwesomeIcon icon={faTimes} className="mr-2" />

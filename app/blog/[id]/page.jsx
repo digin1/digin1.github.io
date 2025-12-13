@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getContentById, getAllContentIds } from '@/lib/content';
+import { getContentById, getAllContentIds, getContentByType } from '@/lib/content';
 import BlogPostClient from './BlogPostClient';
 
 export async function generateStaticParams() {
@@ -51,5 +51,17 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
-  return <BlogPostClient post={post} />;
+  // Get all posts sorted by date for navigation
+  const allPosts = await getContentByType('blog');
+  const currentIndex = allPosts.findIndex(p => p.id === params.id);
+
+  // Posts are sorted newest first (desc), so prev = newer (index-1), next = older (index+1)
+  const prevPost = currentIndex > 0
+    ? { id: allPosts[currentIndex - 1].id, title: allPosts[currentIndex - 1].metadata.title }
+    : null;
+  const nextPost = currentIndex < allPosts.length - 1
+    ? { id: allPosts[currentIndex + 1].id, title: allPosts[currentIndex + 1].metadata.title }
+    : null;
+
+  return <BlogPostClient post={post} prevPost={prevPost} nextPost={nextPost} />;
 }

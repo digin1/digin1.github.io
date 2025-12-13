@@ -17,6 +17,7 @@ export default function Header() {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
+    { name: 'Publications', path: '/publications' },
     { name: 'Blog', path: '/blog' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
@@ -37,9 +38,9 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+      className={`fixed w-full top-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'py-3 bg-white/80 dark:bg-deep-space/80 backdrop-blur-xl border-b border-light-border dark:border-slate-700/50 shadow-lg shadow-black/5 dark:shadow-black/20'
+          ? 'py-3 glass-header'
           : 'py-5 bg-transparent'
       }`}
     >
@@ -49,15 +50,19 @@ export default function Header() {
           <Link href="/" className="group flex items-center gap-2">
             <motion.div
               className="relative"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
+              whileHover={{ scale: 1.05, y: -2 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
-              <span className="text-xl md:text-2xl font-display font-bold text-light-text dark:text-ghost-white">
+              <span className="text-xl md:text-2xl font-display font-bold text-light-text dark:text-ghost-white group-hover:text-neural-blue transition-colors duration-300">
                 Digin
                 <span className="text-gradient"> Dominic</span>
               </span>
             </motion.div>
-            <span className="w-2 h-2 rounded-full bg-signal-green animate-pulse" />
+            <motion.span
+              className="w-2 h-2 rounded-full bg-signal-green"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -66,18 +71,20 @@ export default function Header() {
               <li key={item.path}>
                 <Link
                   href={item.path}
-                  className={`relative px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+                  className={`relative px-4 py-2 rounded-full font-medium transition-all duration-300 group/nav ${
                     pathname === item.path
                       ? 'text-light-text dark:text-ghost-white'
-                      : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white'
+                      : 'text-light-text-secondary dark:text-muted-steel hover:text-neural-blue dark:hover:text-neural-blue'
                   }`}
                 >
-                  {pathname === item.path && (
+                  {pathname === item.path ? (
                     <motion.span
                       layoutId="navbar-indicator"
-                      className="absolute inset-0 rounded-full bg-light-surface dark:bg-midnight-steel/80 border border-light-border dark:border-slate-700/50"
+                      className="absolute inset-0 rounded-full liquid-glass shadow-glass"
                       transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                     />
+                  ) : (
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-neural-blue to-synapse-cyan rounded-full group-hover/nav:w-3/4 transition-all duration-300" />
                   )}
                   <span className="relative z-10">{item.name}</span>
                 </Link>
@@ -88,20 +95,23 @@ export default function Header() {
           {/* Right side: Theme toggle + CTA */}
           <div className="hidden md:flex items-center gap-4">
             {/* Theme Toggle */}
-            <button
+            <motion.button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-light-surface dark:bg-midnight-steel/50 border border-light-border dark:border-slate-700/50 text-light-text dark:text-ghost-white hover:border-neural-blue/50 transition-all duration-300"
+              className="p-2.5 rounded-xl glass-card text-light-text dark:text-ghost-white hover-glow"
               aria-label="Toggle theme"
+              whileHover={{ scale: 1.1, rotate: 15 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
               <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="w-5 h-5" />
-            </button>
+            </motion.button>
 
             {/* Contact Button */}
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-neural-blue to-synapse-cyan text-white font-medium text-sm transition-all duration-300 hover:shadow-glow-blue hover:-translate-y-0.5"
+              className="btn-primary rounded-full text-sm relative overflow-hidden group"
             >
-              <span className="w-2 h-2 rounded-full bg-white/80" />
+              <span className="w-2 h-2 rounded-full bg-white/80 mr-2" />
               Let's Talk
             </Link>
           </div>
@@ -110,14 +120,14 @@ export default function Header() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-light-surface dark:bg-midnight-steel/50 border border-light-border dark:border-slate-700/50 text-light-text dark:text-ghost-white"
+              className="p-2 rounded-xl glass-card text-light-text dark:text-ghost-white"
               aria-label="Toggle theme"
             >
               <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="w-4 h-4" />
             </button>
 
             <button
-              className="relative w-10 h-10 flex items-center justify-center rounded-lg bg-light-surface dark:bg-midnight-steel/50 border border-light-border dark:border-slate-700/50 text-light-text dark:text-ghost-white focus:outline-none focus:ring-2 focus:ring-neural-blue/50"
+              className="relative w-10 h-10 flex items-center justify-center rounded-xl glass-card text-light-text dark:text-ghost-white focus:outline-none focus:ring-2 focus:ring-neural-blue/50"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
@@ -162,7 +172,7 @@ export default function Header() {
               transition={{ duration: 0.3 }}
             >
               <motion.div
-                className="flex flex-col gap-2 p-4 rounded-xl bg-white/90 dark:bg-midnight-steel/80 backdrop-blur-xl border border-light-border dark:border-slate-700/50"
+                className="flex flex-col gap-2 p-4 rounded-2xl liquid-glass"
                 initial={{ y: -10 }}
                 animate={{ y: 0 }}
                 exit={{ y: -10 }}

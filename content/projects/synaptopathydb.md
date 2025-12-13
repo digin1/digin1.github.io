@@ -3,10 +3,13 @@ title: "SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research"
 date: "2025-06-27"
 featured: true
 featuredOrder: 2
+category: "research"
 summary: "A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access."
 image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/synaptopathydb.png"
 tag: "React, Flask, Python, SQLite, Tailwind CSS, REST API, Data Visualization"
 demo: "https://www.synaptopathydb.org"
+role: "Lead Web Developer"
+duration: "6 months"
 ---
 
 ## Project Overview
@@ -135,6 +138,3 @@ The SQLite database integrates multiple biological data sources:
 * Collaboration with the Genes to Cognition Programme at the University of Edinburgh
 * Platform used by researchers studying the molecular basis of brain diseases including schizophrenia, depression, and neurodevelopmental disorders
 
-## Project URL
-
-[SynaptopathyDB](https://www.synaptopathydb.org)

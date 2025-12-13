@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { getContentById, getAllContentIds } from '@/lib/content';
+import { getContentById, getAllContentIds, getContentByType } from '@/lib/content';
 import ProjectClient from './ProjectClient';
 
 export async function generateStaticParams() {
@@ -49,5 +49,17 @@ export default async function ProjectPage({ params }) {
     notFound();
   }
 
-  return <ProjectClient project={project} />;
+  // Get all projects sorted by date for navigation
+  const allProjects = await getContentByType('projects');
+  const currentIndex = allProjects.findIndex(p => p.id === params.id);
+
+  // Projects are sorted newest first (desc), so prev = newer (index-1), next = older (index+1)
+  const prevProject = currentIndex > 0
+    ? { id: allProjects[currentIndex - 1].id, title: allProjects[currentIndex - 1].metadata.title }
+    : null;
+  const nextProject = currentIndex < allProjects.length - 1
+    ? { id: allProjects[currentIndex + 1].id, title: allProjects[currentIndex + 1].metadata.title }
+    : null;
+
+  return <ProjectClient project={project} prevProject={prevProject} nextProject={nextProject} />;
 }

@@ -1,10 +1,14 @@
 ---
 title: "Boot Factory: E-Commerce Platform Development with ASP.NET MVC"
 date: "2021-05-31"
+featured: false
+category: "education"
 summary: "Designed and built a fully functional e-commerce platform for footwear using C# ASP.NET MVC architecture. This coursework project demonstrates proficiency in web development frameworks, database integration, user authentication, and shopping cart functionality while following industry best practices."
 image: "https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/bootfactory.png"
-tag: "ASP.NET, C#, MVC"
+tag: "ASP.NET, C#, MVC, SQL Server, Bootstrap, Entity Framework"
 github: "https://github.com/digin1/Boot-Factory"
+role: "Full Stack Developer"
+duration: "3 months"
 ---
 
 ## Project Overview
@@ -39,6 +43,3 @@ This project significantly improved my understanding of:
 
 ## Conclusion
 The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.
-
-## GitHub Repository
-[[digin1/Boot-Factory](https://github.com/digin1/Boot-Factory)](https://github.com/digin1/Boot-Factory)

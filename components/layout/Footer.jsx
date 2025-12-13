@@ -12,7 +12,7 @@ export default function Footer() {
     { icon: faGithub, href: 'https://github.com/digin1', label: 'GitHub' },
     { icon: faLinkedin, href: 'https://linkedin.com/in/digindominic', label: 'LinkedIn' },
     { icon: faTwitter, href: 'https://twitter.com/digindominic', label: 'Twitter' },
-    { icon: faEnvelope, href: 'mailto:hello@digindominic.me', label: 'Email' },
+    { icon: faEnvelope, href: 'mailto:digin13dominic@gmail.com', label: 'Email' },
   ];
 
   const navLinks = [
@@ -49,7 +49,7 @@ export default function Footer() {
                 <li key={link.path}>
                   <Link
                     href={link.path}
-                    className="text-light-text-secondary dark:text-muted-steel hover:text-neural-blue transition-colors"
+                    className="relative inline-block text-light-text-secondary dark:text-muted-steel hover:text-neural-blue transition-colors hover-underline"
                   >
                     {link.name}
                   </Link>
@@ -70,7 +70,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-light-card dark:bg-midnight-steel border border-light-border dark:border-slate-700/50 flex items-center justify-center text-light-text-secondary dark:text-muted-steel hover:text-neural-blue hover:border-neural-blue/50 transition-all duration-300"
+                  className="w-10 h-10 rounded-lg bg-light-card dark:bg-midnight-steel border border-light-border dark:border-slate-700/50 flex items-center justify-center text-light-text-secondary dark:text-muted-steel hover:text-neural-blue hover:border-neural-blue/50 hover:shadow-glow-blue hover:scale-110 hover:-translate-y-1 transition-all duration-300"
                   aria-label={social.label}
                 >
                   <FontAwesomeIcon icon={social.icon} className="w-5 h-5" />

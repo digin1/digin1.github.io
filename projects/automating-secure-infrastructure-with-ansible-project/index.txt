@@ -1,29 +1,28 @@
 3:I[4707,[],""]
 5:I[6423,[],""]
-6:I[8003,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-9d2c6b7fe3b22e9a.js"],""]
-7:I[9567,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-9d2c6b7fe3b22e9a.js"],"ThemeProvider"]
-8:I[1794,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-9d2c6b7fe3b22e9a.js"],"default"]
-9:I[3039,["676","static/chunks/870fdd6f-f1313cd613627b67.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-17af5df19496b0bb.js"],"default"]
-a:I[9547,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-9d2c6b7fe3b22e9a.js"],"default"]
+6:I[8003,["676","static/chunks/870fdd6f-7d1121d73b7ce91d.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-468c3ea239d1ed5c.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-8cac4dc8dec5882f.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-7d1121d73b7ce91d.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-468c3ea239d1ed5c.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-8cac4dc8dec5882f.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-7d1121d73b7ce91d.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-468c3ea239d1ed5c.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-8cac4dc8dec5882f.js"],"default"]
+9:I[3039,["676","static/chunks/870fdd6f-7d1121d73b7ce91d.js","812","static/chunks/812-468c3ea239d1ed5c.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-65ae65ccec8b943d.js"],"default"]
+a:I[9547,["676","static/chunks/870fdd6f-7d1121d73b7ce91d.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-468c3ea239d1ed5c.js","648","static/chunks/648-ca5c008ca4413444.js","519","static/chunks/519-b283051475233ba7.js","185","static/chunks/app/layout-8cac4dc8dec5882f.js"],"default"]
 4:["id","automating-secure-infrastructure-with-ansible-project","d"]
-0:["At9cxPaK9CbEXjPr0QUf2",[[["",{"children":["projects",{"children":[["id","automating-secure-infrastructure-with-ansible-project","d"],{"children":["__PAGE__?{\"id\":\"automating-secure-infrastructure-with-ansible-project\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","automating-secure-infrastructure-with-ansible-project","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/527bdc2f5737f58b.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L9",null,{}],"notFoundStyles":[]}]}],["$","$La",null,{}]]}]]}]]}]],null],null],["$Lb",null]]]]
-c:I[850,["676","static/chunks/870fdd6f-f1313cd613627b67.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-99c7875f37619dcb.js"],"default"]
-d:T20b8,<h2><strong>Introduction</strong></h2>
-<p>Infrastructure automation is a critical aspect of modern system administration. My project focused on using <strong>Ansible</strong> to automate essential administrative tasks such as:</p>
+0:["KQA904VnGN72EqVaBVtu4",[[["",{"children":["projects",{"children":[["id","automating-secure-infrastructure-with-ansible-project","d"],{"children":["__PAGE__?{\"id\":\"automating-secure-infrastructure-with-ansible-project\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","automating-secure-infrastructure-with-ansible-project","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/dc32f1eda1949ea1.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"https://raw.githubusercontent.com/digin1/web-images/refs/heads/main/profile.webp\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L9",null,{}],"notFoundStyles":[]}]}],["$","$La",null,{}]]}]]}]]}]],null],null],["$Lb",null]]]]
+c:I[8966,["676","static/chunks/870fdd6f-7d1121d73b7ce91d.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-468c3ea239d1ed5c.js","648","static/chunks/648-ca5c008ca4413444.js","336","static/chunks/336-bb4c83f31a5c4b02.js","626","static/chunks/app/projects/%5Bid%5D/page-51cd5540df9b79b2.js"],"default"]
+d:T1d22,<h2>Introduction</h2>
+<p>Infrastructure automation is a critical aspect of modern system administration. My project focused on using Ansible to automate essential administrative tasks such as:</p>
 <ul>
-<li><strong>Managing SSH Key Authentication</strong></li>
-<li><strong>Creating and Removing Users Securely</strong></li>
-<li><strong>Configuring Sudoers for Role-Based Access Control</strong></li>
-<li><strong>Monitoring and Logging Sudo Actions</strong></li>
-<li><strong>Deploying Security Enhancements (Safe Deletion, Password Policies, etc.)</strong></li>
+<li>Managing SSH Key Authentication</li>
+<li>Creating and Removing Users Securely</li>
+<li>Configuring Sudoers for Role-Based Access Control</li>
+<li>Monitoring and Logging Sudo Actions</li>
+<li>Deploying Security Enhancements (Safe Deletion, Password Policies, etc.)</li>
 </ul>
 <p>The primary goal was to create an automated, repeatable, and scalable solution for managing user access and securing the infrastructure.</p>
-<hr>
-<h2><strong>1. SSH Key Management and Secure Access Automation</strong></h2>
-<p>One of the core challenges in multi-node environments is <strong>secure authentication</strong>. Instead of relying on password-based access, I automated <strong>SSH key generation, distribution, and configuration</strong>.</p>
-<h3><strong>Generating and Distributing SSH Keys</strong></h3>
+<h2>1. SSH Key Management and Secure Access Automation</h2>
+<p>One of the core challenges in multi-node environments is secure authentication. Instead of relying on password-based access, I automated SSH key generation, distribution, and configuration.</p>
+<h3>Generating and Distributing SSH Keys</h3>
 <p>Ansible was used to generate SSH keys for different hosts and copy them to the appropriate machines.</p>
-<p><strong>Playbook for Generating SSH Keys (Conditional Execution to Avoid Overwriting):</strong></p>
+<p>Playbook for Generating SSH Keys (Conditional Execution to Avoid Overwriting):</p>
 <pre><code class="language-yaml">- name: Generate SSH keys for root if they don’t exist
   hosts: all
   become: false
@@ -37,8 +36,8 @@ d:T20b8,<h2><strong>Introduction</strong></h2>
       shell: ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa
       when: not ssh_key_check.stat.exists
 </code></pre>
-<h3><strong>Copying SSH Keys to Ansible Host</strong></h3>
-<p>To allow secure, password-less communication between machines, public keys were copied to the <strong>Ansible control machine</strong>:</p>
+<h3>Copying SSH Keys to Ansible Host</h3>
+<p>To allow secure, password-less communication between machines, public keys were copied to the Ansible control machine:</p>
 <pre><code class="language-yaml">- name: Copy SSH keys to Ansible control machine
   hosts: awsnodes
   become: true
@@ -49,7 +48,7 @@ d:T20b8,<h2><strong>Introduction</strong></h2>
         dest: "/root/awskeys/{{ inventory_hostname }}_id_rsa.pub"
         flat: yes
 </code></pre>
-<h3><strong>Copying SSH Keys to Target Nodes</strong></h3>
+<h3>Copying SSH Keys to Target Nodes</h3>
 <pre><code class="language-yaml">- name: Copy SSH keys to authorized_keys on target nodes
   hosts: logserver
   become: true
@@ -69,14 +68,15 @@ d:T20b8,<h2><strong>Introduction</strong></h2>
         state: present
       with_fileglob: "{{ key_dir }}/*_id_rsa.pub"
 </code></pre>
-<h3><strong>Outcome</strong></h3>
-<p>✅ <strong>Password-less authentication</strong> across all servers<br>
-✅ <strong>Hardened security</strong> by eliminating password-based access<br>
-✅ <strong>Automated onboarding</strong> for new machines with SSH authentication</p>
-<hr>
-<h2><strong>2. Automated User and Sudoers Management</strong></h2>
-<p>Managing users manually across multiple servers can lead to inconsistencies and security risks. Ansible was used to automate <strong>user creation, privilege assignment, and sudoers configuration</strong>.</p>
-<h3><strong>Creating Users</strong></h3>
+<h3>Outcome</h3>
+<ul>
+<li>Password-less authentication across all servers</li>
+<li>Hardened security by eliminating password-based access</li>
+<li>Automated onboarding for new machines with SSH authentication</li>
+</ul>
+<h2>2. Automated User and Sudoers Management</h2>
+<p>Managing users manually across multiple servers can lead to inconsistencies and security risks. Ansible was used to automate user creation, privilege assignment, and sudoers configuration.</p>
+<h3>Creating Users</h3>
 <pre><code class="language-yaml">- name: Create users on all nodes
   hosts: all
   become: true
@@ -93,8 +93,8 @@ d:T20b8,<h2><strong>Introduction</strong></h2>
         state: present
       loop: "{{ users }}"
 </code></pre>
-<h3><strong>Granting Sudo Privileges</strong></h3>
-<p>To enforce <strong>role-based access control</strong>, users were assigned to the sudoers file <strong>with strict validation</strong>:</p>
+<h3>Granting Sudo Privileges</h3>
+<p>To enforce role-based access control, users were assigned to the sudoers file with strict validation:</p>
 <pre><code class="language-yaml">- name: Configure sudoers for specific users
   hosts: all
   become: true
@@ -107,14 +107,15 @@ d:T20b8,<h2><strong>Introduction</strong></h2>
         validate: "/usr/sbin/visudo -cf %s"
       loop: "{{ users }}"
 </code></pre>
-<p><strong>Outcome</strong>:
-✅ <strong>Role-based access management</strong><br>
-✅ <strong>Automated onboarding &#x26; offboarding</strong> of users<br>
-✅ <strong>Strict sudoers validation</strong> to prevent misconfigurations</p>
-<hr>
-<h2><strong>3. Monitoring Sudo Commands and Logging Activity</strong></h2>
+<h3>Outcome</h3>
+<ul>
+<li>Role-based access management</li>
+<li>Automated onboarding &#x26; offboarding of users</li>
+<li>Strict sudoers validation to prevent misconfigurations</li>
+</ul>
+<h2>3. Monitoring Sudo Commands and Logging Activity</h2>
 <p>To improve security, all <code>sudo</code> activity needed to be logged and monitored remotely.</p>
-<h3><strong>Playbook for Enabling Sudo Logging</strong></h3>
+<h3>Playbook for Enabling Sudo Logging</h3>
 <pre><code class="language-yaml">- name: Configure sudo logging
   hosts: all
   become: true
@@ -129,8 +130,8 @@ d:T20b8,<h2><strong>Introduction</strong></h2>
           Defaults!/usr/bin/sudoreplay !log_output
           Defaults!/sbin/reboot !log_output
 </code></pre>
-<h3><strong>Automated Log Collection and Sync</strong></h3>
-<p>A script was deployed to <strong>automatically sync logs</strong> from all nodes to a remote monitoring server.</p>
+<h3>Automated Log Collection and Sync</h3>
+<p>A script was deployed to automatically sync logs from all nodes to a remote monitoring server.</p>
 <pre><code class="language-bash">#!/bin/bash
 SRC="/var/log/sudo-io/"
 DEST_DIR="/root/sudologs/{{ inventory_hostname }}/"
@@ -140,7 +141,7 @@ SSH_PORT=4956
 ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$DEST_HOST" "mkdir -p $DEST_DIR"
 rsync -avz -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" "$SRC" "$DEST_HOST:$DEST_DIR"
 </code></pre>
-<p>A <strong>cron job</strong> was configured to run this script <strong>every 12 hours</strong>.</p>
+<p>A cron job was configured to run this script every 12 hours.</p>
 <pre><code class="language-yaml">- name: Schedule sudo log monitoring script
   cron:
     name: "Monitor Sudo Logs"
@@ -149,14 +150,15 @@ rsync -avz -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" "$SRC" "$DEST_HOST:
     job: "/root/monitor_sudo_logs.sh >> /var/log/monitor_sudo_logs.log 2>&#x26;1"
     state: present
 </code></pre>
-<h3><strong>Outcome</strong></h3>
-<p>✅ <strong>Centralized sudo activity monitoring</strong><br>
-✅ <strong>Regular log synchronization</strong> for auditing<br>
-✅ <strong>Prevention of privilege escalation attempts</strong></p>
-<hr>
-<h2><strong>4. Enhancing Security with Safe Deletion Policies</strong></h2>
-<p>Accidental file deletions can cause <strong>irreversible damage</strong>. To prevent this, I implemented a <strong>safe deletion wrapper script</strong>.</p>
-<h3><strong>Safe <code>rm</code> Script</strong></h3>
+<h3>Outcome</h3>
+<ul>
+<li>Centralized sudo activity monitoring</li>
+<li>Regular log synchronization for auditing</li>
+<li>Prevention of privilege escalation attempts</li>
+</ul>
+<h2>4. Enhancing Security with Safe Deletion Policies</h2>
+<p>Accidental file deletions can cause irreversible damage. To prevent this, I implemented a safe deletion wrapper script.</p>
+<h3>Safe <code>rm</code> Script</h3>
 <pre><code class="language-bash">#!/bin/bash
 echo "Warning: You are using the 'rm' command which deletes files permanently!"
 echo "Files to be deleted: $@"
@@ -169,7 +171,7 @@ else
     echo "Operation cancelled."
 fi
 </code></pre>
-<h3><strong>Deploying Safe <code>rm</code> Script Using Ansible</strong></h3>
+<h3>Deploying Safe <code>rm</code> Script Using Ansible</h3>
 <pre><code class="language-yaml">- name: Deploy safe_rm script
   hosts: all
   become: true
@@ -187,42 +189,42 @@ fi
           alias rm='safe_rm'
         create: yes
 </code></pre>
-<h3><strong>Outcome</strong></h3>
-<p>✅ <strong>Prevention of accidental file deletions</strong><br>
-✅ <strong>Enhanced safety while using <code>rm</code> command</strong><br>
-✅ <strong>Forced user confirmation before permanent deletions</strong></p>
-<hr>
-<h2><strong>Final Takeaways</strong></h2>
-<p>By implementing Ansible automation, I was able to <strong>streamline</strong> system administration across multiple nodes, ensuring:</p>
-<p>✔ <strong>Secure and password-less authentication</strong> using SSH keys<br>
-✔ <strong>Automated user management</strong> with structured onboarding &#x26; offboarding<br>
-✔ <strong>Centralized sudo monitoring</strong> with periodic log collection<br>
-✔ <strong>Strict sudoers file management</strong> with validation to prevent errors<br>
-✔ <strong>A safer file deletion process</strong> with <code>safe_rm</code></p>
-<p>This project reinforced my skills in <strong>infrastructure automation, security hardening, and scalable system management</strong>. 🚀</p>
-e:T1b3d,
-## **Introduction**
+<h3>Outcome</h3>
+<ul>
+<li>Prevention of accidental file deletions</li>
+<li>Enhanced safety while using <code>rm</code> command</li>
+<li>Forced user confirmation before permanent deletions</li>
+</ul>
+<h2>Final Takeaways</h2>
+<p>By implementing Ansible automation, I was able to streamline system administration across multiple nodes, ensuring:</p>
+<ul>
+<li>Secure and password-less authentication using SSH keys</li>
+<li>Automated user management with structured onboarding &#x26; offboarding</li>
+<li>Centralized sudo monitoring with periodic log collection</li>
+<li>Strict sudoers file management with validation to prevent errors</li>
+<li>A safer file deletion process with <code>safe_rm</code></li>
+</ul>
+<p>This project reinforced my skills in infrastructure automation, security hardening, and scalable system management.</p>e:T19fe,
+## Introduction
 
-Infrastructure automation is a critical aspect of modern system administration. My project focused on using **Ansible** to automate essential administrative tasks such as:
+Infrastructure automation is a critical aspect of modern system administration. My project focused on using Ansible to automate essential administrative tasks such as:
 
-- **Managing SSH Key Authentication**
-- **Creating and Removing Users Securely**
-- **Configuring Sudoers for Role-Based Access Control**
-- **Monitoring and Logging Sudo Actions**
-- **Deploying Security Enhancements (Safe Deletion, Password Policies, etc.)**
+- Managing SSH Key Authentication
+- Creating and Removing Users Securely
+- Configuring Sudoers for Role-Based Access Control
+- Monitoring and Logging Sudo Actions
+- Deploying Security Enhancements (Safe Deletion, Password Policies, etc.)
 
 The primary goal was to create an automated, repeatable, and scalable solution for managing user access and securing the infrastructure.
 
----
+## 1. SSH Key Management and Secure Access Automation
 
-## **1. SSH Key Management and Secure Access Automation**
+One of the core challenges in multi-node environments is secure authentication. Instead of relying on password-based access, I automated SSH key generation, distribution, and configuration.
 
-One of the core challenges in multi-node environments is **secure authentication**. Instead of relying on password-based access, I automated **SSH key generation, distribution, and configuration**.
-
-### **Generating and Distributing SSH Keys**
+### Generating and Distributing SSH Keys
 Ansible was used to generate SSH keys for different hosts and copy them to the appropriate machines.
 
-**Playbook for Generating SSH Keys (Conditional Execution to Avoid Overwriting):**
+Playbook for Generating SSH Keys (Conditional Execution to Avoid Overwriting):
 ```yaml
 - name: Generate SSH keys for root if they don’t exist
   hosts: all
@@ -238,8 +240,8 @@ Ansible was used to generate SSH keys for different hosts and copy them to the a
       when: not ssh_key_check.stat.exists
 ```
 
-### **Copying SSH Keys to Ansible Host**
-To allow secure, password-less communication between machines, public keys were copied to the **Ansible control machine**:
+### Copying SSH Keys to Ansible Host
+To allow secure, password-less communication between machines, public keys were copied to the Ansible control machine:
 
 ```yaml
 - name: Copy SSH keys to Ansible control machine
@@ -253,7 +255,7 @@ To allow secure, password-less communication between machines, public keys were 
         flat: yes
 ```
 
-### **Copying SSH Keys to Target Nodes**
+### Copying SSH Keys to Target Nodes
 ```yaml
 - name: Copy SSH keys to authorized_keys on target nodes
   hosts: logserver
@@ -275,18 +277,16 @@ To allow secure, password-less communication between machines, public keys were 
       with_fileglob: "{{ key_dir }}/*_id_rsa.pub"
 ```
 
-### **Outcome**
-✅ **Password-less authentication** across all servers  
-✅ **Hardened security** by eliminating password-based access  
-✅ **Automated onboarding** for new machines with SSH authentication  
+### Outcome
+* Password-less authentication across all servers
+* Hardened security by eliminating password-based access
+* Automated onboarding for new machines with SSH authentication
 
----
+## 2. Automated User and Sudoers Management
 
-## **2. Automated User and Sudoers Management**
+Managing users manually across multiple servers can lead to inconsistencies and security risks. Ansible was used to automate user creation, privilege assignment, and sudoers configuration.
 
-Managing users manually across multiple servers can lead to inconsistencies and security risks. Ansible was used to automate **user creation, privilege assignment, and sudoers configuration**.
-
-### **Creating Users**
+### Creating Users
 ```yaml
 - name: Create users on all nodes
   hosts: all
@@ -305,8 +305,8 @@ Managing users manually across multiple servers can lead to inconsistencies and 
       loop: "{{ users }}"
 ```
 
-### **Granting Sudo Privileges**
-To enforce **role-based access control**, users were assigned to the sudoers file **with strict validation**:
+### Granting Sudo Privileges
+To enforce role-based access control, users were assigned to the sudoers file with strict validation:
 
 ```yaml
 - name: Configure sudoers for specific users
@@ -322,18 +322,16 @@ To enforce **role-based access control**, users were assigned to the sudoers fil
       loop: "{{ users }}"
 ```
 
-**Outcome**:
-✅ **Role-based access management**  
-✅ **Automated onboarding & offboarding** of users  
-✅ **Strict sudoers validation** to prevent misconfigurations  
+### Outcome
+* Role-based access management
+* Automated onboarding & offboarding of users
+* Strict sudoers validation to prevent misconfigurations
 
----
-
-## **3. Monitoring Sudo Commands and Logging Activity**
+## 3. Monitoring Sudo Commands and Logging Activity
 
 To improve security, all `sudo` activity needed to be logged and monitored remotely.
 
-### **Playbook for Enabling Sudo Logging**
+### Playbook for Enabling Sudo Logging
 ```yaml
 - name: Configure sudo logging
   hosts: all
@@ -350,8 +348,8 @@ To improve security, all `sudo` activity needed to be logged and monitored remot
           Defaults!/sbin/reboot !log_output
 ```
 
-### **Automated Log Collection and Sync**
-A script was deployed to **automatically sync logs** from all nodes to a remote monitoring server.
+### Automated Log Collection and Sync
+A script was deployed to automatically sync logs from all nodes to a remote monitoring server.
 
 ```bash
 #!/bin/bash
@@ -364,7 +362,7 @@ ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$DEST_HOST" "mkdir -p $DEST_DIR"
 rsync -avz -e "ssh -p $SSH_PORT -o StrictHostKeyChecking=no" "$SRC" "$DEST_HOST:$DEST_DIR"
 ```
 
-A **cron job** was configured to run this script **every 12 hours**.
+A cron job was configured to run this script every 12 hours.
 
 ```yaml
 - name: Schedule sudo log monitoring script
@@ -376,18 +374,16 @@ A **cron job** was configured to run this script **every 12 hours**.
     state: present
 ```
 
-### **Outcome**
-✅ **Centralized sudo activity monitoring**  
-✅ **Regular log synchronization** for auditing  
-✅ **Prevention of privilege escalation attempts**  
+### Outcome
+* Centralized sudo activity monitoring
+* Regular log synchronization for auditing
+* Prevention of privilege escalation attempts
 
----
+## 4. Enhancing Security with Safe Deletion Policies
 
-## **4. Enhancing Security with Safe Deletion Policies**
+Accidental file deletions can cause irreversible damage. To prevent this, I implemented a safe deletion wrapper script.
 
-Accidental file deletions can cause **irreversible damage**. To prevent this, I implemented a **safe deletion wrapper script**.
-
-### **Safe `rm` Script**
+### Safe `rm` Script
 ```bash
 #!/bin/bash
 echo "Warning: You are using the 'rm' command which deletes files permanently!"
@@ -402,7 +398,7 @@ else
 fi
 ```
 
-### **Deploying Safe `rm` Script Using Ansible**
+### Deploying Safe `rm` Script Using Ansible
 ```yaml
 - name: Deploy safe_rm script
   hosts: all
@@ -422,23 +418,21 @@ fi
         create: yes
 ```
 
-### **Outcome**
-✅ **Prevention of accidental file deletions**  
-✅ **Enhanced safety while using `rm` command**  
-✅ **Forced user confirmation before permanent deletions**  
+### Outcome
+* Prevention of accidental file deletions
+* Enhanced safety while using `rm` command
+* Forced user confirmation before permanent deletions
 
----
+## Final Takeaways
 
-## **Final Takeaways**
+By implementing Ansible automation, I was able to streamline system administration across multiple nodes, ensuring:
 
-By implementing Ansible automation, I was able to **streamline** system administration across multiple nodes, ensuring:
+* Secure and password-less authentication using SSH keys
+* Automated user management with structured onboarding & offboarding
+* Centralized sudo monitoring with periodic log collection
+* Strict sudoers file management with validation to prevent errors
+* A safer file deletion process with `safe_rm`
 
-✔ **Secure and password-less authentication** using SSH keys  
-✔ **Automated user management** with structured onboarding & offboarding  
-✔ **Centralized sudo monitoring** with periodic log collection  
-✔ **Strict sudoers file management** with validation to prevent errors  
-✔ **A safer file deletion process** with `safe_rm`  
-
-This project reinforced my skills in **infrastructure automation, security hardening, and scalable system management**. 🚀2:["$","$Lc",null,{"project":{"id":"automating-secure-infrastructure-with-ansible-project","metadata":{"title":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control","date":"2021-12-12","summary":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC). 🚀","image":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png","tag":"ansible, ubuntu","featured":true,"featuredOrder":8},"content":"$d","rawContent":"$e"}}]
-b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC). 🚀"}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/automating-secure-infrastructure-with-ansible-project/"}],["$","meta","11",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","12",{"property":"og:title","content":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control | Digin Dominic"}],["$","meta","13",{"property":"og:description","content":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC). 🚀"}],["$","meta","14",{"property":"og:url","content":"https://digindominic.me/projects/automating-secure-infrastructure-with-ansible-project/"}],["$","meta","15",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control | Digin Dominic"}],["$","meta","22",{"name":"twitter:description","content":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC). 🚀"}],["$","meta","23",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png"}]]
+This project reinforced my skills in infrastructure automation, security hardening, and scalable system management.2:["$","$Lc",null,{"project":{"id":"automating-secure-infrastructure-with-ansible-project","metadata":{"title":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control","date":"2021-12-12","featured":true,"featuredOrder":8,"category":"education","summary":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC).","image":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png","tag":"Ansible, Ubuntu, Linux, DevOps, Infrastructure as Code","role":"DevOps Engineer","duration":"2 weeks"},"content":"$d","rawContent":"$e"},"prevProject":{"id":"deep-chill-inventory-management-system","title":"Deep Chill Inventory Management System"},"nextProject":{"id":"code-pad-me--online-code-execution-system","title":"Code-Pad.me - Award-Winning Online Code Execution System"}}]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC)."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/automating-secure-infrastructure-with-ansible-project/"}],["$","meta","11",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","12",{"property":"og:title","content":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control | Digin Dominic"}],["$","meta","13",{"property":"og:description","content":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC)."}],["$","meta","14",{"property":"og:url","content":"https://digindominic.me/projects/automating-secure-infrastructure-with-ansible-project/"}],["$","meta","15",{"property":"og:image","content":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control | Digin Dominic"}],["$","meta","22",{"name":"twitter:description","content":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC)."}],["$","meta","23",{"name":"twitter:image","content":"https://raw.githubusercontent.com/digin1/web-images/main/ansible.png"}]]
 1:null

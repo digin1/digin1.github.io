@@ -8,6 +8,7 @@ summary: "A full-stack web application for browsing and previewing files in publ
 image: "/images/s3bucketviewer.png"
 tag: "React, Flask, Python, Tailwind CSS, Docker, AWS S3, boto3"
 github: "https://github.com/digin1/s3-bucket-viewer"
+demo: "https://s3-bucket-viewer.brain-synaptome.org/"
 role: "Solo Developer"
 duration: "1 month"
 ---

@@ -1,11 +1,14 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, lazy, Suspense } from 'react';
 import Link from 'next/link';
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faExternalLinkAlt, faMicroscope, faBuilding, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { AnimatedCounter } from '@/components/common/AnimatedText';
+
+// Lazy load Three.js component
+const WireframeGeometry = lazy(() => import('@/components/three/WireframeGeometry'));
 
 const categoryConfig = {
   research: {
@@ -51,7 +54,7 @@ function ProjectCard({ project, index }) {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.6, delay: index * 0.15, ease: [0.25, 0.1, 0.25, 1] }}
     >
-      <div className="relative rounded-2xl overflow-hidden bg-light-surface dark:bg-midnight-steel/50 border border-light-border dark:border-slate-700/50 hover:border-neural-blue/50 hover-card">
+      <div className="relative rounded-2xl overflow-hidden bg-white/80 dark:bg-midnight-steel/70 border border-light-border dark:border-slate-700/50 hover:border-neural-blue/50 hover-card">
         {/* Image Section */}
         <div className="relative aspect-video overflow-hidden">
           {image ? (
@@ -175,12 +178,19 @@ export default function ImpactShowcase({ projects = [], className = '' }) {
     <section
       ref={sectionRef}
       id="impact-showcase"
-      className={`relative py-24 md:py-32 overflow-hidden ${className}`}
+      className={`relative py-24 md:py-32 overflow-x-clip overflow-y-visible ${className}`}
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-30 dark:opacity-20" />
-      <div className="absolute top-1/3 -left-64 w-96 h-96 bg-neural-blue/20 dark:bg-neural-blue/10 rounded-full filter blur-[128px]" />
-      <div className="absolute bottom-1/3 -right-64 w-96 h-96 bg-synapse-cyan/15 dark:bg-synapse-cyan/5 rounded-full filter blur-[128px]" />
+      <div className="absolute inset-0">
+        {/* Three.js Wireframe Geometry */}
+        <Suspense fallback={null}>
+          <WireframeGeometry className="opacity-70 dark:opacity-40" />
+        </Suspense>
+
+        <div className="absolute inset-0 bg-grid-pattern opacity-20 dark:opacity-10" />
+        <div className="absolute top-1/3 -left-64 w-96 h-96 bg-neural-blue/15 dark:bg-neural-blue/5 rounded-full filter blur-[128px]" />
+        <div className="absolute bottom-1/3 -right-64 w-96 h-96 bg-synapse-cyan/10 dark:bg-synapse-cyan/5 rounded-full filter blur-[128px]" />
+      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}

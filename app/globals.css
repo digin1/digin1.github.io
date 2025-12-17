@@ -617,13 +617,13 @@
 .liquid-blob {
   position: absolute;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  filter: blur(60px);
-  opacity: 0.6;
+  filter: blur(80px);
+  opacity: 0.25;
   animation: liquid 8s ease-in-out infinite;
 }
 
 .dark .liquid-blob {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 /* Light mode - more saturated colors for visibility */

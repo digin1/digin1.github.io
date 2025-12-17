@@ -1,9 +1,12 @@
 'use client';
 
-import { useRef } from 'react';
-import { motion, useScroll, useTransform, useInView } from 'framer-motion';
+import { useRef, useState, lazy, Suspense } from 'react';
+import { motion, useScroll, useTransform, useInView, useMotionValueEvent } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faServer, faGraduationCap, faCode, faFlask, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+
+// Lazy load Three.js component
+const AxonalPathway = lazy(() => import('@/components/three/AxonalPathway'));
 
 // Milestones in reverse chronological order (most recent first)
 const milestones = [
@@ -161,9 +164,17 @@ export default function Timeline({ className = '' }) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
 
+  // Scroll progress for Three.js integration
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start center', 'end center'],
+  });
+
+  // Bridge scroll progress to Three.js
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    setScrollProgress(latest);
   });
 
   const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
@@ -172,12 +183,20 @@ export default function Timeline({ className = '' }) {
     <section
       ref={sectionRef}
       id="timeline"
-      className={`relative py-24 md:py-32 overflow-hidden ${className}`}
+      className={`relative py-24 md:py-32 overflow-x-clip overflow-y-visible ${className}`}
     >
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-neural-blue/15 dark:bg-neural-blue/5 rounded-full filter blur-[80px]" />
-        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-plasma-purple/15 dark:bg-plasma-purple/5 rounded-full filter blur-[80px]" />
+        {/* Three.js Axonal Pathway */}
+        <Suspense fallback={null}>
+          <AxonalPathway
+            scrollProgress={scrollProgress}
+            className="opacity-70 dark:opacity-60"
+          />
+        </Suspense>
+
+        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-neural-blue/10 dark:bg-neural-blue/5 rounded-full filter blur-[80px]" />
+        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-plasma-purple/10 dark:bg-plasma-purple/5 rounded-full filter blur-[80px]" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

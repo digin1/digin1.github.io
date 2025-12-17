@@ -1,11 +1,14 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, lazy, Suspense } from 'react';
 import Link from 'next/link';
 import { motion, useInView } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faArrowRight, faCode, faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+
+// Lazy load Three.js component
+const BrainMeshCanvas = lazy(() => import('@/components/three/BrainMesh'));
 
 export default function CTASection({ className = '' }) {
   const sectionRef = useRef(null);
@@ -19,8 +22,13 @@ export default function CTASection({ className = '' }) {
     >
       {/* Background */}
       <div className="absolute inset-0">
+        {/* Three.js Brain Mesh */}
+        <Suspense fallback={null}>
+          <BrainMeshCanvas className="opacity-60 dark:opacity-50" />
+        </Suspense>
+
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-neural-blue/5 to-transparent" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neural-blue/5 rounded-full filter blur-[150px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-neural-blue/3 rounded-full filter blur-[150px]" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -1,8 +1,11 @@
 'use client';
 
-import { useRef } from 'react';
+import { useRef, lazy, Suspense } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { AnimatedCounter } from '@/components/common/AnimatedText';
+
+// Lazy load Three.js component
+const DataParticlesCanvas = lazy(() => import('@/components/three/DataParticles'));
 
 export default function JourneyIntro({
   className = '',
@@ -27,8 +30,13 @@ export default function JourneyIntro({
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/15 dark:bg-neural-blue/5 rounded-full filter blur-[100px]" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-synapse-cyan/15 dark:bg-synapse-cyan/5 rounded-full filter blur-[100px]" />
+        {/* Three.js Data Particles */}
+        <Suspense fallback={null}>
+          <DataParticlesCanvas className="opacity-50 dark:opacity-40" />
+        </Suspense>
+
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/10 dark:bg-neural-blue/5 rounded-full filter blur-[100px]" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-synapse-cyan/10 dark:bg-synapse-cyan/5 rounded-full filter blur-[100px]" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

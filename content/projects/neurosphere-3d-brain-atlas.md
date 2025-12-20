@@ -1,6 +1,6 @@
 ---
 title: "NeuroSphere - Interactive 3D Brain Atlas"
-date: "2024-12-20"
+date: "2025-12-20"
 featured: true
 featuredOrder: 1
 category: "research"

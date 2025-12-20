@@ -5,7 +5,7 @@
 7:I[1794,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-e6475990304c0426.js"],"default"]
 8:I[3039,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","160","static/chunks/app/not-found-cd5d79832c6a66a3.js"],"default"]
 9:I[9547,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-e6475990304c0426.js"],"default"]
-0:["mP7GoYaFt40A_0FPkLMx6",[[["",{"children":["projects",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/9d55f88cb514ddbb.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L5",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L5",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]]}]]}]],null],null],["$La",null]]]]
+0:["iNzaRU43yOhgHQIsFA_5F",[[["",{"children":["projects",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/9d55f88cb514ddbb.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L5",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L5",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L6",null,{"children":[["$","$L7",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L8",null,{}],"notFoundStyles":[]}]}],["$","$L9",null,{}]]}]]}]]}]],null],null],["$La",null]]]]
 b:I[778,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","895","static/chunks/app/projects/page-9ceb5a062adacc2b.js"],"default"]
 c:T16f3,<h2>Project Overview</h2>
 <p>The SV2A Mouse Synaptome Atlas is a modern web application for visualizing research data on Synaptic Vesicle Glycoprotein 2A (SV2A) protein diversity across the mouse brain. The platform enables researchers to explore how synaptic vesicle protein density and intensity vary across brain regions, developmental stages, and between sexes through an interactive brain atlas interface.</p>
@@ -1203,7 +1203,249 @@ Developed a Flask REST API for S3 interactions:
 * **Batch Downloads**: Generate AWS CLI commands for downloading multiple files efficiently
 * **Cross-Platform Access**: Web-based interface works on any device with a browser
 
-16:Td06,<h2>Project Overview</h2>
+16:T1690,<h2>Project Overview</h2>
+<p>NeuroSphere is a comprehensive 3D brain atlas platform that allows users to explore both human and mouse brain anatomy through stunning WebGL visualizations. The platform features interactive neural pathway simulations, region-specific information panels, and real-time activity propagation based on neuroanatomical connectivity data.</p>
+<h2>Demo Videos</h2>
+<h3>Human Brain Atlas</h3>
+<video controls width="100%" poster="/images/neurosphere.jpg">
+  <source src="/videos/human-threejs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<h3>Mouse Brain Atlas</h3>
+<video controls width="100%">
+  <source src="/videos/mouse-threejs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>Three.js (WebGL 3D Engine)</li>
+<li>Vanilla JavaScript (ES6+ Modules)</li>
+<li>CSS3 with Glassmorphism Design</li>
+<li>OBJ Mesh Loader</li>
+<li>JSON Connectivity Matrices</li>
+<li>GitHub Pages Deployment</li>
+</ul>
+<h3>Key Features</h3>
+<h4>Human Brain Atlas</h4>
+<ul>
+<li><strong>43 Anatomical Regions</strong> based on Desikan-Killiany Atlas</li>
+<li><strong>7 Brain Lobes</strong> with color-coded visualization (Frontal, Parietal, Temporal, Occipital, Limbic, Subcortical)</li>
+<li><strong>Interactive Region Selection</strong> with detailed function information</li>
+<li><strong>Neural Pathway Presets</strong>: Visual Processing, Motor Control, Language Production/Comprehension, Memory Encoding/Retrieval, Emotional Response, Attention Network, Decision Making, Resting State (DMN)</li>
+</ul>
+<h4>Mouse Brain Atlas</h4>
+<ul>
+<li><strong>25 Regions</strong> from Allen CCFv3 Atlas</li>
+<li><strong>Real-time Neural Simulations</strong> with connectivity-based activity propagation</li>
+<li><strong>8 Neural Circuit Presets</strong>:
+<ul>
+<li>Whisker Sensation (barrel cortex pathway)</li>
+<li>Visual Processing</li>
+<li>Auditory Processing</li>
+<li>Motor Control</li>
+<li>Fear Response (amygdala circuit)</li>
+<li>Spatial Navigation (hippocampal circuit)</li>
+<li>Olfactory Processing</li>
+<li>Reward Processing (mesolimbic pathway)</li>
+</ul>
+</li>
+</ul>
+<h4>Visualization Features</h4>
+<ul>
+<li>Wireframe and Solid color render modes</li>
+<li>Adjustable opacity and glow intensity</li>
+<li>Auto-rotation and manual OrbitControls</li>
+<li>Region filtering by lobe/category</li>
+<li>Responsive design for desktop and mobile</li>
+</ul>
+<h3>Development Process</h3>
+<h4>3D Rendering Architecture</h4>
+<p>Built with Three.js for high-performance WebGL rendering:</p>
+<ul>
+<li><strong>Scene Management</strong>: Custom <code>BrainViewer</code> class managing scene, camera, renderer, and controls</li>
+<li><strong>Mesh Loading</strong>: OBJLoader for brain region meshes with custom material application</li>
+<li><strong>Interaction</strong>: Raycaster-based mouse picking for region selection and hover effects</li>
+<li><strong>Visual Effects</strong>: Custom glow shader and emission-based highlighting for active regions</li>
+</ul>
+<h4>Neural Simulation Engine (Mouse Brain)</h4>
+<ul>
+<li><strong>ConnectivityGraph.js</strong>: Loads and manages weighted connectivity matrix based on Allen Mouse Brain Connectivity Atlas</li>
+<li><strong>RegionalActivity.js</strong>: Handles activity propagation using weighted connections between regions</li>
+<li><strong>NeuralSimulation.js</strong>: Main controller for preset scenarios with timed region activations</li>
+</ul>
+<h4>Data Sources</h4>
+<p>| Atlas | Source | Coverage |
+|-------|--------|----------|
+| Human Brain | <a href="https://brainder.org">brainder.org</a> (CC BY-SA 3.0) | Desikan-Killiany via FreeSurfer |
+| Mouse Brain | <a href="https://mouse.brain-map.org">Allen Institute</a> | CCFv3 Common Coordinate Framework |</p>
+<h3>Technical Highlights</h3>
+<ul>
+<li><strong>Coordinate System Handling</strong>: Allen CCF uses microns (5000-8000 range) requiring geometry translation and scaling to normalize with human brain coordinates</li>
+<li><strong>Performance Optimization</strong>: Efficient mesh management, LOD considerations, and optimized render loop</li>
+<li><strong>Modular Architecture</strong>: Separate modules for viewer, simulation, data, and UI components</li>
+<li><strong>SEO Optimized</strong>: Full Open Graph and Twitter card meta tags, sitemap, robots.txt</li>
+</ul>
+<h3>Architecture</h3>
+<pre><code>neurosphere/
+├── index.html              # Landing page with species selector
+├── human/
+│   ├── js/brain.js         # Human brain viewer
+│   ├── js/regions.js       # Region metadata
+│   └── models/             # OBJ meshes
+└── mouse/
+    ├── js/brain.js         # Mouse brain viewer
+    ├── js/simulation/      # Neural simulation engine
+    ├── js/data/            # Region data, presets
+    └── data/connectome/    # Connectivity matrix
+</code></pre>
+<h2>Scientific Context</h2>
+<p>The platform serves as an educational and research tool for:</p>
+<ul>
+<li>Understanding brain anatomy and regional organization</li>
+<li>Visualizing neural pathway activations</li>
+<li>Comparing human and mouse brain structures</li>
+<li>Demonstrating connectivity-based signal propagation</li>
+</ul>
+<h2>Deployment</h2>
+<ul>
+<li><strong>Platform</strong>: GitHub Pages with custom domain</li>
+<li><strong>URL</strong>: <a href="https://digindominic.me/brain-threejs/">https://digindominic.me/brain-threejs/</a></li>
+<li><strong>Source</strong>: <a href="https://github.com/digin1/brain-threejs">GitHub Repository</a></li>
+</ul>
+<h2>Future Enhancements</h2>
+<ul>
+<li>Additional species (rat, macaque)</li>
+<li>VR/AR support</li>
+<li>Real experimental data overlays</li>
+<li>Custom pathway creation tool</li>
+</ul>17:T1322,
+## Project Overview
+
+NeuroSphere is a comprehensive 3D brain atlas platform that allows users to explore both human and mouse brain anatomy through stunning WebGL visualizations. The platform features interactive neural pathway simulations, region-specific information panels, and real-time activity propagation based on neuroanatomical connectivity data.
+
+## Demo Videos
+
+### Human Brain Atlas
+<video controls width="100%" poster="/images/neurosphere.jpg">
+  <source src="/videos/human-threejs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Mouse Brain Atlas
+<video controls width="100%">
+  <source src="/videos/mouse-threejs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+## Project Details
+
+### Technologies Used
+
+* Three.js (WebGL 3D Engine)
+* Vanilla JavaScript (ES6+ Modules)
+* CSS3 with Glassmorphism Design
+* OBJ Mesh Loader
+* JSON Connectivity Matrices
+* GitHub Pages Deployment
+
+### Key Features
+
+#### Human Brain Atlas
+* **43 Anatomical Regions** based on Desikan-Killiany Atlas
+* **7 Brain Lobes** with color-coded visualization (Frontal, Parietal, Temporal, Occipital, Limbic, Subcortical)
+* **Interactive Region Selection** with detailed function information
+* **Neural Pathway Presets**: Visual Processing, Motor Control, Language Production/Comprehension, Memory Encoding/Retrieval, Emotional Response, Attention Network, Decision Making, Resting State (DMN)
+
+#### Mouse Brain Atlas
+* **25 Regions** from Allen CCFv3 Atlas
+* **Real-time Neural Simulations** with connectivity-based activity propagation
+* **8 Neural Circuit Presets**:
+  * Whisker Sensation (barrel cortex pathway)
+  * Visual Processing
+  * Auditory Processing
+  * Motor Control
+  * Fear Response (amygdala circuit)
+  * Spatial Navigation (hippocampal circuit)
+  * Olfactory Processing
+  * Reward Processing (mesolimbic pathway)
+
+#### Visualization Features
+* Wireframe and Solid color render modes
+* Adjustable opacity and glow intensity
+* Auto-rotation and manual OrbitControls
+* Region filtering by lobe/category
+* Responsive design for desktop and mobile
+
+### Development Process
+
+#### 3D Rendering Architecture
+
+Built with Three.js for high-performance WebGL rendering:
+
+* **Scene Management**: Custom `BrainViewer` class managing scene, camera, renderer, and controls
+* **Mesh Loading**: OBJLoader for brain region meshes with custom material application
+* **Interaction**: Raycaster-based mouse picking for region selection and hover effects
+* **Visual Effects**: Custom glow shader and emission-based highlighting for active regions
+
+#### Neural Simulation Engine (Mouse Brain)
+
+* **ConnectivityGraph.js**: Loads and manages weighted connectivity matrix based on Allen Mouse Brain Connectivity Atlas
+* **RegionalActivity.js**: Handles activity propagation using weighted connections between regions
+* **NeuralSimulation.js**: Main controller for preset scenarios with timed region activations
+
+#### Data Sources
+
+| Atlas | Source | Coverage |
+|-------|--------|----------|
+| Human Brain | [brainder.org](https://brainder.org) (CC BY-SA 3.0) | Desikan-Killiany via FreeSurfer |
+| Mouse Brain | [Allen Institute](https://mouse.brain-map.org) | CCFv3 Common Coordinate Framework |
+
+### Technical Highlights
+
+* **Coordinate System Handling**: Allen CCF uses microns (5000-8000 range) requiring geometry translation and scaling to normalize with human brain coordinates
+* **Performance Optimization**: Efficient mesh management, LOD considerations, and optimized render loop
+* **Modular Architecture**: Separate modules for viewer, simulation, data, and UI components
+* **SEO Optimized**: Full Open Graph and Twitter card meta tags, sitemap, robots.txt
+
+### Architecture
+
+```
+neurosphere/
+├── index.html              # Landing page with species selector
+├── human/
+│   ├── js/brain.js         # Human brain viewer
+│   ├── js/regions.js       # Region metadata
+│   └── models/             # OBJ meshes
+└── mouse/
+    ├── js/brain.js         # Mouse brain viewer
+    ├── js/simulation/      # Neural simulation engine
+    ├── js/data/            # Region data, presets
+    └── data/connectome/    # Connectivity matrix
+```
+
+## Scientific Context
+
+The platform serves as an educational and research tool for:
+
+* Understanding brain anatomy and regional organization
+* Visualizing neural pathway activations
+* Comparing human and mouse brain structures
+* Demonstrating connectivity-based signal propagation
+
+## Deployment
+
+* **Platform**: GitHub Pages with custom domain
+* **URL**: [https://digindominic.me/brain-threejs/](https://digindominic.me/brain-threejs/)
+* **Source**: [GitHub Repository](https://github.com/digin1/brain-threejs)
+
+## Future Enhancements
+
+* Additional species (rat, macaque)
+* VR/AR support
+* Real experimental data overlays
+* Custom pathway creation tool
+18:Td06,<h2>Project Overview</h2>
 <p>The Deep Chill Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.</p>
 <h2>Project Details</h2>
 <h3>Technologies Used</h3>
@@ -1255,7 +1497,7 @@ Developed a Flask REST API for S3 interactions:
 <li>Streamlined daily workflow for warehouse staff</li>
 </ul>
 <h2>License</h2>
-<p>This project was developed as a custom solution for cold storage inventory management.</p>17:Tb07,
+<p>This project was developed as a custom solution for cold storage inventory management.</p>19:Tb07,
 ## Project Overview
 The Deep Chill Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.
 
@@ -1305,7 +1547,7 @@ This application was developed for a friend working in a cold storage/freezing f
 * Streamlined daily workflow for warehouse staff
 
 ## License
-This project was developed as a custom solution for cold storage inventory management. 18:T1d22,<h2>Introduction</h2>
+This project was developed as a custom solution for cold storage inventory management. 1a:T1d22,<h2>Introduction</h2>
 <p>Infrastructure automation is a critical aspect of modern system administration. My project focused on using Ansible to automate essential administrative tasks such as:</p>
 <ul>
 <li>Managing SSH Key Authentication</li>
@@ -1501,7 +1743,7 @@ fi
 <li>Strict sudoers file management with validation to prevent errors</li>
 <li>A safer file deletion process with <code>safe_rm</code></li>
 </ul>
-<p>This project reinforced my skills in infrastructure automation, security hardening, and scalable system management.</p>19:T19fe,
+<p>This project reinforced my skills in infrastructure automation, security hardening, and scalable system management.</p>1b:T19fe,
 ## Introduction
 
 Infrastructure automation is a critical aspect of modern system administration. My project focused on using Ansible to automate essential administrative tasks such as:
@@ -1730,7 +1972,7 @@ By implementing Ansible automation, I was able to streamline system administrati
 * Strict sudoers file management with validation to prevent errors
 * A safer file deletion process with `safe_rm`
 
-This project reinforced my skills in infrastructure automation, security hardening, and scalable system management.1a:T1589,<blockquote>
+This project reinforced my skills in infrastructure automation, security hardening, and scalable system management.1c:T1589,<blockquote>
 <p><strong>Best Project Award Winner</strong><br>
 MSc Cyber Security – Nottingham Trent University</p>
 </blockquote>
@@ -1835,7 +2077,7 @@ Try it live! Create, run, and share your code today.</p>
 <blockquote>
 <p><em>“This project wasn't just about building a code runner—it's about empowering anyone, anywhere, to learn and write code without barriers.”</em><br>
 — <strong>Digin Dominic</strong></p>
-</blockquote>1b:T1074,
+</blockquote>1d:T1074,
 > **Best Project Award Winner**  
 > MSc Cyber Security – Nottingham Trent University  
 
@@ -1965,7 +2207,7 @@ Special thanks to my supervisor [Dr. Madasar Shah](https://shah.fyi/) and Nottin
 > _“This project wasn't just about building a code runner—it's about empowering anyone, anywhere, to learn and write code without barriers.”_  
 > — **Digin Dominic**
 
-1c:Taaf,<h2>Project Overview</h2>
+1e:Taaf,<h2>Project Overview</h2>
 <p>Boot Factory is an e-commerce web application developed as coursework using the ASP.NET MVC framework and C#. The project demonstrates my ability to build scalable, secure, and user-friendly web applications from the ground up. The platform allows users to browse a catalogue of footwear products, add items to their shopping basket, and proceed through a complete checkout process.</p>
 <h2>Technical Stack</h2>
 <ul>
@@ -1997,7 +2239,7 @@ Special thanks to my supervisor [Dr. Madasar Shah](https://shah.fyi/) and Nottin
 <li>User experience design for e-commerce platforms</li>
 </ul>
 <h2>Conclusion</h2>
-<p>The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.</p>1d:T94e,
+<p>The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.</p>1f:T94e,
 ## Project Overview
 Boot Factory is an e-commerce web application developed as coursework using the ASP.NET MVC framework and C#. The project demonstrates my ability to build scalable, secure, and user-friendly web applications from the ground up. The platform allows users to browse a catalogue of footwear products, add items to their shopping basket, and proceed through a complete checkout process.
 
@@ -2029,7 +2271,7 @@ This project significantly improved my understanding of:
 * User experience design for e-commerce platforms
 
 ## Conclusion
-The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.1e:Tbcc,<h2>Project Overview</h2>
+The Boot Factory project demonstrates my capability to develop a complete web application using modern technologies and patterns. Through this coursework, I gained valuable experience in building secure, scalable, and user-friendly web applications that would transfer well to real-world e-commerce development.20:Tbcc,<h2>Project Overview</h2>
 <p>An IoT integrated hydrogen leakage detection infrastructure developed for Deakin University (Victoria, Australia) to ensure the safety of the Hycel precinct. The system utilizes Google BigData to visualize real-time sensor data on interactive maps, providing critical monitoring capabilities for hydrogen-related safety systems.</p>
 <h2>Project Details</h2>
 <h3>Technologies Used</h3>
@@ -2082,7 +2324,7 @@ The Boot Factory project demonstrates my capability to develop a complete web ap
 <h2>Process</h2>
 <p>This project was developed as an outsourced engagement for Deakin University's Hycel initiative. The development focused primarily on functionality, ensuring reliable data transfer from sensors to the visualization platform. The system was designed to handle large volumes of IoT data while maintaining responsive performance for users monitoring the facility.</p>
 <h2>License</h2>
-<p>This project was developed for Deakin University's Hycel initiative.</p>1f:Ta87,
+<p>This project was developed for Deakin University's Hycel initiative.</p>21:Ta87,
 ## Project Overview
 An IoT integrated hydrogen leakage detection infrastructure developed for Deakin University (Victoria, Australia) to ensure the safety of the Hycel precinct. The system utilizes Google BigData to visualize real-time sensor data on interactive maps, providing critical monitoring capabilities for hydrogen-related safety systems.
 
@@ -2132,7 +2374,7 @@ An IoT integrated hydrogen leakage detection infrastructure developed for Deakin
 This project was developed as an outsourced engagement for Deakin University's Hycel initiative. The development focused primarily on functionality, ensuring reliable data transfer from sensors to the visualization platform. The system was designed to handle large volumes of IoT data while maintaining responsive performance for users monitoring the facility.
 
 ## License
-This project was developed for Deakin University's Hycel initiative.20:T84a,<h2>Project Overview</h2>
+This project was developed for Deakin University's Hycel initiative.22:T84a,<h2>Project Overview</h2>
 <p>A comprehensive knowledge base system designed for Veeble.com to provide organized technical documentation for clients. The system features categorized articles across various hosting technologies with intuitive navigation and powerful search functionality.</p>
 <h2>Project Details</h2>
 <h3>Technologies Used</h3>
@@ -2163,7 +2405,7 @@ This project was developed for Deakin University's Hycel initiative.20:T84a,<h2>
 <h2>Process</h2>
 <p>The Knowledge Base was built as a custom WordPress implementation, requiring significant modifications to standard templates and database structures. Special attention was paid to performance optimization, ensuring that clients could quickly access critical information during potential server issues when page load times are particularly important.</p>
 <h2>License</h2>
-<p>This project was developed for Veeble.com.</p>21:T784,
+<p>This project was developed for Veeble.com.</p>23:T784,
 ## Project Overview
 A comprehensive knowledge base system designed for Veeble.com to provide organized technical documentation for clients. The system features categorized articles across various hosting technologies with intuitive navigation and powerful search functionality.
 
@@ -2195,7 +2437,7 @@ A comprehensive knowledge base system designed for Veeble.com to provide organiz
 The Knowledge Base was built as a custom WordPress implementation, requiring significant modifications to standard templates and database structures. Special attention was paid to performance optimization, ensuring that clients could quickly access critical information during potential server issues when page load times are particularly important.
 
 ## License
-This project was developed for Veeble.com.22:T6fc,<h2>Project Overview</h2>
+This project was developed for Veeble.com.24:T6fc,<h2>Project Overview</h2>
 <p>A technical content platform built with WordPress CMS, focusing on database technologies, programming tutorials, and systems administration topics.</p>
 <h2>Features</h2>
 <ul>
@@ -2230,7 +2472,7 @@ This project was developed for Veeble.com.22:T6fc,<h2>Project Overview</h2>
 <li>Improved database administration capabilities</li>
 </ul>
 <h2>Archive</h2>
-<p>You can still explore a snapshot of the website via the <a href="https://web.archive.org/web/20151011113825/http://clearstacknow.com/">Internet Archive</a>.</p>23:T5cf,
+<p>You can still explore a snapshot of the website via the <a href="https://web.archive.org/web/20151011113825/http://clearstacknow.com/">Internet Archive</a>.</p>25:T5cf,
 ## Project Overview
 A technical content platform built with WordPress CMS, focusing on database technologies, programming tutorials, and systems administration topics.
 
@@ -2266,7 +2508,7 @@ A technical content platform built with WordPress CMS, focusing on database tech
 
 You can still explore a snapshot of the website via the [Internet Archive](https://web.archive.org/web/20151011113825/http://clearstacknow.com/).
 
-24:T1287,<h2>Project Overview</h2>
+26:T1287,<h2>Project Overview</h2>
 <p>A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.</p>
 <h2>Project Details</h2>
 <h3>Technologies &#x26; Platforms Used</h3>
@@ -2334,7 +2576,7 @@ You can still explore a snapshot of the website via the [Internet Archive](https
 <li>Developed expertise in motorsport content creation</li>
 <li>Practical application of web publishing and content management skills</li>
 </ul>
-<p>The <a href="https://46vale.info">46vale.info</a> fan blog demonstrates my ability to create and maintain a content-rich website focused on a specific interest area, implement appropriate design elements for the subject matter, and build an engaged community around shared passions.</p>25:Tf84,
+<p>The <a href="https://46vale.info">46vale.info</a> fan blog demonstrates my ability to create and maintain a content-rich website focused on a specific interest area, implement appropriate design elements for the subject matter, and build an engaged community around shared passions.</p>27:Tf84,
 ## Project Overview
 A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.
 
@@ -2399,6 +2641,6 @@ The blog was built on Blogger's platform with extensive customization to create 
 * Developed expertise in motorsport content creation
 * Practical application of web publishing and content management skills
 
-The [46vale.info](https://46vale.info) fan blog demonstrates my ability to create and maintain a content-rich website focused on a specific interest area, implement appropriate design elements for the subject matter, and build an engaged community around shared passions.2:["$","$Lb",null,{"projects":[{"id":"sv2a-mouse-synaptome-atlas","metadata":{"title":"SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization","date":"2025-11-26","featured":true,"featuredOrder":6,"category":"research","summary":"An interactive web application for visualizing SV2A synaptic vesicle protein density and intensity measurements across mouse brain regions, developmental stages, and sex differences. Built for the Grant Lab at University of Edinburgh, featuring dual-metric analysis and comprehensive sex-specific data visualization.","image":"/images/sv2amousesynaptomeatlas.jpg","tag":"Next.js, TypeScript, React, Tailwind CSS, SVG, Data Visualization, Neuroscience","demo":"https://git-pages.ecdf.ed.ac.uk/grantlab/sv2a-mouse-synaptome-atlas/","role":"Lead Developer","duration":"2 months"},"content":"$c","rawContent":"$d"},{"id":"nanoarchitecture-synaptome-atlas","metadata":{"title":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization","date":"2025-11-24","featured":true,"featuredOrder":5,"category":"research","summary":"An interactive web application for visualizing PSD95 proximity index measurements across 43 mouse brain regions and 4 developmental stages. Built for the Grant Lab at University of Edinburgh, featuring SVG-based brain atlas, real-time data visualization, and comprehensive research methodology documentation.","image":"/images/nanoarchitecturesynaptomeatlas.jpg","tag":"Next.js, TypeScript, React, Tailwind CSS, SVG, Data Visualization, Neuroscience","demo":"https://git-pages.ecdf.ed.ac.uk/grantlab/nanoarchitecture-synaptome-atlas/","role":"Lead Developer","duration":"3 months"},"content":"$e","rawContent":"$f"},{"id":"montageroi-segmenter","metadata":{"title":"MontageROI Segmenter - Web-Based ROI Annotation Tool","date":"2025-11-13","featured":true,"featuredOrder":1,"category":"research","summary":"A powerful web-based application for viewing high-resolution montage TIFF images and creating, editing, and managing Region of Interest (ROI) overlays. Built for the Grant Lab at University of Edinburgh, featuring Three.js WebGL rendering, comprehensive editing tools, and ImageJ-compatible export.","image":"/images/montageroisegmenter.jpg","tag":"Flask, Python, Three.js, WebGL, JavaScript, Bootstrap, Docker, ImageJ, TIFF Processing","role":"Lead Developer","duration":"Ongoing"},"content":"$10","rawContent":"$11"},{"id":"synaptopathydb","metadata":{"title":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research","date":"2025-06-27","featured":true,"featuredOrder":2,"category":"research","summary":"A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access.","image":"/images/synaptopathydb.png","tag":"React, Flask, Python, SQLite, Tailwind CSS, REST API, Data Visualization","demo":"https://www.synaptopathydb.org","role":"Lead Web Developer","duration":"6 months"},"content":"$12","rawContent":"$13"},{"id":"s3-bucket-viewer","metadata":{"title":"S3 Bucket Viewer - Web-Based S3 File Browser","date":"2025-01-15","featured":true,"featuredOrder":3,"category":"personal","summary":"A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation.","image":"/images/s3bucketviewer.png","tag":"React, Flask, Python, Tailwind CSS, Docker, AWS S3, boto3","github":"https://github.com/digin1/s3-bucket-viewer","demo":"https://s3-bucket-viewer.brain-synaptome.org/","role":"Solo Developer","duration":"1 month"},"content":"$14","rawContent":"$15"},{"id":"deep-chill-inventory-management-system","metadata":{"title":"Deep Chill Inventory Management System","date":"2022-04-01","featured":false,"category":"commercial","summary":"The Deep Chill Inventory Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.","image":"/images/inventory-management-system.png","tag":"PHP, Bootstrap, MySQL, JavaScript, jQuery, AJAX","role":"Full Stack Developer","duration":"2 months"},"content":"$16","rawContent":"$17"},{"id":"automating-secure-infrastructure-with-ansible-project","metadata":{"title":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control","date":"2021-12-12","featured":true,"featuredOrder":8,"category":"education","summary":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC).","image":"/images/ansible.png","tag":"Ansible, Ubuntu, Linux, DevOps, Infrastructure as Code","role":"DevOps Engineer","duration":"2 weeks"},"content":"$18","rawContent":"$19"},{"id":"code-pad-me--online-code-execution-system","metadata":{"title":"Code-Pad.me - Award-Winning Online Code Execution System","date":"2021-11-15","featured":true,"featuredOrder":4,"category":"personal","summary":"Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it's perfect for coding challenges, teaching, and collaboration.","image":"/images/code-pad.png","tag":"Django, bootstrap, JQuery, Docker, SQLite, PostgreSQL, GitLab, Judge0","github":"https://gitlab.com/digin13dominic/code-pad.me","demo":"https://code-pad.me","role":"Solo Developer","duration":"4 months"},"content":"$1a","rawContent":"$1b"},{"id":"boot-factory-e-commerce-platform-development","metadata":{"title":"Boot Factory: E-Commerce Platform Development with ASP.NET MVC","date":"2021-05-31","featured":false,"category":"education","summary":"Designed and built a fully functional e-commerce platform for footwear using C# ASP.NET MVC architecture. This coursework project demonstrates proficiency in web development frameworks, database integration, user authentication, and shopping cart functionality while following industry best practices.","image":"/images/bootfactory.png","tag":"ASP.NET, C#, MVC, SQL Server, Bootstrap, Entity Framework","github":"https://github.com/digin1/Boot-Factory","role":"Full Stack Developer","duration":"3 months"},"content":"$1c","rawContent":"$1d"},{"id":"hycel-asset-management-system","metadata":{"title":"Hycel Asset Management System","date":"2021-04-15","featured":false,"category":"commercial","summary":"The Hycel Asset Management System is an IoT-integrated hydrogen leakage detection infrastructure built for Deakin University that visualizes real-time sensor data on interactive Google Maps. Using PHP, MySQL, JavaScript, and BigData integration, the system displays color-coded map markers with detailed sensor information panels showing temperature, humidity, and system status. The project features custom SQL queries for efficient data retrieval, a responsive interface for cross-device monitoring, and a built-in comment system for team communication. This safety-critical system enables early detection of potential hydrogen leaks, enhancing facility safety protocols and creating a scalable platform for the university's expanding Hycel precinct.","image":"/images/hycel.png","tag":"PHP, Bootstrap, Google BigQuery, Google Maps API, IoT, MySQL, JavaScript","demo":"https://hycelassetmanagement.space/","role":"Full Stack Developer","duration":"3 months"},"content":"$1e","rawContent":"$1f"},{"id":"veeble-knowledge-base-web-development-project","metadata":{"title":"Veeble Knowledge Base - Web Development Project","date":"2020-03-01","featured":false,"category":"commercial","summary":"Designed and implemented a comprehensive Knowledge Base system for Veeble.com, creating an organized repository of technical documentation accessible to clients. The system features categorized articles spanning various hosting technologies with an intuitive navigation structure and search functionality. Performance optimizations were implemented to ensure quick access to critical support information.","image":"/images/kbveeble.png","tag":"PHP, WordPress, MySQL, HTML, CSS, JavaScript","demo":"https://kb.veeble.org","role":"WordPress Developer","duration":"1 month"},"content":"$20","rawContent":"$21"},{"id":"wordpress-cms-development-clearstacknow-com","metadata":{"title":"WordPress CMS Development: ClearStackNow.com","date":"2015-10-11","featured":false,"category":"personal","summary":"Developed and deployed a technical content platform using WordPress CMS, focusing on database technologies and systems administration topics. Customized themes and functionality to create an intuitive knowledge-sharing platform for programming and IT operations.","image":"/images/clearstacknow.png","tag":"PHP, WordPress, MySQL, HTML, CSS, JavaScript","demo":"https://web.archive.org/web/20151011113825/http://clearstacknow.com/","role":"Full Stack Developer","duration":"3 months"},"content":"$22","rawContent":"$23"},{"id":"valentino-rossi-fan-blog","metadata":{"title":"46vale.info - Valentino Rossi Fan Blog","date":"2013-03-15","featured":true,"featuredOrder":7,"category":"personal","summary":"A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.","image":"/images/46vale.png","tag":"Blogger, XML","demo":"https://46vale.info","role":"Creator & Writer","duration":"Ongoing since 2013"},"content":"$24","rawContent":"$25"}]}]
+The [46vale.info](https://46vale.info) fan blog demonstrates my ability to create and maintain a content-rich website focused on a specific interest area, implement appropriate design elements for the subject matter, and build an engaged community around shared passions.2:["$","$Lb",null,{"projects":[{"id":"sv2a-mouse-synaptome-atlas","metadata":{"title":"SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization","date":"2025-11-26","featured":true,"featuredOrder":6,"category":"research","summary":"An interactive web application for visualizing SV2A synaptic vesicle protein density and intensity measurements across mouse brain regions, developmental stages, and sex differences. Built for the Grant Lab at University of Edinburgh, featuring dual-metric analysis and comprehensive sex-specific data visualization.","image":"/images/sv2amousesynaptomeatlas.jpg","tag":"Next.js, TypeScript, React, Tailwind CSS, SVG, Data Visualization, Neuroscience","demo":"https://git-pages.ecdf.ed.ac.uk/grantlab/sv2a-mouse-synaptome-atlas/","role":"Lead Developer","duration":"2 months"},"content":"$c","rawContent":"$d"},{"id":"nanoarchitecture-synaptome-atlas","metadata":{"title":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization","date":"2025-11-24","featured":true,"featuredOrder":5,"category":"research","summary":"An interactive web application for visualizing PSD95 proximity index measurements across 43 mouse brain regions and 4 developmental stages. Built for the Grant Lab at University of Edinburgh, featuring SVG-based brain atlas, real-time data visualization, and comprehensive research methodology documentation.","image":"/images/nanoarchitecturesynaptomeatlas.jpg","tag":"Next.js, TypeScript, React, Tailwind CSS, SVG, Data Visualization, Neuroscience","demo":"https://git-pages.ecdf.ed.ac.uk/grantlab/nanoarchitecture-synaptome-atlas/","role":"Lead Developer","duration":"3 months"},"content":"$e","rawContent":"$f"},{"id":"montageroi-segmenter","metadata":{"title":"MontageROI Segmenter - Web-Based ROI Annotation Tool","date":"2025-11-13","featured":true,"featuredOrder":1,"category":"research","summary":"A powerful web-based application for viewing high-resolution montage TIFF images and creating, editing, and managing Region of Interest (ROI) overlays. Built for the Grant Lab at University of Edinburgh, featuring Three.js WebGL rendering, comprehensive editing tools, and ImageJ-compatible export.","image":"/images/montageroisegmenter.jpg","tag":"Flask, Python, Three.js, WebGL, JavaScript, Bootstrap, Docker, ImageJ, TIFF Processing","role":"Lead Developer","duration":"Ongoing"},"content":"$10","rawContent":"$11"},{"id":"synaptopathydb","metadata":{"title":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research","date":"2025-06-27","featured":true,"featuredOrder":2,"category":"research","summary":"A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access.","image":"/images/synaptopathydb.png","tag":"React, Flask, Python, SQLite, Tailwind CSS, REST API, Data Visualization","demo":"https://www.synaptopathydb.org","role":"Lead Web Developer","duration":"6 months"},"content":"$12","rawContent":"$13"},{"id":"s3-bucket-viewer","metadata":{"title":"S3 Bucket Viewer - Web-Based S3 File Browser","date":"2025-01-15","featured":true,"featuredOrder":3,"category":"personal","summary":"A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation.","image":"/images/s3bucketviewer.png","tag":"React, Flask, Python, Tailwind CSS, Docker, AWS S3, boto3","github":"https://github.com/digin1/s3-bucket-viewer","demo":"https://s3-bucket-viewer.brain-synaptome.org/","role":"Solo Developer","duration":"1 month"},"content":"$14","rawContent":"$15"},{"id":"neurosphere-3d-brain-atlas","metadata":{"title":"NeuroSphere - Interactive 3D Brain Atlas","date":"2024-12-20","featured":true,"featuredOrder":1,"category":"research","summary":"An interactive 3D brain atlas platform featuring human and mouse brain visualizations with real-time neural simulations. Built with Three.js, featuring Desikan-Killiany Atlas (43 regions) for human brain and Allen CCFv3 Atlas (25 regions) for mouse brain with connectivity-based activity propagation.","image":"/images/neurosphere.jpg","tag":"Three.js, WebGL, JavaScript, Neural Simulation, Neuroscience, 3D Visualization","demo":"https://digindominic.me/brain-threejs/","github":"https://github.com/digin1/brain-threejs","role":"Solo Developer","duration":"2 weeks"},"content":"$16","rawContent":"$17"},{"id":"deep-chill-inventory-management-system","metadata":{"title":"Deep Chill Inventory Management System","date":"2022-04-01","featured":false,"category":"commercial","summary":"The Deep Chill Inventory Management System is a custom-built web application designed to streamline inventory tracking and calculations in a cold storage/blast freezing environment. This tablet-optimized solution helps staff track product quantities across different storage areas (Blast 1, Blast 2, Deep Chill, Holding, etc.) and automates calculations to save time and reduce errors during daily operations.","image":"/images/inventory-management-system.png","tag":"PHP, Bootstrap, MySQL, JavaScript, jQuery, AJAX","role":"Full Stack Developer","duration":"2 months"},"content":"$18","rawContent":"$19"},{"id":"automating-secure-infrastructure-with-ansible-project","metadata":{"title":"Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control","date":"2021-12-12","featured":true,"featuredOrder":8,"category":"education","summary":"Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC).","image":"/images/ansible.png","tag":"Ansible, Ubuntu, Linux, DevOps, Infrastructure as Code","role":"DevOps Engineer","duration":"2 weeks"},"content":"$1a","rawContent":"$1b"},{"id":"code-pad-me--online-code-execution-system","metadata":{"title":"Code-Pad.me - Award-Winning Online Code Execution System","date":"2021-11-15","featured":true,"featuredOrder":4,"category":"personal","summary":"Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it's perfect for coding challenges, teaching, and collaboration.","image":"/images/code-pad.png","tag":"Django, bootstrap, JQuery, Docker, SQLite, PostgreSQL, GitLab, Judge0","github":"https://gitlab.com/digin13dominic/code-pad.me","demo":"https://code-pad.me","role":"Solo Developer","duration":"4 months"},"content":"$1c","rawContent":"$1d"},{"id":"boot-factory-e-commerce-platform-development","metadata":{"title":"Boot Factory: E-Commerce Platform Development with ASP.NET MVC","date":"2021-05-31","featured":false,"category":"education","summary":"Designed and built a fully functional e-commerce platform for footwear using C# ASP.NET MVC architecture. This coursework project demonstrates proficiency in web development frameworks, database integration, user authentication, and shopping cart functionality while following industry best practices.","image":"/images/bootfactory.png","tag":"ASP.NET, C#, MVC, SQL Server, Bootstrap, Entity Framework","github":"https://github.com/digin1/Boot-Factory","role":"Full Stack Developer","duration":"3 months"},"content":"$1e","rawContent":"$1f"},{"id":"hycel-asset-management-system","metadata":{"title":"Hycel Asset Management System","date":"2021-04-15","featured":false,"category":"commercial","summary":"The Hycel Asset Management System is an IoT-integrated hydrogen leakage detection infrastructure built for Deakin University that visualizes real-time sensor data on interactive Google Maps. Using PHP, MySQL, JavaScript, and BigData integration, the system displays color-coded map markers with detailed sensor information panels showing temperature, humidity, and system status. The project features custom SQL queries for efficient data retrieval, a responsive interface for cross-device monitoring, and a built-in comment system for team communication. This safety-critical system enables early detection of potential hydrogen leaks, enhancing facility safety protocols and creating a scalable platform for the university's expanding Hycel precinct.","image":"/images/hycel.png","tag":"PHP, Bootstrap, Google BigQuery, Google Maps API, IoT, MySQL, JavaScript","demo":"https://hycelassetmanagement.space/","role":"Full Stack Developer","duration":"3 months"},"content":"$20","rawContent":"$21"},{"id":"veeble-knowledge-base-web-development-project","metadata":{"title":"Veeble Knowledge Base - Web Development Project","date":"2020-03-01","featured":false,"category":"commercial","summary":"Designed and implemented a comprehensive Knowledge Base system for Veeble.com, creating an organized repository of technical documentation accessible to clients. The system features categorized articles spanning various hosting technologies with an intuitive navigation structure and search functionality. Performance optimizations were implemented to ensure quick access to critical support information.","image":"/images/kbveeble.png","tag":"PHP, WordPress, MySQL, HTML, CSS, JavaScript","demo":"https://kb.veeble.org","role":"WordPress Developer","duration":"1 month"},"content":"$22","rawContent":"$23"},{"id":"wordpress-cms-development-clearstacknow-com","metadata":{"title":"WordPress CMS Development: ClearStackNow.com","date":"2015-10-11","featured":false,"category":"personal","summary":"Developed and deployed a technical content platform using WordPress CMS, focusing on database technologies and systems administration topics. Customized themes and functionality to create an intuitive knowledge-sharing platform for programming and IT operations.","image":"/images/clearstacknow.png","tag":"PHP, WordPress, MySQL, HTML, CSS, JavaScript","demo":"https://web.archive.org/web/20151011113825/http://clearstacknow.com/","role":"Full Stack Developer","duration":"3 months"},"content":"$24","rawContent":"$25"},{"id":"valentino-rossi-fan-blog","metadata":{"title":"46vale.info - Valentino Rossi Fan Blog","date":"2013-03-15","featured":true,"featuredOrder":7,"category":"personal","summary":"A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events.","image":"/images/46vale.png","tag":"Blogger, XML","demo":"https://46vale.info","role":"Creator & Writer","duration":"Ongoing since 2013"},"content":"$26","rawContent":"$27"}]}]
 a:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Projects | Digin Dominic"}],["$","meta","3",{"name":"description","content":"Browse my portfolio of full-stack web applications, React projects, Node.js backends, Python tools, and data visualization dashboards."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"keywords","content":"portfolio,projects,web applications,React,Node.js,Python,data visualization,full stack"}],["$","meta","7",{"name":"creator","content":"Digin Dominic"}],["$","meta","8",{"name":"publisher","content":"Digin Dominic"}],["$","meta","9",{"name":"robots","content":"index, follow"}],["$","meta","10",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","11",{"rel":"canonical","href":"https://digindominic.me/projects/"}],["$","meta","12",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","13",{"property":"og:title","content":"Projects | Digin Dominic"}],["$","meta","14",{"property":"og:description","content":"Browse my portfolio of full-stack web applications and development work."}],["$","meta","15",{"property":"og:url","content":"https://digindominic.me/projects/"}],["$","meta","16",{"property":"og:type","content":"website"}],["$","meta","17",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","18",{"name":"twitter:title","content":"Projects | Digin Dominic"}],["$","meta","19",{"name":"twitter:description","content":"Browse my portfolio of full-stack web applications and development work."}]]
 1:null

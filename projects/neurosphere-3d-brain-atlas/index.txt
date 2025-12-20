@@ -1,0 +1,255 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-e6475990304c0426.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-e6475990304c0426.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-e6475990304c0426.js"],"default"]
+9:I[3039,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","160","static/chunks/app/not-found-cd5d79832c6a66a3.js"],"default"]
+a:I[9547,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-e6475990304c0426.js"],"default"]
+4:["id","neurosphere-3d-brain-atlas","d"]
+0:["iNzaRU43yOhgHQIsFA_5F",[[["",{"children":["projects",{"children":[["id","neurosphere-3d-brain-atlas","d"],{"children":["__PAGE__?{\"id\":\"neurosphere-3d-brain-atlas\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","neurosphere-3d-brain-atlas","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/9d55f88cb514ddbb.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L9",null,{}],"notFoundStyles":[]}]}],["$","$La",null,{}]]}]]}]]}]],null],null],["$Lb",null]]]]
+c:I[8966,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","336","static/chunks/336-577e97483e52d43a.js","626","static/chunks/app/projects/%5Bid%5D/page-167998e3958fc2b8.js"],"default"]
+d:T1690,<h2>Project Overview</h2>
+<p>NeuroSphere is a comprehensive 3D brain atlas platform that allows users to explore both human and mouse brain anatomy through stunning WebGL visualizations. The platform features interactive neural pathway simulations, region-specific information panels, and real-time activity propagation based on neuroanatomical connectivity data.</p>
+<h2>Demo Videos</h2>
+<h3>Human Brain Atlas</h3>
+<video controls width="100%" poster="/images/neurosphere.jpg">
+  <source src="/videos/human-threejs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<h3>Mouse Brain Atlas</h3>
+<video controls width="100%">
+  <source src="/videos/mouse-threejs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>Three.js (WebGL 3D Engine)</li>
+<li>Vanilla JavaScript (ES6+ Modules)</li>
+<li>CSS3 with Glassmorphism Design</li>
+<li>OBJ Mesh Loader</li>
+<li>JSON Connectivity Matrices</li>
+<li>GitHub Pages Deployment</li>
+</ul>
+<h3>Key Features</h3>
+<h4>Human Brain Atlas</h4>
+<ul>
+<li><strong>43 Anatomical Regions</strong> based on Desikan-Killiany Atlas</li>
+<li><strong>7 Brain Lobes</strong> with color-coded visualization (Frontal, Parietal, Temporal, Occipital, Limbic, Subcortical)</li>
+<li><strong>Interactive Region Selection</strong> with detailed function information</li>
+<li><strong>Neural Pathway Presets</strong>: Visual Processing, Motor Control, Language Production/Comprehension, Memory Encoding/Retrieval, Emotional Response, Attention Network, Decision Making, Resting State (DMN)</li>
+</ul>
+<h4>Mouse Brain Atlas</h4>
+<ul>
+<li><strong>25 Regions</strong> from Allen CCFv3 Atlas</li>
+<li><strong>Real-time Neural Simulations</strong> with connectivity-based activity propagation</li>
+<li><strong>8 Neural Circuit Presets</strong>:
+<ul>
+<li>Whisker Sensation (barrel cortex pathway)</li>
+<li>Visual Processing</li>
+<li>Auditory Processing</li>
+<li>Motor Control</li>
+<li>Fear Response (amygdala circuit)</li>
+<li>Spatial Navigation (hippocampal circuit)</li>
+<li>Olfactory Processing</li>
+<li>Reward Processing (mesolimbic pathway)</li>
+</ul>
+</li>
+</ul>
+<h4>Visualization Features</h4>
+<ul>
+<li>Wireframe and Solid color render modes</li>
+<li>Adjustable opacity and glow intensity</li>
+<li>Auto-rotation and manual OrbitControls</li>
+<li>Region filtering by lobe/category</li>
+<li>Responsive design for desktop and mobile</li>
+</ul>
+<h3>Development Process</h3>
+<h4>3D Rendering Architecture</h4>
+<p>Built with Three.js for high-performance WebGL rendering:</p>
+<ul>
+<li><strong>Scene Management</strong>: Custom <code>BrainViewer</code> class managing scene, camera, renderer, and controls</li>
+<li><strong>Mesh Loading</strong>: OBJLoader for brain region meshes with custom material application</li>
+<li><strong>Interaction</strong>: Raycaster-based mouse picking for region selection and hover effects</li>
+<li><strong>Visual Effects</strong>: Custom glow shader and emission-based highlighting for active regions</li>
+</ul>
+<h4>Neural Simulation Engine (Mouse Brain)</h4>
+<ul>
+<li><strong>ConnectivityGraph.js</strong>: Loads and manages weighted connectivity matrix based on Allen Mouse Brain Connectivity Atlas</li>
+<li><strong>RegionalActivity.js</strong>: Handles activity propagation using weighted connections between regions</li>
+<li><strong>NeuralSimulation.js</strong>: Main controller for preset scenarios with timed region activations</li>
+</ul>
+<h4>Data Sources</h4>
+<p>| Atlas | Source | Coverage |
+|-------|--------|----------|
+| Human Brain | <a href="https://brainder.org">brainder.org</a> (CC BY-SA 3.0) | Desikan-Killiany via FreeSurfer |
+| Mouse Brain | <a href="https://mouse.brain-map.org">Allen Institute</a> | CCFv3 Common Coordinate Framework |</p>
+<h3>Technical Highlights</h3>
+<ul>
+<li><strong>Coordinate System Handling</strong>: Allen CCF uses microns (5000-8000 range) requiring geometry translation and scaling to normalize with human brain coordinates</li>
+<li><strong>Performance Optimization</strong>: Efficient mesh management, LOD considerations, and optimized render loop</li>
+<li><strong>Modular Architecture</strong>: Separate modules for viewer, simulation, data, and UI components</li>
+<li><strong>SEO Optimized</strong>: Full Open Graph and Twitter card meta tags, sitemap, robots.txt</li>
+</ul>
+<h3>Architecture</h3>
+<pre><code>neurosphere/
+├── index.html              # Landing page with species selector
+├── human/
+│   ├── js/brain.js         # Human brain viewer
+│   ├── js/regions.js       # Region metadata
+│   └── models/             # OBJ meshes
+└── mouse/
+    ├── js/brain.js         # Mouse brain viewer
+    ├── js/simulation/      # Neural simulation engine
+    ├── js/data/            # Region data, presets
+    └── data/connectome/    # Connectivity matrix
+</code></pre>
+<h2>Scientific Context</h2>
+<p>The platform serves as an educational and research tool for:</p>
+<ul>
+<li>Understanding brain anatomy and regional organization</li>
+<li>Visualizing neural pathway activations</li>
+<li>Comparing human and mouse brain structures</li>
+<li>Demonstrating connectivity-based signal propagation</li>
+</ul>
+<h2>Deployment</h2>
+<ul>
+<li><strong>Platform</strong>: GitHub Pages with custom domain</li>
+<li><strong>URL</strong>: <a href="https://digindominic.me/brain-threejs/">https://digindominic.me/brain-threejs/</a></li>
+<li><strong>Source</strong>: <a href="https://github.com/digin1/brain-threejs">GitHub Repository</a></li>
+</ul>
+<h2>Future Enhancements</h2>
+<ul>
+<li>Additional species (rat, macaque)</li>
+<li>VR/AR support</li>
+<li>Real experimental data overlays</li>
+<li>Custom pathway creation tool</li>
+</ul>e:T1322,
+## Project Overview
+
+NeuroSphere is a comprehensive 3D brain atlas platform that allows users to explore both human and mouse brain anatomy through stunning WebGL visualizations. The platform features interactive neural pathway simulations, region-specific information panels, and real-time activity propagation based on neuroanatomical connectivity data.
+
+## Demo Videos
+
+### Human Brain Atlas
+<video controls width="100%" poster="/images/neurosphere.jpg">
+  <source src="/videos/human-threejs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### Mouse Brain Atlas
+<video controls width="100%">
+  <source src="/videos/mouse-threejs.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+## Project Details
+
+### Technologies Used
+
+* Three.js (WebGL 3D Engine)
+* Vanilla JavaScript (ES6+ Modules)
+* CSS3 with Glassmorphism Design
+* OBJ Mesh Loader
+* JSON Connectivity Matrices
+* GitHub Pages Deployment
+
+### Key Features
+
+#### Human Brain Atlas
+* **43 Anatomical Regions** based on Desikan-Killiany Atlas
+* **7 Brain Lobes** with color-coded visualization (Frontal, Parietal, Temporal, Occipital, Limbic, Subcortical)
+* **Interactive Region Selection** with detailed function information
+* **Neural Pathway Presets**: Visual Processing, Motor Control, Language Production/Comprehension, Memory Encoding/Retrieval, Emotional Response, Attention Network, Decision Making, Resting State (DMN)
+
+#### Mouse Brain Atlas
+* **25 Regions** from Allen CCFv3 Atlas
+* **Real-time Neural Simulations** with connectivity-based activity propagation
+* **8 Neural Circuit Presets**:
+  * Whisker Sensation (barrel cortex pathway)
+  * Visual Processing
+  * Auditory Processing
+  * Motor Control
+  * Fear Response (amygdala circuit)
+  * Spatial Navigation (hippocampal circuit)
+  * Olfactory Processing
+  * Reward Processing (mesolimbic pathway)
+
+#### Visualization Features
+* Wireframe and Solid color render modes
+* Adjustable opacity and glow intensity
+* Auto-rotation and manual OrbitControls
+* Region filtering by lobe/category
+* Responsive design for desktop and mobile
+
+### Development Process
+
+#### 3D Rendering Architecture
+
+Built with Three.js for high-performance WebGL rendering:
+
+* **Scene Management**: Custom `BrainViewer` class managing scene, camera, renderer, and controls
+* **Mesh Loading**: OBJLoader for brain region meshes with custom material application
+* **Interaction**: Raycaster-based mouse picking for region selection and hover effects
+* **Visual Effects**: Custom glow shader and emission-based highlighting for active regions
+
+#### Neural Simulation Engine (Mouse Brain)
+
+* **ConnectivityGraph.js**: Loads and manages weighted connectivity matrix based on Allen Mouse Brain Connectivity Atlas
+* **RegionalActivity.js**: Handles activity propagation using weighted connections between regions
+* **NeuralSimulation.js**: Main controller for preset scenarios with timed region activations
+
+#### Data Sources
+
+| Atlas | Source | Coverage |
+|-------|--------|----------|
+| Human Brain | [brainder.org](https://brainder.org) (CC BY-SA 3.0) | Desikan-Killiany via FreeSurfer |
+| Mouse Brain | [Allen Institute](https://mouse.brain-map.org) | CCFv3 Common Coordinate Framework |
+
+### Technical Highlights
+
+* **Coordinate System Handling**: Allen CCF uses microns (5000-8000 range) requiring geometry translation and scaling to normalize with human brain coordinates
+* **Performance Optimization**: Efficient mesh management, LOD considerations, and optimized render loop
+* **Modular Architecture**: Separate modules for viewer, simulation, data, and UI components
+* **SEO Optimized**: Full Open Graph and Twitter card meta tags, sitemap, robots.txt
+
+### Architecture
+
+```
+neurosphere/
+├── index.html              # Landing page with species selector
+├── human/
+│   ├── js/brain.js         # Human brain viewer
+│   ├── js/regions.js       # Region metadata
+│   └── models/             # OBJ meshes
+└── mouse/
+    ├── js/brain.js         # Mouse brain viewer
+    ├── js/simulation/      # Neural simulation engine
+    ├── js/data/            # Region data, presets
+    └── data/connectome/    # Connectivity matrix
+```
+
+## Scientific Context
+
+The platform serves as an educational and research tool for:
+
+* Understanding brain anatomy and regional organization
+* Visualizing neural pathway activations
+* Comparing human and mouse brain structures
+* Demonstrating connectivity-based signal propagation
+
+## Deployment
+
+* **Platform**: GitHub Pages with custom domain
+* **URL**: [https://digindominic.me/brain-threejs/](https://digindominic.me/brain-threejs/)
+* **Source**: [GitHub Repository](https://github.com/digin1/brain-threejs)
+
+## Future Enhancements
+
+* Additional species (rat, macaque)
+* VR/AR support
+* Real experimental data overlays
+* Custom pathway creation tool
+2:["$","$Lc",null,{"project":{"id":"neurosphere-3d-brain-atlas","metadata":{"title":"NeuroSphere - Interactive 3D Brain Atlas","date":"2024-12-20","featured":true,"featuredOrder":1,"category":"research","summary":"An interactive 3D brain atlas platform featuring human and mouse brain visualizations with real-time neural simulations. Built with Three.js, featuring Desikan-Killiany Atlas (43 regions) for human brain and Allen CCFv3 Atlas (25 regions) for mouse brain with connectivity-based activity propagation.","image":"/images/neurosphere.jpg","tag":"Three.js, WebGL, JavaScript, Neural Simulation, Neuroscience, 3D Visualization","demo":"https://digindominic.me/brain-threejs/","github":"https://github.com/digin1/brain-threejs","role":"Solo Developer","duration":"2 weeks"},"content":"$d","rawContent":"$e"},"prevProject":{"id":"s3-bucket-viewer","title":"S3 Bucket Viewer - Web-Based S3 File Browser"},"nextProject":{"id":"deep-chill-inventory-management-system","title":"Deep Chill Inventory Management System"}}]
+b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"NeuroSphere - Interactive 3D Brain Atlas | Digin Dominic"}],["$","meta","3",{"name":"description","content":"An interactive 3D brain atlas platform featuring human and mouse brain visualizations with real-time neural simulations. Built with Three.js, featuring Desikan-Killiany Atlas (43 regions) for human brain and Allen CCFv3 Atlas (25 regions) for mouse brain with connectivity-based activity propagation."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/neurosphere-3d-brain-atlas/"}],["$","meta","11",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","12",{"property":"og:title","content":"NeuroSphere - Interactive 3D Brain Atlas | Digin Dominic"}],["$","meta","13",{"property":"og:description","content":"An interactive 3D brain atlas platform featuring human and mouse brain visualizations with real-time neural simulations. Built with Three.js, featuring Desikan-Killiany Atlas (43 regions) for human brain and Allen CCFv3 Atlas (25 regions) for mouse brain with connectivity-based activity propagation."}],["$","meta","14",{"property":"og:url","content":"https://digindominic.me/projects/neurosphere-3d-brain-atlas/"}],["$","meta","15",{"property":"og:image","content":"https://digindominic.me/images/neurosphere.jpg"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"NeuroSphere - Interactive 3D Brain Atlas"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"NeuroSphere - Interactive 3D Brain Atlas | Digin Dominic"}],["$","meta","22",{"name":"twitter:description","content":"An interactive 3D brain atlas platform featuring human and mouse brain visualizations with real-time neural simulations. Built with Three.js, featuring Desikan-Killiany Atlas (43 regions) for human brain and Allen CCFv3 Atlas (25 regions) for mouse brain with connectivity-based activity propagation."}],["$","meta","23",{"name":"twitter:image","content":"https://digindominic.me/images/neurosphere.jpg"}]]
+1:null

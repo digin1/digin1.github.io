@@ -10,7 +10,7 @@ tag: "Three.js, WebGL, JavaScript, Neural Simulation, Neuroscience, 3D Visualiza
 demo: "https://digindominic.me/brain-threejs/"
 github: "https://github.com/digin1/brain-threejs"
 role: "Solo Developer"
-duration: "2 weeks"
+duration: "4 hours"
 ---
 
 ## Project Overview

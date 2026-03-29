@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSun, faMoon, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faSun, faMoon, faArrowUpRightFromSquare, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Header() {
@@ -41,6 +41,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center gap-1 lg:gap-2">
+            <li>
+              <Link
+                href="/"
+                className={`inline-flex items-center justify-center rounded-lg px-2.5 py-2 text-sm ${
+                  isActive('/')
+                    ? 'bg-neural-blue/10 text-neural-blue'
+                    : 'text-light-text-secondary hover:text-light-text dark:text-muted-steel dark:hover:text-ghost-white'
+                }`}
+                aria-label="Home"
+              >
+                <FontAwesomeIcon icon={faHouse} className="h-3.5 w-3.5" />
+              </Link>
+            </li>
             {navItems.map((item) => (
               <li key={item.path}>
                 <Link
@@ -132,6 +145,18 @@ export default function Header() {
               transition={{ duration: 0.2 }}
             >
               <div className="flex flex-col gap-1 rounded-2xl border border-light-border bg-light-surface p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                <Link
+                  href="/"
+                  className={`inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm transition-colors ${
+                    isActive('/')
+                      ? 'bg-neural-blue/10 text-neural-blue'
+                      : 'text-light-text-secondary hover:text-light-text dark:text-muted-steel dark:hover:text-ghost-white'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <FontAwesomeIcon icon={faHouse} className="h-3.5 w-3.5" />
+                  Home
+                </Link>
                 {navItems.map((item) => (
                   <Link
                     key={item.path}

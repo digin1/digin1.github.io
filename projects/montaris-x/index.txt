@@ -1,0 +1,102 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+9:I[839,["601","static/chunks/app/error-a281861f4199e94b.js"],"default"]
+a:I[3039,["676","static/chunks/870fdd6f-5b857784e146b02e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-f71ff85f1e80e868.js"],"default"]
+b:I[9547,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+4:["id","montaris-x","d"]
+0:["I2lY-1QFS2AI4axHXDdWD",[[["",{"children":["projects",{"children":[["id","montaris-x","d"],{"children":["__PAGE__?{\"id\":\"montaris-x\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","montaris-x","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b2616d198509a7d5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b1959b11e1f88b90.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark __variable_245d8d __variable_97c177","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#0B0F14"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Software Engineer & Research Toolsmith\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"University of Edinburgh\",\"department\":\"Genes to Cognition Programme / SIDB\"},\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"sameAs\":[\"https://github.com/digin1\",\"https://www.linkedin.com/in/digin/\",\"https://x.com/digin1\",\"https://sidb.org.uk/seth-grant/digin-dominic/\"],\"knowsAbout\":[\"Scientific Software Development\",\"Neuroscience Research Tools\",\"Three.js 3D Visualisation\",\"Python\",\"React\",\"Docker\",\"Microscopy Data Processing\",\"Data Pipelines\",\"Linux System Administration\"],\"alumniOf\":{\"@type\":\"EducationalOrganization\",\"name\":\"Nottingham Trent University\"}}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-24 md:pt-28","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}]]}]]}]]}]],null],[["$","div",null,{"className":"min-h-[60vh] flex items-center justify-center","children":["$","div",null,{"className":"flex flex-col items-center gap-4","children":[["$","div",null,{"className":"w-8 h-8 border-2 border-neural-blue/30 border-t-neural-blue rounded-full animate-spin"}],["$","p",null,{"className":"text-sm text-light-text-secondary dark:text-muted-steel","children":"Loading..."}]]}]}],[],[]]],["$Lc",null]]]]
+d:I[4543,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-ecf0d6fa5cc4c3ce.js"],"default"]
+e:Ta36,<h2>Overview</h2>
+<p>Montaris-X is a pip-installable desktop ROI editor for scientific microscopy. It is designed for researchers who need local, responsive annotation workflows without relying on large proprietary applications or a fragile chain of manual steps.</p>
+<p>Currently under review for listing at the University of Edinburgh's Software Centre for institutional distribution.</p>
+<h2>Problem</h2>
+<p>Microscopy annotation is often trapped between two bad options: heavyweight vendor tooling or improvised research workflows that are hard to standardise. The goal here was to build a local tool that:</p>
+<ul>
+<li>works well on large scientific images</li>
+<li>supports the ROI formats researchers already use</li>
+<li>feels responsive enough for real annotation work</li>
+<li>is easy to install and distribute</li>
+</ul>
+<h2>What I Built</h2>
+<p>Montaris-X includes:</p>
+<ul>
+<li>ROI drawing and editing tools for practical image annotation</li>
+<li>multi-layer ROI management</li>
+<li>ImageJ ROI and ZIP import/export</li>
+<li>16/32-bit TIFF handling and multi-channel image support</li>
+<li>undo/redo and transform operations</li>
+<li>an install path simple enough for researchers to adopt</li>
+</ul>
+<h2>Technical Decisions</h2>
+<h3>Native desktop instead of browser</h3>
+<p>For this tool, a desktop application was the right choice. The workflow is local, image-heavy, and interaction-intensive. PySide6 provided a reliable base for building something distributable and responsive across platforms.</p>
+<h3>Interoperability first</h3>
+<p>ImageJ compatibility was non-negotiable. The point was not to create another isolated editor. It was to fit into the tools researchers already trust while giving them a better interface for day-to-day work.</p>
+<h3>Distribution</h3>
+<p>Publishing on PyPI mattered because it turned the tool into something that could actually be installed, versioned, and shared, rather than staying as a one-off internal script.</p>
+<h2>Constraints</h2>
+<p>The challenge was to balance a real microscopy feature set with a tool that remained fast enough and simple enough to use in practice. It had to handle scientific image formats and ROI workflows without becoming a bloated desktop application.</p>
+<h2>Outcome</h2>
+<p>Montaris-X gives researchers a practical local tool for ROI work and reduces dependence on proprietary software for a key part of the microscopy workflow. It also shows a different side of the portfolio: packaged desktop software, not just web applications.</p>
+<h2>Installation</h2>
+<pre><code class="language-bash">pip install montaris-x
+</code></pre>f:T956,
+## Overview
+
+Montaris-X is a pip-installable desktop ROI editor for scientific microscopy. It is designed for researchers who need local, responsive annotation workflows without relying on large proprietary applications or a fragile chain of manual steps.
+
+Currently under review for listing at the University of Edinburgh's Software Centre for institutional distribution.
+
+## Problem
+
+Microscopy annotation is often trapped between two bad options: heavyweight vendor tooling or improvised research workflows that are hard to standardise. The goal here was to build a local tool that:
+
+- works well on large scientific images
+- supports the ROI formats researchers already use
+- feels responsive enough for real annotation work
+- is easy to install and distribute
+
+## What I Built
+
+Montaris-X includes:
+
+- ROI drawing and editing tools for practical image annotation
+- multi-layer ROI management
+- ImageJ ROI and ZIP import/export
+- 16/32-bit TIFF handling and multi-channel image support
+- undo/redo and transform operations
+- an install path simple enough for researchers to adopt
+
+## Technical Decisions
+
+### Native desktop instead of browser
+
+For this tool, a desktop application was the right choice. The workflow is local, image-heavy, and interaction-intensive. PySide6 provided a reliable base for building something distributable and responsive across platforms.
+
+### Interoperability first
+
+ImageJ compatibility was non-negotiable. The point was not to create another isolated editor. It was to fit into the tools researchers already trust while giving them a better interface for day-to-day work.
+
+### Distribution
+
+Publishing on PyPI mattered because it turned the tool into something that could actually be installed, versioned, and shared, rather than staying as a one-off internal script.
+
+## Constraints
+
+The challenge was to balance a real microscopy feature set with a tool that remained fast enough and simple enough to use in practice. It had to handle scientific image formats and ROI workflows without becoming a bloated desktop application.
+
+## Outcome
+
+Montaris-X gives researchers a practical local tool for ROI work and reduces dependence on proprietary software for a key part of the microscopy workflow. It also shows a different side of the portfolio: packaged desktop software, not just web applications.
+
+## Installation
+
+```bash
+pip install montaris-x
+```
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CreativeWork\",\"name\":\"Montaris-X\",\"description\":\"A cross-platform desktop ROI editor for scientific microscopy workflows. Built with PySide6 and published on PyPI, it gives researchers a fast local tool for annotation, ROI editing, and ImageJ-compatible interoperability without relying on heavyweight proprietary software.\",\"url\":\"https://digindominic.me/projects/montaris-x\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\"},\"dateCreated\":\"2025-01-01\"}"}}],["$","$Ld",null,{"project":{"id":"montaris-x","metadata":{"title":"Montaris-X","date":"2025-01-01","featured":true,"featuredOrder":4,"category":"research","summary":"A cross-platform desktop ROI editor for scientific microscopy workflows. Built with PySide6 and published on PyPI, it gives researchers a fast local tool for annotation, ROI editing, and ImageJ-compatible interoperability without relying on heavyweight proprietary software.","image":"","tag":"Python, PySide6, NumPy, SciPy, scikit-image, tifffile, PyPI, Desktop App","role":"Solo Developer","duration":"4 months","problem":"Researchers needed a fast local ROI tool they could install and use without depending on heavyweight or proprietary microscopy software.","scope":"Built a native desktop application for ROI drawing, editing, layering, import/export, and high-resolution microscopy image handling.","outcome":"Montaris-X became a distributable local tool for microscopy annotation workflows, with PyPI distribution and institutional interest.","highlights":["Cross-platform Python desktop app built with PySide6","Supports 16/32-bit TIFF, ImageJ ROI import/export, layering, and undo/redo","Published on PyPI and designed for real lab workflows rather than demo use"]},"content":"$e","rawContent":"$f"},"prevProject":{"id":"synapticconnectdb","title":"SynapticConnectDB — Synaptic Connection Database"},"nextProject":{"id":"roi-classification-tool","title":"GPU-Accelerated ROI Classification Tool"}}]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Montaris-X | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A cross-platform desktop ROI editor for scientific microscopy workflows. Built with PySide6 and published on PyPI, it gives researchers a fast local tool for annotation, ROI editing, and ImageJ-compatible interoperability without relying on heavyweight proprietary software."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/montaris-x/"}],["$","meta","11",{"property":"og:title","content":"Montaris-X | Digin Dominic"}],["$","meta","12",{"property":"og:description","content":"A cross-platform desktop ROI editor for scientific microscopy workflows. Built with PySide6 and published on PyPI, it gives researchers a fast local tool for annotation, ROI editing, and ImageJ-compatible interoperability without relying on heavyweight proprietary software."}],["$","meta","13",{"property":"og:url","content":"https://digindominic.me/projects/montaris-x/"}],["$","meta","14",{"property":"og:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Montaris-X"}],["$","meta","18",{"property":"og:type","content":"article"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"Montaris-X | Digin Dominic"}],["$","meta","21",{"name":"twitter:description","content":"A cross-platform desktop ROI editor for scientific microscopy workflows. Built with PySide6 and published on PyPI, it gives researchers a fast local tool for annotation, ROI editing, and ImageJ-compatible interoperability without relying on heavyweight proprietary software."}],["$","meta","22",{"name":"twitter:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","23",{"name":"next-size-adjust"}]]
+1:null

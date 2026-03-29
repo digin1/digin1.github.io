@@ -1,273 +1,143 @@
 3:I[4707,[],""]
 5:I[6423,[],""]
-6:I[8003,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-c85ccb27cd7f4c58.js"],""]
-7:I[9567,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-c85ccb27cd7f4c58.js"],"ThemeProvider"]
-8:I[1794,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-c85ccb27cd7f4c58.js"],"default"]
-9:I[3039,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","160","static/chunks/app/not-found-cd5d79832c6a66a3.js"],"default"]
-a:I[9547,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-c85ccb27cd7f4c58.js"],"default"]
+6:I[8003,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+9:I[839,["601","static/chunks/app/error-a281861f4199e94b.js"],"default"]
+a:I[3039,["676","static/chunks/870fdd6f-5b857784e146b02e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-f71ff85f1e80e868.js"],"default"]
+b:I[9547,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
 4:["id","synaptopathydb","d"]
-0:["wn6ySsOwCqKWPZMwOfVzc",[[["",{"children":["projects",{"children":[["id","synaptopathydb","d"],{"children":["__PAGE__?{\"id\":\"synaptopathydb\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","synaptopathydb","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/9d55f88cb514ddbb.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L9",null,{}],"notFoundStyles":[]}]}],["$","$La",null,{}]]}]]}]]}]],null],null],["$Lb",null]]]]
-c:I[8966,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","336","static/chunks/336-577e97483e52d43a.js","626","static/chunks/app/projects/%5Bid%5D/page-167998e3958fc2b8.js"],"default"]
-d:T2241,<h2>Project Overview</h2>
-<p>SynaptopathyDB is an online resource designed to facilitate research into the genetic basis and clinical manifestations of synaptopathies — brain and behavioural disorders caused by mutations in genes encoding synaptic proteins. The platform integrates data from 64 mammalian synapse proteomic studies with multiple genetic and phenotypic resources, enabling researchers to explore connections between synaptic proteins, genetic variants, and human disease phenotypes.</p>
-<h2>Project Details</h2>
-<h3>Technologies Used</h3>
+0:["I2lY-1QFS2AI4axHXDdWD",[[["",{"children":["projects",{"children":[["id","synaptopathydb","d"],{"children":["__PAGE__?{\"id\":\"synaptopathydb\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","synaptopathydb","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b2616d198509a7d5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b1959b11e1f88b90.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark __variable_245d8d __variable_97c177","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#0B0F14"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Software Engineer & Research Toolsmith\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"University of Edinburgh\",\"department\":\"Genes to Cognition Programme / SIDB\"},\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"sameAs\":[\"https://github.com/digin1\",\"https://www.linkedin.com/in/digin/\",\"https://x.com/digin1\",\"https://sidb.org.uk/seth-grant/digin-dominic/\"],\"knowsAbout\":[\"Scientific Software Development\",\"Neuroscience Research Tools\",\"Three.js 3D Visualisation\",\"Python\",\"React\",\"Docker\",\"Microscopy Data Processing\",\"Data Pipelines\",\"Linux System Administration\"],\"alumniOf\":{\"@type\":\"EducationalOrganization\",\"name\":\"Nottingham Trent University\"}}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-24 md:pt-28","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}]]}]]}]]}]],null],[["$","div",null,{"className":"min-h-[60vh] flex items-center justify-center","children":["$","div",null,{"className":"flex flex-col items-center gap-4","children":[["$","div",null,{"className":"w-8 h-8 border-2 border-neural-blue/30 border-t-neural-blue rounded-full animate-spin"}],["$","p",null,{"className":"text-sm text-light-text-secondary dark:text-muted-steel","children":"Loading..."}]]}]}],[],[]]],["$Lc",null]]]]
+d:I[4543,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-ecf0d6fa5cc4c3ce.js"],"default"]
+e:T11e4,<h2>Overview</h2>
+<p>SynaptopathyDB is an online resource for studying the genetic and clinical basis of synaptopathies: disorders linked to mutations in genes encoding synaptic proteins. The platform brings together proteomic studies, disease associations, mutation data, and publication records so researchers can work from a single interface instead of stitching together evidence manually.</p>
+<p>The project is one of the clearest public examples of the work I do at the University of Edinburgh: turning complex scientific data into a usable product with real research value.</p>
+<h2>Problem</h2>
+<p>The underlying science is rich, but the information landscape is fragmented. Researchers often need to move between proteomic studies, disease records, mutation databases, and publications just to answer basic questions such as:</p>
 <ul>
-<li>React.js</li>
-<li>Tailwind CSS</li>
-<li>Flask (Python)</li>
-<li>Flask-SQLAlchemy</li>
-<li>SQLite</li>
-<li>Recharts (Data Visualization)</li>
-<li>Docker</li>
-<li>nginx</li>
-<li>RESTful API</li>
+<li>Which synaptic genes are associated with a disease?</li>
+<li>Which mutations have been reported for a gene?</li>
+<li>Which studies support a particular synaptic localisation?</li>
+<li>How do publication, disease, and protein records connect?</li>
 </ul>
-<h3>Key Features</h3>
+<p>The challenge was not just to store the data. It was to design a system that let researchers navigate across these relationships quickly and with enough context to support real scientific work.</p>
+<h2>What I Built</h2>
+<p>I built the full web application, including the user-facing search experience, the backend API, and the application architecture around the data model provided by the research collaboration.</p>
+<p>Core parts of the build included:</p>
 <ul>
-<li><strong>Gene Search Interface</strong>: Comprehensive exploration of individual genes with detailed information including multiple species identifiers, associated publications, disease associations, mutation details, and synaptic compartment localization</li>
-<li><strong>Disease Search Interface</strong>: Explore diseases and their associated synaptic genes with detailed mutation information, publication links, and downloadable reports</li>
-<li><strong>Publication Search</strong>: Retrieve scientific publications with gene-disease connections, with filtering by associated genes and mutations</li>
-<li><strong>Autocomplete Search</strong>: Real-time suggestions supporting multiple identifier types including Human/Mouse/Rat Entrez, MGI, Ensembl ID, and gene aliases</li>
-<li><strong>Interactive Data Visualizations</strong>: Disease classification trends, protein localization history, discovery rate analyses, and compartment-specific protein distributions</li>
-<li><strong>CSV Data Export</strong>: Structured datasets including synapse proteome lists for further analysis</li>
-<li><strong>RESTful API</strong>: Programmatic access to raw data and complex queries with full documentation</li>
-<li><strong>Consensus Filtering</strong>: Filter results by protein localization within synaptic compartments</li>
+<li><strong>Gene, disease, and publication views</strong> that connect records across the dataset instead of presenting them in isolation</li>
+<li><strong>Autocomplete and identifier-aware search</strong> supporting multiple biological identifier systems and aliases</li>
+<li><strong>Lazy-loaded tabs and progressive fetching</strong> so detailed pages stayed usable without front-loading every related record</li>
+<li><strong>Export and API access</strong> so the platform could work both as a website and as a reusable data surface for downstream analysis</li>
+<li><strong>Interactive visualisation endpoints</strong> for charts and summary views that help researchers inspect trends in the data</li>
 </ul>
-<h3>Development Process</h3>
-<p>As lead web developer, I built the full-stack web application while collaborating with researchers at the University of Edinburgh who provided the underlying databases and scientific data.</p>
-<h4>Frontend Architecture</h4>
-<p>Built a modular React.js application with custom hooks for reusable logic:</p>
+<h2>Technical Decisions</h2>
+<h3>Frontend</h3>
+<p>The frontend was built as a modular React application with reusable search logic and domain-specific components. The priority was not visual flourish. It was helping researchers move quickly between records, filters, and related data without losing context.</p>
+<p>Key frontend decisions included:</p>
 <ul>
-<li><strong>Custom Hooks</strong>:
-<ul>
-<li><code>useSearch</code> - Manages search state, autocomplete suggestions with debouncing (300ms), pagination, and tab data loading</li>
-<li><code>useConsensusFilter</code> - Filters search results to show only consensus genes (proteins found in 5+ studies)</li>
-<li><code>useToggle</code> - Handles expandable cards and collapsible sections</li>
+<li>Debounced autocomplete and identifier-aware search</li>
+<li>URL-driven state for shareable searches</li>
+<li>Lazy-loading detail panels to keep first-load performance reasonable</li>
+<li>Separate reusable components for search, pagination, export, and no-results flows</li>
 </ul>
-</li>
-<li><strong>Search Implementation</strong>:
+<h3>Backend</h3>
+<p>The backend was a Flask API on top of a substantial SQLite dataset, using SQLAlchemy and modular routes to expose search, detail, autocomplete, and statistics endpoints.</p>
+<p>Important backend decisions included:</p>
 <ul>
-<li>Real-time autocomplete using lodash debounce</li>
-<li>Protein name detection with MyGene.info API integration for protein-to-gene symbol resolution</li>
-<li>Multi-identifier support (Entrez, MGI, Ensembl, UniProt)</li>
-<li>URL query parameter support for shareable searches</li>
+<li>Complex relational queries across genes, diseases, papers, and mutations</li>
+<li>Connection management tuned for longer-running scientific queries</li>
+<li>Programmatic access through API endpoints rather than a UI-only design</li>
+<li>Integration with external lookup services for protein-to-gene resolution</li>
 </ul>
-</li>
-<li><strong>Component Structure</strong>:
+<h2>Constraints</h2>
+<p>This was not a generic content site. The platform had to handle:</p>
 <ul>
-<li>18 page components including GeneSearch (119KB), DiseaseSearch, PaperSearch</li>
-<li>Reusable components: SearchForm, Pagination, DownloadButton, NoResults</li>
-<li>Visualization components using Recharts for interactive charts</li>
+<li>A large scientific dataset with multiple entity types and relationship paths</li>
+<li>Multiple biological identifier systems across species</li>
+<li>Research users who need both fast lookup and deep linked context</li>
+<li>A public-facing product surface that still needed to be trustworthy and maintainable</li>
 </ul>
-</li>
-</ul>
-<h4>Backend Architecture</h4>
-<p>Developed a Flask REST API with modular route blueprints:</p>
+<h2>Outcome</h2>
+<p>SynaptopathyDB became part of a peer-reviewed publication in <em>Scientific Reports</em>, where I am a co-first author. More importantly, it turned a large, multi-source scientific dataset into something researchers could actually interrogate, browse, and reuse.</p>
+<p>It is one of the strongest examples in this portfolio because it combines product thinking, data modelling, full-stack engineering, and research impact in one public system.</p>
+<h2>Links</h2>
 <ul>
-<li><strong>Database Layer</strong>:
-<ul>
-<li>SQLAlchemy ORM with SQLite backend (~770MB database)</li>
-<li>Complex JOIN queries across Gene, Disease, Paper, Mutation, and PaperGene tables</li>
-<li>Connection pooling with 300-second timeout for long-running queries</li>
-<li>SQL trace logging for debugging</li>
-</ul>
-</li>
-<li><strong>API Endpoints</strong>:
-<ul>
-<li><code>/api/gene/search</code> - Gene search with pagination and filtering</li>
-<li><code>/api/gene/&#x3C;id>/tab/&#x3C;type></code> - Lazy-loaded tab data (papers, diseases, mutations)</li>
-<li><code>/api/disease/search</code> - Disease search with gene associations</li>
-<li><code>/api/paper/search</code> - Publication search with gene/mutation counts</li>
-<li><code>/api/consensus/genes</code> - Returns 3,437 consensus gene IDs</li>
-<li><code>/api/protein/lookup</code> - MyGene.info integration for protein name resolution</li>
-<li><code>/api/stats/*</code> - Chart data endpoints for visualizations</li>
-<li><code>/api/autocomplete</code> - Multi-type autocomplete suggestions</li>
-</ul>
-</li>
-<li><strong>Data Processing</strong>:
-<ul>
-<li>Consensus gene loading from Human_syn_top5.txt at startup</li>
-<li>CSV/Excel export with pandas and XlsxWriter</li>
-<li>Concurrent request handling with ThreadPoolExecutor</li>
-</ul>
-</li>
-</ul>
-<h4>Data Visualization</h4>
-<p>Implemented interactive charts for research insights:</p>
-<ul>
-<li><strong>Disease Discovery Trends</strong>: Year-by-year new disease counts and cumulative totals</li>
-<li><strong>Synaptic Compartment Distribution</strong>: Protein localization across presynaptic/postsynaptic compartments</li>
-<li><strong>ICD-11 Chapter Classification</strong>: Disease categorization visualizations</li>
-<li><strong>Brain Region Distribution</strong>: Protein distribution across brain regions</li>
-</ul>
-<h4>Deployment Infrastructure</h4>
-<ul>
-<li><strong>Docker Compose</strong>: Multi-container setup with backend, frontend, and nginx services</li>
-<li><strong>nginx</strong>: Reverse proxy configuration for production deployment</li>
-<li><strong>SSL Support</strong>: Separate docker-compose.ssl.yml for HTTPS configuration</li>
-<li><strong>Environment Variables</strong>: Secure handling of API keys (NIH_KEY)</li>
-</ul>
-<h2>Scientific Impact</h2>
-<p>The database serves the neuroscience research community by providing:</p>
-<ul>
-<li>A consensus set of 3,437 mammalian synapse proteins from presynaptic and postsynaptic compartments</li>
-<li>Mapping of 954 genes encoding synaptic proteins to 1,266 OMIM diseases of the central and peripheral nervous system</li>
-<li>Tools for understanding the pervasive role of synaptic gene variants in neurological, psychiatric, developmental, and systemic disorders</li>
-</ul>
-<h2>Technical Highlights</h2>
-<ul>
-<li><strong>Large-Scale Data Handling</strong>: Efficiently manages queries against a 770MB+ SQLite database containing data from 64 proteomic studies with optimized JOIN queries and connection pooling</li>
-<li><strong>Intelligent Search</strong>: Protein-to-gene resolution using MyGene.info API, debounced autocomplete, and multi-identifier support (Entrez, MGI, Ensembl, UniProt across Human, Mouse, and Rat)</li>
-<li><strong>Lazy Loading Architecture</strong>: Tab data (papers, diseases, mutations) loaded on-demand to optimize initial page load performance</li>
-<li><strong>Real-Time Analytics</strong>: Built-in visit tracking with dedicated stats database and API usage analytics dashboard</li>
-<li><strong>Modular Codebase</strong>: Custom React hooks for reusable search logic, Flask blueprints for organized API routes</li>
-<li><strong>Export Capabilities</strong>: CSV and Excel export using pandas and XlsxWriter for researcher data analysis</li>
-<li><strong>Responsive Design</strong>: Tailwind CSS with mobile-first approach for cross-device accessibility</li>
-</ul>
-<h3>Database Schema</h3>
-<p>The SQLite database integrates multiple biological data sources:</p>
-<ul>
-<li><strong>Gene Table</strong>: Human/Mouse/Rat Entrez IDs, gene names, Ensembl IDs, UniProt accessions</li>
-<li><strong>Disease Table</strong>: HDOID (Human Disease Ontology), descriptions, OMIM mappings</li>
-<li><strong>Paper Table</strong>: PMID, publication year, title, description from 64 proteomic studies</li>
-<li><strong>Mutation Table</strong>: Chromosome, position, variant, cDNA/protein variants, ClinVar annotations</li>
-<li><strong>Junction Tables</strong>: PaperGene, DiseaseGene, PaperMutation for many-to-many relationships</li>
-<li><strong>Reference Tables</strong>: Species (TaxID), BrainRegion, Localisation, Method</li>
-</ul>
-<h2>Achievements</h2>
-<ul>
-<li><strong>Equal Contribution Author</strong> on the bioRxiv preprint: "SynaptopathyDB: a resource for studying the genetic and synaptic basis of nervous system disorders" (doi: 10.1101/2025.06.27.661932)</li>
-<li>Funded by The Wellcome Trust [218293/Z/19/Z]</li>
-<li>Collaboration with the Genes to Cognition Programme at the University of Edinburgh</li>
-<li>Platform used by researchers studying the molecular basis of brain diseases including schizophrenia, depression, and neurodevelopmental disorders</li>
-</ul>e:T1cff,
-## Project Overview
+<li>Live site: <a href="https://www.synaptopathydb.org">synaptopathydb.org</a></li>
+<li>Paper: <a href="https://doi.org/10.1038/s41598-025-26969-z">Scientific Reports DOI</a></li>
+</ul>f:T1031,
+## Overview
 
-SynaptopathyDB is an online resource designed to facilitate research into the genetic basis and clinical manifestations of synaptopathies — brain and behavioural disorders caused by mutations in genes encoding synaptic proteins. The platform integrates data from 64 mammalian synapse proteomic studies with multiple genetic and phenotypic resources, enabling researchers to explore connections between synaptic proteins, genetic variants, and human disease phenotypes.
+SynaptopathyDB is an online resource for studying the genetic and clinical basis of synaptopathies: disorders linked to mutations in genes encoding synaptic proteins. The platform brings together proteomic studies, disease associations, mutation data, and publication records so researchers can work from a single interface instead of stitching together evidence manually.
 
-## Project Details
+The project is one of the clearest public examples of the work I do at the University of Edinburgh: turning complex scientific data into a usable product with real research value.
 
-### Technologies Used
+## Problem
 
-* React.js
-* Tailwind CSS
-* Flask (Python)
-* Flask-SQLAlchemy
-* SQLite
-* Recharts (Data Visualization)
-* Docker
-* nginx
-* RESTful API
+The underlying science is rich, but the information landscape is fragmented. Researchers often need to move between proteomic studies, disease records, mutation databases, and publications just to answer basic questions such as:
 
-### Key Features
+- Which synaptic genes are associated with a disease?
+- Which mutations have been reported for a gene?
+- Which studies support a particular synaptic localisation?
+- How do publication, disease, and protein records connect?
 
-* **Gene Search Interface**: Comprehensive exploration of individual genes with detailed information including multiple species identifiers, associated publications, disease associations, mutation details, and synaptic compartment localization
-* **Disease Search Interface**: Explore diseases and their associated synaptic genes with detailed mutation information, publication links, and downloadable reports
-* **Publication Search**: Retrieve scientific publications with gene-disease connections, with filtering by associated genes and mutations
-* **Autocomplete Search**: Real-time suggestions supporting multiple identifier types including Human/Mouse/Rat Entrez, MGI, Ensembl ID, and gene aliases
-* **Interactive Data Visualizations**: Disease classification trends, protein localization history, discovery rate analyses, and compartment-specific protein distributions
-* **CSV Data Export**: Structured datasets including synapse proteome lists for further analysis
-* **RESTful API**: Programmatic access to raw data and complex queries with full documentation
-* **Consensus Filtering**: Filter results by protein localization within synaptic compartments
+The challenge was not just to store the data. It was to design a system that let researchers navigate across these relationships quickly and with enough context to support real scientific work.
 
-### Development Process
+## What I Built
 
-As lead web developer, I built the full-stack web application while collaborating with researchers at the University of Edinburgh who provided the underlying databases and scientific data.
+I built the full web application, including the user-facing search experience, the backend API, and the application architecture around the data model provided by the research collaboration.
 
-#### Frontend Architecture
+Core parts of the build included:
 
-Built a modular React.js application with custom hooks for reusable logic:
+- **Gene, disease, and publication views** that connect records across the dataset instead of presenting them in isolation
+- **Autocomplete and identifier-aware search** supporting multiple biological identifier systems and aliases
+- **Lazy-loaded tabs and progressive fetching** so detailed pages stayed usable without front-loading every related record
+- **Export and API access** so the platform could work both as a website and as a reusable data surface for downstream analysis
+- **Interactive visualisation endpoints** for charts and summary views that help researchers inspect trends in the data
 
-* **Custom Hooks**:
-  * `useSearch` - Manages search state, autocomplete suggestions with debouncing (300ms), pagination, and tab data loading
-  * `useConsensusFilter` - Filters search results to show only consensus genes (proteins found in 5+ studies)
-  * `useToggle` - Handles expandable cards and collapsible sections
-* **Search Implementation**:
-  * Real-time autocomplete using lodash debounce
-  * Protein name detection with MyGene.info API integration for protein-to-gene symbol resolution
-  * Multi-identifier support (Entrez, MGI, Ensembl, UniProt)
-  * URL query parameter support for shareable searches
-* **Component Structure**:
-  * 18 page components including GeneSearch (119KB), DiseaseSearch, PaperSearch
-  * Reusable components: SearchForm, Pagination, DownloadButton, NoResults
-  * Visualization components using Recharts for interactive charts
+## Technical Decisions
 
-#### Backend Architecture
+### Frontend
 
-Developed a Flask REST API with modular route blueprints:
+The frontend was built as a modular React application with reusable search logic and domain-specific components. The priority was not visual flourish. It was helping researchers move quickly between records, filters, and related data without losing context.
 
-* **Database Layer**:
-  * SQLAlchemy ORM with SQLite backend (~770MB database)
-  * Complex JOIN queries across Gene, Disease, Paper, Mutation, and PaperGene tables
-  * Connection pooling with 300-second timeout for long-running queries
-  * SQL trace logging for debugging
-* **API Endpoints**:
-  * `/api/gene/search` - Gene search with pagination and filtering
-  * `/api/gene/<id>/tab/<type>` - Lazy-loaded tab data (papers, diseases, mutations)
-  * `/api/disease/search` - Disease search with gene associations
-  * `/api/paper/search` - Publication search with gene/mutation counts
-  * `/api/consensus/genes` - Returns 3,437 consensus gene IDs
-  * `/api/protein/lookup` - MyGene.info integration for protein name resolution
-  * `/api/stats/*` - Chart data endpoints for visualizations
-  * `/api/autocomplete` - Multi-type autocomplete suggestions
-* **Data Processing**:
-  * Consensus gene loading from Human_syn_top5.txt at startup
-  * CSV/Excel export with pandas and XlsxWriter
-  * Concurrent request handling with ThreadPoolExecutor
+Key frontend decisions included:
 
-#### Data Visualization
+- Debounced autocomplete and identifier-aware search
+- URL-driven state for shareable searches
+- Lazy-loading detail panels to keep first-load performance reasonable
+- Separate reusable components for search, pagination, export, and no-results flows
 
-Implemented interactive charts for research insights:
+### Backend
 
-* **Disease Discovery Trends**: Year-by-year new disease counts and cumulative totals
-* **Synaptic Compartment Distribution**: Protein localization across presynaptic/postsynaptic compartments
-* **ICD-11 Chapter Classification**: Disease categorization visualizations
-* **Brain Region Distribution**: Protein distribution across brain regions
+The backend was a Flask API on top of a substantial SQLite dataset, using SQLAlchemy and modular routes to expose search, detail, autocomplete, and statistics endpoints.
 
-#### Deployment Infrastructure
+Important backend decisions included:
 
-* **Docker Compose**: Multi-container setup with backend, frontend, and nginx services
-* **nginx**: Reverse proxy configuration for production deployment
-* **SSL Support**: Separate docker-compose.ssl.yml for HTTPS configuration
-* **Environment Variables**: Secure handling of API keys (NIH_KEY)
+- Complex relational queries across genes, diseases, papers, and mutations
+- Connection management tuned for longer-running scientific queries
+- Programmatic access through API endpoints rather than a UI-only design
+- Integration with external lookup services for protein-to-gene resolution
 
-## Scientific Impact
+## Constraints
 
-The database serves the neuroscience research community by providing:
+This was not a generic content site. The platform had to handle:
 
-* A consensus set of 3,437 mammalian synapse proteins from presynaptic and postsynaptic compartments
-* Mapping of 954 genes encoding synaptic proteins to 1,266 OMIM diseases of the central and peripheral nervous system
-* Tools for understanding the pervasive role of synaptic gene variants in neurological, psychiatric, developmental, and systemic disorders
+- A large scientific dataset with multiple entity types and relationship paths
+- Multiple biological identifier systems across species
+- Research users who need both fast lookup and deep linked context
+- A public-facing product surface that still needed to be trustworthy and maintainable
 
-## Technical Highlights
+## Outcome
 
-* **Large-Scale Data Handling**: Efficiently manages queries against a 770MB+ SQLite database containing data from 64 proteomic studies with optimized JOIN queries and connection pooling
-* **Intelligent Search**: Protein-to-gene resolution using MyGene.info API, debounced autocomplete, and multi-identifier support (Entrez, MGI, Ensembl, UniProt across Human, Mouse, and Rat)
-* **Lazy Loading Architecture**: Tab data (papers, diseases, mutations) loaded on-demand to optimize initial page load performance
-* **Real-Time Analytics**: Built-in visit tracking with dedicated stats database and API usage analytics dashboard
-* **Modular Codebase**: Custom React hooks for reusable search logic, Flask blueprints for organized API routes
-* **Export Capabilities**: CSV and Excel export using pandas and XlsxWriter for researcher data analysis
-* **Responsive Design**: Tailwind CSS with mobile-first approach for cross-device accessibility
+SynaptopathyDB became part of a peer-reviewed publication in *Scientific Reports*, where I am a co-first author. More importantly, it turned a large, multi-source scientific dataset into something researchers could actually interrogate, browse, and reuse.
 
-### Database Schema
+It is one of the strongest examples in this portfolio because it combines product thinking, data modelling, full-stack engineering, and research impact in one public system.
 
-The SQLite database integrates multiple biological data sources:
+## Links
 
-* **Gene Table**: Human/Mouse/Rat Entrez IDs, gene names, Ensembl IDs, UniProt accessions
-* **Disease Table**: HDOID (Human Disease Ontology), descriptions, OMIM mappings
-* **Paper Table**: PMID, publication year, title, description from 64 proteomic studies
-* **Mutation Table**: Chromosome, position, variant, cDNA/protein variants, ClinVar annotations
-* **Junction Tables**: PaperGene, DiseaseGene, PaperMutation for many-to-many relationships
-* **Reference Tables**: Species (TaxID), BrainRegion, Localisation, Method
-
-## Achievements
-
-* **Equal Contribution Author** on the bioRxiv preprint: "SynaptopathyDB: a resource for studying the genetic and synaptic basis of nervous system disorders" (doi: 10.1101/2025.06.27.661932)
-* Funded by The Wellcome Trust [218293/Z/19/Z]
-* Collaboration with the Genes to Cognition Programme at the University of Edinburgh
-* Platform used by researchers studying the molecular basis of brain diseases including schizophrenia, depression, and neurodevelopmental disorders
-
-2:["$","$Lc",null,{"project":{"id":"synaptopathydb","metadata":{"title":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research","date":"2025-06-27","featured":true,"featuredOrder":2,"category":"research","summary":"A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access.","image":"/images/synaptopathydb.png","tag":"React, Flask, Python, SQLite, Tailwind CSS, REST API, Data Visualization","demo":"https://www.synaptopathydb.org","role":"Lead Web Developer","duration":"6 months"},"content":"$d","rawContent":"$e"},"prevProject":{"id":"montageroi-segmenter","title":"MontageROI Segmenter - Web-Based ROI Annotation Tool"},"nextProject":{"id":"s3-bucket-viewer","title":"S3 Bucket Viewer - Web-Based S3 File Browser"}}]
-b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/synaptopathydb/"}],["$","meta","11",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","12",{"property":"og:title","content":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research | Digin Dominic"}],["$","meta","13",{"property":"og:description","content":"A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access."}],["$","meta","14",{"property":"og:url","content":"https://digindominic.me/projects/synaptopathydb/"}],["$","meta","15",{"property":"og:image","content":"https://digindominic.me/images/synaptopathydb.png"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research | Digin Dominic"}],["$","meta","22",{"name":"twitter:description","content":"A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access."}],["$","meta","23",{"name":"twitter:image","content":"https://digindominic.me/images/synaptopathydb.png"}]]
+- Live site: [synaptopathydb.org](https://www.synaptopathydb.org)
+- Paper: [Scientific Reports DOI](https://doi.org/10.1038/s41598-025-26969-z)
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CreativeWork\",\"name\":\"SynaptopathyDB\",\"description\":\"A scientific database and web platform that connects synaptic proteins, genes, mutations, diseases, and publications for synaptopathy research. Built as the main software surface for a project that became a Scientific Reports publication, with unified search, data exploration, export, and API access.\",\"url\":\"https://digindominic.me/projects/synaptopathydb\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\"},\"dateCreated\":\"2025-06-27\",\"image\":\"/images/synaptopathydb.png\"}"}}],["$","$Ld",null,{"project":{"id":"synaptopathydb","metadata":{"title":"SynaptopathyDB","date":"2025-06-27","featured":true,"featuredOrder":1,"category":"research","summary":"A scientific database and web platform that connects synaptic proteins, genes, mutations, diseases, and publications for synaptopathy research. Built as the main software surface for a project that became a Scientific Reports publication, with unified search, data exploration, export, and API access.","image":"/images/synaptopathydb.png","tag":"React, Flask, Python, SQLite, Tailwind CSS, REST API, Data Visualization","demo":"https://www.synaptopathydb.org","role":"Lead Web Developer","duration":"6 months","problem":"Researchers needed a way to query proteomic, genetic, and phenotypic data together instead of moving across disconnected papers, databases, and spreadsheet-like resources.","scope":"Built the full web platform: frontend architecture, backend API, search and autocomplete flows, data views, exports, and deployment.","outcome":"The platform became part of a Scientific Reports paper where I am a co-first author and now serves as a public research resource.","highlights":["Integrates data from 64 mammalian synapse proteomic studies into one searchable system","Surfaces 3,437 consensus synapse proteins linked to 1,266 OMIM diseases","Supports unified gene, disease, mutation, and publication exploration with export and API access"]},"content":"$e","rawContent":"$f"},"prevProject":{"id":"montageroi-segmenter","title":"MontageROI Segmenter"},"nextProject":{"id":"brain-heatmap-web-app","title":"Brain Heatmap Visualization Tool"}}]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"SynaptopathyDB | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A scientific database and web platform that connects synaptic proteins, genes, mutations, diseases, and publications for synaptopathy research. Built as the main software surface for a project that became a Scientific Reports publication, with unified search, data exploration, export, and API access."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/synaptopathydb/"}],["$","meta","11",{"property":"og:title","content":"SynaptopathyDB | Digin Dominic"}],["$","meta","12",{"property":"og:description","content":"A scientific database and web platform that connects synaptic proteins, genes, mutations, diseases, and publications for synaptopathy research. Built as the main software surface for a project that became a Scientific Reports publication, with unified search, data exploration, export, and API access."}],["$","meta","13",{"property":"og:url","content":"https://digindominic.me/projects/synaptopathydb/"}],["$","meta","14",{"property":"og:image","content":"https://digindominic.me/images/synaptopathydb.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"SynaptopathyDB"}],["$","meta","18",{"property":"og:type","content":"article"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"SynaptopathyDB | Digin Dominic"}],["$","meta","21",{"name":"twitter:description","content":"A scientific database and web platform that connects synaptic proteins, genes, mutations, diseases, and publications for synaptopathy research. Built as the main software surface for a project that became a Scientific Reports publication, with unified search, data exploration, export, and API access."}],["$","meta","22",{"name":"twitter:image","content":"https://digindominic.me/images/synaptopathydb.png"}],["$","meta","23",{"name":"next-size-adjust"}]]
 1:null

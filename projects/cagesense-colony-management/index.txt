@@ -1,0 +1,166 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+9:I[839,["601","static/chunks/app/error-a281861f4199e94b.js"],"default"]
+a:I[3039,["676","static/chunks/870fdd6f-5b857784e146b02e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-f71ff85f1e80e868.js"],"default"]
+b:I[9547,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+4:["id","cagesense-colony-management","d"]
+0:["I2lY-1QFS2AI4axHXDdWD",[[["",{"children":["projects",{"children":[["id","cagesense-colony-management","d"],{"children":["__PAGE__?{\"id\":\"cagesense-colony-management\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","cagesense-colony-management","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b2616d198509a7d5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b1959b11e1f88b90.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark __variable_245d8d __variable_97c177","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#0B0F14"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Software Engineer & Research Toolsmith\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"University of Edinburgh\",\"department\":\"Genes to Cognition Programme / SIDB\"},\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"sameAs\":[\"https://github.com/digin1\",\"https://www.linkedin.com/in/digin/\",\"https://x.com/digin1\",\"https://sidb.org.uk/seth-grant/digin-dominic/\"],\"knowsAbout\":[\"Scientific Software Development\",\"Neuroscience Research Tools\",\"Three.js 3D Visualisation\",\"Python\",\"React\",\"Docker\",\"Microscopy Data Processing\",\"Data Pipelines\",\"Linux System Administration\"],\"alumniOf\":{\"@type\":\"EducationalOrganization\",\"name\":\"Nottingham Trent University\"}}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-24 md:pt-28","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}]]}]]}]]}]],null],[["$","div",null,{"className":"min-h-[60vh] flex items-center justify-center","children":["$","div",null,{"className":"flex flex-col items-center gap-4","children":[["$","div",null,{"className":"w-8 h-8 border-2 border-neural-blue/30 border-t-neural-blue rounded-full animate-spin"}],["$","p",null,{"className":"text-sm text-light-text-secondary dark:text-muted-steel","children":"Loading..."}]]}]}],[],[]]],["$Lc",null]]]]
+d:I[4543,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-ecf0d6fa5cc4c3ce.js"],"default"]
+e:T1156,<h2>Project Overview</h2>
+<p>CageSense is a web-based colony management system built for the Grant Lab at the University of Edinburgh to manage all aspects of a transgenic mouse breeding facility. It replaces spreadsheet-based tracking with a centralised database, AI-powered query interface, automated reporting, and full audit logging for regulatory compliance.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>Next.js 15 (React 19, TypeScript)</li>
+<li>FastAPI (async Python backend)</li>
+<li>PostgreSQL 16 (SQLAlchemy 2.0 with asyncpg)</li>
+<li>OpenAI Agents Python SDK (multi-agent orchestration)</li>
+<li>Celery + Redis (async job queue with scheduled tasks)</li>
+<li>Alembic (database migrations)</li>
+<li>Docker Compose (8 orchestrated services)</li>
+<li>Nginx (reverse proxy)</li>
+<li>TanStack React Table + React Query</li>
+<li>Recharts (data visualisation)</li>
+<li>Zustand (state management)</li>
+<li>JWT + bcrypt (authentication)</li>
+<li>Playwright (E2E testing)</li>
+</ul>
+<h3>Architecture</h3>
+<p>8 Docker Compose services on a custom bridge network:</p>
+<ol>
+<li><strong>Nginx</strong> — Reverse proxy (port 8080)</li>
+<li><strong>Frontend</strong> — Next.js 15 application</li>
+<li><strong>Backend</strong> — FastAPI with async SQLAlchemy</li>
+<li><strong>PostgreSQL</strong> — Persistent database</li>
+<li><strong>Redis</strong> — Cache and Celery message broker</li>
+<li><strong>Celery Worker</strong> — Async job processor</li>
+<li><strong>Celery Beat</strong> — Scheduled task scheduler (daily reports)</li>
+<li><strong>Health Checks</strong> — Monitoring across all services</li>
+</ol>
+<h3>Key Features</h3>
+<h4>Core Data Management</h4>
+<ul>
+<li><strong>Mouse Tracking</strong>: Unique IDs, sex, DOB/DOD, ear marks, genotype, status lifecycle (alive → in_mating → culled/dead/transferred)</li>
+<li><strong>Breeding Lines</strong>: Background strains, colony codes, gene/clone info, active/frozen status</li>
+<li><strong>Mating Records</strong>: Setup, plugging, litter tracking with pup counts by sex</li>
+<li><strong>Cage Management</strong>: Occupancy monitoring, location tracking, line association</li>
+<li><strong>Genotype Tracking</strong>: Homozygous, heterozygous, wild-type distribution with allele management</li>
+<li><strong>Cryopreservation</strong>: Frozen sperm/embryo sample tracking</li>
+</ul>
+<h4>AI Chat Assistant</h4>
+<ul>
+<li>Natural language queries against the colony database (no SQL needed)</li>
+<li><strong>OpenAI Agents SDK</strong> with multi-agent orchestration and guardrails</li>
+<li>Staged proposed updates — AI suggests changes, researchers approve in the UI</li>
+<li>File attachments with OCR support (Excel, PDF, images)</li>
+<li>Streaming responses via Server-Sent Events</li>
+<li>Execution logging and response quality tripwires</li>
+<li>Persistent conversation history and user memory</li>
+</ul>
+<h4>Reporting &#x26; Analytics</h4>
+<ul>
+<li>Automated daily reports via Celery Beat</li>
+<li>Dashboard with colony overview charts (Recharts)</li>
+<li>Excel/CSV/PDF export of mice, matings, cages, litters</li>
+<li>Bulk data import from Excel spreadsheets</li>
+</ul>
+<h4>Admin &#x26; Compliance</h4>
+<ul>
+<li>Role-based access control (admin, write, read)</li>
+<li>Complete audit trail for all data mutations</li>
+<li>Admin impersonation with auto-expiry</li>
+<li>Configurable alert rules with dashboard</li>
+<li>Transaction ID tracking with undo capability</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>AI-Augmented Workflow</strong>: Researchers can ask natural language questions like "show me all unmated females from the APP line" or "set up a new mating with mouse 1234 and 5678" — the AI translates to database operations with approval gates</li>
+<li><strong>Full Async Stack</strong>: FastAPI + asyncpg + Celery for non-blocking operations across the entire backend</li>
+<li><strong>Institutional Integration</strong>: SMTP configured for University of Edinburgh mail relay</li>
+<li><strong>Data Integrity</strong>: Reconciliation service for data integrity checks, import quality scoring, and validation with helpful error messages</li>
+</ul>
+<h2>Impact</h2>
+<p>Centralises colony management for a research breeding facility, eliminating spreadsheet chaos and enabling regulatory compliance through automated audit trails. The AI assistant significantly reduces the time researchers spend on data entry and querying.</p>f:Te8d,
+## Project Overview
+
+CageSense is a web-based colony management system built for the Grant Lab at the University of Edinburgh to manage all aspects of a transgenic mouse breeding facility. It replaces spreadsheet-based tracking with a centralised database, AI-powered query interface, automated reporting, and full audit logging for regulatory compliance.
+
+## Project Details
+
+### Technologies Used
+
+* Next.js 15 (React 19, TypeScript)
+* FastAPI (async Python backend)
+* PostgreSQL 16 (SQLAlchemy 2.0 with asyncpg)
+* OpenAI Agents Python SDK (multi-agent orchestration)
+* Celery + Redis (async job queue with scheduled tasks)
+* Alembic (database migrations)
+* Docker Compose (8 orchestrated services)
+* Nginx (reverse proxy)
+* TanStack React Table + React Query
+* Recharts (data visualisation)
+* Zustand (state management)
+* JWT + bcrypt (authentication)
+* Playwright (E2E testing)
+
+### Architecture
+
+8 Docker Compose services on a custom bridge network:
+
+1. **Nginx** — Reverse proxy (port 8080)
+2. **Frontend** — Next.js 15 application
+3. **Backend** — FastAPI with async SQLAlchemy
+4. **PostgreSQL** — Persistent database
+5. **Redis** — Cache and Celery message broker
+6. **Celery Worker** — Async job processor
+7. **Celery Beat** — Scheduled task scheduler (daily reports)
+8. **Health Checks** — Monitoring across all services
+
+### Key Features
+
+#### Core Data Management
+* **Mouse Tracking**: Unique IDs, sex, DOB/DOD, ear marks, genotype, status lifecycle (alive → in_mating → culled/dead/transferred)
+* **Breeding Lines**: Background strains, colony codes, gene/clone info, active/frozen status
+* **Mating Records**: Setup, plugging, litter tracking with pup counts by sex
+* **Cage Management**: Occupancy monitoring, location tracking, line association
+* **Genotype Tracking**: Homozygous, heterozygous, wild-type distribution with allele management
+* **Cryopreservation**: Frozen sperm/embryo sample tracking
+
+#### AI Chat Assistant
+* Natural language queries against the colony database (no SQL needed)
+* **OpenAI Agents SDK** with multi-agent orchestration and guardrails
+* Staged proposed updates — AI suggests changes, researchers approve in the UI
+* File attachments with OCR support (Excel, PDF, images)
+* Streaming responses via Server-Sent Events
+* Execution logging and response quality tripwires
+* Persistent conversation history and user memory
+
+#### Reporting & Analytics
+* Automated daily reports via Celery Beat
+* Dashboard with colony overview charts (Recharts)
+* Excel/CSV/PDF export of mice, matings, cages, litters
+* Bulk data import from Excel spreadsheets
+
+#### Admin & Compliance
+* Role-based access control (admin, write, read)
+* Complete audit trail for all data mutations
+* Admin impersonation with auto-expiry
+* Configurable alert rules with dashboard
+* Transaction ID tracking with undo capability
+
+## Technical Highlights
+
+* **AI-Augmented Workflow**: Researchers can ask natural language questions like "show me all unmated females from the APP line" or "set up a new mating with mouse 1234 and 5678" — the AI translates to database operations with approval gates
+* **Full Async Stack**: FastAPI + asyncpg + Celery for non-blocking operations across the entire backend
+* **Institutional Integration**: SMTP configured for University of Edinburgh mail relay
+* **Data Integrity**: Reconciliation service for data integrity checks, import quality scoring, and validation with helpful error messages
+
+## Impact
+
+Centralises colony management for a research breeding facility, eliminating spreadsheet chaos and enabling regulatory compliance through automated audit trails. The AI assistant significantly reduces the time researchers spend on data entry and querying.
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CreativeWork\",\"name\":\"CageSense — AI-Powered Mouse Colony Management System\",\"description\":\"A full-stack colony management platform for transgenic mouse facilities, with AI-assisted querying and approval-gated updates. It replaces spreadsheet-heavy tracking with a centralised system for mice, matings, litters, cages, genotypes, reporting, and audit history.\",\"url\":\"https://digindominic.me/projects/cagesense-colony-management\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\"},\"dateCreated\":\"2025-03-15\"}"}}],["$","$Ld",null,{"project":{"id":"cagesense-colony-management","metadata":{"title":"CageSense — AI-Powered Mouse Colony Management System","date":"2025-03-15","featured":false,"featuredOrder":5,"category":"research","summary":"A full-stack colony management platform for transgenic mouse facilities, with AI-assisted querying and approval-gated updates. It replaces spreadsheet-heavy tracking with a centralised system for mice, matings, litters, cages, genotypes, reporting, and audit history.","image":"","tag":"Next.js, FastAPI, PostgreSQL, OpenAI Agents, Docker, Celery, Redis, TypeScript","role":"Lead Developer","duration":"2 months","problem":"The breeding facility needed more than spreadsheets. It needed auditable colony tracking, controlled data updates, and faster querying across mice, matings, cages, litters, and genotypes.","scope":"Built the full platform across Next.js, FastAPI, PostgreSQL, background jobs, authentication, reporting, audit logging, and the AI-assisted query/update workflow.","outcome":"Centralised colony operations, improved traceability, and introduced practical AI assistance without giving up approval control.","highlights":["Tracks mice, matings, litters, cages, genotypes, cryostorage, and lifecycle state in one system","AI assistant built with the OpenAI Agents SDK for natural-language querying and staged proposed updates","8-service Docker Compose deployment with Celery, Redis, automated reports, and full audit history"],"visibilityNote":"This is an internal institutional platform. The case study focuses on workflow design, system architecture, and operational controls rather than exposing facility data."},"content":"$e","rawContent":"$f"},"prevProject":{"id":"brain-heatmap-web-app","title":"Brain Heatmap Visualization Tool"},"nextProject":{"id":"grantlab-automation-platform","title":"Grant Lab Automation — AI Workflow Platform"}}]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"CageSense — AI-Powered Mouse Colony Management System | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A full-stack colony management platform for transgenic mouse facilities, with AI-assisted querying and approval-gated updates. It replaces spreadsheet-heavy tracking with a centralised system for mice, matings, litters, cages, genotypes, reporting, and audit history."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/cagesense-colony-management/"}],["$","meta","11",{"property":"og:title","content":"CageSense — AI-Powered Mouse Colony Management System | Digin Dominic"}],["$","meta","12",{"property":"og:description","content":"A full-stack colony management platform for transgenic mouse facilities, with AI-assisted querying and approval-gated updates. It replaces spreadsheet-heavy tracking with a centralised system for mice, matings, litters, cages, genotypes, reporting, and audit history."}],["$","meta","13",{"property":"og:url","content":"https://digindominic.me/projects/cagesense-colony-management/"}],["$","meta","14",{"property":"og:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"CageSense — AI-Powered Mouse Colony Management System"}],["$","meta","18",{"property":"og:type","content":"article"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"CageSense — AI-Powered Mouse Colony Management System | Digin Dominic"}],["$","meta","21",{"name":"twitter:description","content":"A full-stack colony management platform for transgenic mouse facilities, with AI-assisted querying and approval-gated updates. It replaces spreadsheet-heavy tracking with a centralised system for mice, matings, litters, cages, genotypes, reporting, and audit history."}],["$","meta","22",{"name":"twitter:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","23",{"name":"next-size-adjust"}]]
+1:null

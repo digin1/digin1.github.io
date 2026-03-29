@@ -1,0 +1,82 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+9:I[839,["601","static/chunks/app/error-a281861f4199e94b.js"],"default"]
+a:I[3039,["676","static/chunks/870fdd6f-5b857784e146b02e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-f71ff85f1e80e868.js"],"default"]
+b:I[9547,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+4:["id","roi-classification-tool","d"]
+0:["I2lY-1QFS2AI4axHXDdWD",[[["",{"children":["projects",{"children":[["id","roi-classification-tool","d"],{"children":["__PAGE__?{\"id\":\"roi-classification-tool\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","roi-classification-tool","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b2616d198509a7d5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b1959b11e1f88b90.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark __variable_245d8d __variable_97c177","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#0B0F14"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Software Engineer & Research Toolsmith\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"University of Edinburgh\",\"department\":\"Genes to Cognition Programme / SIDB\"},\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"sameAs\":[\"https://github.com/digin1\",\"https://www.linkedin.com/in/digin/\",\"https://x.com/digin1\",\"https://sidb.org.uk/seth-grant/digin-dominic/\"],\"knowsAbout\":[\"Scientific Software Development\",\"Neuroscience Research Tools\",\"Three.js 3D Visualisation\",\"Python\",\"React\",\"Docker\",\"Microscopy Data Processing\",\"Data Pipelines\",\"Linux System Administration\"],\"alumniOf\":{\"@type\":\"EducationalOrganization\",\"name\":\"Nottingham Trent University\"}}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-24 md:pt-28","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}]]}]]}]]}]],null],[["$","div",null,{"className":"min-h-[60vh] flex items-center justify-center","children":["$","div",null,{"className":"flex flex-col items-center gap-4","children":[["$","div",null,{"className":"w-8 h-8 border-2 border-neural-blue/30 border-t-neural-blue rounded-full animate-spin"}],["$","p",null,{"className":"text-sm text-light-text-secondary dark:text-muted-steel","children":"Loading..."}]]}]}],[],[]]],["$Lc",null]]]]
+d:I[4543,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-ecf0d6fa5cc4c3ce.js"],"default"]
+e:T848,<h2>Project Overview</h2>
+<p>A specialised tool for classifying spatial data points into anatomical regions of interest (ROIs) defined as polygons. Designed for neuroscience microscopy workflows where millions of synapse coordinates need to be mapped to brain regions defined by hand-drawn or atlas-derived ROI boundaries.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>Python 3</li>
+<li>PyTorch (GPU-accelerated ray-casting)</li>
+<li>CUDA (NVIDIA GPU computing)</li>
+<li>NumPy (numerical processing)</li>
+<li>pandas (data management)</li>
+<li>Pillow (debug visualisation)</li>
+<li>tqdm (progress tracking)</li>
+<li>Multiprocessing (CPU parallelism)</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>GPU-Accelerated Ray-Casting</strong>: PyTorch CUDA implementation for efficient point-in-polygon classification</li>
+<li><strong>Dataset Processing</strong>: Tile and montage processing with metadata generation</li>
+<li><strong>Debug Visualisation</strong>: Point cloud overlays with ROI polygon boundaries for verification</li>
+<li><strong>Chunked Processing</strong>: Memory-efficient processing of large datasets that don't fit in GPU memory</li>
+<li><strong>Composite ROI Support</strong>: Handles complex multi-polygon regions from ImageJ ROI files</li>
+<li><strong>Batch Processing</strong>: Process entire experimental datasets with configurable parameters</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>Performance</strong>: GPU acceleration provides orders-of-magnitude speedup over CPU-based point-in-polygon algorithms</li>
+<li><strong>Memory Management</strong>: Chunked processing strategy handles datasets larger than GPU memory</li>
+<li><strong>Correctness</strong>: Debug visualisation mode enables visual verification of classification accuracy against ground truth</li>
+<li><strong>Integration</strong>: Reads standard ImageJ ROI files and outputs data compatible with downstream analysis tools</li>
+</ul>
+<h2>Impact</h2>
+<p>Core component of the lab's analysis pipeline for Allen Brain Atlas heatmap generation and synaptome architecture analysis across brain regions.</p>f:T703,
+## Project Overview
+
+A specialised tool for classifying spatial data points into anatomical regions of interest (ROIs) defined as polygons. Designed for neuroscience microscopy workflows where millions of synapse coordinates need to be mapped to brain regions defined by hand-drawn or atlas-derived ROI boundaries.
+
+## Project Details
+
+### Technologies Used
+
+* Python 3
+* PyTorch (GPU-accelerated ray-casting)
+* CUDA (NVIDIA GPU computing)
+* NumPy (numerical processing)
+* pandas (data management)
+* Pillow (debug visualisation)
+* tqdm (progress tracking)
+* Multiprocessing (CPU parallelism)
+
+### Key Features
+
+* **GPU-Accelerated Ray-Casting**: PyTorch CUDA implementation for efficient point-in-polygon classification
+* **Dataset Processing**: Tile and montage processing with metadata generation
+* **Debug Visualisation**: Point cloud overlays with ROI polygon boundaries for verification
+* **Chunked Processing**: Memory-efficient processing of large datasets that don't fit in GPU memory
+* **Composite ROI Support**: Handles complex multi-polygon regions from ImageJ ROI files
+* **Batch Processing**: Process entire experimental datasets with configurable parameters
+
+## Technical Highlights
+
+* **Performance**: GPU acceleration provides orders-of-magnitude speedup over CPU-based point-in-polygon algorithms
+* **Memory Management**: Chunked processing strategy handles datasets larger than GPU memory
+* **Correctness**: Debug visualisation mode enables visual verification of classification accuracy against ground truth
+* **Integration**: Reads standard ImageJ ROI files and outputs data compatible with downstream analysis tools
+
+## Impact
+
+Core component of the lab's analysis pipeline for Allen Brain Atlas heatmap generation and synaptome architecture analysis across brain regions.
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CreativeWork\",\"name\":\"GPU-Accelerated ROI Classification Tool\",\"description\":\"A GPU-accelerated Python tool for classifying millions of microscopy datapoints into polygonal regions of interest. Built to make region-based analysis practical on large datasets instead of turning point-in-polygon classification into a bottleneck.\",\"url\":\"https://digindominic.me/projects/roi-classification-tool\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\"},\"dateCreated\":\"2024-11-01\"}"}}],["$","$Ld",null,{"project":{"id":"roi-classification-tool","metadata":{"title":"GPU-Accelerated ROI Classification Tool","date":"2024-11-01","featured":false,"category":"research","summary":"A GPU-accelerated Python tool for classifying millions of microscopy datapoints into polygonal regions of interest. Built to make region-based analysis practical on large datasets instead of turning point-in-polygon classification into a bottleneck.","image":"","tag":"Python, PyTorch, CUDA, NumPy, Multiprocessing, GPU Computing","role":"Solo Developer","duration":"1 month","problem":"Regional analysis workflows needed to classify millions of synapse coordinates into anatomical ROIs quickly enough to be practical on real microscopy datasets.","scope":"Built a GPU-accelerated point-in-polygon classifier with chunked processing, debug visualisation, ImageJ ROI support, and batch dataset handling.","outcome":"Removed a major performance bottleneck in atlas-based heatmap and synaptome analysis workflows.","highlights":["PyTorch CUDA ray-casting for point-in-polygon classification at research scale","Chunked processing to handle datasets larger than GPU memory","ImageJ ROI compatibility and visual QA overlays for correctness checking"],"visibilityNote":"This tool is infrastructure within a broader analysis pipeline. The case study focuses on algorithmic and workflow value rather than a polished public interface."},"content":"$e","rawContent":"$f"},"prevProject":{"id":"montaris-x","title":"Montaris-X"},"nextProject":{"id":"statistical-analysis-pipeline","title":"Statistical Analysis Pipeline for Neuroscience Data"}}]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"GPU-Accelerated ROI Classification Tool | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A GPU-accelerated Python tool for classifying millions of microscopy datapoints into polygonal regions of interest. Built to make region-based analysis practical on large datasets instead of turning point-in-polygon classification into a bottleneck."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/roi-classification-tool/"}],["$","meta","11",{"property":"og:title","content":"GPU-Accelerated ROI Classification Tool | Digin Dominic"}],["$","meta","12",{"property":"og:description","content":"A GPU-accelerated Python tool for classifying millions of microscopy datapoints into polygonal regions of interest. Built to make region-based analysis practical on large datasets instead of turning point-in-polygon classification into a bottleneck."}],["$","meta","13",{"property":"og:url","content":"https://digindominic.me/projects/roi-classification-tool/"}],["$","meta","14",{"property":"og:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"GPU-Accelerated ROI Classification Tool"}],["$","meta","18",{"property":"og:type","content":"article"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"GPU-Accelerated ROI Classification Tool | Digin Dominic"}],["$","meta","21",{"name":"twitter:description","content":"A GPU-accelerated Python tool for classifying millions of microscopy datapoints into polygonal regions of interest. Built to make region-based analysis practical on large datasets instead of turning point-in-polygon classification into a bottleneck."}],["$","meta","22",{"name":"twitter:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","23",{"name":"next-size-adjust"}]]
+1:null

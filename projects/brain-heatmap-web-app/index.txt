@@ -1,0 +1,90 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+9:I[839,["601","static/chunks/app/error-a281861f4199e94b.js"],"default"]
+a:I[3039,["676","static/chunks/870fdd6f-5b857784e146b02e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-f71ff85f1e80e868.js"],"default"]
+b:I[9547,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+4:["id","brain-heatmap-web-app","d"]
+0:["I2lY-1QFS2AI4axHXDdWD",[[["",{"children":["projects",{"children":[["id","brain-heatmap-web-app","d"],{"children":["__PAGE__?{\"id\":\"brain-heatmap-web-app\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","brain-heatmap-web-app","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b2616d198509a7d5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b1959b11e1f88b90.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark __variable_245d8d __variable_97c177","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#0B0F14"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Software Engineer & Research Toolsmith\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"University of Edinburgh\",\"department\":\"Genes to Cognition Programme / SIDB\"},\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"sameAs\":[\"https://github.com/digin1\",\"https://www.linkedin.com/in/digin/\",\"https://x.com/digin1\",\"https://sidb.org.uk/seth-grant/digin-dominic/\"],\"knowsAbout\":[\"Scientific Software Development\",\"Neuroscience Research Tools\",\"Three.js 3D Visualisation\",\"Python\",\"React\",\"Docker\",\"Microscopy Data Processing\",\"Data Pipelines\",\"Linux System Administration\"],\"alumniOf\":{\"@type\":\"EducationalOrganization\",\"name\":\"Nottingham Trent University\"}}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-24 md:pt-28","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}]]}]]}]]}]],null],[["$","div",null,{"className":"min-h-[60vh] flex items-center justify-center","children":["$","div",null,{"className":"flex flex-col items-center gap-4","children":[["$","div",null,{"className":"w-8 h-8 border-2 border-neural-blue/30 border-t-neural-blue rounded-full animate-spin"}],["$","p",null,{"className":"text-sm text-light-text-secondary dark:text-muted-steel","children":"Loading..."}]]}]}],[],[]]],["$Lc",null]]]]
+d:I[4543,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-ecf0d6fa5cc4c3ce.js"],"default"]
+e:T924,<h2>Project Overview</h2>
+<p>A production-grade web application for neuroscience researchers to generate brain region heatmaps from experimental data. Supports multiple species brain templates and provides real-time interactive controls for colour mapping, range adjustment, and export.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>Next.js 16 with React 19 (TypeScript)</li>
+<li>D3.js v7 (SVG-based brain atlas rendering)</li>
+<li>Zustand (state management)</li>
+<li>Tailwind CSS 4</li>
+<li>Vitest + React Testing Library (73 passing tests)</li>
+<li>Flask 2.3 (Python backend)</li>
+<li>pandas, NumPy, Matplotlib, lxml, BeautifulSoup4</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Multiple Brain Templates</strong>: DevMouse, Mouse, Rat, Human — switchable in real-time</li>
+<li><strong>10+ Scientific Colormaps</strong>: Viridis, Plasma, Inferno, Magma, Cividis, Turbo, Cool, Warm, RdYlBu, Spectral</li>
+<li><strong>Data Upload</strong>: CSV/Excel upload with validation, error messages, and typo suggestions for region names</li>
+<li><strong>Interactive Controls</strong>: Real-time range adjustment, colour selection, linear/log scale toggle</li>
+<li><strong>Dual Export</strong>: PNG (raster) and SVG (vector) for publication-quality figures</li>
+<li><strong>Responsive Design</strong>: Works across desktop and tablet browsers</li>
+<li><strong>CI/CD</strong>: Automated deployment to GitLab Pages on push to main</li>
+</ul>
+<h3>Testing</h3>
+<ul>
+<li>73 passing tests covering data processing, colour mapping, region matching, and export functionality</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>D3.js SVG Rendering</strong>: Dynamic colouring of brain atlas SVG regions based on uploaded data values</li>
+<li><strong>Intelligent Validation</strong>: Fuzzy matching suggests corrections for mistyped brain region names</li>
+<li><strong>Full-Stack</strong>: Next.js frontend communicates with Flask API for data processing and SVG template management</li>
+<li><strong>Production Deployment</strong>: GitLab CI/CD pipeline with automated build, test, and deploy stages</li>
+</ul>
+<h2>Impact</h2>
+<p>Used by researchers at the Grant Lab to generate publication-quality brain heatmap figures for synaptome mapping papers. Replaces manual SVG editing workflows with an automated, reproducible tool.</p>f:T7bd,
+## Project Overview
+
+A production-grade web application for neuroscience researchers to generate brain region heatmaps from experimental data. Supports multiple species brain templates and provides real-time interactive controls for colour mapping, range adjustment, and export.
+
+## Project Details
+
+### Technologies Used
+
+* Next.js 16 with React 19 (TypeScript)
+* D3.js v7 (SVG-based brain atlas rendering)
+* Zustand (state management)
+* Tailwind CSS 4
+* Vitest + React Testing Library (73 passing tests)
+* Flask 2.3 (Python backend)
+* pandas, NumPy, Matplotlib, lxml, BeautifulSoup4
+
+### Key Features
+
+* **Multiple Brain Templates**: DevMouse, Mouse, Rat, Human — switchable in real-time
+* **10+ Scientific Colormaps**: Viridis, Plasma, Inferno, Magma, Cividis, Turbo, Cool, Warm, RdYlBu, Spectral
+* **Data Upload**: CSV/Excel upload with validation, error messages, and typo suggestions for region names
+* **Interactive Controls**: Real-time range adjustment, colour selection, linear/log scale toggle
+* **Dual Export**: PNG (raster) and SVG (vector) for publication-quality figures
+* **Responsive Design**: Works across desktop and tablet browsers
+* **CI/CD**: Automated deployment to GitLab Pages on push to main
+
+### Testing
+
+* 73 passing tests covering data processing, colour mapping, region matching, and export functionality
+
+## Technical Highlights
+
+* **D3.js SVG Rendering**: Dynamic colouring of brain atlas SVG regions based on uploaded data values
+* **Intelligent Validation**: Fuzzy matching suggests corrections for mistyped brain region names
+* **Full-Stack**: Next.js frontend communicates with Flask API for data processing and SVG template management
+* **Production Deployment**: GitLab CI/CD pipeline with automated build, test, and deploy stages
+
+## Impact
+
+Used by researchers at the Grant Lab to generate publication-quality brain heatmap figures for synaptome mapping papers. Replaces manual SVG editing workflows with an automated, reproducible tool.
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CreativeWork\",\"name\":\"Brain Heatmap Visualization Tool\",\"description\":\"A web application for generating publication-ready brain region heatmaps from experimental data. Supports multiple atlas templates, scientific colormaps, CSV upload, and PNG/SVG export, replacing manual atlas colouring with a reproducible workflow.\",\"url\":\"https://digindominic.me/projects/brain-heatmap-web-app\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\"},\"dateCreated\":\"2025-06-01\"}"}}],["$","$Ld",null,{"project":{"id":"brain-heatmap-web-app","metadata":{"title":"Brain Heatmap Visualization Tool","date":"2025-06-01","featured":false,"category":"research","summary":"A web application for generating publication-ready brain region heatmaps from experimental data. Supports multiple atlas templates, scientific colormaps, CSV upload, and PNG/SVG export, replacing manual atlas colouring with a reproducible workflow.","image":"","tag":"Next.js, D3.js, Flask, TypeScript, Tailwind CSS, Zustand, Vitest","demo":"https://git-pages.ecdf.ed.ac.uk/brain-heatmap-visualization-tool-f94056/","role":"Lead Developer","duration":"6 weeks","problem":"Researchers needed a fast way to turn region-level experimental values into publication-ready brain heatmaps without manual SVG editing, brittle scripts, or ad hoc colour mapping.","scope":"Built the full web application, atlas rendering layer, validation flow, export system, and Flask backend for data and template handling.","outcome":"Turned a manual figure-making process into a repeatable tool used to generate publication-quality neuroscience visuals.","highlights":["Supports mouse, rat, human, and development templates with real-time switching","Provides 10+ scientific colormaps, range controls, validation, and typo suggestions for region names","Export-ready PNG and SVG output backed by 73 passing tests"],"visibilityNote":"This tool is used in research workflows. The case study focuses on atlas rendering, validation, and export design rather than internal datasets."},"content":"$e","rawContent":"$f"},"prevProject":{"id":"synaptopathydb","title":"SynaptopathyDB"},"nextProject":{"id":"cagesense-colony-management","title":"CageSense — AI-Powered Mouse Colony Management System"}}]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Brain Heatmap Visualization Tool | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A web application for generating publication-ready brain region heatmaps from experimental data. Supports multiple atlas templates, scientific colormaps, CSV upload, and PNG/SVG export, replacing manual atlas colouring with a reproducible workflow."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/brain-heatmap-web-app/"}],["$","meta","11",{"property":"og:title","content":"Brain Heatmap Visualization Tool | Digin Dominic"}],["$","meta","12",{"property":"og:description","content":"A web application for generating publication-ready brain region heatmaps from experimental data. Supports multiple atlas templates, scientific colormaps, CSV upload, and PNG/SVG export, replacing manual atlas colouring with a reproducible workflow."}],["$","meta","13",{"property":"og:url","content":"https://digindominic.me/projects/brain-heatmap-web-app/"}],["$","meta","14",{"property":"og:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Brain Heatmap Visualization Tool"}],["$","meta","18",{"property":"og:type","content":"article"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"Brain Heatmap Visualization Tool | Digin Dominic"}],["$","meta","21",{"name":"twitter:description","content":"A web application for generating publication-ready brain region heatmaps from experimental data. Supports multiple atlas templates, scientific colormaps, CSV upload, and PNG/SVG export, replacing manual atlas colouring with a reproducible workflow."}],["$","meta","22",{"name":"twitter:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","23",{"name":"next-size-adjust"}]]
+1:null

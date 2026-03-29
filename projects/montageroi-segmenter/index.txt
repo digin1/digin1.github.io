@@ -1,253 +1,114 @@
 3:I[4707,[],""]
 5:I[6423,[],""]
-6:I[8003,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-c85ccb27cd7f4c58.js"],""]
-7:I[9567,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-c85ccb27cd7f4c58.js"],"ThemeProvider"]
-8:I[1794,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-c85ccb27cd7f4c58.js"],"default"]
-9:I[3039,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","160","static/chunks/app/not-found-cd5d79832c6a66a3.js"],"default"]
-a:I[9547,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","519","static/chunks/519-b2943afe6571172d.js","185","static/chunks/app/layout-c85ccb27cd7f4c58.js"],"default"]
+6:I[8003,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+9:I[839,["601","static/chunks/app/error-a281861f4199e94b.js"],"default"]
+a:I[3039,["676","static/chunks/870fdd6f-5b857784e146b02e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-f71ff85f1e80e868.js"],"default"]
+b:I[9547,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
 4:["id","montageroi-segmenter","d"]
-0:["wn6ySsOwCqKWPZMwOfVzc",[[["",{"children":["projects",{"children":[["id","montageroi-segmenter","d"],{"children":["__PAGE__?{\"id\":\"montageroi-segmenter\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","montageroi-segmenter","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/9d55f88cb514ddbb.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#3B82F6"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Full Stack Developer\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"sameAs\":[\"https://github.com/digin1\",\"https://linkedin.com/in/digin\",\"https://twitter.com/digin1\"],\"knowsAbout\":[\"React\",\"Node.js\",\"Python\",\"JavaScript\",\"TypeScript\",\"Web Development\",\"Software Engineering\"]}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-20","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L9",null,{}],"notFoundStyles":[]}]}],["$","$La",null,{}]]}]]}]]}]],null],null],["$Lb",null]]]]
-c:I[8966,["676","static/chunks/870fdd6f-13b67920ea26e8d8.js","958","static/chunks/69b09407-9eb0958119fc55ca.js","812","static/chunks/812-5933561b11cc6dfa.js","648","static/chunks/648-8a991ddcd93629d1.js","336","static/chunks/336-577e97483e52d43a.js","626","static/chunks/app/projects/%5Bid%5D/page-167998e3958fc2b8.js"],"default"]
-d:T1b52,<h2>Project Overview</h2>
-<p>MontageROI Segmenter is a specialized web application designed for neuroscience researchers to annotate and segment high-resolution microscopy montage images. The tool enables researchers to load large multi-channel TIFF images, create precise ROI annotations, and export them in ImageJ-compatible formats for downstream analysis.</p>
-<h2>Project Details</h2>
-<h3>Technologies Used</h3>
+0:["I2lY-1QFS2AI4axHXDdWD",[[["",{"children":["projects",{"children":[["id","montageroi-segmenter","d"],{"children":["__PAGE__?{\"id\":\"montageroi-segmenter\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","montageroi-segmenter","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b2616d198509a7d5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b1959b11e1f88b90.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark __variable_245d8d __variable_97c177","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#0B0F14"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Software Engineer & Research Toolsmith\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"University of Edinburgh\",\"department\":\"Genes to Cognition Programme / SIDB\"},\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"sameAs\":[\"https://github.com/digin1\",\"https://www.linkedin.com/in/digin/\",\"https://x.com/digin1\",\"https://sidb.org.uk/seth-grant/digin-dominic/\"],\"knowsAbout\":[\"Scientific Software Development\",\"Neuroscience Research Tools\",\"Three.js 3D Visualisation\",\"Python\",\"React\",\"Docker\",\"Microscopy Data Processing\",\"Data Pipelines\",\"Linux System Administration\"],\"alumniOf\":{\"@type\":\"EducationalOrganization\",\"name\":\"Nottingham Trent University\"}}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-24 md:pt-28","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}]]}]]}]]}]],null],[["$","div",null,{"className":"min-h-[60vh] flex items-center justify-center","children":["$","div",null,{"className":"flex flex-col items-center gap-4","children":[["$","div",null,{"className":"w-8 h-8 border-2 border-neural-blue/30 border-t-neural-blue rounded-full animate-spin"}],["$","p",null,{"className":"text-sm text-light-text-secondary dark:text-muted-steel","children":"Loading..."}]]}]}],[],[]]],["$Lc",null]]]]
+d:I[4543,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-ecf0d6fa5cc4c3ce.js"],"default"]
+e:Tcc7,<h2>Overview</h2>
+<p>MontageROI Segmenter is a specialised web application for annotating high-resolution microscopy montage images. It lets researchers load large TIFF-based datasets, work with ROI layers directly in the browser, and export the results into formats that fit the rest of the lab's analysis pipeline.</p>
+<p>The important part here is not just that it supports annotation. It is that the annotation workflow remains usable even when images are large, interactions are complex, and the downstream tooling still expects ImageJ-compatible output.</p>
+<h2>Problem</h2>
+<p>Large montage images are awkward to work with. Researchers still need precise ROI creation, but many existing tools either assume desktop usage, struggle with large images, or fit badly into the actual lab workflow.</p>
+<p>This project needed to solve several problems at once:</p>
 <ul>
-<li>Flask (Python Backend)</li>
-<li>Three.js (WebGL Rendering)</li>
-<li>JavaScript/HTML5 Canvas</li>
-<li>Bootstrap 5</li>
-<li>NumPy &#x26; SciPy (Image Processing)</li>
-<li>tifffile (TIFF Handling)</li>
-<li>scikit-image (Image Analysis)</li>
-<li>PyImageJ (ImageJ Integration)</li>
-<li>Docker</li>
+<li>smooth viewing and navigation for large montage images</li>
+<li>a usable ROI editing model with multiple tools and layers</li>
+<li>export compatibility with existing ImageJ/FIJI workflows</li>
+<li>support for touch-oriented workflows, not just mouse-and-keyboard usage</li>
 </ul>
-<h3>Key Features</h3>
+<h2>What I Built</h2>
+<p>I built the application around a browser-based editor with a WebGL image viewer, layered ROI management, and import/export support for existing lab formats.</p>
+<p>The main workflow includes:</p>
 <ul>
-<li><strong>High-Resolution Image Viewing</strong>: Load and navigate large montage TIFF files with smooth pan/zoom using Three.js WebGL rendering and tile pyramid system</li>
-<li><strong>Multi-Channel Support</strong>: View composite, false color, max projection, first channel, or grayscale display modes</li>
-<li><strong>Comprehensive ROI Tools</strong>:
+<li>loading and navigating high-resolution montage imagery</li>
+<li>creating and editing ROI layers with brush, fill, polygon, and shape tools</li>
+<li>applying transforms and managing visibility across ROI layers</li>
+<li>tuning image display with brightness, contrast, and exposure adjustments</li>
+<li>exporting results in ImageJ-compatible ROI ZIP format</li>
+</ul>
+<h2>Technical Decisions</h2>
+<h3>Rendering and interaction</h3>
+<p>Three.js and WebGL provided the right base for smooth zooming and navigation across large images. The viewer uses an orthographic-style 2D interaction model so the editing experience feels precise rather than game-like.</p>
+<h3>Editing workflow</h3>
+<p>The ROI system had to support more than simple drawing. Researchers needed layer control, transformations, visibility management, and non-destructive editing patterns such as undo/redo.</p>
+<h3>Interoperability</h3>
+<p>ImageJ compatibility mattered because the web tool could not become an isolated island. Import and export support had to fit the rest of the lab's analysis stack.</p>
+<h2>Constraints</h2>
+<p>The main constraints were:</p>
 <ul>
-<li>Brush painting with adjustable size</li>
-<li>Eraser tool for precise removal</li>
-<li>Bucket fill with tolerance-based filling</li>
-<li>Rectangle and circle shape tools</li>
-<li>Polygon drawing tool</li>
-<li>Square stamp tool with custom dimensions</li>
+<li>very large montage imagery</li>
+<li>precision requirements for scientific annotation</li>
+<li>interoperability with existing analysis tools</li>
+<li>the need for a workflow that researchers could use repeatedly, not just occasionally</li>
 </ul>
-</li>
-<li><strong>Transform Operations</strong>: Scale, rotate, and move individual or all visible ROIs with bounding box preview</li>
-<li><strong>ROI Management</strong>: Create, rename, duplicate, merge, reorder (drag-and-drop), and delete ROI layers</li>
-<li><strong>Color Customization</strong>: Pick custom colors or use preset palette with adjustable opacity</li>
-<li><strong>Undo/Redo System</strong>: Per-ROI history tracking for non-destructive editing</li>
-<li><strong>Image Adjustments</strong>: Real-time brightness, contrast, and exposure controls with live preview</li>
-<li><strong>Import/Export</strong>: Load ROI ZIP files or individual .roi/.png files; export all ROIs as ImageJ-compatible ZIP</li>
-<li><strong>Instructions Upload</strong>: Optional text file upload for custom protocols or notes</li>
-<li><strong>Touch Support</strong>: Optimized for iPad and touch devices with gesture controls</li>
-</ul>
-<h3>Development Process</h3>
-<p>Developed as the primary developer for the Grant Lab at University of Edinburgh to support their neuroscience research workflows.</p>
-<h4>Frontend Architecture</h4>
-<p>Built an interactive canvas-based editor using Three.js for WebGL rendering:</p>
-<ul>
-<li><strong>WebGL Rendering</strong>: Three.js scene with orthographic camera for precise 2D image viewing</li>
-<li><strong>Tile Pyramid System</strong>: Efficient loading and rendering of large images through multi-resolution tiling</li>
-<li><strong>Canvas Compositing</strong>: Separate canvases for montage image and ROI overlay layers</li>
-<li><strong>Tool System</strong>:
-<ul>
-<li>Mode-based tool switching (brush, erase, bucket, shapes, transform, move)</li>
-<li>Zoom-aware cursor sizing that matches actual paint area</li>
-<li>Right-click panning while in any editing mode</li>
-</ul>
-</li>
-<li><strong>ROI Layer Management</strong>:
-<ul>
-<li>Visibility toggling per layer</li>
-<li>Drag-and-drop reordering</li>
-<li>Insert-at-position functionality</li>
-<li>Selection highlighting with crosshair indicators</li>
-</ul>
-</li>
-</ul>
-<h4>Backend Architecture</h4>
-<p>Flask-based Python backend handling image processing:</p>
-<ul>
-<li><strong>TIFF Processing</strong>:
-<ul>
-<li>Multi-page TIFF support using tifffile library</li>
-<li>Channel compositing and color mapping</li>
-<li>Flip and rotation transformations</li>
-</ul>
-</li>
-<li><strong>ROI Conversion</strong>:
-<ul>
-<li>ImageJ .roi file parsing and generation</li>
-<li>PNG mask to ROI conversion</li>
-<li>Coordinate transformation handling</li>
-</ul>
-</li>
-<li><strong>Session Management</strong>: Per-session file storage with automatic cleanup</li>
-<li><strong>Progress Streaming</strong>: Real-time progress updates during file processing</li>
-</ul>
-<h4>Image Processing Pipeline</h4>
-<ul>
-<li><strong>Tile Generation</strong>: Creates multi-resolution tile pyramids for smooth zooming</li>
-<li><strong>Channel Compositing</strong>: RGB composite from multi-channel fluorescence images</li>
-<li><strong>Adjustment Processing</strong>: Server-side brightness/contrast/exposure adjustments</li>
-<li><strong>ROI Export</strong>: Converts canvas masks to ImageJ-compatible ROI format with polygon optimization</li>
-</ul>
-<h3>Technical Highlights</h3>
-<ul>
-<li><strong>Large Image Handling</strong>: Efficiently processes and displays TIFF files over 100MB through chunked loading and tile pyramids</li>
-<li><strong>Binary Mask Painting</strong>: Hard-edged painting for precise ROI boundaries without anti-aliasing artifacts</li>
-<li><strong>Flood Fill Algorithm</strong>: Tolerance-based bucket fill for handling similar colors in biological images</li>
-<li><strong>Transform Pipeline</strong>: Non-destructive transform preview with final baking to canvas on confirmation</li>
-<li><strong>Overlap Detection</strong>: Tool to fix overlapping ROIs by removing intersecting regions from other layers</li>
-<li><strong>Multi-Montage Support</strong>: Load and switch between multiple montage images with per-image adjustment memory</li>
-<li><strong>Keyboard Shortcuts</strong>: Ctrl+Z/Y for undo/redo, Ctrl+B/E/U for tool switching</li>
-</ul>
-<h3>User Interface</h3>
-<ul>
-<li><strong>Left Sidebar</strong>: Tools and upload controls with collapsible sections</li>
-<li><strong>Center Viewer</strong>: WebGL canvas with coordinate overlay and minimap navigation</li>
-<li><strong>Right Sidebar</strong>: ROI list management with visibility toggles and color controls</li>
-<li><strong>Responsive Design</strong>: Auto-collapsing sidebars on mobile/tablet for maximum viewing area</li>
-<li><strong>Debug Console</strong>: Built-in debugging panel for troubleshooting</li>
-</ul>
-<h2>Scientific Application</h2>
-<p>The tool supports neuroscience research workflows by enabling:</p>
-<ul>
-<li>Precise annotation of synaptic structures in high-resolution microscopy images</li>
-<li>Consistent ROI creation across multiple sample images</li>
-<li>Export of annotations compatible with ImageJ/FIJI analysis pipelines</li>
-<li>Collaborative annotation through shareable ROI files</li>
-</ul>
-<h2>Deployment</h2>
-<ul>
-<li><strong>Docker Support</strong>: Containerized deployment with docker-compose for easy installation</li>
-<li><strong>Private Registry</strong>: Hosted on institutional GitLab container registry</li>
-<li><strong>Port Configuration</strong>: Runs on configurable port (default: 6743)</li>
-</ul>
-<h2>Project Context</h2>
-<p>Designed for Grant Lab at University of Edinburgh to streamline the annotation workflow for synaptic microscopy research, enabling researchers to efficiently create and manage ROI annotations for quantitative analysis.</p>e:T1698,
-## Project Overview
+<h2>Outcome</h2>
+<p>MontageROI Segmenter turned a difficult annotation task into something that could happen directly in the browser without abandoning the surrounding research pipeline. It is a strong example of domain-specific interface engineering: not generic UI work, but a tool shaped by how researchers actually need to interact with image data.</p>
+<h2>Deployment Notes</h2>
+<p>The tool is containerised for deployment and designed to sit cleanly inside a broader research tooling environment.</p>f:Tbd8,
+## Overview
 
-MontageROI Segmenter is a specialized web application designed for neuroscience researchers to annotate and segment high-resolution microscopy montage images. The tool enables researchers to load large multi-channel TIFF images, create precise ROI annotations, and export them in ImageJ-compatible formats for downstream analysis.
+MontageROI Segmenter is a specialised web application for annotating high-resolution microscopy montage images. It lets researchers load large TIFF-based datasets, work with ROI layers directly in the browser, and export the results into formats that fit the rest of the lab's analysis pipeline.
 
-## Project Details
+The important part here is not just that it supports annotation. It is that the annotation workflow remains usable even when images are large, interactions are complex, and the downstream tooling still expects ImageJ-compatible output.
 
-### Technologies Used
+## Problem
 
-* Flask (Python Backend)
-* Three.js (WebGL Rendering)
-* JavaScript/HTML5 Canvas
-* Bootstrap 5
-* NumPy & SciPy (Image Processing)
-* tifffile (TIFF Handling)
-* scikit-image (Image Analysis)
-* PyImageJ (ImageJ Integration)
-* Docker
+Large montage images are awkward to work with. Researchers still need precise ROI creation, but many existing tools either assume desktop usage, struggle with large images, or fit badly into the actual lab workflow.
 
-### Key Features
+This project needed to solve several problems at once:
 
-* **High-Resolution Image Viewing**: Load and navigate large montage TIFF files with smooth pan/zoom using Three.js WebGL rendering and tile pyramid system
-* **Multi-Channel Support**: View composite, false color, max projection, first channel, or grayscale display modes
-* **Comprehensive ROI Tools**:
-  * Brush painting with adjustable size
-  * Eraser tool for precise removal
-  * Bucket fill with tolerance-based filling
-  * Rectangle and circle shape tools
-  * Polygon drawing tool
-  * Square stamp tool with custom dimensions
-* **Transform Operations**: Scale, rotate, and move individual or all visible ROIs with bounding box preview
-* **ROI Management**: Create, rename, duplicate, merge, reorder (drag-and-drop), and delete ROI layers
-* **Color Customization**: Pick custom colors or use preset palette with adjustable opacity
-* **Undo/Redo System**: Per-ROI history tracking for non-destructive editing
-* **Image Adjustments**: Real-time brightness, contrast, and exposure controls with live preview
-* **Import/Export**: Load ROI ZIP files or individual .roi/.png files; export all ROIs as ImageJ-compatible ZIP
-* **Instructions Upload**: Optional text file upload for custom protocols or notes
-* **Touch Support**: Optimized for iPad and touch devices with gesture controls
+- smooth viewing and navigation for large montage images
+- a usable ROI editing model with multiple tools and layers
+- export compatibility with existing ImageJ/FIJI workflows
+- support for touch-oriented workflows, not just mouse-and-keyboard usage
 
-### Development Process
+## What I Built
 
-Developed as the primary developer for the Grant Lab at University of Edinburgh to support their neuroscience research workflows.
+I built the application around a browser-based editor with a WebGL image viewer, layered ROI management, and import/export support for existing lab formats.
 
-#### Frontend Architecture
+The main workflow includes:
 
-Built an interactive canvas-based editor using Three.js for WebGL rendering:
+- loading and navigating high-resolution montage imagery
+- creating and editing ROI layers with brush, fill, polygon, and shape tools
+- applying transforms and managing visibility across ROI layers
+- tuning image display with brightness, contrast, and exposure adjustments
+- exporting results in ImageJ-compatible ROI ZIP format
 
-* **WebGL Rendering**: Three.js scene with orthographic camera for precise 2D image viewing
-* **Tile Pyramid System**: Efficient loading and rendering of large images through multi-resolution tiling
-* **Canvas Compositing**: Separate canvases for montage image and ROI overlay layers
-* **Tool System**:
-  * Mode-based tool switching (brush, erase, bucket, shapes, transform, move)
-  * Zoom-aware cursor sizing that matches actual paint area
-  * Right-click panning while in any editing mode
-* **ROI Layer Management**:
-  * Visibility toggling per layer
-  * Drag-and-drop reordering
-  * Insert-at-position functionality
-  * Selection highlighting with crosshair indicators
+## Technical Decisions
 
-#### Backend Architecture
+### Rendering and interaction
 
-Flask-based Python backend handling image processing:
+Three.js and WebGL provided the right base for smooth zooming and navigation across large images. The viewer uses an orthographic-style 2D interaction model so the editing experience feels precise rather than game-like.
 
-* **TIFF Processing**:
-  * Multi-page TIFF support using tifffile library
-  * Channel compositing and color mapping
-  * Flip and rotation transformations
-* **ROI Conversion**:
-  * ImageJ .roi file parsing and generation
-  * PNG mask to ROI conversion
-  * Coordinate transformation handling
-* **Session Management**: Per-session file storage with automatic cleanup
-* **Progress Streaming**: Real-time progress updates during file processing
+### Editing workflow
 
-#### Image Processing Pipeline
+The ROI system had to support more than simple drawing. Researchers needed layer control, transformations, visibility management, and non-destructive editing patterns such as undo/redo.
 
-* **Tile Generation**: Creates multi-resolution tile pyramids for smooth zooming
-* **Channel Compositing**: RGB composite from multi-channel fluorescence images
-* **Adjustment Processing**: Server-side brightness/contrast/exposure adjustments
-* **ROI Export**: Converts canvas masks to ImageJ-compatible ROI format with polygon optimization
+### Interoperability
 
-### Technical Highlights
+ImageJ compatibility mattered because the web tool could not become an isolated island. Import and export support had to fit the rest of the lab's analysis stack.
 
-* **Large Image Handling**: Efficiently processes and displays TIFF files over 100MB through chunked loading and tile pyramids
-* **Binary Mask Painting**: Hard-edged painting for precise ROI boundaries without anti-aliasing artifacts
-* **Flood Fill Algorithm**: Tolerance-based bucket fill for handling similar colors in biological images
-* **Transform Pipeline**: Non-destructive transform preview with final baking to canvas on confirmation
-* **Overlap Detection**: Tool to fix overlapping ROIs by removing intersecting regions from other layers
-* **Multi-Montage Support**: Load and switch between multiple montage images with per-image adjustment memory
-* **Keyboard Shortcuts**: Ctrl+Z/Y for undo/redo, Ctrl+B/E/U for tool switching
+## Constraints
 
-### User Interface
+The main constraints were:
 
-* **Left Sidebar**: Tools and upload controls with collapsible sections
-* **Center Viewer**: WebGL canvas with coordinate overlay and minimap navigation
-* **Right Sidebar**: ROI list management with visibility toggles and color controls
-* **Responsive Design**: Auto-collapsing sidebars on mobile/tablet for maximum viewing area
-* **Debug Console**: Built-in debugging panel for troubleshooting
+- very large montage imagery
+- precision requirements for scientific annotation
+- interoperability with existing analysis tools
+- the need for a workflow that researchers could use repeatedly, not just occasionally
 
-## Scientific Application
+## Outcome
 
-The tool supports neuroscience research workflows by enabling:
+MontageROI Segmenter turned a difficult annotation task into something that could happen directly in the browser without abandoning the surrounding research pipeline. It is a strong example of domain-specific interface engineering: not generic UI work, but a tool shaped by how researchers actually need to interact with image data.
 
-* Precise annotation of synaptic structures in high-resolution microscopy images
-* Consistent ROI creation across multiple sample images
-* Export of annotations compatible with ImageJ/FIJI analysis pipelines
-* Collaborative annotation through shareable ROI files
+## Deployment Notes
 
-## Deployment
-
-* **Docker Support**: Containerized deployment with docker-compose for easy installation
-* **Private Registry**: Hosted on institutional GitLab container registry
-* **Port Configuration**: Runs on configurable port (default: 6743)
-
-## Project Context
-
-Designed for Grant Lab at University of Edinburgh to streamline the annotation workflow for synaptic microscopy research, enabling researchers to efficiently create and manage ROI annotations for quantitative analysis.
-2:["$","$Lc",null,{"project":{"id":"montageroi-segmenter","metadata":{"title":"MontageROI Segmenter - Web-Based ROI Annotation Tool","date":"2025-11-13","featured":true,"featuredOrder":1,"category":"research","summary":"A powerful web-based application for viewing high-resolution montage TIFF images and creating, editing, and managing Region of Interest (ROI) overlays. Built for the Grant Lab at University of Edinburgh, featuring Three.js WebGL rendering, comprehensive editing tools, and ImageJ-compatible export.","image":"/images/montageroisegmenter.jpg","tag":"Flask, Python, Three.js, WebGL, JavaScript, Bootstrap, Docker, ImageJ, TIFF Processing","role":"Lead Developer","duration":"Ongoing"},"content":"$d","rawContent":"$e"},"prevProject":{"id":"nanoarchitecture-synaptome-atlas","title":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization"},"nextProject":{"id":"synaptopathydb","title":"SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research"}}]
-b:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"MontageROI Segmenter - Web-Based ROI Annotation Tool | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A powerful web-based application for viewing high-resolution montage TIFF images and creating, editing, and managing Region of Interest (ROI) overlays. Built for the Grant Lab at University of Edinburgh, featuring Three.js WebGL rendering, comprehensive editing tools, and ImageJ-compatible export."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/montageroi-segmenter/"}],["$","meta","11",{"name":"google-site-verification","content":"your-google-verification-code"}],["$","meta","12",{"property":"og:title","content":"MontageROI Segmenter - Web-Based ROI Annotation Tool | Digin Dominic"}],["$","meta","13",{"property":"og:description","content":"A powerful web-based application for viewing high-resolution montage TIFF images and creating, editing, and managing Region of Interest (ROI) overlays. Built for the Grant Lab at University of Edinburgh, featuring Three.js WebGL rendering, comprehensive editing tools, and ImageJ-compatible export."}],["$","meta","14",{"property":"og:url","content":"https://digindominic.me/projects/montageroi-segmenter/"}],["$","meta","15",{"property":"og:image","content":"https://digindominic.me/images/montageroisegmenter.jpg"}],["$","meta","16",{"property":"og:image:width","content":"1200"}],["$","meta","17",{"property":"og:image:height","content":"630"}],["$","meta","18",{"property":"og:image:alt","content":"MontageROI Segmenter - Web-Based ROI Annotation Tool"}],["$","meta","19",{"property":"og:type","content":"article"}],["$","meta","20",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","21",{"name":"twitter:title","content":"MontageROI Segmenter - Web-Based ROI Annotation Tool | Digin Dominic"}],["$","meta","22",{"name":"twitter:description","content":"A powerful web-based application for viewing high-resolution montage TIFF images and creating, editing, and managing Region of Interest (ROI) overlays. Built for the Grant Lab at University of Edinburgh, featuring Three.js WebGL rendering, comprehensive editing tools, and ImageJ-compatible export."}],["$","meta","23",{"name":"twitter:image","content":"https://digindominic.me/images/montageroisegmenter.jpg"}]]
+The tool is containerised for deployment and designed to sit cleanly inside a broader research tooling environment.
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CreativeWork\",\"name\":\"MontageROI Segmenter\",\"description\":\"A browser-based ROI annotation tool for large microscopy montage images. Built with Flask and Three.js so researchers can inspect, annotate, transform, and export ROI overlays directly in the browser instead of relying on desktop-only workflows.\",\"url\":\"https://digindominic.me/projects/montageroi-segmenter\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\"},\"dateCreated\":\"2025-11-13\",\"image\":\"/images/montageroisegmenter.jpg\"}"}}],["$","$Ld",null,{"project":{"id":"montageroi-segmenter","metadata":{"title":"MontageROI Segmenter","date":"2025-11-13","featured":true,"featuredOrder":3,"category":"research","summary":"A browser-based ROI annotation tool for large microscopy montage images. Built with Flask and Three.js so researchers can inspect, annotate, transform, and export ROI overlays directly in the browser instead of relying on desktop-only workflows.","image":"/images/montageroisegmenter.jpg","tag":"Flask, Python, Three.js, WebGL, JavaScript, Bootstrap, Docker, ImageJ, TIFF Processing","role":"Lead Developer","duration":"Ongoing","problem":"Researchers needed a browser-based way to annotate huge TIFF montages without falling back to desktop-only or proprietary tooling.","scope":"Built the web app, WebGL viewer, ROI editing workflow, import/export path, and touch-friendly interaction model.","outcome":"Made large-image annotation practical in the browser while staying compatible with existing ImageJ-based research workflows.","highlights":["Smooth pan and zoom for large montage TIFF images using Three.js/WebGL","ROI drawing, layer management, transform tools, undo/redo, and ImageJ-compatible export","Designed for real annotation work, including touch-device use"],"visibilityNote":"This tool is used in research workflows. The case study focuses on the engineering decisions and annotation experience rather than internal datasets."},"content":"$e","rawContent":"$f"},"prevProject":{"id":"nanoarchitecture-synaptome-atlas","title":"Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization"},"nextProject":{"id":"synaptopathydb","title":"SynaptopathyDB"}}]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"MontageROI Segmenter | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A browser-based ROI annotation tool for large microscopy montage images. Built with Flask and Three.js so researchers can inspect, annotate, transform, and export ROI overlays directly in the browser instead of relying on desktop-only workflows."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/montageroi-segmenter/"}],["$","meta","11",{"property":"og:title","content":"MontageROI Segmenter | Digin Dominic"}],["$","meta","12",{"property":"og:description","content":"A browser-based ROI annotation tool for large microscopy montage images. Built with Flask and Three.js so researchers can inspect, annotate, transform, and export ROI overlays directly in the browser instead of relying on desktop-only workflows."}],["$","meta","13",{"property":"og:url","content":"https://digindominic.me/projects/montageroi-segmenter/"}],["$","meta","14",{"property":"og:image","content":"https://digindominic.me/images/montageroisegmenter.jpg"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"MontageROI Segmenter"}],["$","meta","18",{"property":"og:type","content":"article"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"MontageROI Segmenter | Digin Dominic"}],["$","meta","21",{"name":"twitter:description","content":"A browser-based ROI annotation tool for large microscopy montage images. Built with Flask and Three.js so researchers can inspect, annotate, transform, and export ROI overlays directly in the browser instead of relying on desktop-only workflows."}],["$","meta","22",{"name":"twitter:image","content":"https://digindominic.me/images/montageroisegmenter.jpg"}],["$","meta","23",{"name":"next-size-adjust"}]]
 1:null

@@ -1,0 +1,90 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+9:I[839,["601","static/chunks/app/error-a281861f4199e94b.js"],"default"]
+a:I[3039,["676","static/chunks/870fdd6f-5b857784e146b02e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-f71ff85f1e80e868.js"],"default"]
+b:I[9547,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+4:["id","statistical-analysis-pipeline","d"]
+0:["I2lY-1QFS2AI4axHXDdWD",[[["",{"children":["projects",{"children":[["id","statistical-analysis-pipeline","d"],{"children":["__PAGE__?{\"id\":\"statistical-analysis-pipeline\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","statistical-analysis-pipeline","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b2616d198509a7d5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b1959b11e1f88b90.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark __variable_245d8d __variable_97c177","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#0B0F14"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Software Engineer & Research Toolsmith\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"University of Edinburgh\",\"department\":\"Genes to Cognition Programme / SIDB\"},\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"sameAs\":[\"https://github.com/digin1\",\"https://www.linkedin.com/in/digin/\",\"https://x.com/digin1\",\"https://sidb.org.uk/seth-grant/digin-dominic/\"],\"knowsAbout\":[\"Scientific Software Development\",\"Neuroscience Research Tools\",\"Three.js 3D Visualisation\",\"Python\",\"React\",\"Docker\",\"Microscopy Data Processing\",\"Data Pipelines\",\"Linux System Administration\"],\"alumniOf\":{\"@type\":\"EducationalOrganization\",\"name\":\"Nottingham Trent University\"}}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-24 md:pt-28","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}]]}]]}]]}]],null],[["$","div",null,{"className":"min-h-[60vh] flex items-center justify-center","children":["$","div",null,{"className":"flex flex-col items-center gap-4","children":[["$","div",null,{"className":"w-8 h-8 border-2 border-neural-blue/30 border-t-neural-blue rounded-full animate-spin"}],["$","p",null,{"className":"text-sm text-light-text-secondary dark:text-muted-steel","children":"Loading..."}]]}]}],[],[]]],["$Lc",null]]]]
+d:I[4543,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-ecf0d6fa5cc4c3ce.js"],"default"]
+e:T987,<h2>Project Overview</h2>
+<p>A web-accessible statistical analysis pipeline built into the Grant Lab research platform. Researchers upload experimental datasets and receive comprehensive statistical reports with multiple test types, post-hoc corrections, and publication-quality plots — all without writing code or using external statistics software.</p>
+<h2>Project Details</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li>Python (SciPy, pandas, NumPy)</li>
+<li>R (ggplot2, scales, readxl, dplyr)</li>
+<li>Flask (web interface)</li>
+<li>Dask (distributed computation for large datasets)</li>
+</ul>
+<h3>Key Features</h3>
+<ul>
+<li><strong>Multi-Test Framework</strong>: ANOVA (one-way, two-way), independent/paired t-tests, Mann-Whitney U, Kruskal-Wallis</li>
+<li><strong>Post-Hoc Corrections</strong>: Bonferroni, Tukey HSD, Holm-Sidak for multiple comparison correction</li>
+<li><strong>Effect Size Calculations</strong>: Cohen's d, eta-squared for quantifying practical significance</li>
+<li><strong>R Plot Generation</strong>: Publication-ready box plots, violin plots, density plots, and interaction plots via ggplot2</li>
+<li><strong>Batch Processing</strong>: Run the same analysis across multiple brain regions or experimental conditions</li>
+<li><strong>Data Validation</strong>: Automatic normality testing (Shapiro-Wilk) to recommend parametric vs non-parametric tests</li>
+<li><strong>Export</strong>: Results as CSV/Excel tables, plots as high-resolution PNG/SVG</li>
+</ul>
+<h3>Supported Plot Types</h3>
+<ul>
+<li>Box plots with individual data points</li>
+<li>Violin plots with quartile markers</li>
+<li>Density distribution plots</li>
+<li>Interaction plots for two-way comparisons</li>
+<li>Bar plots with error bars</li>
+</ul>
+<h2>Technical Highlights</h2>
+<ul>
+<li><strong>Intelligent Test Selection</strong>: Automatically recommends appropriate statistical tests based on data distribution and group structure</li>
+<li><strong>Python-R Bridge</strong>: Python orchestrates data processing and test execution, then delegates visualisation to R/ggplot2 for publication-quality output</li>
+<li><strong>Reproducibility</strong>: Every analysis generates a complete log of parameters, tests applied, and p-values for audit trails</li>
+</ul>
+<h2>Impact</h2>
+<p>Eliminates the need for researchers to manually run statistics in SPSS, R, or Excel. Used to generate statistical analyses and figures for synaptome mapping publications.</p>f:T82d,
+## Project Overview
+
+A web-accessible statistical analysis pipeline built into the Grant Lab research platform. Researchers upload experimental datasets and receive comprehensive statistical reports with multiple test types, post-hoc corrections, and publication-quality plots — all without writing code or using external statistics software.
+
+## Project Details
+
+### Technologies Used
+
+* Python (SciPy, pandas, NumPy)
+* R (ggplot2, scales, readxl, dplyr)
+* Flask (web interface)
+* Dask (distributed computation for large datasets)
+
+### Key Features
+
+* **Multi-Test Framework**: ANOVA (one-way, two-way), independent/paired t-tests, Mann-Whitney U, Kruskal-Wallis
+* **Post-Hoc Corrections**: Bonferroni, Tukey HSD, Holm-Sidak for multiple comparison correction
+* **Effect Size Calculations**: Cohen's d, eta-squared for quantifying practical significance
+* **R Plot Generation**: Publication-ready box plots, violin plots, density plots, and interaction plots via ggplot2
+* **Batch Processing**: Run the same analysis across multiple brain regions or experimental conditions
+* **Data Validation**: Automatic normality testing (Shapiro-Wilk) to recommend parametric vs non-parametric tests
+* **Export**: Results as CSV/Excel tables, plots as high-resolution PNG/SVG
+
+### Supported Plot Types
+
+* Box plots with individual data points
+* Violin plots with quartile markers
+* Density distribution plots
+* Interaction plots for two-way comparisons
+* Bar plots with error bars
+
+## Technical Highlights
+
+* **Intelligent Test Selection**: Automatically recommends appropriate statistical tests based on data distribution and group structure
+* **Python-R Bridge**: Python orchestrates data processing and test execution, then delegates visualisation to R/ggplot2 for publication-quality output
+* **Reproducibility**: Every analysis generates a complete log of parameters, tests applied, and p-values for audit trails
+
+## Impact
+
+Eliminates the need for researchers to manually run statistics in SPSS, R, or Excel. Used to generate statistical analyses and figures for synaptome mapping publications.
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CreativeWork\",\"name\":\"Statistical Analysis Pipeline for Neuroscience Data\",\"description\":\"A comprehensive statistical analysis framework for neuroscience research data. Supports multi-group comparisons (ANOVA, t-tests, Mann-Whitney), post-hoc corrections (Bonferroni, Tukey HSD), effect size calculations, and publication-ready visualisations via R/ggplot2 integration.\",\"url\":\"https://digindominic.me/projects/statistical-analysis-pipeline\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\"},\"dateCreated\":\"2024-10-01\"}"}}],["$","$Ld",null,{"project":{"id":"statistical-analysis-pipeline","metadata":{"title":"Statistical Analysis Pipeline for Neuroscience Data","date":"2024-10-01","featured":false,"category":"research","summary":"A comprehensive statistical analysis framework for neuroscience research data. Supports multi-group comparisons (ANOVA, t-tests, Mann-Whitney), post-hoc corrections (Bonferroni, Tukey HSD), effect size calculations, and publication-ready visualisations via R/ggplot2 integration.","image":"","tag":"Python, R, SciPy, pandas, ggplot2, Flask, Statistics","role":"Solo Developer","duration":"1 month"},"content":"$e","rawContent":"$f"},"prevProject":{"id":"roi-classification-tool","title":"GPU-Accelerated ROI Classification Tool"},"nextProject":{"id":"human-heatmap-generator","title":"Human Brain Heatmap Generator"}}]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Statistical Analysis Pipeline for Neuroscience Data | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A comprehensive statistical analysis framework for neuroscience research data. Supports multi-group comparisons (ANOVA, t-tests, Mann-Whitney), post-hoc corrections (Bonferroni, Tukey HSD), effect size calculations, and publication-ready visualisations via R/ggplot2 integration."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/statistical-analysis-pipeline/"}],["$","meta","11",{"property":"og:title","content":"Statistical Analysis Pipeline for Neuroscience Data | Digin Dominic"}],["$","meta","12",{"property":"og:description","content":"A comprehensive statistical analysis framework for neuroscience research data. Supports multi-group comparisons (ANOVA, t-tests, Mann-Whitney), post-hoc corrections (Bonferroni, Tukey HSD), effect size calculations, and publication-ready visualisations via R/ggplot2 integration."}],["$","meta","13",{"property":"og:url","content":"https://digindominic.me/projects/statistical-analysis-pipeline/"}],["$","meta","14",{"property":"og:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Statistical Analysis Pipeline for Neuroscience Data"}],["$","meta","18",{"property":"og:type","content":"article"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"Statistical Analysis Pipeline for Neuroscience Data | Digin Dominic"}],["$","meta","21",{"name":"twitter:description","content":"A comprehensive statistical analysis framework for neuroscience research data. Supports multi-group comparisons (ANOVA, t-tests, Mann-Whitney), post-hoc corrections (Bonferroni, Tukey HSD), effect size calculations, and publication-ready visualisations via R/ggplot2 integration."}],["$","meta","22",{"name":"twitter:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","23",{"name":"next-size-adjust"}]]
+1:null

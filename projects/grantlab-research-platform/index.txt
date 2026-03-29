@@ -1,0 +1,141 @@
+3:I[4707,[],""]
+5:I[6423,[],""]
+6:I[8003,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],""]
+7:I[9567,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"ThemeProvider"]
+8:I[1794,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+9:I[839,["601","static/chunks/app/error-a281861f4199e94b.js"],"default"]
+a:I[3039,["676","static/chunks/870fdd6f-5b857784e146b02e.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","160","static/chunks/app/not-found-f71ff85f1e80e868.js"],"default"]
+b:I[9547,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","137","static/chunks/137-998d8aa36c5b16bb.js","185","static/chunks/app/layout-fcf7b94ede1f9569.js"],"default"]
+4:["id","grantlab-research-platform","d"]
+0:["I2lY-1QFS2AI4axHXDdWD",[[["",{"children":["projects",{"children":[["id","grantlab-research-platform","d"],{"children":["__PAGE__?{\"id\":\"grantlab-research-platform\"}",{}]}]}]},"$undefined","$undefined",true],["",{"children":["projects",{"children":[["id","grantlab-research-platform","d"],{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children","$4","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[null,["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children","projects","children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","notFoundStyles":"$undefined"}]],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/b2616d198509a7d5.css","precedence":"next","crossOrigin":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/b1959b11e1f88b90.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"dark __variable_245d8d __variable_97c177","suppressHydrationWarning":true,"children":[["$","head",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}"}}],["$","link",null,{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link",null,{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link",null,{"rel":"apple-touch-icon","href":"/android-chrome-192x192.png"}],["$","link",null,{"rel":"manifest","href":"/manifest.json"}],["$","meta",null,{"name":"theme-color","content":"#0B0F14"}],["$","link",null,{"rel":"sitemap","type":"application/xml","href":"/sitemap.xml"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"image\":\"/images/digin.png\",\"jobTitle\":\"Software Engineer & Research Toolsmith\",\"worksFor\":{\"@type\":\"Organization\",\"name\":\"University of Edinburgh\",\"department\":\"Genes to Cognition Programme / SIDB\"},\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"sameAs\":[\"https://github.com/digin1\",\"https://www.linkedin.com/in/digin/\",\"https://x.com/digin1\",\"https://sidb.org.uk/seth-grant/digin-dominic/\"],\"knowsAbout\":[\"Scientific Software Development\",\"Neuroscience Research Tools\",\"Three.js 3D Visualisation\",\"Python\",\"React\",\"Docker\",\"Microscopy Data Processing\",\"Data Pipelines\",\"Linux System Administration\"],\"alumniOf\":{\"@type\":\"EducationalOrganization\",\"name\":\"Nottingham Trent University\"}}"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"WebSite\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\",\"description\":\"Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\"},\"potentialAction\":{\"@type\":\"SearchAction\",\"target\":\"https://digindominic.me/projects?search={search_term_string}\",\"query-input\":\"required name=search_term_string\"}}"}}]]}],["$","body",null,{"className":"min-h-screen flex flex-col","children":[["$","$L6",null,{"src":"https://www.googletagmanager.com/gtag/js?id=G-9KKL3BNRNY","strategy":"afterInteractive"}],["$","$L6",null,{"id":"google-analytics","strategy":"afterInteractive","children":"\n            window.dataLayer = window.dataLayer || [];\n            function gtag(){dataLayer.push(arguments);}\n            gtag('js', new Date());\n            gtag('config', 'G-9KKL3BNRNY');\n          "}],["$","$L7",null,{"children":[["$","$L8",null,{}],["$","main",null,{"className":"flex-1 pt-24 md:pt-28","children":["$","$L3",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$9","errorStyles":[],"errorScripts":[],"template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$La",null,{}],"notFoundStyles":[]}]}],["$","$Lb",null,{}]]}]]}]]}]],null],[["$","div",null,{"className":"min-h-[60vh] flex items-center justify-center","children":["$","div",null,{"className":"flex flex-col items-center gap-4","children":[["$","div",null,{"className":"w-8 h-8 border-2 border-neural-blue/30 border-t-neural-blue rounded-full animate-spin"}],["$","p",null,{"className":"text-sm text-light-text-secondary dark:text-muted-steel","children":"Loading..."}]]}]}],[],[]]],["$Lc",null]]]]
+d:I[4543,["676","static/chunks/870fdd6f-5b857784e146b02e.js","958","static/chunks/69b09407-b8db79a5429cad18.js","682","static/chunks/682-3e1fe04c8b44cd29.js","648","static/chunks/648-ca5c008ca4413444.js","626","static/chunks/app/projects/%5Bid%5D/page-ecf0d6fa5cc4c3ce.js"],"default"]
+e:Tefb,<h2>Overview</h2>
+<p>The Grant Lab Research Platform is the operational layer behind a large part of the microscopy processing work in the Seth Grant Lab. It is not a single tool. It is a research software platform that brings together services, data workflows, internal interfaces, and compute orchestration so researchers can move from raw microscopy data to analysis-ready outputs.</p>
+<p>This is one of the strongest examples of my systems range because it combines product engineering, infrastructure, workflow design, and ongoing operations in one environment.</p>
+<h2>Problem</h2>
+<p>Research labs often accumulate scripts, desktop tools, and disconnected processing steps over time. That works until scale, reproducibility, collaboration, and maintenance start to matter more than one-off execution.</p>
+<p>The problem here was to create a platform that could:</p>
+<ul>
+<li>coordinate long-running and heterogeneous microscopy workflows</li>
+<li>support multiple internal tools without every new feature becoming operational chaos</li>
+<li>use distributed and GPU-enabled processing where needed</li>
+<li>remain maintainable for real researchers using it day to day</li>
+</ul>
+<h2>What I Built</h2>
+<p>I built and evolved the platform as both an application layer and an operational system. That included:</p>
+<ul>
+<li>A Flask-based application layer with multiple route blueprints and internal tool surfaces</li>
+<li>Distributed task execution using Celery and Dask</li>
+<li>MySQL, Redis, and queue-backed background processing</li>
+<li>Docker Swarm orchestration for multi-service deployment</li>
+<li>Integration points for GPU-enabled and domain-specific processing tools</li>
+<li>Operational patterns for testing, deployment, migrations, and service management</li>
+</ul>
+<p>The platform also became the place where related tools could live together coherently: ROI workflows, converters, segmentation, detection pipelines, heatmap generation, and supporting utilities.</p>
+<h2>Architecture and Technical Decisions</h2>
+<h3>Service orchestration</h3>
+<p>The platform runs as an orchestrated set of services, including:</p>
+<ul>
+<li>web application layer</li>
+<li>Celery workers</li>
+<li>Dask scheduler and workers</li>
+<li>MySQL</li>
+<li>Redis</li>
+<li>reverse proxy and deployment edge services</li>
+<li>supporting internal tools such as ROI interfaces</li>
+</ul>
+<h3>Workflow design</h3>
+<p>The key architectural decision was to treat the lab's processing environment as a platform rather than as a set of separate scripts. That made it possible to standardise:</p>
+<ul>
+<li>how jobs are submitted and tracked</li>
+<li>how results are stored and handed off</li>
+<li>how new tools are added</li>
+<li>how compute-heavy steps are moved onto the right execution layer</li>
+</ul>
+<h3>Operational quality</h3>
+<p>This is not just a prototype stack. It needed to be stable enough for repeated use and flexible enough for new research workflows. Testing, deployment, migrations, and maintainability mattered as much as feature delivery.</p>
+<h2>Constraints</h2>
+<p>The platform had to absorb a difficult mix of requirements:</p>
+<ul>
+<li>long-running microscopy jobs</li>
+<li>heterogeneous scientific tools and dependencies</li>
+<li>internal users with very practical workflow needs</li>
+<li>infrastructure that had to stay maintainable in a real research environment</li>
+</ul>
+<p>It also had to support scale: large datasets, many processing stages, and multiple tools sharing a common operational base.</p>
+<h2>Outcome</h2>
+<p>The Grant Lab Research Platform became the backbone for microscopy processing and related research tooling in the lab. It supports workflows that feed published work, reduces operational fragmentation, and creates a durable foundation for adding new tools without rebuilding the stack each time.</p>f:Tda9,
+## Overview
+
+The Grant Lab Research Platform is the operational layer behind a large part of the microscopy processing work in the Seth Grant Lab. It is not a single tool. It is a research software platform that brings together services, data workflows, internal interfaces, and compute orchestration so researchers can move from raw microscopy data to analysis-ready outputs.
+
+This is one of the strongest examples of my systems range because it combines product engineering, infrastructure, workflow design, and ongoing operations in one environment.
+
+## Problem
+
+Research labs often accumulate scripts, desktop tools, and disconnected processing steps over time. That works until scale, reproducibility, collaboration, and maintenance start to matter more than one-off execution.
+
+The problem here was to create a platform that could:
+
+- coordinate long-running and heterogeneous microscopy workflows
+- support multiple internal tools without every new feature becoming operational chaos
+- use distributed and GPU-enabled processing where needed
+- remain maintainable for real researchers using it day to day
+
+## What I Built
+
+I built and evolved the platform as both an application layer and an operational system. That included:
+
+- A Flask-based application layer with multiple route blueprints and internal tool surfaces
+- Distributed task execution using Celery and Dask
+- MySQL, Redis, and queue-backed background processing
+- Docker Swarm orchestration for multi-service deployment
+- Integration points for GPU-enabled and domain-specific processing tools
+- Operational patterns for testing, deployment, migrations, and service management
+
+The platform also became the place where related tools could live together coherently: ROI workflows, converters, segmentation, detection pipelines, heatmap generation, and supporting utilities.
+
+## Architecture and Technical Decisions
+
+### Service orchestration
+
+The platform runs as an orchestrated set of services, including:
+
+- web application layer
+- Celery workers
+- Dask scheduler and workers
+- MySQL
+- Redis
+- reverse proxy and deployment edge services
+- supporting internal tools such as ROI interfaces
+
+### Workflow design
+
+The key architectural decision was to treat the lab's processing environment as a platform rather than as a set of separate scripts. That made it possible to standardise:
+
+- how jobs are submitted and tracked
+- how results are stored and handed off
+- how new tools are added
+- how compute-heavy steps are moved onto the right execution layer
+
+### Operational quality
+
+This is not just a prototype stack. It needed to be stable enough for repeated use and flexible enough for new research workflows. Testing, deployment, migrations, and maintainability mattered as much as feature delivery.
+
+## Constraints
+
+The platform had to absorb a difficult mix of requirements:
+
+- long-running microscopy jobs
+- heterogeneous scientific tools and dependencies
+- internal users with very practical workflow needs
+- infrastructure that had to stay maintainable in a real research environment
+
+It also had to support scale: large datasets, many processing stages, and multiple tools sharing a common operational base.
+
+## Outcome
+
+The Grant Lab Research Platform became the backbone for microscopy processing and related research tooling in the lab. It supports workflows that feed published work, reduces operational fragmentation, and creates a durable foundation for adding new tools without rebuilding the stack each time.
+2:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"CreativeWork\",\"name\":\"Grant Lab Research Platform\",\"description\":\"A distributed research software platform for microscopy processing and synaptome analysis at the University of Edinburgh. It combines web applications, queueing, orchestration, GPU-enabled pipelines, and internal tools into one operational system that supports day-to-day neuroscience workflows.\",\"url\":\"https://digindominic.me/projects/grantlab-research-platform\",\"author\":{\"@type\":\"Person\",\"name\":\"Digin Dominic\",\"url\":\"https://digindominic.me\"},\"dateCreated\":\"2024-06-01\"}"}}],["$","$Ld",null,{"project":{"id":"grantlab-research-platform","metadata":{"title":"Grant Lab Research Platform","date":"2024-06-01","featured":true,"featuredOrder":2,"category":"research","summary":"A distributed research software platform for microscopy processing and synaptome analysis at the University of Edinburgh. It combines web applications, queueing, orchestration, GPU-enabled pipelines, and internal tools into one operational system that supports day-to-day neuroscience workflows.","image":"","tag":"Flask, Docker Swarm, Celery, Dask, Redis, MySQL, Python, CUDA, Three.js","role":"Lead Developer & Infrastructure Architect","duration":"2+ years (ongoing)","problem":"The lab needed more than scripts. It needed a reliable platform that could turn raw microscopy data into repeatable analysis across multiple tools, services, and users.","scope":"Built and operated the distributed platform, analysis services, orchestration, internal tools, and deployment workflows that sit behind multiple microscopy and synaptome pipelines.","outcome":"It became the backbone for day-to-day microscopy processing in the lab and supports workflows that feed published research.","highlights":["Docker Swarm platform coordinating web apps, task queues, Dask workers, storage, and GPU-enabled processing","10+ internal research tools brought under one operational platform","Used in live workflows for conversion, ROI analysis, segmentation, detection, and heatmap generation"],"visibilityNote":"Large parts of this platform are internal to the lab. This case study focuses on architecture, workflow design, and engineering patterns rather than internal interfaces."},"content":"$e","rawContent":"$f"},"prevProject":{"id":"synapse-subtype-analyzer","title":"Synapse Subtype Analyzer"},"nextProject":{"id":"microscopy-format-converters","title":"Microscopy Format Conversion Suite"}}]]
+c:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Grant Lab Research Platform | Digin Dominic"}],["$","meta","3",{"name":"description","content":"A distributed research software platform for microscopy processing and synaptome analysis at the University of Edinburgh. It combines web applications, queueing, orchestration, GPU-enabled pipelines, and internal tools into one operational system that supports day-to-day neuroscience workflows."}],["$","link","4",{"rel":"author","href":"https://digindominic.me"}],["$","meta","5",{"name":"author","content":"Digin Dominic"}],["$","meta","6",{"name":"creator","content":"Digin Dominic"}],["$","meta","7",{"name":"publisher","content":"Digin Dominic"}],["$","meta","8",{"name":"robots","content":"index, follow"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","link","10",{"rel":"canonical","href":"https://digindominic.me/projects/grantlab-research-platform/"}],["$","meta","11",{"property":"og:title","content":"Grant Lab Research Platform | Digin Dominic"}],["$","meta","12",{"property":"og:description","content":"A distributed research software platform for microscopy processing and synaptome analysis at the University of Edinburgh. It combines web applications, queueing, orchestration, GPU-enabled pipelines, and internal tools into one operational system that supports day-to-day neuroscience workflows."}],["$","meta","13",{"property":"og:url","content":"https://digindominic.me/projects/grantlab-research-platform/"}],["$","meta","14",{"property":"og:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","15",{"property":"og:image:width","content":"1200"}],["$","meta","16",{"property":"og:image:height","content":"630"}],["$","meta","17",{"property":"og:image:alt","content":"Grant Lab Research Platform"}],["$","meta","18",{"property":"og:type","content":"article"}],["$","meta","19",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","20",{"name":"twitter:title","content":"Grant Lab Research Platform | Digin Dominic"}],["$","meta","21",{"name":"twitter:description","content":"A distributed research software platform for microscopy processing and synaptome analysis at the University of Edinburgh. It combines web applications, queueing, orchestration, GPU-enabled pipelines, and internal tools into one operational system that supports day-to-day neuroscience workflows."}],["$","meta","22",{"name":"twitter:image","content":"https://digindominic.me/images/digin.png"}],["$","meta","23",{"name":"next-size-adjust"}]]
+1:null

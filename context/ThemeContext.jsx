@@ -5,19 +5,20 @@ import { createContext, useContext, useEffect, useState } from 'react';
 const ThemeContext = createContext({
   theme: 'dark',
   toggleTheme: () => {},
+  mounted: false,
 });
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('theme') || 'dark';
+    }
+    return 'dark';
+  });
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-    // Default is dark mode - no system preference check
   }, []);
 
   useEffect(() => {
@@ -36,12 +37,8 @@ export function ThemeProvider({ children }) {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   };
 
-  if (!mounted) {
-    return null;
-  }
-
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme, mounted }}>
       {children}
     </ThemeContext.Provider>
   );

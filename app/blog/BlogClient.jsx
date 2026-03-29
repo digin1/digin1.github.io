@@ -1,78 +1,134 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faNewspaper, faTimes, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faBookOpen, faTimes } from '@fortawesome/free-solid-svg-icons';
 
-function BlogPostCard({ post, index }) {
-  const { title, image, summary, description, date, tag } = post.metadata || {};
+const futureTopics = [
+  'How I built SynaptopathyDB',
+  'Rendering large synapse datasets in the browser',
+  'Microscopy tooling beyond proprietary software',
+  'Infrastructure choices in research environments',
+];
 
-  const formatDate = (dateStr) => {
-    if (!dateStr) return '';
-    return new Date(dateStr).toLocaleDateString(undefined, { day: '2-digit', month: '2-digit', year: 'numeric' });
-  };
+function getTags(tagString = '', limit = 3) {
+  return tagString
+    .split(',')
+    .map((tag) => tag.trim())
+    .filter(Boolean)
+    .slice(0, limit);
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return '';
+  return new Date(dateStr).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+function LeadPost({ post }) {
+  const { title, summary, description, image, date, tag } = post.metadata || {};
+  const tags = getTags(tag, 4);
 
   return (
-    <motion.div
-      className="group relative"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
-    >
-      <Link href={`/blog/${post.id}`} className="block">
-        <div className="flex flex-col md:flex-row items-stretch rounded-xl overflow-hidden bg-white dark:bg-midnight-steel/80 border border-light-border dark:border-slate-700/50 hover:border-synapse-cyan/30 cursor-pointer hover-card">
-          {image && (
-            <div className="md:w-1/2 relative overflow-hidden">
-              <div className="h-64 md:h-full min-h-[200px]">
-                <img
-                  src={image}
-                  alt={title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 img-glow"
-                />
-              </div>
-            </div>
-          )}
+    <article className="editorial-card overflow-hidden">
+      <div className="grid gap-0 xl:grid-cols-[minmax(0,1fr)_380px]">
+        <div className="p-6 sm:p-7">
+          <span className="eyebrow">Lead essay</span>
+          <h2 className="mt-4 max-w-[18ch] font-display font-bold text-[2rem] leading-[1.04] tracking-tight text-light-text dark:text-ghost-white">
+            {title}
+          </h2>
+          {date ? (
+            <p className="mt-4 text-sm text-light-text-secondary dark:text-muted-steel">
+              {formatDate(date)}
+            </p>
+          ) : null}
+          <p className="mt-4 max-w-[56ch] text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+            {summary || description || ''}
+          </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            {tags.map((tagItem) => (
+              <span key={tagItem} className="tag">
+                {tagItem}
+              </span>
+            ))}
+          </div>
+          <Link href={`/blog/${post.id}`} className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-neural-blue hover:text-synapse-cyan">
+            Read article
+            <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5" />
+          </Link>
+        </div>
 
-          <div className={`${image ? 'md:w-1/2' : 'w-full'} p-6 md:p-8 flex flex-col justify-between relative z-10`}>
-            <div>
-              <h3 className="text-2xl font-display font-bold mb-3 text-light-text dark:text-ghost-white group-hover:text-synapse-cyan transition-colors">
-                {title}
-              </h3>
-
-              {tag && (
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {tag.split(',').slice(0, 3).map((t, idx) => (
-                    <span
-                      key={idx}
-                      className="px-2.5 py-1 text-xs font-mono rounded-full bg-synapse-cyan/10 text-synapse-cyan border border-synapse-cyan/20"
-                    >
-                      {t.trim()}
-                    </span>
-                  ))}
-                </div>
-              )}
-
-              {date && (
-                <p className="text-sm text-light-text-secondary dark:text-muted-steel mb-3 font-mono">
-                  {formatDate(date)}
+        <div className="border-t border-light-border/80 bg-light-surface/70 p-4 dark:border-zinc-800 dark:bg-zinc-900 xl:border-l xl:border-t-0">
+          <div className="flex h-full min-h-[220px] items-center justify-center overflow-hidden rounded-xl border border-light-border/80 bg-light-surface dark:border-zinc-800 dark:bg-zinc-900">
+            {image ? (
+              <img src={image} alt={title} loading="lazy" className="h-full w-full object-cover object-center" />
+            ) : (
+              <div className="px-6 text-center">
+                <p className="meta-label">Writing</p>
+                <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+                  Notes on research software, infrastructure, and technical problem-solving.
                 </p>
-              )}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
 
-              <p className="text-light-text-secondary dark:text-muted-steel mb-4 line-clamp-4">
-                {summary || description || ''}
-              </p>
+function ArchivePost({ post, index }) {
+  const { title, summary, description, date, tag } = post.metadata || {};
+  const tags = getTags(tag, 3);
+
+  return (
+    <motion.article
+      initial={{ opacity: 0, y: 10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.32, delay: Math.min(index * 0.04, 0.24) }}
+    >
+      <Link
+        href={`/blog/${post.id}`}
+        className="group block rounded-2xl border border-light-border bg-light-card p-4 hover:border-neural-blue/40 hover:bg-neural-blue/5 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-slate-950/35"
+      >
+        <div className="grid gap-4 md:grid-cols-[180px_minmax(0,1fr)_auto] md:items-start">
+          <div>
+            <p className="meta-label">Published</p>
+            <p className="mt-2 text-sm font-semibold text-light-text dark:text-ghost-white">
+              {formatDate(date)}
+            </p>
+          </div>
+
+          <div className="min-w-0">
+            <h3 className="text-xl font-display font-bold tracking-tight text-light-text group-hover:text-neural-blue dark:text-ghost-white">
+              {title}
+            </h3>
+            <p className="mt-3 max-w-[60ch] text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+              {summary || description || ''}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {tags.map((tagItem) => (
+                <span key={tagItem} className="tag">
+                  {tagItem}
+                </span>
+              ))}
             </div>
+          </div>
 
-            <span className="inline-flex items-center text-neural-blue font-medium group-hover:text-synapse-cyan mt-4">
-              Read More
-              <FontAwesomeIcon icon={faChevronRight} className="ml-2 text-sm transition-transform group-hover:translate-x-1" />
+          <div className="flex items-center md:justify-end">
+            <span className="inline-flex items-center gap-2 text-sm font-medium text-neural-blue group-hover:text-synapse-cyan">
+              Read
+              <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5" />
             </span>
           </div>
         </div>
       </Link>
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -80,116 +136,165 @@ export default function BlogClient({ posts = [] }) {
   const [activeTag, setActiveTag] = useState('');
 
   const allTags = useMemo(() => {
-    const tagsSet = new Set();
-    posts.forEach(post => {
+    const tags = new Set();
+    posts.forEach((post) => {
       if (post.metadata?.tag) {
-        post.metadata.tag.split(',').map(t => t.trim()).forEach(t => tagsSet.add(t));
+        post.metadata.tag.split(',').forEach((tag) => tags.add(tag.trim()));
       }
     });
-    return Array.from(tagsSet).sort();
+    return Array.from(tags).filter(Boolean).sort();
   }, [posts]);
 
-  const filteredPosts = useMemo(() => {
-    if (!activeTag) return posts;
-    return posts.filter(post => {
-      if (!post.metadata?.tag) return false;
-      const postTags = post.metadata.tag.split(',').map(t => t.trim());
-      return postTags.includes(activeTag);
-    });
-  }, [posts, activeTag]);
-
   const sortedPosts = useMemo(() => {
-    return [...filteredPosts].sort((a, b) => {
+    const result = activeTag
+      ? posts.filter((post) => {
+          const postTags = post.metadata?.tag
+            ? post.metadata.tag.split(',').map((tag) => tag.trim())
+            : [];
+          return postTags.includes(activeTag);
+        })
+      : posts;
+
+    return [...result].sort((a, b) => {
       const dateA = a.metadata?.date ? new Date(a.metadata.date) : new Date(0);
       const dateB = b.metadata?.date ? new Date(b.metadata.date) : new Date(0);
       return dateB - dateA;
     });
-  }, [filteredPosts]);
+  }, [posts, activeTag]);
+
+  const leadPost = sortedPosts[0];
+  const archivePosts = leadPost ? sortedPosts.slice(1) : [];
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <motion.div
-        className="text-center mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <span className="inline-block px-4 py-1.5 rounded-full bg-synapse-cyan/10 text-synapse-cyan text-sm font-mono mb-4 border border-synapse-cyan/20">
-          {'// Articles & Insights'}
-        </span>
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-light-text dark:text-ghost-white mb-4">
-          My <span className="text-gradient">Blog</span>
-        </h1>
-        <p className="max-w-2xl mx-auto text-light-text-secondary dark:text-muted-steel mb-8">
-          Explore my thoughts, insights, and experiences
-        </p>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+      <div className="mx-auto max-w-6xl">
+        <motion.header
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.42 }}
+          className="border-b border-light-border pb-8 dark:border-zinc-800"
+        >
+          <span className="eyebrow mb-4">Writing</span>
+          <h1 className="max-w-[12ch] font-display font-bold text-[2.7rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white sm:text-[3.2rem]">
+            Notes on software, systems, and technical work that matters in practice.
+          </h1>
+          <p className="mt-5 max-w-[62ch] text-[1.03rem] leading-8 text-light-text-secondary dark:text-muted-steel">
+            This section is smaller than the work archive, but it will grow around research software, infrastructure choices, scientific visualisation, and lessons from building real systems.
+          </p>
+        </motion.header>
 
-        {allTags.length > 0 && (
-          <div className="flex flex-wrap justify-center gap-2">
-            {allTags.map(tag => (
-              <motion.button
-                key={tag}
-                onClick={() => setActiveTag(activeTag === tag ? '' : tag)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  activeTag === tag
-                    ? 'bg-gradient-to-r from-synapse-cyan to-neural-blue text-white shadow-glow-cyan'
-                    : 'bg-light-surface dark:bg-midnight-steel/50 text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white border border-light-border dark:border-slate-700/50 hover:border-synapse-cyan/30'
-                }`}
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: activeTag !== tag ? '0 8px 20px rgba(6, 182, 212, 0.15)' : undefined
-                }}
-                whileTap={{ scale: 0.98 }}
-              >
-                {tag}
-              </motion.button>
-            ))}
-            {activeTag && (
-              <motion.button
-                onClick={() => setActiveTag('')}
-                className="px-4 py-2 rounded-lg text-sm font-medium bg-red-500/10 text-red-500 border border-red-500/20 hover:bg-red-500/20 transition-colors"
-                whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(239, 68, 68, 0.2)' }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <FontAwesomeIcon icon={faTimes} className="mr-2" />
-                Clear
-              </motion.button>
-            )}
-          </div>
-        )}
-      </motion.div>
-
-      <AnimatePresence mode="wait">
-        {sortedPosts.length === 0 ? (
-          <motion.div
-            className="text-center glass-card p-12 max-w-xl mx-auto"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
-          >
-            <div className="w-16 h-16 rounded-full bg-synapse-cyan/10 flex items-center justify-center mx-auto mb-4">
-              <FontAwesomeIcon icon={faNewspaper} className="text-synapse-cyan text-2xl" />
+        {allTags.length > 0 ? (
+          <section className="mt-6 editorial-card p-4 sm:p-5">
+            <div className="flex flex-wrap items-center gap-2">
+              {allTags.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setActiveTag(activeTag === tag ? '' : tag)}
+                  className={activeTag === tag ? 'tag bg-neural-blue text-deep-space border-neural-blue' : 'tag'}
+                >
+                  {tag}
+                </button>
+              ))}
+              {activeTag ? (
+                <button onClick={() => setActiveTag('')} className="btn-secondary">
+                  <FontAwesomeIcon icon={faTimes} className="h-3.5 w-3.5" />
+                  Clear
+                </button>
+              ) : null}
             </div>
-            <h3 className="text-xl font-display font-semibold text-light-text dark:text-ghost-white mb-2">
-              No blog posts found
-            </h3>
-            <p className="text-light-text-secondary dark:text-muted-steel">
-              {activeTag ? 'Try selecting a different tag or clear the filter.' : 'Check back soon for new content!'}
-            </p>
-          </motion.div>
-        ) : (
-          <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
-            {sortedPosts.map((post, index) => (
-              <BlogPostCard key={post.id} post={post} index={index} />
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+          </section>
+        ) : null}
+
+        {leadPost ? (
+          <section className="mt-8">
+            <div className="mb-4 flex items-end justify-between gap-4">
+              <div>
+                <p className="eyebrow">Latest post</p>
+                <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+                  Writing should read like engineering notes, not lifestyle content.
+                </p>
+              </div>
+            </div>
+            <LeadPost post={leadPost} />
+          </section>
+        ) : null}
+
+        <section className="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
+          <div>
+            <div className="mb-4 flex items-end justify-between gap-4 border-b border-light-border pb-3 dark:border-zinc-800">
+              <div>
+                <p className="eyebrow">Archive</p>
+                <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+                  A denser list of published notes and technical reflections.
+                </p>
+              </div>
+            </div>
+
+            <AnimatePresence mode="wait">
+              {sortedPosts.length === 0 ? (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.98 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.98 }}
+                  className="editorial-card px-6 py-12 text-center"
+                >
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-light-border bg-light-surface text-neural-blue dark:border-zinc-800 dark:bg-zinc-900">
+                    <FontAwesomeIcon icon={faBookOpen} className="h-5 w-5" />
+                  </div>
+                  <h3 className="mt-5 text-xl font-display font-bold text-light-text dark:text-ghost-white">
+                    No posts match this filter.
+                  </h3>
+                  <p className="mt-3 text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+                    Clear the active tag to return to the full archive.
+                  </p>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key={activeTag || 'all'}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="space-y-3"
+                >
+                  {archivePosts.map((post, index) => (
+                    <ArchivePost key={post.id} post={post} index={index} />
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <aside className="space-y-5">
+            <div className="editorial-card p-5 sm:p-6">
+              <p className="meta-label">Planned writing</p>
+              <div className="mt-4 space-y-3">
+                {futureTopics.map((topic) => (
+                  <div key={topic} className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                    <p className="text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+                      {topic}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="editorial-card p-5 sm:p-6">
+              <p className="meta-label">Related reading path</p>
+              <p className="mt-4 text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+                If you want the strongest proof first, start with the work archive and publications, then come back here for the implementation notes and opinions behind the systems.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href="/projects" className="btn-secondary">
+                  View work
+                </Link>
+                <Link href="/publications" className="btn-secondary">
+                  Publications
+                </Link>
+              </div>
+            </div>
+          </aside>
+        </section>
+      </div>
     </div>
   );
 }

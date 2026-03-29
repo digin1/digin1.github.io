@@ -3,18 +3,18 @@ import AboutClient from './AboutClient';
 
 export const metadata = {
   title: 'About',
-  description: 'Learn more about Digin Dominic - Full Stack Developer with expertise in React, Node.js, Python, and modern web technologies. Background, skills, and professional journey.',
-  keywords: ['about', 'Digin Dominic', 'full stack developer', 'software engineer', 'React developer', 'biography', 'skills'],
+  description: 'Background, career path, and working style of Digin Dominic — from Linux systems and security to research software engineering at the University of Edinburgh.',
+  keywords: ['Digin Dominic', 'about', 'research software engineer', 'University of Edinburgh', 'scientific software', 'Linux systems', 'SynaptopathyDB', 'neuroscience tooling'],
   openGraph: {
     title: 'About | Digin Dominic',
-    description: 'Learn more about Digin Dominic - Full Stack Developer with expertise in modern web technologies.',
+    description: 'Career path, technical range, and research software work at the University of Edinburgh.',
     url: 'https://digindominic.me/about',
     type: 'profile',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About | Digin Dominic',
-    description: 'Learn more about Digin Dominic - Full Stack Developer.',
+    description: 'Career path, technical range, and research software work at the University of Edinburgh.',
   },
   alternates: {
     canonical: 'https://digindominic.me/about',

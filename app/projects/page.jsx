@@ -2,19 +2,19 @@ import { getContentByType } from '@/lib/content';
 import ProjectsClient from './ProjectsClient';
 
 export const metadata = {
-  title: 'Projects',
-  description: 'Browse my portfolio of full-stack web applications, React projects, Node.js backends, Python tools, and data visualization dashboards.',
-  keywords: ['portfolio', 'projects', 'web applications', 'React', 'Node.js', 'Python', 'data visualization', 'full stack'],
+  title: 'Work',
+  description: 'Case studies across research software, scientific databases, microscopy tooling, browser-based visualisation, and infrastructure-heavy engineering work by Digin Dominic.',
+  keywords: ['research software', 'case studies', 'scientific software', 'microscopy tooling', 'Three.js', 'Python', 'research engineering', 'data workflows'],
   openGraph: {
-    title: 'Projects | Digin Dominic',
-    description: 'Browse my portfolio of full-stack web applications and development work.',
+    title: 'Work | Digin Dominic',
+    description: 'Case studies across research software, visualisation, infrastructure, and scientific tooling.',
     url: 'https://digindominic.me/projects',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Projects | Digin Dominic',
-    description: 'Browse my portfolio of full-stack web applications and development work.',
+    title: 'Work | Digin Dominic',
+    description: 'Case studies across research software, visualisation, infrastructure, and scientific tooling.',
   },
   alternates: {
     canonical: 'https://digindominic.me/projects',

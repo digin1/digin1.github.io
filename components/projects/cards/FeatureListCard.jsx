@@ -29,7 +29,7 @@ export default function FeatureListCard({
         <span className="text-xs font-mono text-signal-green uppercase tracking-wider">
           Key Features
         </span>
-        <h4 className="text-lg font-display font-semibold text-light-text dark:text-ghost-white">
+        <h4 className="text-lg font-display font-bold text-light-text dark:text-ghost-white">
           {features.length} Features
         </h4>
       </div>

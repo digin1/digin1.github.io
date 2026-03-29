@@ -19,42 +19,42 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
       : preprintPubs;
 
   return (
-    <div className="bg-white dark:bg-slate-950 min-h-screen">
+    <div className="min-h-screen bg-transparent">
       {/* Header */}
-      <header className="border-b border-slate-200 dark:border-slate-800">
-        <div className="max-w-5xl mx-auto px-6 pt-12 pb-8 md:pt-16 md:pb-10">
+      <header className="border-b border-light-border dark:border-zinc-800">
+        <div className="max-w-6xl mx-auto px-6 pt-8 pb-8 md:pt-10 md:pb-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-sm font-medium text-neural-blue mb-3 uppercase tracking-wide">
-              Research
-            </p>
-            <h1 className="font-serif text-[2rem] sm:text-[2.5rem] md:text-[3rem] leading-[1.1] font-bold text-slate-900 dark:text-white mb-4">
+            <span className="eyebrow mb-4">
+              Research output
+            </span>
+            <h1 className="font-display font-bold text-[2.4rem] sm:text-[2.9rem] md:text-[3.4rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white mb-4">
               Publications
             </h1>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
-              Academic publications, research papers, and scientific contributions.
+            <p className="max-w-3xl text-[1rem] leading-8 text-light-text-secondary dark:text-muted-steel">
+              Academic publications, peer-reviewed papers, and preprints connected to the research software and platform work.
             </p>
           </motion.div>
         </div>
       </header>
 
       {/* Tabs */}
-      <div className="border-b border-slate-200 dark:border-slate-800">
-        <div className="max-w-5xl mx-auto px-6">
+      <div className="border-b border-light-border dark:border-zinc-800">
+        <div className="max-w-6xl mx-auto px-6">
           <nav className="flex gap-8" aria-label="Publication tabs">
             <button
               onClick={() => setActiveTab('main')}
               className={`relative py-4 text-sm font-medium transition-colors ${
                 activeTab === 'main'
                   ? 'text-neural-blue'
-                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                  : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white'
               }`}
             >
               Main Author
-              <span className="ml-2 text-xs text-slate-400">({mainAuthorPubs.length})</span>
+              <span className="ml-2 text-xs text-light-text-secondary dark:text-muted-steel">({mainAuthorPubs.length})</span>
               {activeTab === 'main' && (
                 <motion.div
                   layoutId="tab-indicator"
@@ -68,11 +68,11 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
               className={`relative py-4 text-sm font-medium transition-colors ${
                 activeTab === 'co'
                   ? 'text-neural-blue'
-                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                  : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white'
               }`}
             >
               Co-Author
-              <span className="ml-2 text-xs text-slate-400">({coAuthorPubs.length})</span>
+              <span className="ml-2 text-xs text-light-text-secondary dark:text-muted-steel">({coAuthorPubs.length})</span>
               {activeTab === 'co' && (
                 <motion.div
                   layoutId="tab-indicator"
@@ -86,11 +86,11 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
               className={`relative py-4 text-sm font-medium transition-colors ${
                 activeTab === 'preprint'
                   ? 'text-neural-blue'
-                  : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+                  : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white'
               }`}
             >
               Preprints
-              <span className="ml-2 text-xs text-slate-400">({preprintPubs.length})</span>
+              <span className="ml-2 text-xs text-light-text-secondary dark:text-muted-steel">({preprintPubs.length})</span>
               {activeTab === 'preprint' && (
                 <motion.div
                   layoutId="tab-indicator"
@@ -104,14 +104,14 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
       </div>
 
       {/* Publications List */}
-      <div className="max-w-5xl mx-auto px-6 py-10">
+      <div className="max-w-6xl mx-auto px-6 py-8 md:py-10">
         {currentPubs.length > 0 ? (
           <motion.div
             key={activeTab}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
-            className="space-y-8"
+            className="space-y-4"
           >
             {currentPubs.map((pub, index) => (
               <PublicationCard key={pub.id} publication={pub} index={index} />
@@ -123,13 +123,13 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
             animate={{ opacity: 1 }}
             className="text-center py-16"
           >
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center">
-              <FontAwesomeIcon icon={faQuoteRight} className="w-6 h-6 text-slate-400" />
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-light-surface dark:bg-zinc-900 border border-light-border dark:border-zinc-800 flex items-center justify-center">
+              <FontAwesomeIcon icon={faQuoteRight} className="w-6 h-6 text-zinc-400" />
             </div>
-            <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">
+            <h3 className="text-lg font-medium text-light-text dark:text-ghost-white mb-2">
               No publications yet
             </h3>
-            <p className="text-slate-500 dark:text-slate-400">
+            <p className="text-light-text-secondary dark:text-muted-steel">
               {activeTab === 'main'
                 ? 'Main author publications will appear here.'
                 : activeTab === 'co'
@@ -152,28 +152,28 @@ function PublicationCard({ publication, index }) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="border-b border-slate-200 dark:border-slate-800 pb-8 last:border-0"
+      className="editorial-card p-5 sm:p-6"
     >
       {/* Badges */}
       <div className="flex flex-wrap gap-2 mb-3">
         {status && (
           <span className={`inline-block px-2 py-0.5 text-xs font-medium rounded ${
             status === 'published'
-              ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-              : 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
+              ? 'bg-signal-green/15 text-signal-green'
+              : 'bg-plasma-purple/15 text-plasma-purple'
           }`}>
             {status === 'published' ? 'Published' : 'Preprint'}
           </span>
         )}
         {equalContribution && (
-          <span className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400">
+          <span className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-neural-blue/15 text-neural-blue">
             * Equal Contribution
           </span>
         )}
       </div>
 
       {/* Title */}
-      <h2 className="font-serif text-xl md:text-2xl font-bold text-slate-900 dark:text-white mb-3 leading-tight">
+      <h2 className="font-display font-bold text-xl md:text-[1.7rem] tracking-tight text-light-text dark:text-ghost-white mb-3 leading-tight">
         {doi ? (
           <a
             href={doi}
@@ -189,12 +189,12 @@ function PublicationCard({ publication, index }) {
       </h2>
 
       {/* Authors */}
-      <p className="text-slate-600 dark:text-slate-400 mb-2">
+      <p className="text-light-text-secondary dark:text-muted-steel mb-2">
         {authors}
       </p>
 
       {/* Journal & Year */}
-      <p className="text-sm text-slate-500 dark:text-slate-500 mb-4">
+      <p className="text-sm text-light-text-secondary dark:text-muted-steel mb-4">
         <span className="italic">{journal}</span>
         {year && <span> ({year})</span>}
       </p>
@@ -202,7 +202,7 @@ function PublicationCard({ publication, index }) {
       {/* Abstract from content */}
       {content && (
         <div
-          className="font-serif text-slate-700 dark:text-slate-300 mb-4 leading-relaxed prose prose-sm max-w-none dark:prose-invert"
+          className="text-light-text-secondary dark:text-muted-steel mb-4 leading-relaxed prose prose-sm max-w-none dark:prose-invert prose-p:text-light-text-secondary dark:prose-p:text-muted-steel"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       )}
@@ -214,7 +214,7 @@ function PublicationCard({ publication, index }) {
             href={doi}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-neural-blue hover:bg-neural-blue/10 rounded transition-colors"
+            className="btn-secondary"
           >
             <FontAwesomeIcon icon={faExternalLinkAlt} className="w-3.5 h-3.5" />
             View Publication
@@ -225,7 +225,7 @@ function PublicationCard({ publication, index }) {
             href={pdf}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors"
+            className="btn-secondary"
           >
             <FontAwesomeIcon icon={faFilePdf} className="w-3.5 h-3.5" />
             PDF
@@ -236,7 +236,7 @@ function PublicationCard({ publication, index }) {
             href={pubmed}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors"
+            className="btn-secondary"
           >
             <FontAwesomeIcon icon={faExternalLinkAlt} className="w-3.5 h-3.5" />
             PubMed

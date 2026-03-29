@@ -1,140 +1,93 @@
 ---
-title: "SynaptopathyDB - A Comprehensive Resource for Synaptopathy Research"
+title: "SynaptopathyDB"
 date: "2025-06-27"
 featured: true
-featuredOrder: 2
+featuredOrder: 1
 category: "research"
-summary: "A comprehensive web platform for exploring synaptic protein-disease relationships, integrating data from 64 proteomic studies to facilitate research into synaptopathies. Developed as lead web developer for University of Edinburgh researchers, featuring advanced search interfaces, interactive visualizations, and RESTful API access."
+summary: "A scientific database and web platform that connects synaptic proteins, genes, mutations, diseases, and publications for synaptopathy research. Built as the main software surface for a project that became a Scientific Reports publication, with unified search, data exploration, export, and API access."
 image: "/images/synaptopathydb.png"
 tag: "React, Flask, Python, SQLite, Tailwind CSS, REST API, Data Visualization"
 demo: "https://www.synaptopathydb.org"
 role: "Lead Web Developer"
 duration: "6 months"
+problem: "Researchers needed a way to query proteomic, genetic, and phenotypic data together instead of moving across disconnected papers, databases, and spreadsheet-like resources."
+scope: "Built the full web platform: frontend architecture, backend API, search and autocomplete flows, data views, exports, and deployment."
+outcome: "The platform became part of a Scientific Reports paper where I am a co-first author and now serves as a public research resource."
+highlights:
+  - "Integrates data from 64 mammalian synapse proteomic studies into one searchable system"
+  - "Surfaces 3,437 consensus synapse proteins linked to 1,266 OMIM diseases"
+  - "Supports unified gene, disease, mutation, and publication exploration with export and API access"
 ---
 
-## Project Overview
+## Overview
 
-SynaptopathyDB is an online resource designed to facilitate research into the genetic basis and clinical manifestations of synaptopathies — brain and behavioural disorders caused by mutations in genes encoding synaptic proteins. The platform integrates data from 64 mammalian synapse proteomic studies with multiple genetic and phenotypic resources, enabling researchers to explore connections between synaptic proteins, genetic variants, and human disease phenotypes.
+SynaptopathyDB is an online resource for studying the genetic and clinical basis of synaptopathies: disorders linked to mutations in genes encoding synaptic proteins. The platform brings together proteomic studies, disease associations, mutation data, and publication records so researchers can work from a single interface instead of stitching together evidence manually.
 
-## Project Details
+The project is one of the clearest public examples of the work I do at the University of Edinburgh: turning complex scientific data into a usable product with real research value.
 
-### Technologies Used
+## Problem
 
-* React.js
-* Tailwind CSS
-* Flask (Python)
-* Flask-SQLAlchemy
-* SQLite
-* Recharts (Data Visualization)
-* Docker
-* nginx
-* RESTful API
+The underlying science is rich, but the information landscape is fragmented. Researchers often need to move between proteomic studies, disease records, mutation databases, and publications just to answer basic questions such as:
 
-### Key Features
+- Which synaptic genes are associated with a disease?
+- Which mutations have been reported for a gene?
+- Which studies support a particular synaptic localisation?
+- How do publication, disease, and protein records connect?
 
-* **Gene Search Interface**: Comprehensive exploration of individual genes with detailed information including multiple species identifiers, associated publications, disease associations, mutation details, and synaptic compartment localization
-* **Disease Search Interface**: Explore diseases and their associated synaptic genes with detailed mutation information, publication links, and downloadable reports
-* **Publication Search**: Retrieve scientific publications with gene-disease connections, with filtering by associated genes and mutations
-* **Autocomplete Search**: Real-time suggestions supporting multiple identifier types including Human/Mouse/Rat Entrez, MGI, Ensembl ID, and gene aliases
-* **Interactive Data Visualizations**: Disease classification trends, protein localization history, discovery rate analyses, and compartment-specific protein distributions
-* **CSV Data Export**: Structured datasets including synapse proteome lists for further analysis
-* **RESTful API**: Programmatic access to raw data and complex queries with full documentation
-* **Consensus Filtering**: Filter results by protein localization within synaptic compartments
+The challenge was not just to store the data. It was to design a system that let researchers navigate across these relationships quickly and with enough context to support real scientific work.
 
-### Development Process
+## What I Built
 
-As lead web developer, I built the full-stack web application while collaborating with researchers at the University of Edinburgh who provided the underlying databases and scientific data.
+I built the full web application, including the user-facing search experience, the backend API, and the application architecture around the data model provided by the research collaboration.
 
-#### Frontend Architecture
+Core parts of the build included:
 
-Built a modular React.js application with custom hooks for reusable logic:
+- **Gene, disease, and publication views** that connect records across the dataset instead of presenting them in isolation
+- **Autocomplete and identifier-aware search** supporting multiple biological identifier systems and aliases
+- **Lazy-loaded tabs and progressive fetching** so detailed pages stayed usable without front-loading every related record
+- **Export and API access** so the platform could work both as a website and as a reusable data surface for downstream analysis
+- **Interactive visualisation endpoints** for charts and summary views that help researchers inspect trends in the data
 
-* **Custom Hooks**:
-  * `useSearch` - Manages search state, autocomplete suggestions with debouncing (300ms), pagination, and tab data loading
-  * `useConsensusFilter` - Filters search results to show only consensus genes (proteins found in 5+ studies)
-  * `useToggle` - Handles expandable cards and collapsible sections
-* **Search Implementation**:
-  * Real-time autocomplete using lodash debounce
-  * Protein name detection with MyGene.info API integration for protein-to-gene symbol resolution
-  * Multi-identifier support (Entrez, MGI, Ensembl, UniProt)
-  * URL query parameter support for shareable searches
-* **Component Structure**:
-  * 18 page components including GeneSearch (119KB), DiseaseSearch, PaperSearch
-  * Reusable components: SearchForm, Pagination, DownloadButton, NoResults
-  * Visualization components using Recharts for interactive charts
+## Technical Decisions
 
-#### Backend Architecture
+### Frontend
 
-Developed a Flask REST API with modular route blueprints:
+The frontend was built as a modular React application with reusable search logic and domain-specific components. The priority was not visual flourish. It was helping researchers move quickly between records, filters, and related data without losing context.
 
-* **Database Layer**:
-  * SQLAlchemy ORM with SQLite backend (~770MB database)
-  * Complex JOIN queries across Gene, Disease, Paper, Mutation, and PaperGene tables
-  * Connection pooling with 300-second timeout for long-running queries
-  * SQL trace logging for debugging
-* **API Endpoints**:
-  * `/api/gene/search` - Gene search with pagination and filtering
-  * `/api/gene/<id>/tab/<type>` - Lazy-loaded tab data (papers, diseases, mutations)
-  * `/api/disease/search` - Disease search with gene associations
-  * `/api/paper/search` - Publication search with gene/mutation counts
-  * `/api/consensus/genes` - Returns 3,437 consensus gene IDs
-  * `/api/protein/lookup` - MyGene.info integration for protein name resolution
-  * `/api/stats/*` - Chart data endpoints for visualizations
-  * `/api/autocomplete` - Multi-type autocomplete suggestions
-* **Data Processing**:
-  * Consensus gene loading from Human_syn_top5.txt at startup
-  * CSV/Excel export with pandas and XlsxWriter
-  * Concurrent request handling with ThreadPoolExecutor
+Key frontend decisions included:
 
-#### Data Visualization
+- Debounced autocomplete and identifier-aware search
+- URL-driven state for shareable searches
+- Lazy-loading detail panels to keep first-load performance reasonable
+- Separate reusable components for search, pagination, export, and no-results flows
 
-Implemented interactive charts for research insights:
+### Backend
 
-* **Disease Discovery Trends**: Year-by-year new disease counts and cumulative totals
-* **Synaptic Compartment Distribution**: Protein localization across presynaptic/postsynaptic compartments
-* **ICD-11 Chapter Classification**: Disease categorization visualizations
-* **Brain Region Distribution**: Protein distribution across brain regions
+The backend was a Flask API on top of a substantial SQLite dataset, using SQLAlchemy and modular routes to expose search, detail, autocomplete, and statistics endpoints.
 
-#### Deployment Infrastructure
+Important backend decisions included:
 
-* **Docker Compose**: Multi-container setup with backend, frontend, and nginx services
-* **nginx**: Reverse proxy configuration for production deployment
-* **SSL Support**: Separate docker-compose.ssl.yml for HTTPS configuration
-* **Environment Variables**: Secure handling of API keys (NIH_KEY)
+- Complex relational queries across genes, diseases, papers, and mutations
+- Connection management tuned for longer-running scientific queries
+- Programmatic access through API endpoints rather than a UI-only design
+- Integration with external lookup services for protein-to-gene resolution
 
-## Scientific Impact
+## Constraints
 
-The database serves the neuroscience research community by providing:
+This was not a generic content site. The platform had to handle:
 
-* A consensus set of 3,437 mammalian synapse proteins from presynaptic and postsynaptic compartments
-* Mapping of 954 genes encoding synaptic proteins to 1,266 OMIM diseases of the central and peripheral nervous system
-* Tools for understanding the pervasive role of synaptic gene variants in neurological, psychiatric, developmental, and systemic disorders
+- A large scientific dataset with multiple entity types and relationship paths
+- Multiple biological identifier systems across species
+- Research users who need both fast lookup and deep linked context
+- A public-facing product surface that still needed to be trustworthy and maintainable
 
-## Technical Highlights
+## Outcome
 
-* **Large-Scale Data Handling**: Efficiently manages queries against a 770MB+ SQLite database containing data from 64 proteomic studies with optimized JOIN queries and connection pooling
-* **Intelligent Search**: Protein-to-gene resolution using MyGene.info API, debounced autocomplete, and multi-identifier support (Entrez, MGI, Ensembl, UniProt across Human, Mouse, and Rat)
-* **Lazy Loading Architecture**: Tab data (papers, diseases, mutations) loaded on-demand to optimize initial page load performance
-* **Real-Time Analytics**: Built-in visit tracking with dedicated stats database and API usage analytics dashboard
-* **Modular Codebase**: Custom React hooks for reusable search logic, Flask blueprints for organized API routes
-* **Export Capabilities**: CSV and Excel export using pandas and XlsxWriter for researcher data analysis
-* **Responsive Design**: Tailwind CSS with mobile-first approach for cross-device accessibility
+SynaptopathyDB became part of a peer-reviewed publication in *Scientific Reports*, where I am a co-first author. More importantly, it turned a large, multi-source scientific dataset into something researchers could actually interrogate, browse, and reuse.
 
-### Database Schema
+It is one of the strongest examples in this portfolio because it combines product thinking, data modelling, full-stack engineering, and research impact in one public system.
 
-The SQLite database integrates multiple biological data sources:
+## Links
 
-* **Gene Table**: Human/Mouse/Rat Entrez IDs, gene names, Ensembl IDs, UniProt accessions
-* **Disease Table**: HDOID (Human Disease Ontology), descriptions, OMIM mappings
-* **Paper Table**: PMID, publication year, title, description from 64 proteomic studies
-* **Mutation Table**: Chromosome, position, variant, cDNA/protein variants, ClinVar annotations
-* **Junction Tables**: PaperGene, DiseaseGene, PaperMutation for many-to-many relationships
-* **Reference Tables**: Species (TaxID), BrainRegion, Localisation, Method
-
-## Achievements
-
-* **Equal Contribution Author** on the bioRxiv preprint: "SynaptopathyDB: a resource for studying the genetic and synaptic basis of nervous system disorders" (doi: 10.1101/2025.06.27.661932)
-* Funded by The Wellcome Trust [218293/Z/19/Z]
-* Collaboration with the Genes to Cognition Programme at the University of Edinburgh
-* Platform used by researchers studying the molecular basis of brain diseases including schizophrenia, depression, and neurodevelopmental disorders
-
+- Live site: [synaptopathydb.org](https://www.synaptopathydb.org)
+- Paper: [Scientific Reports DOI](https://doi.org/10.1038/s41598-025-26969-z)

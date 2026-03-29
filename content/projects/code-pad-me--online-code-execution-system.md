@@ -1,12 +1,12 @@
 ---
 title: "Code-Pad.me - Award-Winning Online Code Execution System"
 date: "2021-11-15"
-featured: true
+featured: false
 featuredOrder: 4
 category: "personal"
 summary: "Code-Pad.me is an award-winning web application that lets users write, run, and share code instantly from any device. Built during my MSc at Nottingham Trent University, it eliminates the need for local compilers using a cloud-based execution system. Designed for learners and educators, it's perfect for coding challenges, teaching, and collaboration."
 image: "/images/code-pad.png"
-tag: "Django, bootstrap, JQuery, Docker, SQLite, PostgreSQL, GitLab, Judge0"
+tag: "Django, Bootstrap, jQuery, Docker, SQLite, PostgreSQL, GitLab, Judge0"
 github: "https://gitlab.com/digin13dominic/code-pad.me"
 demo: "https://code-pad.me"
 role: "Solo Developer"
@@ -93,7 +93,7 @@ The app uses a modern stack with continuous delivery pipelines:
 
 ## 📈 Achievements
 
-- 🏆 **Best Project Award** - Nottingham Trent University, 2025
+- **Best Project Award** - Nottingham Trent University, 2022
 - 🎓 Successfully presented to academic panels and peers
 - 💬 Positive feedback from students, developers, and educators
 
@@ -141,4 +141,3 @@ Special thanks to my supervisor [Dr. Madasar Shah](https://shah.fyi/) and Nottin
 
 > _“This project wasn't just about building a code runner—it's about empowering anyone, anywhere, to learn and write code without barriers.”_  
 > — **Digin Dominic**
-

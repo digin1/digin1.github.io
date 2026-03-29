@@ -1,130 +1,80 @@
 ---
-title: "MontageROI Segmenter - Web-Based ROI Annotation Tool"
+title: "MontageROI Segmenter"
 date: "2025-11-13"
 featured: true
-featuredOrder: 1
+featuredOrder: 3
 category: "research"
-summary: "A powerful web-based application for viewing high-resolution montage TIFF images and creating, editing, and managing Region of Interest (ROI) overlays. Built for the Grant Lab at University of Edinburgh, featuring Three.js WebGL rendering, comprehensive editing tools, and ImageJ-compatible export."
+summary: "A browser-based ROI annotation tool for large microscopy montage images. Built with Flask and Three.js so researchers can inspect, annotate, transform, and export ROI overlays directly in the browser instead of relying on desktop-only workflows."
 image: "/images/montageroisegmenter.jpg"
 tag: "Flask, Python, Three.js, WebGL, JavaScript, Bootstrap, Docker, ImageJ, TIFF Processing"
 role: "Lead Developer"
 duration: "Ongoing"
+problem: "Researchers needed a browser-based way to annotate huge TIFF montages without falling back to desktop-only or proprietary tooling."
+scope: "Built the web app, WebGL viewer, ROI editing workflow, import/export path, and touch-friendly interaction model."
+outcome: "Made large-image annotation practical in the browser while staying compatible with existing ImageJ-based research workflows."
+highlights:
+  - "Smooth pan and zoom for large montage TIFF images using Three.js/WebGL"
+  - "ROI drawing, layer management, transform tools, undo/redo, and ImageJ-compatible export"
+  - "Designed for real annotation work, including touch-device use"
+visibilityNote: "This tool is used in research workflows. The case study focuses on the engineering decisions and annotation experience rather than internal datasets."
 ---
 
-## Project Overview
+## Overview
 
-MontageROI Segmenter is a specialized web application designed for neuroscience researchers to annotate and segment high-resolution microscopy montage images. The tool enables researchers to load large multi-channel TIFF images, create precise ROI annotations, and export them in ImageJ-compatible formats for downstream analysis.
+MontageROI Segmenter is a specialised web application for annotating high-resolution microscopy montage images. It lets researchers load large TIFF-based datasets, work with ROI layers directly in the browser, and export the results into formats that fit the rest of the lab's analysis pipeline.
 
-## Project Details
+The important part here is not just that it supports annotation. It is that the annotation workflow remains usable even when images are large, interactions are complex, and the downstream tooling still expects ImageJ-compatible output.
 
-### Technologies Used
+## Problem
 
-* Flask (Python Backend)
-* Three.js (WebGL Rendering)
-* JavaScript/HTML5 Canvas
-* Bootstrap 5
-* NumPy & SciPy (Image Processing)
-* tifffile (TIFF Handling)
-* scikit-image (Image Analysis)
-* PyImageJ (ImageJ Integration)
-* Docker
+Large montage images are awkward to work with. Researchers still need precise ROI creation, but many existing tools either assume desktop usage, struggle with large images, or fit badly into the actual lab workflow.
 
-### Key Features
+This project needed to solve several problems at once:
 
-* **High-Resolution Image Viewing**: Load and navigate large montage TIFF files with smooth pan/zoom using Three.js WebGL rendering and tile pyramid system
-* **Multi-Channel Support**: View composite, false color, max projection, first channel, or grayscale display modes
-* **Comprehensive ROI Tools**:
-  * Brush painting with adjustable size
-  * Eraser tool for precise removal
-  * Bucket fill with tolerance-based filling
-  * Rectangle and circle shape tools
-  * Polygon drawing tool
-  * Square stamp tool with custom dimensions
-* **Transform Operations**: Scale, rotate, and move individual or all visible ROIs with bounding box preview
-* **ROI Management**: Create, rename, duplicate, merge, reorder (drag-and-drop), and delete ROI layers
-* **Color Customization**: Pick custom colors or use preset palette with adjustable opacity
-* **Undo/Redo System**: Per-ROI history tracking for non-destructive editing
-* **Image Adjustments**: Real-time brightness, contrast, and exposure controls with live preview
-* **Import/Export**: Load ROI ZIP files or individual .roi/.png files; export all ROIs as ImageJ-compatible ZIP
-* **Instructions Upload**: Optional text file upload for custom protocols or notes
-* **Touch Support**: Optimized for iPad and touch devices with gesture controls
+- smooth viewing and navigation for large montage images
+- a usable ROI editing model with multiple tools and layers
+- export compatibility with existing ImageJ/FIJI workflows
+- support for touch-oriented workflows, not just mouse-and-keyboard usage
 
-### Development Process
+## What I Built
 
-Developed as the primary developer for the Grant Lab at University of Edinburgh to support their neuroscience research workflows.
+I built the application around a browser-based editor with a WebGL image viewer, layered ROI management, and import/export support for existing lab formats.
 
-#### Frontend Architecture
+The main workflow includes:
 
-Built an interactive canvas-based editor using Three.js for WebGL rendering:
+- loading and navigating high-resolution montage imagery
+- creating and editing ROI layers with brush, fill, polygon, and shape tools
+- applying transforms and managing visibility across ROI layers
+- tuning image display with brightness, contrast, and exposure adjustments
+- exporting results in ImageJ-compatible ROI ZIP format
 
-* **WebGL Rendering**: Three.js scene with orthographic camera for precise 2D image viewing
-* **Tile Pyramid System**: Efficient loading and rendering of large images through multi-resolution tiling
-* **Canvas Compositing**: Separate canvases for montage image and ROI overlay layers
-* **Tool System**:
-  * Mode-based tool switching (brush, erase, bucket, shapes, transform, move)
-  * Zoom-aware cursor sizing that matches actual paint area
-  * Right-click panning while in any editing mode
-* **ROI Layer Management**:
-  * Visibility toggling per layer
-  * Drag-and-drop reordering
-  * Insert-at-position functionality
-  * Selection highlighting with crosshair indicators
+## Technical Decisions
 
-#### Backend Architecture
+### Rendering and interaction
 
-Flask-based Python backend handling image processing:
+Three.js and WebGL provided the right base for smooth zooming and navigation across large images. The viewer uses an orthographic-style 2D interaction model so the editing experience feels precise rather than game-like.
 
-* **TIFF Processing**:
-  * Multi-page TIFF support using tifffile library
-  * Channel compositing and color mapping
-  * Flip and rotation transformations
-* **ROI Conversion**:
-  * ImageJ .roi file parsing and generation
-  * PNG mask to ROI conversion
-  * Coordinate transformation handling
-* **Session Management**: Per-session file storage with automatic cleanup
-* **Progress Streaming**: Real-time progress updates during file processing
+### Editing workflow
 
-#### Image Processing Pipeline
+The ROI system had to support more than simple drawing. Researchers needed layer control, transformations, visibility management, and non-destructive editing patterns such as undo/redo.
 
-* **Tile Generation**: Creates multi-resolution tile pyramids for smooth zooming
-* **Channel Compositing**: RGB composite from multi-channel fluorescence images
-* **Adjustment Processing**: Server-side brightness/contrast/exposure adjustments
-* **ROI Export**: Converts canvas masks to ImageJ-compatible ROI format with polygon optimization
+### Interoperability
 
-### Technical Highlights
+ImageJ compatibility mattered because the web tool could not become an isolated island. Import and export support had to fit the rest of the lab's analysis stack.
 
-* **Large Image Handling**: Efficiently processes and displays TIFF files over 100MB through chunked loading and tile pyramids
-* **Binary Mask Painting**: Hard-edged painting for precise ROI boundaries without anti-aliasing artifacts
-* **Flood Fill Algorithm**: Tolerance-based bucket fill for handling similar colors in biological images
-* **Transform Pipeline**: Non-destructive transform preview with final baking to canvas on confirmation
-* **Overlap Detection**: Tool to fix overlapping ROIs by removing intersecting regions from other layers
-* **Multi-Montage Support**: Load and switch between multiple montage images with per-image adjustment memory
-* **Keyboard Shortcuts**: Ctrl+Z/Y for undo/redo, Ctrl+B/E/U for tool switching
+## Constraints
 
-### User Interface
+The main constraints were:
 
-* **Left Sidebar**: Tools and upload controls with collapsible sections
-* **Center Viewer**: WebGL canvas with coordinate overlay and minimap navigation
-* **Right Sidebar**: ROI list management with visibility toggles and color controls
-* **Responsive Design**: Auto-collapsing sidebars on mobile/tablet for maximum viewing area
-* **Debug Console**: Built-in debugging panel for troubleshooting
+- very large montage imagery
+- precision requirements for scientific annotation
+- interoperability with existing analysis tools
+- the need for a workflow that researchers could use repeatedly, not just occasionally
 
-## Scientific Application
+## Outcome
 
-The tool supports neuroscience research workflows by enabling:
+MontageROI Segmenter turned a difficult annotation task into something that could happen directly in the browser without abandoning the surrounding research pipeline. It is a strong example of domain-specific interface engineering: not generic UI work, but a tool shaped by how researchers actually need to interact with image data.
 
-* Precise annotation of synaptic structures in high-resolution microscopy images
-* Consistent ROI creation across multiple sample images
-* Export of annotations compatible with ImageJ/FIJI analysis pipelines
-* Collaborative annotation through shareable ROI files
+## Deployment Notes
 
-## Deployment
-
-* **Docker Support**: Containerized deployment with docker-compose for easy installation
-* **Private Registry**: Hosted on institutional GitLab container registry
-* **Port Configuration**: Runs on configurable port (default: 6743)
-
-## Project Context
-
-Designed for Grant Lab at University of Edinburgh to streamline the annotation workflow for synaptic microscopy research, enabling researchers to efficiently create and manage ROI annotations for quantitative analysis.
+The tool is containerised for deployment and designed to sit cleanly inside a broader research tooling environment.

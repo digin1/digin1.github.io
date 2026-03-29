@@ -1,11 +1,8 @@
 'use client';
 
-import { useRef, lazy, Suspense } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { AnimatedCounter } from '@/components/common/AnimatedText';
-
-// Lazy load Three.js component
-const DataParticlesCanvas = lazy(() => import('@/components/three/DataParticles'));
 
 export default function JourneyIntro({
   className = '',
@@ -17,7 +14,7 @@ export default function JourneyIntro({
     { value: yearsExperience, suffix: '+', label: 'Years Experience', description: 'In the tech industry' },
     { value: projectCount, suffix: '', label: 'Projects Built', description: 'Research & commercial' },
     { value: skillsCount, suffix: '+', label: 'Technologies', description: 'Mastered & applied' },
-    { value: 2, suffix: '', label: 'Countries', description: 'India & United Kingdom' },
+    { value: 3, suffix: '', label: 'Publications', description: 'Scientific Reports + preprints' },
   ];
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
@@ -30,11 +27,6 @@ export default function JourneyIntro({
     >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        {/* Three.js Data Particles */}
-        <Suspense fallback={null}>
-          <DataParticlesCanvas className="opacity-50 dark:opacity-40" />
-        </Suspense>
-
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-neural-blue/10 dark:bg-neural-blue/5 rounded-full filter blur-[100px]" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-synapse-cyan/10 dark:bg-synapse-cyan/5 rounded-full filter blur-[100px]" />
       </div>
@@ -105,7 +97,7 @@ export default function JourneyIntro({
                 </div>
 
                 {/* Label */}
-                <h3 className="text-lg md:text-xl font-display font-semibold text-light-text dark:text-ghost-white mb-1">
+                <h3 className="text-lg md:text-xl font-display font-bold text-light-text dark:text-ghost-white mb-1">
                   {stat.label}
                 </h3>
 

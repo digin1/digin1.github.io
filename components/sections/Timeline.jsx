@@ -1,278 +1,123 @@
 'use client';
 
-import { useRef, useState, lazy, Suspense } from 'react';
-import { motion, useScroll, useTransform, useInView, useMotionValueEvent } from 'framer-motion';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faServer, faGraduationCap, faCode, faFlask, faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-// Lazy load Three.js component
-const AxonalPathway = lazy(() => import('@/components/three/AxonalPathway'));
-
-// Milestones in reverse chronological order (most recent first)
-const milestones = [
+const roles = [
   {
-    year: '2022-Present',
-    title: 'System Engineer & Web Developer',
+    id: 'edinburgh',
     company: 'University of Edinburgh',
-    location: 'Edinburgh, Scotland',
-    description: 'Building research tools that bridge science and software. From high-performance image segmentation apps to interactive 3D brain atlases, creating solutions that turn complex neuroscience data into accessible applications.',
-    icon: faFlask,
-    skills: ['React', 'Python', 'Three.js', 'Flask', 'PostgreSQL', 'Docker'],
-    highlight: 'Grant Lab - Neuroscience Research',
-    current: true,
+    title: 'Software Engineer & Research Toolsmith',
+    period: '2022 — Present',
+    bullets: [
+      'Building scientific software for the Seth Grant Lab (Genes to Cognition / SIDB)',
+      'Co-first author on SynaptopathyDB in Scientific Reports (Nature Portfolio)',
+      'Created 3D visualisation tools rendering billions of synapse data points in the browser',
+      'Built microscopy format converters, segmentation editors, and Docker Swarm infrastructure',
+    ],
   },
   {
-    year: '2022',
-    title: 'Junior C# Developer',
+    id: 'u2a',
     company: 'U2A Solutions',
-    location: 'UK',
-    description: 'Brief but valuable experience in enterprise software development, gaining exposure to .NET ecosystem and professional software engineering practices.',
-    icon: faCode,
-    skills: ['C#', '.NET', 'SQL Server', 'Agile'],
-    highlight: 'Enterprise software development',
+    title: 'Junior C# Developer',
+    period: '2022',
+    bullets: [
+      'Enterprise .NET development and professional software engineering practices',
+    ],
   },
   {
-    year: '2021-2022',
-    title: 'PHP Developer',
-    company: 'Veeble Hosting',
-    location: 'Remote',
-    description: 'Developed internal tools and customer-facing applications while pursuing my Masters. Balanced full-time studies with professional development work.',
-    icon: faBriefcase,
-    skills: ['PHP', 'MySQL', 'Laravel', 'WordPress'],
-    highlight: 'Concurrent with Masters degree',
-  },
-  {
-    year: '2021-2022',
-    title: 'Masters in IT Security',
+    id: 'ntu',
     company: 'Nottingham Trent University',
-    location: 'Nottingham, UK',
-    description: 'Expanded my knowledge into cybersecurity, cryptography, and secure software development. A pivotal step toward a more specialized career.',
-    icon: faGraduationCap,
-    skills: ['Security', 'Cryptography', 'Python', 'Research'],
-    highlight: 'Graduated with Merit',
+    title: 'MSc Cyber Security',
+    period: '2021 — 2022',
+    bullets: [
+      'Awarded Best Project for dissertation research',
+      'Focus on secure software development, cryptography, and data protection',
+    ],
   },
   {
-    year: '2016-2021',
-    title: 'Linux System Administrator',
+    id: 'veeble',
     company: 'Veeble Hosting',
-    location: 'Kerala, India',
-    description: 'Started my tech journey managing Linux servers, automation, and infrastructure. Built the foundation for understanding complex systems at scale.',
-    icon: faServer,
-    skills: ['Linux', 'Bash', 'Ansible', 'Docker', 'Monitoring'],
-    highlight: '5 years of hands-on DevOps experience',
+    title: 'Linux System Administrator & PHP Developer',
+    period: '2016 — 2022',
+    bullets: [
+      'Go-to systems engineer for DNS, email deliverability, DDoS mitigation, SSL, and cPanel/WHM',
+      'Built internal tools and customer-facing applications',
+      'Still consulting as an advisor for complex infrastructure issues',
+    ],
   },
 ];
 
-function TimelineItem({ milestone, index, isLeft }) {
-  const itemRef = useRef(null);
-  const isInView = useInView(itemRef, { once: true, amount: 0.3 });
-
-  return (
-    <motion.div
-      ref={itemRef}
-      className={`relative flex items-center gap-8 mb-12 md:mb-16 ${
-        isLeft ? 'md:flex-row-reverse' : ''
-      }`}
-      initial={{ opacity: 0, x: isLeft ? 50 : -50 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isLeft ? 50 : -50 }}
-      transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-    >
-      {/* Content Card */}
-      <div className={`flex-1 ${isLeft ? 'md:text-right' : ''}`}>
-        <div
-          className={`relative p-6 md:p-8 liquid-glass hover-card group ${
-            milestone.current ? 'shadow-glass-glow' : ''
-          }`}
-        >
-          {/* Current Badge - inside the card */}
-          {milestone.current && (
-            <div className={`mb-4 ${isLeft ? 'md:text-right' : ''}`}>
-              <span className="inline-block px-4 py-1.5 text-xs font-mono bg-gradient-to-r from-neural-blue to-synapse-cyan text-white rounded-full shadow-glow-blue">
-                ✦ Current Role
-              </span>
-            </div>
-          )}
-
-          {/* Year Badge */}
-          <span className="inline-block px-3 py-1 text-sm font-mono bg-neural-blue/10 text-neural-blue rounded-full mb-4">
-            {milestone.year}
-          </span>
-
-          {/* Title & Company */}
-          <h3 className="text-xl md:text-2xl font-display font-bold text-light-text dark:text-ghost-white mb-2">
-            {milestone.title}
-          </h3>
-          <p className="text-neural-blue font-medium mb-1">{milestone.company}</p>
-          <p className="text-sm text-light-text-secondary dark:text-muted-steel mb-4">
-            {milestone.location}
-          </p>
-
-          {/* Description */}
-          <p className="text-light-text-secondary dark:text-muted-steel mb-4 leading-relaxed">
-            {milestone.description}
-          </p>
-
-          {/* Highlight */}
-          <p className="text-sm font-medium text-synapse-cyan mb-4">
-            {milestone.highlight}
-          </p>
-
-          {/* Skills */}
-          <div className={`flex flex-wrap gap-2 ${isLeft ? 'md:justify-end' : ''}`}>
-            {milestone.skills.map((skill) => (
-              <span
-                key={skill}
-                className="px-2 py-1 text-xs font-mono bg-light-border dark:bg-slate-700/50 text-light-text-secondary dark:text-muted-steel rounded"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-
-          {/* Decorative corner */}
-          <div
-            className={`absolute -bottom-2 ${
-              isLeft ? '-left-2' : '-right-2'
-            } w-12 h-12 border-2 border-neural-blue/10 rounded-xl -rotate-12 group-hover:rotate-0 transition-transform duration-500`}
-          />
-        </div>
-      </div>
-
-      {/* Center Icon (Desktop) */}
-      <div className="hidden md:flex flex-col items-center">
-        <motion.div
-          className={`w-14 h-14 rounded-full flex items-center justify-center ${
-            milestone.current
-              ? 'bg-gradient-to-br from-neural-blue to-synapse-cyan text-white'
-              : 'bg-light-surface dark:bg-midnight-steel border-2 border-neural-blue/30 text-neural-blue'
-          }`}
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.2 }}
-        >
-          <FontAwesomeIcon icon={milestone.icon} className="w-6 h-6" />
-        </motion.div>
-      </div>
-
-      {/* Spacer for alternating layout */}
-      <div className="flex-1 hidden md:block" />
-    </motion.div>
-  );
-}
-
 export default function Timeline({ className = '' }) {
-  const containerRef = useRef(null);
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.1 });
-
-  // Scroll progress for Three.js integration
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start center', 'end center'],
-  });
-
-  // Bridge scroll progress to Three.js
-  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-    setScrollProgress(latest);
-  });
-
-  const lineHeight = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
+  const [activeId, setActiveId] = useState('edinburgh');
+  const active = roles.find(r => r.id === activeId) || roles[0];
 
   return (
-    <section
-      ref={sectionRef}
-      id="timeline"
-      className={`relative py-24 md:py-32 overflow-x-clip overflow-y-visible ${className}`}
-    >
-      {/* Background */}
-      <div className="absolute inset-0">
-        {/* Three.js Axonal Pathway */}
-        <Suspense fallback={null}>
-          <AxonalPathway
-            scrollProgress={scrollProgress}
-            className="opacity-70 dark:opacity-60"
-          />
-        </Suspense>
-
-        <div className="absolute top-1/4 -left-32 w-64 h-64 bg-neural-blue/10 dark:bg-neural-blue/5 rounded-full filter blur-[80px]" />
-        <div className="absolute bottom-1/4 -right-32 w-64 h-64 bg-plasma-purple/10 dark:bg-plasma-purple/5 rounded-full filter blur-[80px]" />
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <motion.div
-          className="text-center mb-16 md:mb-20"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6 }}
-        >
-          <span className="inline-block px-4 py-1.5 rounded-full bg-plasma-purple/10 text-plasma-purple text-sm font-mono mb-4 border border-plasma-purple/20">
-            {'// Career Journey'}
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-light-text dark:text-ghost-white mb-4">
-            From <span className="text-transparent bg-clip-text bg-gradient-to-r from-neural-blue to-plasma-purple">India to Edinburgh</span>
-          </h2>
-          <p className="text-lg text-light-text-secondary dark:text-muted-steel max-w-2xl mx-auto">
-            A decade of growth, learning, and building—tracing back through roles that shaped who I am today
-          </p>
-        </motion.div>
-
-        {/* Timeline Container */}
-        <div ref={containerRef} className="relative max-w-5xl mx-auto">
-          {/* Center Line (Desktop) */}
-          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-light-border dark:bg-slate-700/50 -translate-x-1/2">
-            <motion.div
-              className="absolute top-0 left-0 w-full bg-gradient-to-b from-neural-blue to-synapse-cyan"
-              style={{ height: lineHeight }}
-            />
-          </div>
-
-          {/* Mobile Line */}
-          <div className="md:hidden absolute left-6 top-0 bottom-0 w-px bg-light-border dark:bg-slate-700/50">
-            <motion.div
-              className="absolute top-0 left-0 w-full bg-gradient-to-b from-neural-blue to-synapse-cyan"
-              style={{ height: lineHeight }}
-            />
-          </div>
-
-          {/* Timeline Items */}
-          <div className="relative">
-            {milestones.map((milestone, index) => (
-              <TimelineItem
-                key={index}
-                milestone={milestone}
-                index={index}
-                isLeft={index % 2 === 1}
-              />
-            ))}
-          </div>
-
-          {/* End Marker */}
+    <section id="experience" className={`py-16 md:py-20 ${className}`}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
           <motion.div
-            className="hidden md:flex justify-center"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.35 }}
+            className="mb-8"
           >
-            <div className="w-4 h-4 rounded-full bg-gradient-to-br from-neural-blue to-synapse-cyan animate-pulse" />
+            <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-3">Experience</p>
+            <h2 className="text-section-heading font-display font-bold text-light-text dark:text-ghost-white">
+              Where I&apos;ve worked
+            </h2>
           </motion.div>
-        </div>
 
-        {/* Origin Section */}
-        <motion.div
-          className="text-center mt-16 md:mt-20"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-        >
-          <p className="text-light-text-secondary dark:text-muted-steel mb-2">
-            Where it all began...
-          </p>
-          <p className="text-lg font-medium text-neural-blue">
-            Every expert was once a beginner
-          </p>
-        </motion.div>
+          <div className="grid gap-0 md:grid-cols-[200px_minmax(0,1fr)] lg:grid-cols-[220px_minmax(0,1fr)]">
+            {/* Tab list */}
+            <div role="tablist" aria-label="Work experience" className="flex md:flex-col gap-1 overflow-x-auto md:overflow-visible border-b md:border-b-0 md:border-r border-zinc-200 dark:border-zinc-800 pb-2 md:pb-0 md:pr-0">
+              {roles.map(role => (
+                <button
+                  key={role.id}
+                  role="tab"
+                  aria-selected={activeId === role.id}
+                  aria-controls={`tabpanel-${role.id}`}
+                  onClick={() => setActiveId(role.id)}
+                  className={`text-left whitespace-nowrap px-4 py-2.5 text-sm font-medium rounded-md md:rounded-none md:rounded-l-md transition-colors shrink-0 ${
+                    activeId === role.id
+                      ? 'text-neural-blue bg-neural-blue/10 md:border-r-2 md:border-neural-blue'
+                      : 'text-zinc-500 hover:text-light-text dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-900'
+                  }`}
+                >
+                  {role.company}
+                </button>
+              ))}
+            </div>
+
+            {/* Tab content */}
+            <div role="tabpanel" id={`tabpanel-${active.id}`} className="min-h-[200px] pt-4 md:pt-0 md:pl-8">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={active.id}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <h3 className="text-lg font-bold text-light-text dark:text-ghost-white">
+                    {active.title}
+                  </h3>
+                  <p className="mt-1 text-sm text-zinc-500">{active.period}</p>
+
+                  <ul className="mt-5 space-y-3">
+                    {active.bullets.map((b, i) => (
+                      <li key={i} className="flex items-start gap-2.5 text-sm leading-6 text-light-text-secondary dark:text-zinc-400">
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-neural-blue" />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

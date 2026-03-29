@@ -46,7 +46,7 @@ export default function NotFound() {
 
         {/* Terminal-style message */}
         <motion.div
-          className="glass-card p-4 mb-8 font-mono text-sm text-left max-w-md mx-auto"
+          className="rounded-xl bg-light-surface dark:bg-midnight-steel/50 border border-light-border dark:border-slate-700/50 p-4 mb-8 font-mono text-sm text-left max-w-md mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}

@@ -1,4 +1,6 @@
 import './globals.css';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
 import Script from 'next/script';
 import { ThemeProvider } from '@/context/ThemeContext';
 import Header from '@/components/layout/Header';
@@ -8,27 +10,29 @@ const GA_MEASUREMENT_ID = 'G-9KKL3BNRNY';
 
 const siteUrl = 'https://digindominic.me';
 const siteName = 'Digin Dominic';
-const siteDescription = 'Full Stack Developer & Software Engineer specializing in React, Node.js, Python, and modern web technologies. Building scalable applications and research tools.';
+const siteDescription = 'Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.';
 const siteImage = '/images/digin.png';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Digin Dominic | Full Stack Developer & Software Engineer',
+    default: 'Digin Dominic | Software Engineer & Research Toolsmith — University of Edinburgh',
     template: '%s | Digin Dominic',
   },
   description: siteDescription,
   keywords: [
     'Digin Dominic',
-    'Full Stack Developer',
     'Software Engineer',
-    'React Developer',
-    'Node.js Developer',
-    'Python Developer',
-    'Web Developer',
-    'Portfolio',
-    'Research Tools',
-    'Data Visualization',
+    'Research Toolsmith',
+    'University of Edinburgh',
+    'neuroscience',
+    'SynaptopathyDB',
+    'scientific computing',
+    'Three.js',
+    'Python',
+    'brain research',
+    'synaptome',
+    'data visualisation',
   ],
   authors: [{ name: 'Digin Dominic', url: siteUrl }],
   creator: 'Digin Dominic',
@@ -49,20 +53,20 @@ export const metadata = {
     locale: 'en_US',
     url: siteUrl,
     siteName: siteName,
-    title: 'Digin Dominic | Full Stack Developer & Software Engineer',
+    title: 'Digin Dominic | Software Engineer & Research Toolsmith',
     description: siteDescription,
     images: [
       {
         url: siteImage,
         width: 1200,
         height: 630,
-        alt: 'Digin Dominic - Full Stack Developer',
+        alt: 'Digin Dominic - Software Engineer & Research Toolsmith',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digin Dominic | Full Stack Developer & Software Engineer',
+    title: 'Digin Dominic | Software Engineer & Research Toolsmith',
     description: siteDescription,
     images: [siteImage],
     creator: '@digin1',
@@ -70,9 +74,7 @@ export const metadata = {
   alternates: {
     canonical: siteUrl,
   },
-  verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification
-  },
+  // verification: { google: 'ADD_REAL_CODE_HERE' },
 };
 
 export default function RootLayout({ children }) {
@@ -82,22 +84,34 @@ export default function RootLayout({ children }) {
     name: 'Digin Dominic',
     url: siteUrl,
     image: siteImage,
-    jobTitle: 'Full Stack Developer',
+    jobTitle: 'Software Engineer & Research Toolsmith',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'University of Edinburgh',
+      department: 'Genes to Cognition Programme / SIDB',
+    },
     description: siteDescription,
     sameAs: [
       'https://github.com/digin1',
-      'https://linkedin.com/in/digin',
-      'https://twitter.com/digin1',
+      'https://www.linkedin.com/in/digin/',
+      'https://x.com/digin1',
+      'https://sidb.org.uk/seth-grant/digin-dominic/',
     ],
     knowsAbout: [
-      'React',
-      'Node.js',
+      'Scientific Software Development',
+      'Neuroscience Research Tools',
+      'Three.js 3D Visualisation',
       'Python',
-      'JavaScript',
-      'TypeScript',
-      'Web Development',
-      'Software Engineering',
+      'React',
+      'Docker',
+      'Microscopy Data Processing',
+      'Data Pipelines',
+      'Linux System Administration',
     ],
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Nottingham Trent University',
+    },
   };
 
   const websiteJsonLd = {
@@ -118,13 +132,15 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className={`dark ${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <head>
+        {/* Prevent flash of light mode — set dark before paint */}
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}` }} />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#3B82F6" />
+        <meta name="theme-color" content="#0B0F14" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <script
           type="application/ld+json"
@@ -151,7 +167,7 @@ export default function RootLayout({ children }) {
         </Script>
         <ThemeProvider>
           <Header />
-          <main className="flex-1 pt-20">
+          <main className="flex-1 pt-24 md:pt-28">
             {children}
           </main>
           <Footer />

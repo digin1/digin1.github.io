@@ -1,7 +1,7 @@
 ---
 title: "NeuroSphere - Interactive 3D Brain Atlas"
 date: "2025-12-20"
-featured: true
+featured: false
 featuredOrder: 1
 category: "research"
 summary: "An interactive 3D brain atlas platform featuring human and mouse brain visualizations with real-time neural simulations. Built with Three.js, featuring Desikan-Killiany Atlas (43 regions) for human brain and Allen CCFv3 Atlas (25 regions) for mouse brain with connectivity-based activity propagation."

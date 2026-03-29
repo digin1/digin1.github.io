@@ -3,18 +3,18 @@ import ContactClient from './ContactClient';
 
 export const metadata = {
   title: 'Contact',
-  description: 'Get in touch with Digin Dominic. Send a message or connect via email, phone, or social media for collaboration opportunities.',
-  keywords: ['contact', 'Digin Dominic', 'hire developer', 'freelance', 'collaboration', 'get in touch'],
+  description: 'Contact Digin Dominic about research software, scientific tooling, browser-based visualisation, and infrastructure-heavy engineering work.',
+  keywords: ['contact Digin Dominic', 'research software collaboration', 'scientific tooling', 'engineering contact', 'University of Edinburgh software engineer'],
   openGraph: {
     title: 'Contact | Digin Dominic',
-    description: 'Get in touch with Digin Dominic for collaboration opportunities.',
+    description: 'Open to research software and technical collaboration.',
     url: 'https://digindominic.me/contact',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Contact | Digin Dominic',
-    description: 'Get in touch with Digin Dominic for collaboration opportunities.',
+    description: 'Open to research software and technical collaboration.',
   },
   alternates: {
     canonical: 'https://digindominic.me/contact',

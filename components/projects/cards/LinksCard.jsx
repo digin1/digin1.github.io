@@ -44,7 +44,7 @@ export default function LinksCard({
             className="group flex items-center gap-3 px-4 py-3 rounded-xl
               bg-gradient-to-r from-neural-blue to-synapse-cyan
               text-white font-medium
-              shadow-lg hover:shadow-glow-blue
+              shadow-lg hover:shadow-card-hover
               transition-shadow"
             whileHover={{ scale: 1.02, y: -2 }}
             whileTap={{ scale: 0.98 }}

@@ -2,206 +2,341 @@
 
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUpRightFromSquare, faCodeBranch, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-/**
- * Research paper style read mode view for project content
- * Styled to resemble academic journals like Nature.com
- * Uses Merriweather serif for body, sans-serif for headings
- * Blue subheadings, gray abstract box, max ~90 char line length
- */
+const categoryLabels = {
+  research: 'Research project',
+  commercial: 'Commercial project',
+  personal: 'Independent project',
+  education: 'Academic project',
+};
+
+function slugify(value = '') {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/&/g, ' and ')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function extractSections(rawContent = '') {
+  const seen = new Map();
+
+  return rawContent
+    .split('\n')
+    .map((line) => line.match(/^##\s+(.+)$/)?.[1]?.trim())
+    .filter(Boolean)
+    .map((title) => {
+      const baseSlug = slugify(title) || 'section';
+      const seenCount = seen.get(baseSlug) || 0;
+      seen.set(baseSlug, seenCount + 1);
+
+      return {
+        title,
+        slug: seenCount === 0 ? baseSlug : `${baseSlug}-${seenCount + 1}`,
+      };
+    });
+}
+
+function injectHeadingIds(html = '', sections = []) {
+  let headingIndex = 0;
+
+  return html.replace(/<h2>(.*?)<\/h2>/g, (match, headingContent) => {
+    const section = sections[headingIndex];
+    headingIndex += 1;
+
+    if (!section) return match;
+
+    return `<h2 id="${section.slug}">${headingContent}</h2>`;
+  });
+}
+
+function formatDate(dateStr) {
+  if (!dateStr) return null;
+  const date = new Date(dateStr);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+function QuickFacts({ project, tags, sections = [], mobile = false }) {
+  const { metadata } = project;
+  const facts = [
+    { label: 'Role', value: metadata?.role },
+    { label: 'Duration', value: metadata?.duration },
+    { label: 'Type', value: categoryLabels[metadata?.category] || 'Case study' },
+    { label: 'Published', value: metadata?.date ? new Date(metadata.date).getFullYear().toString() : null },
+  ].filter((fact) => fact.value);
+
+  return (
+    <div className={`editorial-card p-5 ${mobile ? '' : 'lg:sticky lg:top-28'}`}>
+      <div className="border-b border-light-border pb-4 dark:border-zinc-800">
+        <p className="meta-label">At a glance</p>
+        <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+          This case study focuses on problem framing, implementation choices, technical constraints, and outcome.
+        </p>
+      </div>
+
+      <div className="mt-4 space-y-3">
+        {facts.map((fact) => (
+          <div key={fact.label} className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+            <p className="meta-label">{fact.label}</p>
+            <p className="mt-2 text-sm font-semibold leading-6 text-light-text dark:text-ghost-white">
+              {fact.value}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      {(metadata?.demo || metadata?.github) ? (
+        <div className="mt-5">
+          <p className="meta-label">Links</p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {metadata?.demo ? (
+              <a
+                href={metadata.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                <FontAwesomeIcon icon={faGlobe} className="h-3.5 w-3.5" />
+                View Project
+              </a>
+            ) : null}
+            {metadata?.github ? (
+              <a
+                href={metadata.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary"
+              >
+                <FontAwesomeIcon icon={faGithub} className="h-3.5 w-3.5" />
+                Source Code
+              </a>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
+
+      {tags.length > 0 ? (
+        <div className="mt-5">
+          <p className="meta-label">Stack</p>
+          <div className="mt-3 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span key={tag} className="tag">
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+      ) : null}
+
+      {sections.length > 0 ? (
+        <div className="mt-5 border-t border-light-border pt-5 dark:border-zinc-800">
+          <p className="meta-label">Section outline</p>
+          <nav className="mt-3 space-y-2">
+            {sections.map((section) => (
+              <a
+                key={section.slug}
+                href={`#${section.slug}`}
+                className="block text-sm leading-6 text-light-text-secondary hover:text-neural-blue dark:text-muted-steel dark:hover:text-synapse-cyan"
+              >
+                {section.title}
+              </a>
+            ))}
+          </nav>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 export default function ReadModeView({ project }) {
   const tags = project.metadata?.tag
-    ? project.metadata.tag.split(',').map(t => t.trim())
+    ? project.metadata.tag.split(',').map((tag) => tag.trim()).filter(Boolean)
     : [];
 
-  const formatDate = (dateStr) => {
-    if (!dateStr) return null;
-    const date = new Date(dateStr);
-    return date.toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
+  const topTags = tags.slice(0, 8);
+  const category = categoryLabels[project.metadata?.category] || 'Case study';
+  const highlights = Array.isArray(project.metadata?.highlights) ? project.metadata.highlights : [];
+  const sections = extractSections(project.rawContent);
+  const caseStudyContent = injectHeadingIds(project.content, sections);
 
   return (
     <motion.article
-      className="bg-white dark:bg-slate-950"
+      className="bg-transparent"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.35 }}
     >
-      {/* Article Header */}
-      <header className="border-b border-slate-200 dark:border-slate-800">
-        <div className="max-w-5xl mx-auto px-6 pt-10 pb-8 md:pt-14 md:pb-10">
-          {/* Category Label */}
-          {project.metadata?.category && (
-            <p className="text-sm font-medium text-neural-blue mb-3 uppercase tracking-wide">
-              {project.metadata.category === 'research' ? 'Research' :
-               project.metadata.category === 'commercial' ? 'Commercial' :
-               project.metadata.category === 'education' ? 'Academic' :
-               'Project'}
-            </p>
-          )}
+      <header className="border-b border-light-border dark:border-zinc-800">
+        <div className="mx-auto max-w-6xl px-0 pb-8 pt-2 md:pb-10">
+          <div className="grid gap-6">
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="eyebrow">{category}</span>
+                {project.metadata?.date ? (
+                  <time dateTime={project.metadata.date} className="meta-label">
+                    {formatDate(project.metadata.date)}
+                  </time>
+                ) : null}
+              </div>
 
-          {/* Title */}
-          <h1 className="font-serif text-[1.75rem] sm:text-[2rem] md:text-[2.25rem] leading-[1.2] font-bold text-slate-900 dark:text-white mb-5">
-            {project.metadata.title}
-          </h1>
+              <h1 className="mt-4 max-w-[16ch] font-display font-bold text-[2.4rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white sm:text-[3rem] md:text-[3.5rem]">
+                {project.metadata?.title}
+              </h1>
 
-          {/* Author & Meta Info */}
-          <div className="flex flex-wrap items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
-            {project.metadata?.role && (
-              <span className="font-medium text-slate-800 dark:text-slate-200">
-                {project.metadata.role}
-              </span>
-            )}
-            {project.metadata?.role && project.metadata?.duration && (
-              <span className="text-slate-400">·</span>
-            )}
-            {project.metadata?.duration && (
-              <span>{project.metadata.duration}</span>
-            )}
-            {(project.metadata?.role || project.metadata?.duration) && project.metadata?.date && (
-              <span className="text-slate-400">·</span>
-            )}
-            {project.metadata?.date && (
-              <time dateTime={project.metadata.date}>
-                {formatDate(project.metadata.date)}
-              </time>
-            )}
+              {project.metadata?.summary ? (
+                <p className="mt-5 max-w-[64ch] text-[1.03rem] leading-8 text-light-text-secondary dark:text-muted-steel">
+                  {project.metadata.summary}
+                </p>
+              ) : null}
+
+              {(project.metadata?.problem || project.metadata?.scope || project.metadata?.outcome) ? (
+                <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                  {project.metadata?.problem ? (
+                    <div className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                      <p className="meta-label">Problem</p>
+                      <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+                        {project.metadata.problem}
+                      </p>
+                    </div>
+                  ) : null}
+                  {project.metadata?.scope ? (
+                    <div className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                      <p className="meta-label">Scope</p>
+                      <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+                        {project.metadata.scope}
+                      </p>
+                    </div>
+                  ) : null}
+                  {project.metadata?.outcome ? (
+                    <div className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                      <p className="meta-label">Outcome</p>
+                      <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+                        {project.metadata.outcome}
+                      </p>
+                    </div>
+                  ) : null}
+                </div>
+              ) : null}
+
+              <div className="mt-6 grid gap-3 sm:grid-cols-3">
+                {project.metadata?.role ? (
+                  <div className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                    <p className="meta-label">Role</p>
+                    <p className="mt-2 text-sm font-semibold text-light-text dark:text-ghost-white">
+                      {project.metadata.role}
+                    </p>
+                  </div>
+                ) : null}
+
+                {project.metadata?.duration ? (
+                  <div className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                    <p className="meta-label">Duration</p>
+                    <p className="mt-2 text-sm font-semibold text-light-text dark:text-ghost-white">
+                      {project.metadata.duration}
+                    </p>
+                  </div>
+                ) : null}
+
+                <div className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                  <p className="meta-label">Reading mode</p>
+                  <p className="mt-2 text-sm font-semibold text-light-text dark:text-ghost-white">
+                    Reader-first case study
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Featured Image */}
-      {project.metadata?.image && (
-        <figure className="max-w-5xl mx-auto px-6 py-8">
-          <img
-            src={project.metadata.image}
-            alt={project.metadata.title}
-            className="w-full h-auto"
-          />
+      {project.metadata?.image ? (
+        <figure className="mx-auto mt-8 max-w-6xl">
+          <div className="overflow-hidden rounded-[1.4rem] border border-light-border dark:border-zinc-800">
+            <img
+              src={project.metadata.image}
+              alt={project.metadata.title}
+              loading="lazy"
+              className="w-full object-cover"
+            />
+          </div>
         </figure>
-      )}
+      ) : null}
 
-      {/* Abstract Box - Nature style gray background */}
-      {project.metadata?.summary && (
-        <div className="max-w-5xl mx-auto px-6 mb-8">
-          <div className="bg-slate-100 dark:bg-slate-900 border-l-4 border-neural-blue p-6">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
-              Abstract
-            </h2>
-            <p className="font-serif text-[1.0625rem] leading-[1.7] text-slate-700 dark:text-slate-300">
-              {project.metadata.summary}
-            </p>
-          </div>
-        </div>
-      )}
-
-      {/* Action Links */}
-      {(project.metadata?.demo || project.metadata?.github) && (
-        <div className="max-w-5xl mx-auto px-6 mb-8">
-          <div className="flex flex-wrap gap-3">
-            {project.metadata.demo && (
-              <a
-                href={project.metadata.demo}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-neural-blue hover:bg-blue-600 rounded transition-colors"
-              >
-                <FontAwesomeIcon icon={faExternalLinkAlt} className="w-3.5 h-3.5" />
-                View Project
-              </a>
-            )}
-            {project.metadata.github && (
-              <a
-                href={project.metadata.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-200 border border-slate-300 dark:border-slate-600 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors"
-              >
-                <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
-                Source Code
-              </a>
-            )}
-          </div>
-        </div>
-      )}
-
-      {/* Main Content */}
-      <div className="max-w-5xl mx-auto px-6 pb-16">
-        <section
-          className="
-            font-serif text-[1.0625rem] leading-[1.8] text-slate-800 dark:text-slate-300
-
-            [&>h2]:font-sans [&>h2]:text-[1.375rem] [&>h2]:font-bold [&>h2]:text-neural-blue
-            [&>h2]:mt-10 [&>h2]:mb-4 [&>h2]:leading-tight
-
-            [&>h3]:font-sans [&>h3]:text-[1.125rem] [&>h3]:font-semibold [&>h3]:text-neural-blue
-            [&>h3]:mt-8 [&>h3]:mb-3
-
-            [&>h4]:font-sans [&>h4]:text-base [&>h4]:font-semibold [&>h4]:text-slate-700 [&>h4]:dark:text-slate-300
-            [&>h4]:mt-6 [&>h4]:mb-2
-
-            [&>p]:mb-5
-
-            [&>ul]:mb-5 [&>ul]:pl-5 [&>ul]:list-disc [&>ul]:marker:text-slate-400
-            [&>ol]:mb-5 [&>ol]:pl-5 [&>ol]:list-decimal
-            [&_li]:mb-1.5 [&_li]:pl-1
-
-            [&>blockquote]:border-l-4 [&>blockquote]:border-neural-blue/50 [&>blockquote]:pl-5 [&>blockquote]:py-1
-            [&>blockquote]:my-6 [&>blockquote]:italic [&>blockquote]:text-slate-600 [&>blockquote]:dark:text-slate-400
-
-            [&_a]:text-neural-blue [&_a]:underline [&_a]:decoration-neural-blue/30
-            [&_a]:underline-offset-2 [&_a:hover]:decoration-neural-blue
-
-            [&_strong]:font-bold [&_strong]:text-slate-900 [&_strong]:dark:text-white
-
-            [&_code]:font-mono [&_code]:text-[0.9375rem] [&_code]:text-rose-600 [&_code]:dark:text-rose-400
-            [&_code]:bg-slate-100 [&_code]:dark:bg-slate-800 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded
-
-            [&>pre]:bg-slate-900 [&>pre]:text-slate-200 [&>pre]:rounded
-            [&>pre]:p-4 [&>pre]:my-6 [&>pre]:overflow-x-auto
-            [&>pre]:text-sm [&>pre]:leading-relaxed [&>pre]:font-mono
-            [&_pre_code]:bg-transparent [&_pre_code]:p-0 [&_pre_code]:text-slate-200
-
-            [&>hr]:my-8 [&>hr]:border-slate-200 [&>hr]:dark:border-slate-800
-
-            [&_img]:my-6 [&_img]:max-w-full
-
-            [&_table]:w-full [&_table]:my-6 [&_table]:text-[0.9375rem] [&_table]:font-sans
-            [&_th]:text-left [&_th]:font-semibold [&_th]:p-3 [&_th]:bg-slate-100 [&_th]:dark:bg-slate-800
-            [&_th]:border-b [&_th]:border-slate-300 [&_th]:dark:border-slate-700
-            [&_td]:p-3 [&_td]:border-b [&_td]:border-slate-200 [&_td]:dark:border-slate-800
-          "
-          dangerouslySetInnerHTML={{ __html: project.content }}
-        />
+      <div className="mx-auto mt-8 max-w-6xl lg:hidden">
+        <QuickFacts project={project} tags={topTags} sections={sections} mobile />
       </div>
 
-      {/* Technologies Footer */}
-      {tags.length > 0 && (
-        <div className="border-t border-slate-200 dark:border-slate-800">
-          <div className="max-w-5xl mx-auto px-6 py-8">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-4">
-              Technologies Used
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="px-3 py-1 text-sm font-mono text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-900 rounded"
+      <div className="mx-auto mt-8 grid max-w-6xl gap-10 lg:grid-cols-[minmax(0,1fr)_300px]">
+        <div className="min-w-0">
+          <div className="mb-8 rounded-2xl border border-light-border bg-light-card p-5 dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex flex-wrap items-start gap-3">
+              <span className="eyebrow">Case study notes</span>
+            </div>
+            <p className="mt-4 max-w-[62ch] text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+              {project.metadata?.visibilityNote || 'Where parts of the system are internal or institutional, this case study focuses on engineering scope, workflow design, and technical decisions rather than trying to simulate missing public artifacts.'}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {project.metadata?.demo ? (
+                <a
+                  href={project.metadata.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-neural-blue hover:text-synapse-cyan"
                 >
-                  {tag}
-                </span>
-              ))}
+                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" />
+                  Public link
+                </a>
+              ) : null}
+              {project.metadata?.github ? (
+                <a
+                  href={project.metadata.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-neural-blue hover:text-synapse-cyan"
+                >
+                  <FontAwesomeIcon icon={faCodeBranch} className="h-3.5 w-3.5" />
+                  Repository
+                </a>
+              ) : null}
             </div>
           </div>
+
+          {highlights.length > 0 ? (
+            <div className="mb-8 rounded-2xl border border-light-border bg-light-card p-5 dark:border-zinc-800 dark:bg-zinc-900">
+              <p className="meta-label">Key evidence</p>
+              <div className="mt-4 grid gap-3 md:grid-cols-2">
+                {highlights.map((item, index) => (
+                  <div key={item} className="proof-chip">
+                    <p className="meta-label">
+                      Evidence {String(index + 1).padStart(2, '0')}
+                    </p>
+                    <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ) : null}
+
+          <section
+            className="case-study-prose"
+            dangerouslySetInnerHTML={{ __html: caseStudyContent }}
+          />
         </div>
-      )}
+
+        <aside className="hidden lg:block">
+          <QuickFacts project={project} tags={topTags} sections={sections} />
+        </aside>
+      </div>
     </motion.article>
   );
 }

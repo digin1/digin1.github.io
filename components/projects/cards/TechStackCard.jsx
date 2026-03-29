@@ -35,7 +35,7 @@ export default function TechStackCard({
         <span className="text-xs font-mono text-neural-blue uppercase tracking-wider">
           Tech Stack
         </span>
-        <h4 className="text-lg font-display font-semibold text-light-text dark:text-ghost-white">
+        <h4 className="text-lg font-display font-bold text-light-text dark:text-ghost-white">
           {technologies.length} Technologies
         </h4>
       </div>
@@ -61,7 +61,7 @@ export default function TechStackCard({
               <div
                 className={`px-3 py-1.5 rounded-full text-xs font-medium text-white whitespace-nowrap
                   bg-gradient-to-r ${colors[colorIndex]}
-                  shadow-md hover:shadow-glow-blue transition-shadow cursor-pointer`}
+                  shadow-md transition-shadow cursor-pointer`}
               >
                 {tech}
               </div>

@@ -1,65 +1,57 @@
 ---
 title: "About Me"
 name: "Digin Dominic"
-role: "Software Engineer & Computational Scientist"
+role: "Software Engineer & Research Toolsmith"
 organization: "University of Edinburgh"
 image: "/images/digin.png"
-skills: "Python, React, Flask, Three.js, Docker, Kubernetes, PostgreSQL, Dask, Celery, PyTorch, TensorFlow, OpenCV, WebGL, Chart.js, Node.js, JavaScript, TypeScript, HTML, CSS, Git, GitLab CI, MongoDB, SQLite, AWS, Linux, Ansible, Prometheus, Grafana, MATLAB, RadiantKit, rclone"
+skills: "Python, React, Flask, Django, Three.js, Docker, Docker Swarm, Dask, Celery, Redis, MySQL, SQLite, JavaScript, HTML, CSS, Git, GitLab CI, AWS, Linux, Ansible, Prometheus, Grafana, MATLAB, RadiantKit, Node.js, Chart.js, Shell/Bash, OpenCV, WebGL, Vue.js, rclone"
 email: "digin13dominic@gmail.com"
 phone: "+44 7424003671"
-location: "Edinburgh, United Kingdom"
+location: "Edinburgh, Scotland"
 languages: "English, Malayalam"
 youtubeId: "LurUb1p8Cns"
 youtubeTitle: "Masters Graduation - Best Project Award"
 highlights:
-  - metric: "Nature Publication"
-    value: "SynaptopathyDB"
-    description: "Published in Scientific Reports"
+  - metric: "Scientific Reports"
+    value: "Co-First Author"
+    description: "SynaptopathyDB in a Nature Portfolio journal"
   - metric: "Best Project Award"
-    value: "NTU Masters"
-    description: "Cyber Security 2022"
-  - metric: "Research Impact"
-    value: "500+"
-    description: "Researchers supported"
+    value: "MSc Cyber Security"
+    description: "Nottingham Trent University"
+  - metric: "Research Output"
+    value: "Scientific Reports + preprints"
+    description: "Published and manuscript-stage contributions"
   - metric: "Data Scale"
     value: "Billions"
-    description: "Data points processed"
+    description: "Synapse datapoints visualised in-browser"
 ---
 
-I am a software engineer and computational scientist working at the University of Edinburgh, where my role sits at the intersection of scientific research, large-scale data processing, and modern web technologies. My work focuses on designing, building, and maintaining end-to-end computational systems that enable researchers to analyse, visualise, and interpret complex biological imaging and genomic data at scale.
+I'm a Software Engineer at the University of Edinburgh, working in the Genes to Cognition Programme under Professor Seth Grant. I build the tools, pipelines, and visualisations that power human brain synaptome mapping research. My work has contributed to Scientific Reports and bioRxiv manuscripts, and I'm a co-first author on SynaptopathyDB — an open resource connecting synaptic proteomes to human disease.
 
-## Technical Foundation
+## From Kerala to Edinburgh
 
-I have a strong background in software engineering, Linux system administration, and research computing, with hands-on experience spanning Python, Docker, distributed systems, web development, and scientific data pipelines. Over the years, I have evolved from traditional systems and infrastructure roles into a developer who builds full-stack research platforms—from backend data ingestion and processing pipelines to interactive, browser-based visualisation tools.
+I started coding in Kerala, India — self-taught, building PHP websites and learning Linux from the ground up. I joined Veeble Hosting early on, where I became their go-to engineer for anything server-related: DNS, email deliverability, cPanel, Exim, security hardening. They still call me when things get complicated.
 
-## Current Work: Grant Lab, University of Edinburgh
+I earned my Master's in Cyber Security from Nottingham Trent University, winning the **Best Project Award**. That gave me a formal foundation in security that I bring to everything I build.
 
-At the University of Edinburgh, I am closely involved with the Seth Grant Lab (Centre for Clinical Brain Sciences / Genes to Cognition Programme), where I contribute to multiple long-term research initiatives related to human brain synaptome mapping. My work directly supports scientists by transforming raw microscopy and experimental data into structured, analysable formats, and by building tools that make complex datasets accessible to non-technical users.
+## What I Build at Edinburgh
 
-## SynaptopathyDB: A Nature Publication
+Now I'm at the University of Edinburgh, in the Genes to Cognition Programme / SIDB, building software for one of the world's leading neuroscience labs. My work sits at a unique intersection: **full-stack web development + scientific computing + systems engineering + 3D visualisation**.
 
-One of my key contributions is **SynaptopathyDB**, a publicly available research database published in *Nature Scientific Reports*. I played a central role in developing the platform, including data integration, backend APIs, frontend visualisation, and deployment. The project brings together proteomic, genetic, and disease-association data to support research into synaptic disorders, and it represents a significant example of my ability to translate scientific requirements into robust, production-grade software.
+I've built 3D visualisation tools that render billions of synapse data points in the browser using Three.js. I've built microscopy format converters that freed the lab from proprietary software. I've built web applications, analysis pipelines, segmentation editors, and Docker Swarm orchestration for our compute infrastructure. My tools have directly enabled published research.
 
-## Large-Scale Microscopy Data
+## SynaptopathyDB: A Public Research System
 
-Beyond databases, I have extensive experience working with large-scale microscopy data, including Nikon ND2, Zeiss CZI, IMS, and high-resolution TIFF montages. I have designed and implemented conversion pipelines, stitching algorithms, metadata extraction tools, and GPU-accelerated workflows to handle datasets that can span tens of thousands of pixels or billions of data points. These pipelines are used in real research workflows and must balance accuracy, performance, and reproducibility.
+I'm a co-first author on the SynaptopathyDB paper in *Scientific Reports*, a Nature Portfolio journal, and I built the [synaptopathydb.org](https://synaptopathydb.org) platform from scratch. The database integrates data from 64 mammalian synapse proteomic studies, identifying 3,437 consensus synapse proteins linked to 1,266 OMIM diseases. It is a public-facing example of the kind of full-stack scientific software I build.
 
-## Custom Visualisation & Analysis Tools
+## Large-Scale Microscopy & Scientific Computing
 
-I am the developer behind several custom visualisation and segmentation tools built using technologies such as Flask, Three.js, React, and Docker. These tools allow researchers to interactively explore massive imaging datasets, draw and edit ROIs, overlay analytical results, and export data in formats compatible with downstream tools such as ImageJ, MATLAB, and Napari. Performance, usability, and reliability are core design considerations in my work.
+I have extensive experience working with large-scale microscopy data — Nikon ND2, Zeiss CZI, IMS, and high-resolution TIFF montages. I've designed conversion pipelines, metadata extraction tools, and GPU-accelerated workflows for datasets spanning billions of data points. These pipelines run in production research workflows where accuracy, performance, and reproducibility are non-negotiable.
 
-## Infrastructure & DevOps
+## Infrastructure
 
-On the infrastructure side, I have deep experience managing Linux servers, Docker Swarm and Kubernetes environments, distributed task queues, and research clusters. I regularly work with Dask, Celery, GPU-enabled containers, NAS storage systems, and CI/CD pipelines. My background in system administration allows me to design solutions that are not only functional, but also maintainable, secure, and cost-effective in a real institutional environment.
+On the infrastructure side, I manage Dell PowerEdge servers, Docker Swarm clusters, distributed task queues (Dask, Celery + Redis), and NAS storage with rclone sync. Monitoring with Nagios, Grafana, and Prometheus. My background in Linux system administration means I design solutions that are not just functional, but maintainable, secure, and cost-effective.
 
-## Education & Recognition
+## The Connector
 
-I hold a **Master's degree in Cyber Security** from Nottingham Trent University, where I received the **Best Project Award**. This background strongly influences my approach to software development—I place a high emphasis on data protection, access control, reproducibility, and compliance, particularly when working with sensitive research data and public-facing platforms.
-
-## What Sets Me Apart
-
-What distinguishes my work is the ability to operate comfortably across domains: I can discuss scientific requirements with researchers, design scalable architectures, write production-ready code, and deploy and maintain systems in live environments. I enjoy solving hard, messy problems where data, computation, and usability intersect, and I take pride in building tools that genuinely improve how research is conducted.
-
-## Looking Forward
-
-I am passionate about creating robust, transparent, and reusable research software, and I am particularly motivated by projects that have real scientific and societal impact. My long-term goal is to continue contributing to high-impact research through technology—building platforms and tools that help scientists ask better questions and discover meaningful answers.
+What distinguishes my work is the ability to operate across domains: I discuss scientific requirements with researchers, design scalable architectures, write production-ready code, and deploy and maintain systems in live environments. I'm not a specialist in one narrow lane — I'm the person who connects all the pieces.

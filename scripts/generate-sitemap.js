@@ -22,7 +22,7 @@ function getContentSlugs(contentType) {
 
   return fs.readdirSync(contentDir)
     .filter(file => file.endsWith('.md'))
-    .map(file => file.replace('.md', ''));
+    .map(file => file.replace('.md', '').toLowerCase());
 }
 
 function generateSitemap() {

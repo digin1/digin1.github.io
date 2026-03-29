@@ -1,7 +1,7 @@
 ---
 title: "Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control"
 date: "2021-12-12"
-featured: true
+featured: false
 featuredOrder: 8
 category: "education"
 summary: "Automating Secure Infrastructure with Ansible streamlines SSH key management, user provisioning, and sudoers configuration to enhance security and efficiency. This project ensures password-less authentication, centralized sudo monitoring, and safe system administration through Infrastructure as Code (IaC)."

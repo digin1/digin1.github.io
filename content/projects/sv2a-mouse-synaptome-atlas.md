@@ -1,7 +1,7 @@
 ---
 title: "SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization"
 date: "2025-11-26"
-featured: true
+featured: false
 featuredOrder: 6
 category: "research"
 summary: "An interactive web application for visualizing SV2A synaptic vesicle protein density and intensity measurements across mouse brain regions, developmental stages, and sex differences. Built for the Grant Lab at University of Edinburgh, featuring dual-metric analysis and comprehensive sex-specific data visualization."

@@ -1,142 +1,79 @@
 ---
-title: "S3 Bucket Viewer - Web-Based S3 File Browser"
+title: "S3 Bucket Viewer"
 date: "2025-01-15"
 featured: true
-featuredOrder: 3
+featuredOrder: 6
 category: "personal"
-summary: "A full-stack web application for browsing and previewing files in public S3-compatible storage buckets. Features include real-time file preview for multiple formats, resizable panel interface, shareable URLs, and AWS CLI command generation."
+summary: "A full-stack browser for public S3-compatible storage that makes object buckets easier to inspect, preview, and share from the web. Built as a public open-source tool with multi-format preview, shareable paths, and download-friendly workflows."
 image: "/images/s3bucketviewer.png"
 tag: "React, Flask, Python, Tailwind CSS, Docker, AWS S3, boto3"
 github: "https://github.com/digin1/s3-bucket-viewer"
 demo: "https://s3-bucket-viewer.brain-synaptome.org/"
 role: "Solo Developer"
 duration: "1 month"
+problem: "Public S3 buckets are powerful but awkward to browse when you need quick inspection instead of raw object keys and command-line tooling."
+scope: "Built a full-stack web application for listing bucket contents, previewing files, sharing stateful URLs, and generating download-friendly commands."
+outcome: "Turned an awkward storage interaction into a usable public tool and open-source project."
+highlights:
+  - "Preview support for text, image, CSV, XLSX, DOCX, and TIFF content"
+  - "Shareable URLs and generated AWS CLI sync commands"
+  - "React + Flask application packaged with Docker and published on GitHub"
 ---
 
-## Project Overview
+## Overview
 
-S3 Bucket Viewer is a web application designed to simplify browsing and previewing files stored in public S3-compatible buckets. It provides an intuitive interface for navigating bucket contents, previewing various file types directly in the browser, and generating shareable links or AWS CLI commands for batch operations.
+S3 Bucket Viewer is a web application for browsing and previewing files in public S3-compatible buckets. It turns bucket exploration into a usable browser workflow instead of forcing everything through raw object listings, CLI commands, or manual downloads.
 
-## Project Details
+This project matters in the portfolio because it is public, product-shaped, and not tied to an institutional environment. It shows how I approach a more general developer-facing problem.
 
-### Technologies Used
+## Problem
 
-* React.js
-* Tailwind CSS
-* Flask (Python)
-* boto3 (AWS SDK)
-* Docker & Docker Compose
-* nginx
+Public buckets are common, but the browsing experience is usually poor. If you want to inspect files quickly, share a specific path, or preview content before downloading, the default tooling gets in the way.
 
-### Key Features
+The tool needed to make three things better:
 
-* **Directory Navigation**: Browse bucket contents with breadcrumb navigation and pagination support using S3 continuation tokens
-* **Multi-Format File Preview**: In-browser preview support for text files, images (including TIFF conversion), CSV, XLSX, and DOCX documents
-* **Resizable Panel Layout**: Adjustable split-view interface with draggable dividers for customizing the browsing experience
-* **Shareable URLs**: Generate URLs that preserve the current endpoint, bucket, and path configuration for easy sharing
-* **AWS CLI Sync Commands**: Automatically generate `aws s3 sync` commands for batch downloading files
-* **Configuration Persistence**: Hierarchical config system using URL parameters, localStorage, and backend fallback
-* **File Size Display**: Human-readable file sizes with appropriate unit formatting
+- browsing nested bucket contents
+- previewing common file types in-browser
+- handing off to download or CLI workflows cleanly
 
-### Development Process
+## What I Built
 
-#### Frontend Architecture
+The application includes:
 
-Built a React.js single-page application with sophisticated state management:
+- directory navigation with breadcrumb paths and pagination
+- file preview across multiple common formats
+- shareable URLs that preserve endpoint, bucket, and path state
+- generated AWS CLI sync commands for batch download workflows
+- a configurable frontend that works with S3-compatible endpoints beyond AWS itself
 
-* **App.js (Main Component)**:
-  * Manages global state including endpoint configuration, current path, and selected file
-  * Implements resizable panel layout using mouse event handlers for drag functionality
-  * Configuration persistence with priority: URL params > localStorage > backend config
-  * Panel width constraints with minimum/maximum boundaries
+## Technical Decisions
 
-* **BucketExplorer Component**:
-  * Directory listing with pagination using S3 continuation tokens
-  * Breadcrumb navigation for quick directory traversal
-  * File size formatting and sorting capabilities
-  * Click handling for both directories and files
+### Client-server split
 
-* **FileViewer Component**:
-  * Dispatcher component that routes files to appropriate handlers based on MIME type
-  * Supports lazy loading of file content for performance
+The frontend handles browsing state and interface behaviour, while the backend manages S3 access, content inspection, and preview preparation. That split keeps the browser experience responsive while still allowing server-side conversion and validation where needed.
 
-* **FileTypeHandlers**:
-  * `TextViewer`: Syntax-highlighted code and plain text display
-  * `ImageViewer`: Image preview with TIFF-to-PNG conversion support
-  * `CsvViewer`: Tabular display of CSV data with headers
-  * `XlsxViewer`: Excel spreadsheet rendering
-  * `DocxViewer`: Word document preview
+### Preview architecture
 
-* **Utility Components**:
-  * `ConfigPanel`: S3 endpoint and bucket configuration interface
-  * `ShareableLink`: URL generation for current view state
-  * `SyncCommandBox`: AWS CLI command generation for batch operations
+Preview support is one of the main product features, so the backend had to route files intelligently to appropriate handlers. Text, image, spreadsheet, document, and TIFF paths each needed their own treatment.
 
-#### Backend Architecture
+### Public bucket access
 
-Developed a Flask REST API for S3 interactions:
+Using unsigned access for public buckets was an important design choice because it keeps the tool useful without forcing account setup or credential management for simple browsing scenarios.
 
-* **API Endpoints**:
-  * `GET/POST/DELETE /api/config` - Manage S3 connection configuration with validation
-  * `GET /api/list` - List bucket contents with pagination (500 items per page)
-  * `GET /api/file` - Download or stream files for preview
-  * `GET /api/fileinfo` - Retrieve file metadata including size and content type
+## Constraints
 
-* **S3 Integration**:
-  * Uses boto3 with `UNSIGNED` signature configuration for public bucket access
-  * Handles S3-compatible endpoints (AWS, MinIO, Wasabi, etc.)
-  * Continuation token management for large directory listings
+The application had to remain simple enough to use quickly while still handling:
 
-* **File Processing (file_handlers.py)**:
-  * MIME type detection using python-magic
-  * Text file preview with encoding detection
-  * Image processing with TIFF-to-PNG conversion using Pillow
-  * CSV parsing with pandas for structured display
-  * XLSX extraction with openpyxl
-  * DOCX text extraction with python-docx
-  * 100MB size limit for preview operations
+- large bucket listings
+- multiple preview formats
+- S3-compatible endpoints beyond AWS
+- server-side conversion where browsers cannot natively display the content
 
-#### Deployment Infrastructure
+## Outcome
 
-* **Docker Compose Configuration**:
-  * Backend service: Flask app on port 5000 (exposed as 5050)
-  * Frontend service: nginx serving React build on port 80 (exposed as 8080)
-  * Resource limits: CPU and memory constraints for production stability
-  * Health checks for backend service monitoring
-  * Shared bridge network for inter-service communication
+S3 Bucket Viewer turned a low-level storage surface into something much more usable. It is a good counterweight to the research case studies because it shows the same engineering instincts applied to a more general product problem.
 
-* **Volume Management**:
-  * Development hot-reload with mounted source directories
-  * Separate node_modules volume to prevent conflicts
+## Links
 
-## Technical Highlights
-
-* **Public Bucket Access**: Implements unsigned S3 requests using boto3's `UNSIGNED` signature, eliminating the need for AWS credentials when accessing public buckets
-* **Format Conversion**: Server-side TIFF-to-PNG conversion enables web display of formats not natively supported by browsers
-* **Efficient Pagination**: Leverages S3's native continuation tokens for efficient navigation of buckets with thousands of objects
-* **Flexible Configuration**: Three-tier configuration system (URL > localStorage > backend) enables both shareable links and persistent user preferences
-* **Responsive Design**: Tailwind CSS utilities provide mobile-friendly layouts with consistent styling
-* **Container Orchestration**: Docker Compose setup enables single-command deployment with proper service dependencies and resource management
-
-### Architecture Diagram
-
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   Browser       │────▶│   nginx (80)    │────▶│   React App     │
-│                 │     │   Frontend      │     │   (Static)      │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-                                │
-                                ▼
-                        ┌─────────────────┐     ┌─────────────────┐
-                        │   Flask API     │────▶│   S3 Bucket     │
-                        │   (5000)        │     │   (Public)      │
-                        └─────────────────┘     └─────────────────┘
-```
-
-## Use Cases
-
-* **Data Exploration**: Quickly browse and preview files in public datasets without downloading
-* **Team Sharing**: Generate shareable links to specific files or directories
-* **Batch Downloads**: Generate AWS CLI commands for downloading multiple files efficiently
-* **Cross-Platform Access**: Web-based interface works on any device with a browser
-
+- Live demo: [s3-bucket-viewer.brain-synaptome.org](https://s3-bucket-viewer.brain-synaptome.org/)
+- Source: [GitHub repository](https://github.com/digin1/s3-bucket-viewer)

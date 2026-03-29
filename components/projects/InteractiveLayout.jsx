@@ -113,6 +113,7 @@ export default function InteractiveLayout({ parsedContent }) {
               <img
                 src={image}
                 alt={title}
+                loading="lazy"
                 className="w-full rounded-xl object-cover max-h-[400px]"
               />
             )}
@@ -126,7 +127,7 @@ export default function InteractiveLayout({ parsedContent }) {
         return (
           <div
             className="prose prose-lg max-w-none dark:prose-invert
-              prose-headings:font-display prose-headings:text-light-text dark:prose-headings:text-ghost-white
+              prose-headings:font-display prose-headings:font-bold prose-headings:text-light-text dark:prose-headings:text-ghost-white
               prose-p:text-light-text-secondary dark:prose-p:text-muted-steel
               prose-a:text-neural-blue hover:prose-a:text-synapse-cyan
               prose-strong:text-light-text dark:prose-strong:text-ghost-white

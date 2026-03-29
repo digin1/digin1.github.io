@@ -5,385 +5,351 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faEnvelope,
-  faPhone,
-  faMapMarkerAlt,
-  faPaperPlane,
-  faUser,
-  faMessage,
+  faArrowRight,
   faCheck,
-  faExclamationTriangle
+  faEnvelope,
+  faExclamationTriangle,
+  faLocationDot,
+  faPaperPlane,
+  faPhone,
+  faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
-const staggerContainer = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
-};
-
-const staggerItem = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-};
+const contactTopics = [
+  'Research software engineering',
+  'Microscopy tooling and data workflows',
+  'Browser-based visualisation',
+  'Infrastructure-heavy engineering work',
+  'Scientific platforms and internal tools',
+];
 
 export default function ContactClient({ aboutContent }) {
+  const metadata = aboutContent?.metadata || {};
+  const email = metadata?.email || 'digin13dominic@gmail.com';
+  const phone = metadata?.phone;
+  const location = metadata?.location || 'Edinburgh, Scotland';
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
-    message: ''
+    message: '',
   });
-  const [status, setStatus] = useState('idle'); // idle, submitting, success, error
+  const [status, setStatus] = useState('idle');
   const [errors, setErrors] = useState({});
 
-  const metadata = aboutContent?.metadata || {};
-  const { email, phone, location } = metadata;
-
   const validateForm = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    const nextErrors = {};
+    if (!formData.name.trim()) nextErrors.name = 'Name is required';
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      nextErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email';
+      nextErrors.email = 'Please enter a valid email';
     }
-    if (!formData.message.trim()) newErrors.message = 'Message is required';
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    if (!formData.message.trim()) nextErrors.message = 'Message is required';
+    setErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }));
+      setErrors((prev) => ({ ...prev, [name]: '' }));
+    }
+    if (status === 'error') {
+      setStatus('idle');
     }
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     if (!validateForm()) return;
 
     setStatus('submitting');
 
-    // Create mailto link with form data
-    const subject = encodeURIComponent(formData.subject || `Contact from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoLink = `mailto:${email}?subject=${subject}&body=${body}`;
+    try {
+      const res = await fetch('https://formspree.io/f/xjgpyeao', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || `Contact from ${formData.name}`,
+          message: formData.message,
+        }),
+      });
 
-    // Open email client
-    window.location.href = mailtoLink;
-
-    // Show success after a brief delay
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    }, 500);
+      if (res.ok) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   const socialLinks = [
-    { href: 'https://github.com/digin1', icon: faGithub, label: 'GitHub', color: 'hover:text-gray-900 dark:hover:text-white' },
-    { href: 'https://www.linkedin.com/in/digin/', icon: faLinkedinIn, label: 'LinkedIn', color: 'hover:text-blue-600' },
-    { href: 'https://x.com/digin1', icon: faXTwitter, label: 'X (Twitter)', color: 'hover:text-gray-900 dark:hover:text-white' },
+    { href: 'https://github.com/digin1', icon: faGithub, label: 'GitHub' },
+    { href: 'https://www.linkedin.com/in/digin/', icon: faLinkedinIn, label: 'LinkedIn' },
+    { href: 'https://x.com/digin1', icon: faXTwitter, label: 'X' },
   ];
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <motion.div
-        className="text-center mb-12"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <span className="inline-block px-4 py-1.5 rounded-full bg-synapse-cyan/10 text-synapse-cyan text-sm font-mono mb-4 border border-synapse-cyan/20">
-          {'// Get in touch'}
-        </span>
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-light-text dark:text-ghost-white mb-4">
-          Let's <span className="text-gradient">Talk</span>
-        </h1>
-        <p className="max-w-2xl mx-auto text-light-text-secondary dark:text-muted-steel">
-          Have a project in mind or want to collaborate? I'd love to hear from you.
-          Send me a message and I'll get back to you as soon as possible.
-        </p>
-      </motion.div>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+      <div className="mx-auto max-w-6xl">
+        <motion.header
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.42 }}
+          className="border-b border-light-border pb-8 dark:border-zinc-800"
+        >
+          <span className="eyebrow mb-4">Contact</span>
+          <h1 className="max-w-[13ch] font-display font-bold text-[2.7rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white sm:text-[3.3rem]">
+            Open to research software and technical collaboration.
+          </h1>
+          <p className="mt-5 max-w-[62ch] text-[1.03rem] leading-8 text-light-text-secondary dark:text-muted-steel">
+            If you&apos;re working on scientific tooling, data workflows, visualisation, or infrastructure-heavy systems, send me the context and I&apos;ll have a quick look. The fastest route is still a direct email.
+          </p>
+        </motion.header>
 
-      <motion.div
-        className="grid grid-cols-1 lg:grid-cols-5 gap-8 max-w-6xl mx-auto"
-        variants={staggerContainer}
-        initial="hidden"
-        animate="visible"
-      >
-        {/* Contact Form */}
-        <motion.div className="lg:col-span-3" variants={staggerItem}>
-          <div className="glass-card p-6 md:p-8">
-            <h2 className="text-2xl font-display font-semibold text-light-text dark:text-ghost-white mb-6 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-signal-green" />
-              Send a Message
-            </h2>
+        <div className="mt-8 grid gap-8 lg:grid-cols-[360px_minmax(0,1fr)]">
+          <aside className="space-y-5">
+            <div className="editorial-card p-5 sm:p-6">
+              <p className="meta-label">Direct contact</p>
+              <div className="mt-4 space-y-4">
+                <a
+                  href={`mailto:${email}`}
+                  className="flex items-start gap-3 rounded-xl border border-light-border/80 bg-light-surface/80 p-4 hover:border-neural-blue/40 dark:border-zinc-800 dark:bg-zinc-900"
+                >
+                  <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-neural-blue/10 text-neural-blue">
+                    <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="meta-label">Email</p>
+                    <p className="mt-2 break-all text-sm font-semibold leading-6 text-light-text dark:text-ghost-white">
+                      {email}
+                    </p>
+                  </div>
+                </a>
+
+                {phone ? (
+                  <a
+                    href={`tel:${phone}`}
+                    className="flex items-start gap-3 rounded-xl border border-light-border/80 bg-light-surface/80 p-4 hover:border-neural-blue/40 dark:border-zinc-800 dark:bg-zinc-900"
+                  >
+                    <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-neural-blue/10 text-neural-blue">
+                      <FontAwesomeIcon icon={faPhone} className="h-4 w-4" />
+                    </span>
+                    <div>
+                      <p className="meta-label">Phone</p>
+                      <p className="mt-2 text-sm font-semibold leading-6 text-light-text dark:text-ghost-white">
+                        {phone}
+                      </p>
+                    </div>
+                  </a>
+                ) : null}
+
+                <div className="flex items-start gap-3 rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                  <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-neural-blue/10 text-neural-blue">
+                    <FontAwesomeIcon icon={faLocationDot} className="h-4 w-4" />
+                  </span>
+                  <div>
+                    <p className="meta-label">Location</p>
+                    <p className="mt-2 text-sm font-semibold leading-6 text-light-text dark:text-ghost-white">
+                      {location}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="editorial-card p-5 sm:p-6">
+              <p className="meta-label">Good topics to send</p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {contactTopics.map((topic) => (
+                  <span key={topic} className="tag">
+                    {topic}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-4 text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+                A short message with the problem, constraints, and desired outcome is more useful than a long preamble.
+              </p>
+            </div>
+
+            <div className="editorial-card p-5 sm:p-6">
+              <p className="meta-label">Elsewhere</p>
+              <div className="mt-4 flex flex-wrap gap-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-light-border bg-light-surface text-light-text-secondary hover:border-neural-blue/40 hover:text-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel"
+                    aria-label={social.label}
+                  >
+                    <FontAwesomeIcon icon={social.icon} className="h-4 w-4" />
+                  </a>
+                ))}
+              </div>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href="/projects" className="btn-secondary">
+                  View work
+                </Link>
+                <Link href="/about" className="btn-secondary">
+                  Read profile
+                </Link>
+              </div>
+            </div>
+          </aside>
+
+          <section className="editorial-card p-5 sm:p-6 md:p-8">
+            <div className="border-b border-light-border pb-5 dark:border-zinc-800">
+              <p className="meta-label">Send a message</p>
+              <h2 className="mt-3 text-[1.65rem] font-display font-bold tracking-tight text-light-text dark:text-ghost-white">
+                Start with the actual problem.
+              </h2>
+              <p className="mt-3 max-w-[58ch] text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+                What are you building, what is difficult about it, and where do you need help?
+              </p>
+            </div>
 
             {status === 'success' ? (
               <motion.div
-                className="text-center py-12"
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.98 }}
                 animate={{ opacity: 1, scale: 1 }}
+                className="py-12 text-center"
               >
-                <div className="w-16 h-16 rounded-full bg-signal-green/10 flex items-center justify-center mx-auto mb-4">
-                  <FontAwesomeIcon icon={faCheck} className="text-signal-green text-2xl" />
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-signal-green/30 bg-signal-green/10 text-signal-green">
+                  <FontAwesomeIcon icon={faCheck} className="h-5 w-5" />
                 </div>
-                <h3 className="text-xl font-display font-semibold text-light-text dark:text-ghost-white mb-2">
-                  Email Client Opened!
+                <h3 className="mt-5 text-xl font-display font-bold text-light-text dark:text-ghost-white">
+                  Message sent.
                 </h3>
-                <p className="text-light-text-secondary dark:text-muted-steel mb-6">
-                  Your email client should have opened with the message. Complete sending from there.
+                <p className="mt-3 max-w-[36ch] mx-auto text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+                  I&apos;ll get back to you as soon as I can.
                 </p>
-                <button
-                  onClick={() => setStatus('idle')}
-                  className="btn-secondary"
-                >
-                  Send Another Message
+                <button onClick={() => setStatus('idle')} className="btn-secondary mt-6">
+                  Send another message
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Name Field */}
+              <form onSubmit={handleSubmit} className="mt-6 space-y-5">
+                <div className="grid gap-5 md:grid-cols-2">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-light-text dark:text-ghost-white mb-2">
-                      Your Name <span className="text-red-500">*</span>
+                    <label htmlFor="name" className="meta-label">
+                      Name
                     </label>
-                    <div className="relative">
-                      <FontAwesomeIcon
-                        icon={faUser}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 text-light-text-secondary dark:text-muted-steel"
-                      />
+                    <div className="relative mt-2">
+                      <FontAwesomeIcon icon={faUser} className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-light-text-secondary dark:text-muted-steel" />
                       <input
-                        type="text"
                         id="name"
                         name="name"
+                        type="text"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`w-full pl-11 pr-4 py-3 rounded-lg bg-light-surface dark:bg-deep-space border ${
-                          errors.name
-                            ? 'border-red-500 focus:ring-red-500'
-                            : 'border-light-border dark:border-slate-700/50 focus:ring-neural-blue'
-                        } text-light-text dark:text-ghost-white placeholder-light-text-secondary dark:placeholder-muted-steel focus:outline-none focus:ring-2 transition-all`}
-                        placeholder="John Doe"
-                        aria-describedby={errors.name ? 'name-error' : undefined}
+                        className={`w-full rounded-xl border bg-light-surface py-3 pl-11 pr-4 text-sm text-light-text outline-none placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
+                          errors.name ? 'border-red-500' : 'border-light-border dark:border-zinc-800'
+                        }`}
+                        placeholder="Your name"
                       />
                     </div>
-                    {errors.name && (
-                      <p id="name-error" className="mt-1 text-sm text-red-500 flex items-center gap-1">
-                        <FontAwesomeIcon icon={faExclamationTriangle} className="text-xs" />
+                    {errors.name ? (
+                      <p className="mt-2 flex items-center gap-2 text-sm text-red-500">
+                        <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" />
                         {errors.name}
                       </p>
-                    )}
+                    ) : null}
                   </div>
 
-                  {/* Email Field */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-light-text dark:text-ghost-white mb-2">
-                      Email Address <span className="text-red-500">*</span>
+                    <label htmlFor="email" className="meta-label">
+                      Email
                     </label>
-                    <div className="relative">
-                      <FontAwesomeIcon
-                        icon={faEnvelope}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 text-light-text-secondary dark:text-muted-steel"
-                      />
+                    <div className="relative mt-2">
+                      <FontAwesomeIcon icon={faEnvelope} className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-light-text-secondary dark:text-muted-steel" />
                       <input
-                        type="email"
                         id="email"
                         name="email"
+                        type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full pl-11 pr-4 py-3 rounded-lg bg-light-surface dark:bg-deep-space border ${
-                          errors.email
-                            ? 'border-red-500 focus:ring-red-500'
-                            : 'border-light-border dark:border-slate-700/50 focus:ring-neural-blue'
-                        } text-light-text dark:text-ghost-white placeholder-light-text-secondary dark:placeholder-muted-steel focus:outline-none focus:ring-2 transition-all`}
-                        placeholder="john@example.com"
-                        aria-describedby={errors.email ? 'email-error' : undefined}
+                        className={`w-full rounded-xl border bg-light-surface py-3 pl-11 pr-4 text-sm text-light-text outline-none placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
+                          errors.email ? 'border-red-500' : 'border-light-border dark:border-zinc-800'
+                        }`}
+                        placeholder="you@example.com"
                       />
                     </div>
-                    {errors.email && (
-                      <p id="email-error" className="mt-1 text-sm text-red-500 flex items-center gap-1">
-                        <FontAwesomeIcon icon={faExclamationTriangle} className="text-xs" />
+                    {errors.email ? (
+                      <p className="mt-2 flex items-center gap-2 text-sm text-red-500">
+                        <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" />
                         {errors.email}
                       </p>
-                    )}
+                    ) : null}
                   </div>
                 </div>
 
-                {/* Subject Field */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-light-text dark:text-ghost-white mb-2">
+                  <label htmlFor="subject" className="meta-label">
                     Subject
                   </label>
                   <input
-                    type="text"
                     id="subject"
                     name="subject"
+                    type="text"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-light-surface dark:bg-deep-space border border-light-border dark:border-slate-700/50 text-light-text dark:text-ghost-white placeholder-light-text-secondary dark:placeholder-muted-steel focus:outline-none focus:ring-2 focus:ring-neural-blue transition-all"
-                    placeholder="Project Collaboration"
+                    className="mt-2 w-full rounded-xl border border-light-border bg-light-surface px-4 py-3 text-sm text-light-text outline-none placeholder:text-light-text-secondary focus:border-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel"
+                    placeholder="A short subject line"
                   />
                 </div>
 
-                {/* Message Field */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-light-text dark:text-ghost-white mb-2">
-                    Message <span className="text-red-500">*</span>
+                  <label htmlFor="message" className="meta-label">
+                    Message
                   </label>
-                  <div className="relative">
-                    <FontAwesomeIcon
-                      icon={faMessage}
-                      className="absolute left-4 top-4 text-light-text-secondary dark:text-muted-steel"
-                    />
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={5}
-                      className={`w-full pl-11 pr-4 py-3 rounded-lg bg-light-surface dark:bg-deep-space border ${
-                        errors.message
-                          ? 'border-red-500 focus:ring-red-500'
-                          : 'border-light-border dark:border-slate-700/50 focus:ring-neural-blue'
-                      } text-light-text dark:text-ghost-white placeholder-light-text-secondary dark:placeholder-muted-steel focus:outline-none focus:ring-2 transition-all resize-none`}
-                      placeholder="Tell me about your project or idea..."
-                      aria-describedby={errors.message ? 'message-error' : undefined}
-                    />
-                  </div>
-                  {errors.message && (
-                    <p id="message-error" className="mt-1 text-sm text-red-500 flex items-center gap-1">
-                      <FontAwesomeIcon icon={faExclamationTriangle} className="text-xs" />
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={8}
+                    className={`mt-2 w-full rounded-xl border bg-light-surface px-4 py-3 text-sm leading-7 text-light-text outline-none placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
+                      errors.message ? 'border-red-500' : 'border-light-border dark:border-zinc-800'
+                    }`}
+                    placeholder="What are you building, what is hard about it, and what kind of help or collaboration are you looking for?"
+                  />
+                  {errors.message ? (
+                    <p className="mt-2 flex items-center gap-2 text-sm text-red-500">
+                      <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" />
                       {errors.message}
                     </p>
-                  )}
+                  ) : null}
                 </div>
 
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={status === 'submitting'}
-                  className="w-full btn-primary flex items-center justify-center gap-2 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {status === 'submitting' ? (
-                    <>
-                      <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Opening Email...
-                    </>
-                  ) : (
-                    <>
-                      <FontAwesomeIcon icon={faPaperPlane} />
-                      Send Message
-                    </>
-                  )}
-                </button>
+                <div className="flex flex-wrap items-center justify-between gap-4 border-t border-light-border pt-5 dark:border-zinc-800">
+                  <p className="max-w-[40ch] text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+                    Your message will be sent directly to me. I typically reply within a day.
+                  </p>
+                  <button
+                    type="submit"
+                    disabled={status === 'submitting'}
+                    className="btn-primary disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    <FontAwesomeIcon icon={faPaperPlane} className="h-3.5 w-3.5" />
+                    {status === 'submitting' ? 'Sending...' : status === 'error' ? 'Failed — try again' : 'Send message'}
+                  </button>
+                </div>
               </form>
             )}
-          </div>
-        </motion.div>
-
-        {/* Contact Info Sidebar */}
-        <motion.div className="lg:col-span-2 space-y-6" variants={staggerItem}>
-          {/* Direct Contact */}
-          <div className="glass-card p-6">
-            <h2 className="text-xl font-display font-semibold text-light-text dark:text-ghost-white mb-4 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-plasma-purple" />
-              Contact Info
-            </h2>
-            <ul className="space-y-4">
-              {email && (
-                <li>
-                  <a
-                    href={`mailto:${email}`}
-                    className="flex items-center gap-3 text-light-text-secondary dark:text-muted-steel hover:text-neural-blue transition-colors group"
-                  >
-                    <span className="w-10 h-10 rounded-lg bg-neural-blue/10 flex items-center justify-center group-hover:bg-neural-blue/20 transition-colors">
-                      <FontAwesomeIcon icon={faEnvelope} className="text-neural-blue" />
-                    </span>
-                    <span className="text-sm break-all">{email}</span>
-                  </a>
-                </li>
-              )}
-              {phone && (
-                <li>
-                  <a
-                    href={`tel:${phone}`}
-                    className="flex items-center gap-3 text-light-text-secondary dark:text-muted-steel hover:text-neural-blue transition-colors group"
-                  >
-                    <span className="w-10 h-10 rounded-lg bg-synapse-cyan/10 flex items-center justify-center group-hover:bg-synapse-cyan/20 transition-colors">
-                      <FontAwesomeIcon icon={faPhone} className="text-synapse-cyan" />
-                    </span>
-                    <span className="text-sm">{phone}</span>
-                  </a>
-                </li>
-              )}
-              {location && (
-                <li className="flex items-center gap-3 text-light-text-secondary dark:text-muted-steel">
-                  <span className="w-10 h-10 rounded-lg bg-plasma-purple/10 flex items-center justify-center">
-                    <FontAwesomeIcon icon={faMapMarkerAlt} className="text-plasma-purple" />
-                  </span>
-                  <span className="text-sm">{location}</span>
-                </li>
-              )}
-            </ul>
-          </div>
-
-          {/* Social Links */}
-          <div className="glass-card p-6">
-            <h2 className="text-xl font-display font-semibold text-light-text dark:text-ghost-white mb-4 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-signal-green" />
-              Connect Online
-            </h2>
-            <div className="flex gap-3">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.label}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-12 h-12 rounded-lg bg-light-surface dark:bg-midnight-steel/50 border border-light-border dark:border-slate-700/50 flex items-center justify-center text-light-text-secondary dark:text-muted-steel ${social.color} hover:border-neural-blue/50 transition-all duration-300`}
-                  aria-label={social.label}
-                >
-                  <FontAwesomeIcon icon={social.icon} className="w-5 h-5" />
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div className="glass-card p-6">
-            <h2 className="text-xl font-display font-semibold text-light-text dark:text-ghost-white mb-4 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-neural-blue" />
-              Quick Links
-            </h2>
-            <div className="space-y-2">
-              <Link
-                href="/projects"
-                className="block px-4 py-2 rounded-lg text-sm text-light-text-secondary dark:text-muted-steel hover:bg-light-surface dark:hover:bg-midnight-steel/50 hover:text-light-text dark:hover:text-ghost-white transition-colors"
-              >
-                View My Projects →
-              </Link>
-              <Link
-                href="/about"
-                className="block px-4 py-2 rounded-lg text-sm text-light-text-secondary dark:text-muted-steel hover:bg-light-surface dark:hover:bg-midnight-steel/50 hover:text-light-text dark:hover:text-ghost-white transition-colors"
-              >
-                Learn About Me →
-              </Link>
-              <Link
-                href="/blog"
-                className="block px-4 py-2 rounded-lg text-sm text-light-text-secondary dark:text-muted-steel hover:bg-light-surface dark:hover:bg-midnight-steel/50 hover:text-light-text dark:hover:text-ghost-white transition-colors"
-              >
-                Read My Blog →
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-      </motion.div>
+          </section>
+        </div>
+      </div>
     </div>
   );
 }

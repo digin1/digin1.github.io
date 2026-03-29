@@ -2,19 +2,19 @@ import { getContentByType } from '@/lib/content';
 import BlogClient from './BlogClient';
 
 export const metadata = {
-  title: 'Blog',
-  description: 'Read articles about web development, React, Node.js, Python, software engineering best practices, and tech insights.',
-  keywords: ['blog', 'web development', 'programming', 'React', 'Node.js', 'Python', 'software engineering', 'tech articles'],
+  title: 'Writing',
+  description: 'Technical notes and writing from Digin Dominic on research software, infrastructure, visualisation, and practical engineering work.',
+  keywords: ['writing', 'research software', 'technical notes', 'infrastructure', 'visualisation', 'engineering blog'],
   openGraph: {
-    title: 'Blog | Digin Dominic',
-    description: 'Read articles about web development, programming, and tech insights.',
+    title: 'Writing | Digin Dominic',
+    description: 'Technical notes on research software, infrastructure, and practical engineering work.',
     url: 'https://digindominic.me/blog',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blog | Digin Dominic',
-    description: 'Read articles about web development, programming, and tech insights.',
+    title: 'Writing | Digin Dominic',
+    description: 'Technical notes on research software, infrastructure, and practical engineering work.',
   },
   alternates: {
     canonical: 'https://digindominic.me/blog',

@@ -200,14 +200,14 @@ export default function Projects({ projects = [] }) {
               <>
                 <button
                   onClick={() => paginate(-1)}
-                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/80 dark:bg-midnight-steel/80 border border-light-border dark:border-slate-700/50 flex items-center justify-center text-light-text dark:text-ghost-white hover:bg-neural-blue hover:text-white hover:border-neural-blue transition-all duration-300 shadow-lg z-10"
+                  className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/80 dark:bg-zinc-900 border border-light-border dark:border-slate-700/50 flex items-center justify-center text-light-text dark:text-ghost-white hover:bg-neural-blue hover:text-white hover:border-neural-blue transition-all duration-300 shadow-lg z-10"
                   aria-label="Previous project"
                 >
                   <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
                 <button
                   onClick={() => paginate(1)}
-                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/80 dark:bg-midnight-steel/80 border border-light-border dark:border-slate-700/50 flex items-center justify-center text-light-text dark:text-ghost-white hover:bg-neural-blue hover:text-white hover:border-neural-blue transition-all duration-300 shadow-lg z-10"
+                  className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/80 dark:bg-zinc-900 border border-light-border dark:border-slate-700/50 flex items-center justify-center text-light-text dark:text-ghost-white hover:bg-neural-blue hover:text-white hover:border-neural-blue transition-all duration-300 shadow-lg z-10"
                   aria-label="Next project"
                 >
                   <FontAwesomeIcon icon={faChevronRight} />
@@ -236,7 +236,7 @@ export default function Projects({ projects = [] }) {
           )}
 
           {/* Slide Counter */}
-          <div className="absolute top-4 right-4 md:top-6 md:right-6 px-3 py-1 rounded-full bg-white/80 dark:bg-midnight-steel/80 border border-light-border dark:border-slate-700/50 text-sm font-mono text-light-text-secondary dark:text-muted-steel">
+          <div className="absolute top-4 right-4 md:top-6 md:right-6 px-3 py-1 rounded-full bg-white/80 dark:bg-zinc-900 border border-light-border dark:border-slate-700/50 text-sm font-mono text-light-text-secondary dark:text-muted-steel">
             {currentIndex + 1} / {totalSlides}
           </div>
         </motion.div>

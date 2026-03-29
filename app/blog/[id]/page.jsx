@@ -8,16 +8,17 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const post = await getContentById('blog', params.id);
+  const { id } = await params;
+  const post = await getContentById('blog', id);
   if (!post) return { title: 'Blog Post Not Found' };
 
-  const { title, summary, image, date, tags } = post.metadata;
-  const postUrl = `https://digindominic.me/blog/${params.id}`;
+  const { title, summary, image, date, tag, tags } = post.metadata;
+  const postUrl = `https://digindominic.me/blog/${id}`;
 
   return {
     title: title,
     description: summary || `${title} - Blog post by Digin Dominic`,
-    keywords: tags || [],
+    keywords: tags || tag?.split(',').map((item) => item.trim()) || [],
     openGraph: {
       title: `${title} | Digin Dominic`,
       description: summary || '',
@@ -25,18 +26,18 @@ export async function generateMetadata({ params }) {
       type: 'article',
       publishedTime: date || undefined,
       authors: ['Digin Dominic'],
-      images: image ? [{
-        url: image,
+      images: [{
+        url: image || '/images/digin.png',
         width: 1200,
         height: 630,
         alt: title,
-      }] : [],
+      }],
     },
     twitter: {
       card: 'summary_large_image',
       title: `${title} | Digin Dominic`,
       description: summary || '',
-      images: image ? [image] : [],
+      images: [image || '/images/digin.png'],
     },
     alternates: {
       canonical: postUrl,
@@ -45,7 +46,8 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function BlogPostPage({ params }) {
-  const post = await getContentById('blog', params.id);
+  const { id } = await params;
+  const post = await getContentById('blog', id);
 
   if (!post) {
     notFound();
@@ -53,7 +55,7 @@ export default async function BlogPostPage({ params }) {
 
   // Get all posts sorted by date for navigation
   const allPosts = await getContentByType('blog');
-  const currentIndex = allPosts.findIndex(p => p.id === params.id);
+  const currentIndex = allPosts.findIndex(p => p.id === id);
 
   // Posts are sorted newest first (desc), so prev = newer (index-1), next = older (index+1)
   const prevPost = currentIndex > 0
@@ -63,5 +65,22 @@ export default async function BlogPostPage({ params }) {
     ? { id: allPosts[currentIndex + 1].id, title: allPosts[currentIndex + 1].metadata.title }
     : null;
 
-  return <BlogPostClient post={post} prevPost={prevPost} nextPost={nextPost} />;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.metadata.title,
+    description: post.metadata.summary,
+    url: `https://digindominic.me/blog/${id}`,
+    datePublished: post.metadata.date,
+    author: { '@type': 'Person', name: 'Digin Dominic', url: 'https://digindominic.me' },
+    image: post.metadata.image || undefined,
+    publisher: { '@type': 'Person', name: 'Digin Dominic' },
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <BlogPostClient post={post} prevPost={prevPost} nextPost={nextPost} />
+    </>
+  );
 }

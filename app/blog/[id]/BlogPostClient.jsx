@@ -108,7 +108,7 @@ export default function BlogPostClient({ post, prevPost, nextPost }) {
               src={post.metadata.image}
               alt={post.metadata.title}
               loading="lazy"
-              className="w-full max-h-[320px] object-cover object-center"
+              className="w-full max-h-[320px] object-contain"
             />
           </figure>
         ) : null}

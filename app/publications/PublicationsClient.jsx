@@ -22,19 +22,19 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
     <div className="min-h-screen bg-transparent">
       {/* Header */}
       <header className="border-b border-light-border dark:border-zinc-800">
-        <div className="max-w-6xl mx-auto px-6 pt-8 pb-8 md:pt-10 md:pb-10">
+        <div className="max-w-6xl mx-auto px-6 pt-4 pb-6 md:pt-6 md:pb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="eyebrow mb-4">
+            <span className="eyebrow mb-2">
               Research output
             </span>
-            <h1 className="font-display font-bold text-[2.4rem] sm:text-[2.9rem] md:text-[3.4rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white mb-4">
+            <h1 className="font-display font-bold text-[2.2rem] sm:text-[2.6rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white mb-3">
               Publications
             </h1>
-            <p className="max-w-3xl text-[1rem] leading-8 text-light-text-secondary dark:text-muted-steel">
+            <p className="max-w-3xl text-[0.95rem] leading-7 text-light-text-secondary dark:text-muted-steel">
               Academic publications, peer-reviewed papers, and preprints connected to the research software and platform work.
             </p>
           </motion.div>
@@ -104,7 +104,7 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
       </div>
 
       {/* Publications List */}
-      <div className="max-w-6xl mx-auto px-6 py-8 md:py-10">
+      <div className="max-w-6xl mx-auto px-6 py-4 md:py-6">
         {currentPubs.length > 0 ? (
           <motion.div
             key={activeTab}

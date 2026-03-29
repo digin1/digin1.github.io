@@ -228,19 +228,19 @@ export default function ProjectsClient({ projects = [] }) {
   };
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
       <div className="mx-auto max-w-6xl">
         <motion.header
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.42 }}
-          className="border-b border-light-border pb-7 dark:border-zinc-800"
+          className="border-b border-light-border pb-5 dark:border-zinc-800"
         >
-          <span className="eyebrow mb-4">Selected work</span>
-          <h1 className="max-w-[12ch] font-display font-bold text-[2.6rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white sm:text-[3.2rem]">
+          <span className="eyebrow mb-2">Selected work</span>
+          <h1 className="max-w-3xl font-display font-bold text-[2.2rem] leading-[1.05] tracking-tight text-light-text dark:text-ghost-white sm:text-[2.6rem]">
             Case studies across research software, visualisation, and infrastructure.
           </h1>
-          <p className="mt-4 max-w-[64ch] text-[1.02rem] leading-8 text-light-text-secondary dark:text-muted-steel">
+          <p className="mt-3 max-w-3xl text-[0.95rem] leading-7 text-light-text-secondary dark:text-muted-steel">
             These projects span scientific databases, microscopy tooling, browser-based 3D visualisation, research interfaces, and infrastructure-heavy systems. Some are public, some institutional, but all show the same working style: practical engineering for difficult problems.
           </p>
         </motion.header>
@@ -250,7 +250,7 @@ export default function ProjectsClient({ projects = [] }) {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.35, delay: 0.05 }}
-          className="mt-6"
+          className="mt-4"
         >
           <div className="relative">
             <FontAwesomeIcon

@@ -18,7 +18,7 @@ export default function AboutClient({ content }) {
   const { metadata } = content;
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
       <div className="mx-auto max-w-6xl">
 
         {/* ── Header ── */}
@@ -26,31 +26,31 @@ export default function AboutClient({ content }) {
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="pb-10"
+          className="pb-6"
         >
           <div>
             <div>
               {/* Intro row with photo */}
-              <div className="flex items-start gap-6 mb-6">
+              <div className="flex items-start gap-4 mb-4">
                 {metadata?.image && (
                   <img
                     src={metadata.image}
                     alt={metadata?.name || 'Digin Dominic'}
-                    className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover border border-light-border dark:border-zinc-800 shrink-0"
+                    className="w-14 h-14 sm:w-16 sm:h-16 rounded-lg object-cover border border-light-border dark:border-zinc-800 shrink-0"
                   />
                 )}
                 <div>
-                  <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-3">About</p>
-                  <p className="text-lg font-bold text-light-text dark:text-ghost-white">{metadata?.name || 'Digin Dominic'}</p>
+                  <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-1">About</p>
+                  <p className="text-base font-bold text-light-text dark:text-ghost-white">{metadata?.name || 'Digin Dominic'}</p>
                   <p className="text-sm text-zinc-500">{metadata?.role || 'Software Engineer'} &middot; {metadata?.organization || 'University of Edinburgh'}</p>
                 </div>
               </div>
 
-              <h1 className="text-hero font-display font-bold text-light-text dark:text-ghost-white max-w-[14ch]">
+              <h1 className="text-page-title font-display font-bold text-light-text dark:text-ghost-white max-w-3xl">
                 A non-linear path through systems, security, and research software.
               </h1>
 
-              <p className="mt-5 max-w-[58ch] text-[15px] leading-7 text-light-text-secondary dark:text-zinc-400">
+              <p className="mt-3 max-w-[58ch] text-[15px] leading-7 text-light-text-secondary dark:text-zinc-400">
                 I&apos;m Digin Dominic, a Software Engineer at the University of Edinburgh. I build research platforms, microscopy pipelines, browser-based visualisation, and infrastructure for neuroscience. Co-first author on SynaptopathyDB in <em>Scientific Reports</em>.
               </p>
 

@@ -11,7 +11,7 @@ import { useTheme } from '@/context/ThemeContext';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme, mounted } = useTheme();
 
   const navItems = [
     { name: 'Work', path: '/projects' },
@@ -86,7 +86,7 @@ export default function Header() {
               className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-light-border bg-light-surface text-light-text-secondary hover:text-light-text dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel dark:hover:text-ghost-white"
               aria-label="Toggle theme"
             >
-              <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="w-4 h-4" />
+              {mounted && <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="w-4 h-4" />}
             </button>
           </div>
 
@@ -97,7 +97,7 @@ export default function Header() {
               className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-light-border bg-light-surface text-light-text-secondary dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel"
               aria-label="Toggle theme"
             >
-              <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="w-4 h-4" />
+              {mounted && <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="w-4 h-4" />}
             </button>
             <button
               className="flex h-10 w-10 items-center justify-center rounded-xl border border-light-border bg-light-surface text-light-text dark:border-zinc-800 dark:bg-zinc-900 dark:text-ghost-white"

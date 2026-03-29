@@ -167,7 +167,7 @@ export default function RootLayout({ children }) {
         </Script>
         <ThemeProvider>
           <Header />
-          <main className="flex-1 pt-24 md:pt-28">
+          <main className="flex-1 pt-20">
             {children}
           </main>
           <Footer />

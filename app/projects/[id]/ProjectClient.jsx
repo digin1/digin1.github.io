@@ -8,7 +8,7 @@ import ReadModeView from '@/components/projects/ReadModeView';
 
 export default function ProjectClient({ project, prevProject, nextProject }) {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
       <motion.div
         className="mx-auto mb-6 flex max-w-6xl flex-wrap items-center justify-between gap-4 border-b border-light-border pb-5 dark:border-zinc-800 lg:relative"
         initial={{ opacity: 0, y: -10 }}

@@ -99,19 +99,19 @@ export default function ContactClient({ aboutContent }) {
   ];
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
       <div className="mx-auto max-w-6xl">
         <motion.header
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.42 }}
-          className="border-b border-light-border pb-8 dark:border-zinc-800"
+          className="border-b border-light-border pb-5 dark:border-zinc-800"
         >
-          <span className="eyebrow mb-4">Contact</span>
-          <h1 className="max-w-[13ch] font-display font-bold text-[2.7rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white sm:text-[3.3rem]">
+          <span className="eyebrow mb-2">Contact</span>
+          <h1 className="max-w-3xl font-display font-bold text-[2.2rem] leading-[1.05] tracking-tight text-light-text dark:text-ghost-white sm:text-[2.6rem]">
             Open to research software and technical collaboration.
           </h1>
-          <p className="mt-5 max-w-[62ch] text-[1.03rem] leading-8 text-light-text-secondary dark:text-muted-steel">
+          <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-7 text-light-text-secondary dark:text-muted-steel">
             If you&apos;re working on scientific tooling, data workflows, visualisation, or infrastructure-heavy systems, send me the context and I&apos;ll have a quick look. The fastest route is still a direct email.
           </p>
         </motion.header>

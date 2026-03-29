@@ -166,25 +166,25 @@ export default function BlogClient({ posts = [] }) {
   const archivePosts = leadPost ? sortedPosts.slice(1) : [];
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-10">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
       <div className="mx-auto max-w-6xl">
         <motion.header
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.42 }}
-          className="border-b border-light-border pb-8 dark:border-zinc-800"
+          className="border-b border-light-border pb-5 dark:border-zinc-800"
         >
-          <span className="eyebrow mb-4">Writing</span>
-          <h1 className="max-w-[12ch] font-display font-bold text-[2.7rem] leading-[0.98] tracking-tight text-light-text dark:text-ghost-white sm:text-[3.2rem]">
+          <span className="eyebrow mb-2">Writing</span>
+          <h1 className="max-w-3xl font-display font-bold text-[2.2rem] leading-[1.05] tracking-tight text-light-text dark:text-ghost-white sm:text-[2.6rem]">
             Notes on software, systems, and technical work that matters in practice.
           </h1>
-          <p className="mt-5 max-w-[62ch] text-[1.03rem] leading-8 text-light-text-secondary dark:text-muted-steel">
+          <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-7 text-light-text-secondary dark:text-muted-steel">
             This section is smaller than the work archive, but it will grow around research software, infrastructure choices, scientific visualisation, and lessons from building real systems.
           </p>
         </motion.header>
 
         {allTags.length > 0 ? (
-          <section className="mt-6 editorial-card p-4 sm:p-5">
+          <section className="mt-4 editorial-card p-4 sm:p-5">
             <div className="flex flex-wrap items-center gap-2">
               {allTags.map((tag) => (
                 <button

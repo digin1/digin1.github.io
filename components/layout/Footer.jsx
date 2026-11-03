@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import SocialLinks from '@/components/common/SocialLinks';
+import { CookieSettingsButton } from '@/components/layout/CookieConsent';
 
 const navLinks = [
   { name: 'Work', path: '/projects/' },
@@ -61,6 +62,10 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-light-border pt-6 text-sm text-light-text-secondary dark:border-zinc-800 dark:text-muted-steel md:flex-row md:items-center md:justify-between">
           <p>© {currentYear} Digin Dominic. All rights reserved.</p>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link href="/privacy/" className="hover:text-neural-blue">Privacy</Link>
+            <CookieSettingsButton className="hover:text-neural-blue" />
+          </div>
           <p>Built with Next.js and a deliberately reader-first layout.</p>
         </div>
       </div>

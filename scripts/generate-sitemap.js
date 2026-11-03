@@ -60,6 +60,7 @@ function generateSitemap() {
     { path: '/blog/', changefreq: 'monthly', priority: '0.8', lastmod: latest(postDates, gitDate('app/blog')) },
     { path: '/about/', changefreq: 'monthly', priority: '0.8', lastmod: latest(gitDate('content/about'), gitDate('app/about')) },
     { path: '/contact/', changefreq: 'yearly', priority: '0.6', lastmod: latest(gitDate('app/contact')) },
+    { path: '/privacy/', changefreq: 'yearly', priority: '0.3', lastmod: latest(gitDate('app/privacy')) },
   ];
 
   let urls = '';

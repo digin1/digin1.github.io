@@ -3,17 +3,15 @@ import './globals.css';
 import { config as faConfig } from '@fortawesome/fontawesome-svg-core';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import Script from 'next/script';
 import { ThemeProvider } from '@/context/ThemeContext';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import CookieConsent from '@/components/layout/CookieConsent';
 import { siteUrl, siteName, ogImage, pageUrl, absoluteUrl, jsonLdScript, socialLinks } from '@/lib/site';
 
 // The stylesheet is imported above, so stop Font Awesome injecting it at
 // runtime (which made icons flash at full size before JS loaded).
 faConfig.autoAddCss = false;
-
-const GA_MEASUREMENT_ID = 'G-9KKL3BNRNY';
 
 const siteDescription = 'Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.';
 
@@ -142,19 +140,6 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="min-h-screen flex flex-col">
-        {/* Google Analytics */}
-        <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_MEASUREMENT_ID}');
-          `}
-        </Script>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-deep-space focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-ghost-white dark:focus:bg-ghost-white dark:focus:text-deep-space"
@@ -167,6 +152,7 @@ export default function RootLayout({ children }) {
             {children}
           </main>
           <Footer />
+          <CookieConsent />
         </ThemeProvider>
       </body>
     </html>

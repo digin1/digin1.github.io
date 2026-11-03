@@ -18,7 +18,7 @@ export const metadata = pageMetadata({
   ],
 });
 
-const plainText = (text = '') => text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+const plainText = (text = '') => text.replace(/[<>]/g, '').replace(/\s+/g, ' ').trim();
 
 function publicationJsonLd({ metadata, rawContent }) {
   return {

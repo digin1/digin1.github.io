@@ -23,11 +23,12 @@ module.exports = {
         'ghost-white': '#FAFAFA',
         'muted-steel': '#A1A1AA',
 
-        // Accent — teal (dark in light mode, bright in dark mode)
-        'neural-blue': '#0E7490',
-        'synapse-cyan': '#0891B2',
-        'signal-green': '#4ADE80',
-        'plasma-purple': '#A78BFA',
+        // Accents are CSS variables (see globals.css) so each one has a
+        // light-mode and a dark-mode value that both pass WCAG AA contrast.
+        'neural-blue': 'rgb(var(--accent-rgb) / <alpha-value>)',
+        'synapse-cyan': 'rgb(var(--accent-hover-rgb) / <alpha-value>)',
+        'signal-green': 'rgb(var(--success-rgb) / <alpha-value>)',
+        'plasma-purple': 'rgb(var(--violet-rgb) / <alpha-value>)',
 
         // Category
         'category-research': '#22D3EE',
@@ -42,7 +43,7 @@ module.exports = {
       },
       fontSize: {
         'hero': ['clamp(2.2rem, 4.5vw, 3.2rem)', { lineHeight: '1.1', letterSpacing: '-0.025em', fontWeight: '800' }],
-        'page-title': ['clamp(1.6rem, 3vw, 2.2rem)', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'page-title': ['clamp(1.9rem, 3.6vw, 2.6rem)', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '700' }],
         'section-heading': ['clamp(1.3rem, 2.5vw, 1.75rem)', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '700' }],
       },
       animation: {

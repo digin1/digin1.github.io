@@ -1,68 +1,39 @@
-import { getContentBySubfolder } from '@/lib/content';
-import PublicationsClient from './PublicationsClient';
+import { getAllPublications } from '@/lib/content';
+import { jsonLdScript, pageMetadata, pageUrl } from '@/lib/site';
+import PublicationsList from './PublicationsList';
 
-const siteUrl = 'https://digindominic.me';
-
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Publications',
   description: 'Academic publications, peer-reviewed research papers, and preprints by Digin Dominic in neuroscience, bioinformatics, and computational biology.',
+  path: '/publications/',
   keywords: [
     'Digin Dominic publications',
     'research papers',
-    'academic publications',
     'neuroscience research',
     'bioinformatics',
     'synaptopathy',
-    'brain research',
+    'synaptome',
     'computational biology',
-    'peer-reviewed papers',
-    'scientific publications',
+    'preprints',
   ],
-  openGraph: {
-    title: 'Publications | Digin Dominic',
-    description: 'Academic publications, peer-reviewed research papers, and preprints in neuroscience, bioinformatics, and computational biology.',
-    url: `${siteUrl}/publications`,
-    type: 'website',
-    images: [
-      {
-        url: '/images/digin.png',
-        width: 1200,
-        height: 630,
-        alt: 'Digin Dominic - Research Publications',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Publications | Digin Dominic',
-    description: 'Academic publications, peer-reviewed research papers, and preprints in neuroscience and bioinformatics.',
-    images: ['/images/digin.png'],
-  },
-  alternates: {
-    canonical: `${siteUrl}/publications`,
-  },
-};
+});
 
-function generatePublicationJsonLd(pub) {
-  const { metadata, rawContent } = pub;
+const plainText = (text = '') => text.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+
+function publicationJsonLd({ metadata, rawContent }) {
   return {
     '@type': 'ScholarlyArticle',
     headline: metadata.title,
-    author: metadata.authors?.split(',').map(name => ({
-      '@type': 'Person',
-      name: name.trim().replace(/\*$/, ''),
-    })),
+    author: metadata.authors
+      ?.split(',')
+      .map(name => name.trim().replace(/\*$/, ''))
+      .filter(name => name && !/^et al/i.test(name))
+      .map(name => ({ '@type': 'Person', name })),
     datePublished: metadata.date,
-    publisher: {
-      '@type': 'Organization',
-      name: metadata.journal,
-    },
-    description: rawContent?.substring(0, 300),
+    publisher: { '@type': 'Organization', name: metadata.journal },
+    description: plainText(rawContent).slice(0, 300),
     url: metadata.doi,
-    isPartOf: {
-      '@type': 'Periodical',
-      name: metadata.journal,
-    },
+    isPartOf: { '@type': 'Periodical', name: metadata.journal },
     ...(metadata.volume && { volumeNumber: metadata.volume }),
     ...(metadata.issue && { issueNumber: metadata.issue }),
     ...(metadata.pages && { pagination: metadata.pages }),
@@ -70,47 +41,32 @@ function generatePublicationJsonLd(pub) {
 }
 
 export default async function PublicationsPage() {
-  const [mainAuthor, coAuthor, preprints] = await Promise.all([
-    getContentBySubfolder('publications', 'main-author'),
-    getContentBySubfolder('publications', 'co-author'),
-    getContentBySubfolder('publications', 'preprint'),
-  ]);
-
-  const allPubs = [
-    ...mainAuthor.map(pub => ({ ...pub, role: 'main' })),
-    ...coAuthor.map(pub => ({ ...pub, role: 'co' })),
-    ...preprints.map(pub => ({ ...pub, role: 'preprint' })),
-  ].sort((a, b) => new Date(b.metadata.date || 0) - new Date(a.metadata.date || 0));
+  const publications = await getAllPublications();
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Publications by Digin Dominic',
     description: 'Academic publications, peer-reviewed research papers, and preprints in neuroscience, bioinformatics, and computational biology.',
-    url: `${siteUrl}/publications`,
-    author: {
-      '@type': 'Person',
-      name: 'Digin Dominic',
-      url: siteUrl,
-    },
+    url: pageUrl('/publications/'),
+    author: { '@type': 'Person', name: 'Digin Dominic', url: pageUrl('/') },
     mainEntity: {
       '@type': 'ItemList',
-      numberOfItems: allPubs.length,
-      itemListElement: allPubs.map((pub, index) => ({
+      numberOfItems: publications.length,
+      itemListElement: publications.map((pub, index) => ({
         '@type': 'ListItem',
         position: index + 1,
-        item: generatePublicationJsonLd(pub),
+        item: publicationJsonLd(pub),
       })),
     },
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }} />
+      <PublicationsList
+        publications={publications.map(({ id, role, metadata, content }) => ({ id, role, metadata, content }))}
       />
-      <PublicationsClient publications={allPubs} />
     </>
   );
 }

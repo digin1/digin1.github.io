@@ -1,17 +1,21 @@
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import './globals.css';
+import { config as faConfig } from '@fortawesome/fontawesome-svg-core';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import Script from 'next/script';
 import { ThemeProvider } from '@/context/ThemeContext';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { siteUrl, siteName, ogImage, pageUrl, absoluteUrl, jsonLdScript, socialLinks } from '@/lib/site';
+
+// The stylesheet is imported above, so stop Font Awesome injecting it at
+// runtime (which made icons flash at full size before JS loaded).
+faConfig.autoAddCss = false;
 
 const GA_MEASUREMENT_ID = 'G-9KKL3BNRNY';
 
-const siteUrl = 'https://digindominic.me';
-const siteName = 'Digin Dominic';
 const siteDescription = 'Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.';
-const siteImage = '/images/digin.png';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -50,29 +54,22 @@ export const metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    url: siteUrl,
+    locale: 'en_GB',
+    url: pageUrl('/'),
     siteName: siteName,
     title: 'Digin Dominic | Software Engineer & Research Toolsmith',
     description: siteDescription,
-    images: [
-      {
-        url: siteImage,
-        width: 1200,
-        height: 630,
-        alt: 'Digin Dominic - Software Engineer & Research Toolsmith',
-      },
-    ],
+    images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Digin Dominic | Software Engineer & Research Toolsmith',
     description: siteDescription,
-    images: [siteImage],
+    images: [ogImage.url],
     creator: '@digin1',
   },
   alternates: {
-    canonical: siteUrl,
+    canonical: pageUrl('/'),
   },
   // verification: { google: 'ADD_REAL_CODE_HERE' },
 };
@@ -83,7 +80,7 @@ export default function RootLayout({ children }) {
     '@type': 'Person',
     name: 'Digin Dominic',
     url: siteUrl,
-    image: siteImage,
+    image: absoluteUrl('/images/digin.png'),
     jobTitle: 'Software Engineer & Research Toolsmith',
     worksFor: {
       '@type': 'Organization',
@@ -92,9 +89,7 @@ export default function RootLayout({ children }) {
     },
     description: siteDescription,
     sameAs: [
-      'https://github.com/digin1',
-      'https://www.linkedin.com/in/digin/',
-      'https://x.com/digin1',
+      ...socialLinks.filter(l => l.href.startsWith('http')).map(l => l.href),
       'https://sidb.org.uk/seth-grant/digin-dominic/',
     ],
     knowsAbout: [
@@ -124,11 +119,6 @@ export default function RootLayout({ children }) {
       '@type': 'Person',
       name: 'Digin Dominic',
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: `${siteUrl}/projects?search={search_term_string}`,
-      'query-input': 'required name=search_term_string',
-    },
   };
 
   return (
@@ -140,15 +130,15 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#0B0F14" />
+        <meta name="theme-color" content="#09090B" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: jsonLdScript(websiteJsonLd) }}
         />
       </head>
       <body className="min-h-screen flex flex-col">
@@ -165,9 +155,15 @@ export default function RootLayout({ children }) {
             gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-deep-space focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-ghost-white dark:focus:bg-ghost-white dark:focus:text-deep-space"
+        >
+          Skip to content
+        </a>
         <ThemeProvider>
           <Header />
-          <main className="flex-1 pt-20">
+          <main id="main" tabIndex={-1} className="flex-1 pt-20 focus:outline-none">
             {children}
           </main>
           <Footer />

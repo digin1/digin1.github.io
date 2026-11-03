@@ -52,6 +52,24 @@ export default function Timeline({ className = '' }) {
   const [activeId, setActiveId] = useState('edinburgh');
   const active = roles.find(r => r.id === activeId) || roles[0];
 
+  // Arrow keys / Home / End move between tabs (WAI-ARIA tabs pattern).
+  const onTabKeyDown = (event) => {
+    const index = roles.findIndex((role) => role.id === activeId);
+    const last = roles.length - 1;
+    const nextIndex = {
+      ArrowDown: index === last ? 0 : index + 1,
+      ArrowRight: index === last ? 0 : index + 1,
+      ArrowUp: index === 0 ? last : index - 1,
+      ArrowLeft: index === 0 ? last : index - 1,
+      Home: 0,
+      End: last,
+    }[event.key];
+    if (nextIndex === undefined) return;
+    event.preventDefault();
+    setActiveId(roles[nextIndex].id);
+    document.getElementById(`tab-${roles[nextIndex].id}`)?.focus();
+  };
+
   return (
     <section id="experience" className={`py-16 md:py-20 ${className}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,7 +81,7 @@ export default function Timeline({ className = '' }) {
             transition={{ duration: 0.35 }}
             className="mb-8"
           >
-            <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-3">Experience</p>
+            <p className="eyebrow mb-3">Experience</p>
             <h2 className="text-section-heading font-display font-bold text-light-text dark:text-ghost-white">
               Where I&apos;ve worked
             </h2>
@@ -75,14 +93,18 @@ export default function Timeline({ className = '' }) {
               {roles.map(role => (
                 <button
                   key={role.id}
+                  id={`tab-${role.id}`}
+                  type="button"
                   role="tab"
                   aria-selected={activeId === role.id}
                   aria-controls={`tabpanel-${role.id}`}
+                  tabIndex={activeId === role.id ? 0 : -1}
                   onClick={() => setActiveId(role.id)}
+                  onKeyDown={onTabKeyDown}
                   className={`text-left whitespace-nowrap px-4 py-2.5 text-sm font-medium rounded-md md:rounded-none md:rounded-l-md transition-colors shrink-0 ${
                     activeId === role.id
                       ? 'text-neural-blue bg-neural-blue/10 md:border-r-2 md:border-neural-blue'
-                      : 'text-zinc-500 hover:text-light-text dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-900'
+                      : 'text-zinc-500 dark:text-zinc-400 hover:text-light-text dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-900'
                   }`}
                 >
                   {role.company}
@@ -91,7 +113,7 @@ export default function Timeline({ className = '' }) {
             </div>
 
             {/* Tab content */}
-            <div role="tabpanel" id={`tabpanel-${active.id}`} className="min-h-[200px] pt-4 md:pt-0 md:pl-8">
+            <div role="tabpanel" id={`tabpanel-${active.id}`} aria-labelledby={`tab-${active.id}`} tabIndex={0} className="min-h-[200px] pt-4 md:pt-0 md:pl-8">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={active.id}
@@ -103,7 +125,7 @@ export default function Timeline({ className = '' }) {
                   <h3 className="text-lg font-bold text-light-text dark:text-ghost-white">
                     {active.title}
                   </h3>
-                  <p className="mt-1 text-sm text-zinc-500">{active.period}</p>
+                  <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{active.period}</p>
 
                   <ul className="mt-5 space-y-3">
                     {active.bullets.map((b, i) => (

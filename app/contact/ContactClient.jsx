@@ -108,7 +108,7 @@ export default function ContactClient({ aboutContent }) {
           className="border-b border-light-border pb-5 dark:border-zinc-800"
         >
           <span className="eyebrow mb-2">Contact</span>
-          <h1 className="max-w-3xl font-display font-bold text-[2.2rem] leading-[1.05] tracking-tight text-light-text dark:text-ghost-white sm:text-[2.6rem]">
+          <h1 className="max-w-3xl text-page-title font-display text-light-text dark:text-ghost-white text-balance">
             Open to research software and technical collaboration.
           </h1>
           <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-7 text-light-text-secondary dark:text-muted-steel">
@@ -123,9 +123,9 @@ export default function ContactClient({ aboutContent }) {
               <div className="mt-4 space-y-4">
                 <a
                   href={`mailto:${email}`}
-                  className="flex items-start gap-3 rounded-xl border border-light-border/80 bg-light-surface/80 p-4 hover:border-neural-blue/40 dark:border-zinc-800 dark:bg-zinc-900"
+                  className="flex items-start gap-3 rounded-lg border border-light-border/80 bg-light-surface/80 p-4 hover:border-neural-blue/40 dark:border-zinc-800 dark:bg-zinc-900"
                 >
-                  <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-neural-blue/10 text-neural-blue">
+                  <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-neural-blue/10 text-neural-blue">
                     <FontAwesomeIcon icon={faEnvelope} className="h-4 w-4" />
                   </span>
                   <div className="min-w-0">
@@ -139,9 +139,9 @@ export default function ContactClient({ aboutContent }) {
                 {phone ? (
                   <a
                     href={`tel:${phone}`}
-                    className="flex items-start gap-3 rounded-xl border border-light-border/80 bg-light-surface/80 p-4 hover:border-neural-blue/40 dark:border-zinc-800 dark:bg-zinc-900"
+                    className="flex items-start gap-3 rounded-lg border border-light-border/80 bg-light-surface/80 p-4 hover:border-neural-blue/40 dark:border-zinc-800 dark:bg-zinc-900"
                   >
-                    <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-neural-blue/10 text-neural-blue">
+                    <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-neural-blue/10 text-neural-blue">
                       <FontAwesomeIcon icon={faPhone} className="h-4 w-4" />
                     </span>
                     <div>
@@ -153,8 +153,8 @@ export default function ContactClient({ aboutContent }) {
                   </a>
                 ) : null}
 
-                <div className="flex items-start gap-3 rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
-                  <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-xl bg-neural-blue/10 text-neural-blue">
+                <div className="flex items-start gap-3 rounded-lg border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                  <span className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-lg bg-neural-blue/10 text-neural-blue">
                     <FontAwesomeIcon icon={faLocationDot} className="h-4 w-4" />
                   </span>
                   <div>
@@ -190,7 +190,7 @@ export default function ContactClient({ aboutContent }) {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-light-border bg-light-surface text-light-text-secondary hover:border-neural-blue/40 hover:text-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel"
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-light-border bg-light-surface text-light-text-secondary hover:border-neural-blue/40 hover:text-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel"
                     aria-label={social.label}
                   >
                     <FontAwesomeIcon icon={social.icon} className="h-4 w-4" />
@@ -198,10 +198,10 @@ export default function ContactClient({ aboutContent }) {
                 ))}
               </div>
               <div className="mt-5 flex flex-wrap gap-3">
-                <Link href="/projects" className="btn-secondary">
+                <Link href="/projects/" className="btn-secondary">
                   View work
                 </Link>
-                <Link href="/about" className="btn-secondary">
+                <Link href="/about/" className="btn-secondary">
                   Read profile
                 </Link>
               </div>
@@ -225,7 +225,7 @@ export default function ContactClient({ aboutContent }) {
                 animate={{ opacity: 1, scale: 1 }}
                 className="py-12 text-center"
               >
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-signal-green/30 bg-signal-green/10 text-signal-green">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-lg border border-signal-green/30 bg-signal-green/10 text-signal-green">
                   <FontAwesomeIcon icon={faCheck} className="h-5 w-5" />
                 </div>
                 <h3 className="mt-5 text-xl font-display font-bold text-light-text dark:text-ghost-white">
@@ -239,7 +239,7 @@ export default function ContactClient({ aboutContent }) {
                 </button>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="mt-6 space-y-5">
+              <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-5">
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>
                     <label htmlFor="name" className="meta-label">
@@ -250,18 +250,21 @@ export default function ContactClient({ aboutContent }) {
                       <input
                         id="name"
                         name="name"
+                        autoComplete="name"
+                        aria-invalid={Boolean(errors.name)}
+                        aria-describedby={errors.name ? 'name-error' : undefined}
                         type="text"
                         value={formData.name}
                         onChange={handleChange}
-                        className={`w-full rounded-xl border bg-light-surface py-3 pl-11 pr-4 text-sm text-light-text outline-none placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
-                          errors.name ? 'border-red-500' : 'border-light-border dark:border-zinc-800'
+                        className={`w-full rounded-lg border bg-light-surface py-3 pl-11 pr-4 text-sm text-light-text placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
+                          errors.name ? 'border-red-600 dark:border-red-400' : 'border-light-border dark:border-zinc-800'
                         }`}
                         placeholder="Your name"
                       />
                     </div>
                     {errors.name ? (
-                      <p className="mt-2 flex items-center gap-2 text-sm text-red-500">
-                        <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" />
+                      <p id="name-error" className="mt-2 flex items-center gap-2 text-sm text-red-600 dark:text-red-400">
+                        <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" aria-hidden="true" />
                         {errors.name}
                       </p>
                     ) : null}
@@ -276,18 +279,21 @@ export default function ContactClient({ aboutContent }) {
                       <input
                         id="email"
                         name="email"
+                        autoComplete="email"
+                        aria-invalid={Boolean(errors.email)}
+                        aria-describedby={errors.email ? 'email-error' : undefined}
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full rounded-xl border bg-light-surface py-3 pl-11 pr-4 text-sm text-light-text outline-none placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
-                          errors.email ? 'border-red-500' : 'border-light-border dark:border-zinc-800'
+                        className={`w-full rounded-lg border bg-light-surface py-3 pl-11 pr-4 text-sm text-light-text placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
+                          errors.email ? 'border-red-600 dark:border-red-400' : 'border-light-border dark:border-zinc-800'
                         }`}
                         placeholder="you@example.com"
                       />
                     </div>
                     {errors.email ? (
-                      <p className="mt-2 flex items-center gap-2 text-sm text-red-500">
-                        <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" />
+                      <p id="email-error" className="mt-2 flex items-center gap-2 text-sm text-red-600 dark:text-red-400">
+                        <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" aria-hidden="true" />
                         {errors.email}
                       </p>
                     ) : null}
@@ -304,7 +310,7 @@ export default function ContactClient({ aboutContent }) {
                     type="text"
                     value={formData.subject}
                     onChange={handleChange}
-                    className="mt-2 w-full rounded-xl border border-light-border bg-light-surface px-4 py-3 text-sm text-light-text outline-none placeholder:text-light-text-secondary focus:border-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel"
+                    className="mt-2 w-full rounded-lg border border-light-border bg-light-surface px-4 py-3 text-sm text-light-text placeholder:text-light-text-secondary focus:border-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel"
                     placeholder="A short subject line"
                   />
                 </div>
@@ -316,17 +322,19 @@ export default function ContactClient({ aboutContent }) {
                   <textarea
                     id="message"
                     name="message"
+                    aria-invalid={Boolean(errors.message)}
+                    aria-describedby={errors.message ? 'message-error' : undefined}
                     value={formData.message}
                     onChange={handleChange}
                     rows={8}
-                    className={`mt-2 w-full rounded-xl border bg-light-surface px-4 py-3 text-sm leading-7 text-light-text outline-none placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
-                      errors.message ? 'border-red-500' : 'border-light-border dark:border-zinc-800'
+                    className={`mt-2 w-full rounded-lg border bg-light-surface px-4 py-3 text-sm leading-7 text-light-text placeholder:text-light-text-secondary focus:border-neural-blue dark:bg-zinc-900 dark:text-ghost-white dark:placeholder:text-muted-steel ${
+                      errors.message ? 'border-red-600 dark:border-red-400' : 'border-light-border dark:border-zinc-800'
                     }`}
                     placeholder="What are you building, what is hard about it, and what kind of help or collaboration are you looking for?"
                   />
                   {errors.message ? (
-                    <p className="mt-2 flex items-center gap-2 text-sm text-red-500">
-                      <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" />
+                    <p id="message-error" className="mt-2 flex items-center gap-2 text-sm text-red-600 dark:text-red-400">
+                      <FontAwesomeIcon icon={faExclamationTriangle} className="h-3.5 w-3.5" aria-hidden="true" />
                       {errors.message}
                     </p>
                   ) : null}

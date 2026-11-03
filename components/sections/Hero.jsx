@@ -1,90 +1,67 @@
-'use client';
-
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedinIn, faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import SocialLinks from '@/components/common/SocialLinks';
 
-export default function Hero({ content }) {
+// Rendered on the server with no entrance animation: the headline is the
+// largest thing on the page, so it should paint as soon as the HTML arrives.
+export default function Hero({ content, projectCount, publicationCount }) {
   const metadata = content?.metadata || {};
   const name = metadata?.name || 'Digin Dominic';
+
+  const proof = [
+    'University of Edinburgh',
+    'Co-first author, Scientific Reports',
+    projectCount ? `${projectCount} documented projects` : null,
+    publicationCount ? `${publicationCount} publications` : null,
+    '8+ years in engineering',
+  ].filter(Boolean);
 
   return (
     <section id="hero" className="pb-0 pt-2">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            {/* Role line */}
-            <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-3">
-              Software Engineer &middot; University of Edinburgh
-            </p>
+          <p className="eyebrow mb-3">Software Engineer &middot; University of Edinburgh</p>
 
-            {/* Headline */}
-            <h1 className="text-hero font-display font-bold text-light-text dark:text-ghost-white max-w-3xl">
-              Building the software that makes complex science usable.
-            </h1>
+          <h1 className="text-hero font-display font-bold text-light-text dark:text-ghost-white max-w-3xl text-balance">
+            Building the software that makes complex science usable.
+          </h1>
 
-            {/* Description */}
-            <p className="mt-3 max-w-[58ch] text-[15px] leading-7 text-light-text-secondary dark:text-zinc-400">
-              I&apos;m {name}. I build research platforms, microscopy pipelines, 3D visualisations, and infrastructure for the Genes to Cognition Programme under Professor Seth Grant. Co-first author on SynaptopathyDB in <em>Scientific Reports</em>.
-            </p>
+          <p className="mt-4 max-w-[58ch] text-[15px] leading-7 text-light-text-secondary dark:text-zinc-400">
+            I&apos;m {name}. I build research platforms, microscopy pipelines, 3D visualisations, and infrastructure for the Genes to Cognition Programme under Professor Seth Grant. Co-first author on SynaptopathyDB in <em>Scientific Reports</em>.
+          </p>
 
-            {/* Proof — inline, not cards */}
-            <div className="mt-4 flex flex-wrap gap-x-6 gap-y-1 text-sm text-zinc-500 dark:text-zinc-500">
-              <span>University of Edinburgh</span>
-              <span className="text-zinc-300 dark:text-zinc-700">|</span>
-              <span>Co-first author, Scientific Reports</span>
-              <span className="text-zinc-300 dark:text-zinc-700">|</span>
-              <span>29+ documented projects</span>
-              <span className="text-zinc-300 dark:text-zinc-700">|</span>
-              <span>8+ years in engineering</span>
-            </div>
+          <ul className="mt-5 flex flex-wrap gap-x-5 gap-y-2 text-sm text-zinc-600 dark:text-zinc-400" aria-label="Highlights">
+            {proof.map((item) => (
+              <li key={item} className="inline-flex items-center gap-2">
+                <span className="h-1 w-1 rounded-full bg-neural-blue" aria-hidden="true" />
+                {item}
+              </li>
+            ))}
+          </ul>
 
-            {/* CTAs */}
-            <div className="mt-5 flex flex-wrap items-center gap-3">
-              <Link href="/projects" className="btn-primary group">
-                Browse case studies
-                <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-              </Link>
-              <Link href="/publications" className="btn-secondary">
-                Publications
-              </Link>
-            </div>
+          <div className="mt-6 flex flex-wrap items-center gap-3">
+            <Link href="/projects/" className="btn-primary group">
+              Browse case studies
+              <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            </Link>
+            <Link href="/publications/" className="btn-secondary">
+              Publications
+            </Link>
+          </div>
 
-            {/* Social — quiet */}
-            <div className="mt-4 flex items-center gap-3">
-              {[
-                { href: 'https://github.com/digin1', icon: faGithub, label: 'GitHub' },
-                { href: 'https://www.linkedin.com/in/digin/', icon: faLinkedinIn, label: 'LinkedIn' },
-                { href: 'https://x.com/digin1', icon: faXTwitter, label: 'X' },
-              ].map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zinc-400 hover:text-light-text dark:hover:text-ghost-white focus-visible:text-neural-blue focus-visible:outline-none transition-colors"
-                  aria-label={s.label}
-                >
-                  <FontAwesomeIcon icon={s.icon} className="h-4 w-4" />
-                </a>
-              ))}
-              <span className="text-zinc-700 dark:text-zinc-700">|</span>
-              <a
-                href="/Digin_Dominic_Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-zinc-500 hover:text-light-text dark:hover:text-ghost-white focus-visible:text-neural-blue focus-visible:outline-none transition-colors"
-              >
-                Resume &darr;
-              </a>
-            </div>
-          </motion.div>
+          <div className="mt-5 flex items-center gap-3">
+            <SocialLinks include={['GitHub', 'LinkedIn', 'X (Twitter)']} />
+            <span className="h-4 w-px bg-light-border dark:bg-zinc-800" aria-hidden="true" />
+            <a
+              href="/Digin_Dominic_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-zinc-600 hover:text-light-text dark:text-zinc-400 dark:hover:text-ghost-white transition-colors"
+            >
+              Resume (PDF)
+            </a>
+          </div>
         </div>
       </div>
     </section>

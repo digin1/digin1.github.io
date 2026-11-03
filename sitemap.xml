@@ -15,14 +15,14 @@
   <url>
     <loc>https://digindominic.me/publications/</loc>
     <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://digindominic.me/blog/</loc>
     <lastmod>2026-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://digindominic.me/about/</loc>
@@ -33,30 +33,36 @@
   <url>
     <loc>https://digindominic.me/contact/</loc>
     <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://digindominic.me/privacy/</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/automating-secure-infrastructure-with-ansible-project/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/boot-factory-e-commerce-platform-development/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/brain-heatmap-web-app/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/cagesense-colony-management/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -68,67 +74,67 @@
   </url>
   <url>
     <loc>https://digindominic.me/projects/deep-chill-inventory-management-system/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/grant-lab-website/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/grantlab-automation-platform/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/grantlab-research-platform/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/gridcomposer/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/human-heatmap-generator/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/hycel-asset-management-system/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/microscopy-format-converters/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/montageroi-segmenter/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/montaris-x/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/nanoarchitecture-synaptome-atlas/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -140,55 +146,55 @@
   </url>
   <url>
     <loc>https://digindominic.me/projects/roi-binning-tool/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/roi-classification-tool/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/s3-bucket-viewer/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/statistical-analysis-pipeline/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/sv2a-mouse-synaptome-atlas/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/synapse-subtype-analyzer/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/synapticconnectdb/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/synaptopathydb/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/trackpy-synaptic-detection/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -200,19 +206,19 @@
   </url>
   <url>
     <loc>https://digindominic.me/projects/veeble-knowledge-base-web-development-project/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/projects/wordpress-cms-development-clearstacknow-com/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2025-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://digindominic.me/blog/automating-infrastructure-with-ansible/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

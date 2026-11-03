@@ -76,7 +76,11 @@ export default async function PublicationsPage() {
     getContentBySubfolder('publications', 'preprint'),
   ]);
 
-  const allPubs = [...mainAuthor, ...coAuthor, ...preprints];
+  const allPubs = [
+    ...mainAuthor.map(pub => ({ ...pub, role: 'main' })),
+    ...coAuthor.map(pub => ({ ...pub, role: 'co' })),
+    ...preprints.map(pub => ({ ...pub, role: 'preprint' })),
+  ].sort((a, b) => new Date(b.metadata.date || 0) - new Date(a.metadata.date || 0));
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -106,11 +110,7 @@ export default async function PublicationsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <PublicationsClient
-        mainAuthorPubs={mainAuthor}
-        coAuthorPubs={coAuthor}
-        preprintPubs={preprints}
-      />
+      <PublicationsClient publications={allPubs} />
     </>
   );
 }

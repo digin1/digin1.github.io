@@ -1,22 +1,17 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt, faFilePdf, faQuoteRight } from '@fortawesome/free-solid-svg-icons';
 
 /**
- * Publications page with Main Author and Co-Author tabs
+ * Publications page: every paper in one list, newest first.
  * Styled like Nature.com research pages
  */
-export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs = [], preprintPubs = [] }) {
-  const [activeTab, setActiveTab] = useState('main');
-
-  const currentPubs = activeTab === 'main'
-    ? mainAuthorPubs
-    : activeTab === 'co'
-      ? coAuthorPubs
-      : preprintPubs;
+export default function PublicationsClient({ publications = [] }) {
+  const total = publications.length;
+  const published = publications.filter(p => p.metadata.status === 'published').length;
+  const preprints = total - published;
 
   return (
     <div className="min-h-screen bg-transparent">
@@ -37,86 +32,25 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
             <p className="max-w-3xl text-[0.95rem] leading-7 text-light-text-secondary dark:text-muted-steel">
               Academic publications, peer-reviewed papers, and preprints connected to the research software and platform work.
             </p>
+            {total > 0 && (
+              <dl className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
+                <Stat value={total} label={total === 1 ? 'Paper' : 'Papers'} />
+                {published > 0 && <Stat value={published} label="Peer-reviewed" />}
+                {preprints > 0 && <Stat value={preprints} label={preprints === 1 ? 'Preprint' : 'Preprints'} />}
+              </dl>
+            )}
           </motion.div>
         </div>
       </header>
 
-      {/* Tabs */}
-      <div className="border-b border-light-border dark:border-zinc-800">
-        <div className="max-w-6xl mx-auto px-6">
-          <nav className="flex gap-8" aria-label="Publication tabs">
-            <button
-              onClick={() => setActiveTab('main')}
-              className={`relative py-4 text-sm font-medium transition-colors ${
-                activeTab === 'main'
-                  ? 'text-neural-blue'
-                  : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white'
-              }`}
-            >
-              Main Author
-              <span className="ml-2 text-xs text-light-text-secondary dark:text-muted-steel">({mainAuthorPubs.length})</span>
-              {activeTab === 'main' && (
-                <motion.div
-                  layoutId="tab-indicator"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-neural-blue"
-                  transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
-                />
-              )}
-            </button>
-            <button
-              onClick={() => setActiveTab('co')}
-              className={`relative py-4 text-sm font-medium transition-colors ${
-                activeTab === 'co'
-                  ? 'text-neural-blue'
-                  : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white'
-              }`}
-            >
-              Co-Author
-              <span className="ml-2 text-xs text-light-text-secondary dark:text-muted-steel">({coAuthorPubs.length})</span>
-              {activeTab === 'co' && (
-                <motion.div
-                  layoutId="tab-indicator"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-neural-blue"
-                  transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
-                />
-              )}
-            </button>
-            <button
-              onClick={() => setActiveTab('preprint')}
-              className={`relative py-4 text-sm font-medium transition-colors ${
-                activeTab === 'preprint'
-                  ? 'text-neural-blue'
-                  : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-ghost-white'
-              }`}
-            >
-              Preprints
-              <span className="ml-2 text-xs text-light-text-secondary dark:text-muted-steel">({preprintPubs.length})</span>
-              {activeTab === 'preprint' && (
-                <motion.div
-                  layoutId="tab-indicator"
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-neural-blue"
-                  transition={{ type: 'spring', bounce: 0.2, duration: 0.5 }}
-                />
-              )}
-            </button>
-          </nav>
-        </div>
-      </div>
-
       {/* Publications List */}
       <div className="max-w-6xl mx-auto px-6 py-4 md:py-6">
-        {currentPubs.length > 0 ? (
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-            className="space-y-4"
-          >
-            {currentPubs.map((pub, index) => (
-              <PublicationCard key={pub.id} publication={pub} index={index} />
+        {total > 0 ? (
+          <div className="space-y-4">
+            {publications.map((pub, index) => (
+              <PublicationCard key={`${pub.role}-${pub.id}`} publication={pub} index={index} />
             ))}
-          </motion.div>
+          </div>
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
@@ -130,11 +64,7 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
               No publications yet
             </h3>
             <p className="text-light-text-secondary dark:text-muted-steel">
-              {activeTab === 'main'
-                ? 'Main author publications will appear here.'
-                : activeTab === 'co'
-                  ? 'Co-authored publications will appear here.'
-                  : 'Preprint publications will appear here.'}
+              Publications will appear here.
             </p>
           </motion.div>
         )}
@@ -143,15 +73,25 @@ export default function PublicationsClient({ mainAuthorPubs = [], coAuthorPubs =
   );
 }
 
+function Stat({ value, label }) {
+  return (
+    <div className="flex items-baseline gap-2">
+      <dt className="sr-only">{label}</dt>
+      <dd className="font-display font-bold text-2xl text-light-text dark:text-ghost-white">{value}</dd>
+      <span className="text-sm text-light-text-secondary dark:text-muted-steel">{label}</span>
+    </div>
+  );
+}
+
 function PublicationCard({ publication, index }) {
-  const { metadata, content } = publication;
+  const { metadata, content, role } = publication;
   const { title, authors, journal, year, doi, pdf, pubmed, status, equalContribution } = metadata;
 
   return (
     <motion.article
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: index * 0.1 }}
+      transition={{ duration: 0.4, delay: Math.min(index, 5) * 0.08 }}
       className="editorial-card p-5 sm:p-6"
     >
       {/* Badges */}
@@ -165,7 +105,12 @@ function PublicationCard({ publication, index }) {
             {status === 'published' ? 'Published' : 'Preprint'}
           </span>
         )}
-        {equalContribution && (
+        {role === 'main' && (
+          <span className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-neural-blue/15 text-neural-blue">
+            {equalContribution ? 'Co-first author' : 'First author'}
+          </span>
+        )}
+        {equalContribution && role !== 'main' && (
           <span className="inline-block px-2 py-0.5 text-xs font-medium rounded bg-neural-blue/15 text-neural-blue">
             * Equal Contribution
           </span>

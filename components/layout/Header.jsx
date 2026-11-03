@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -8,179 +8,189 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon, faArrowUpRightFromSquare, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { useTheme } from '@/context/ThemeContext';
 
+const navItems = [
+  { name: 'Work', path: '/projects/' },
+  { name: 'Writing', path: '/blog/' },
+  { name: 'Publications', path: '/publications/' },
+  { name: 'About', path: '/about/' },
+  { name: 'Contact', path: '/contact/' },
+];
+
+const linkBase = 'rounded-lg text-sm transition-colors';
+const linkIdle = 'text-light-text-secondary hover:text-light-text dark:text-muted-steel dark:hover:text-ghost-white';
+const linkActive = 'bg-neural-blue/10 text-neural-blue';
+
+function ThemeToggle({ theme, toggleTheme, mounted }) {
+  const next = theme === 'dark' ? 'light' : 'dark';
+  return (
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-light-border bg-light-surface text-light-text-secondary hover:text-light-text dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel dark:hover:text-ghost-white"
+      aria-label={mounted ? `Switch to ${next} theme` : 'Toggle theme'}
+    >
+      {mounted && <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="h-4 w-4" aria-hidden="true" />}
+    </button>
+  );
+}
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
+  const pathname = usePathname() || '/';
   const { theme, toggleTheme, mounted } = useTheme();
+  const menuButtonRef = useRef(null);
+  const menuRef = useRef(null);
 
-  const navItems = [
-    { name: 'Work', path: '/projects' },
-    { name: 'Writing', path: '/blog' },
-    { name: 'Publications', path: '/publications' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
-  ];
-
+  // Close the menu on navigation.
   useEffect(() => {
     setIsMenuOpen(false);
   }, [pathname]);
 
+  // While the menu is open: Escape closes it and returns focus to the button.
+  useEffect(() => {
+    if (!isMenuOpen) return undefined;
+    menuRef.current?.querySelector('a')?.focus();
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  }, [isMenuOpen]);
+
   const isActive = (path) => {
-    if (path === '/') return pathname === path;
-    return pathname === path || pathname.startsWith(`${path}/`);
+    if (path === '/') return pathname === '/';
+    const base = path.replace(/\/$/, '');
+    return pathname === base || pathname.startsWith(`${base}/`);
   };
+
+  const ariaCurrent = (path) => (isActive(path) ? 'page' : undefined);
 
   return (
     <header className="fixed top-0 z-50 w-full glass-header">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex min-h-[72px] items-center justify-between gap-4">
-          {/* Logo */}
+        <div className="flex min-h-[72px] items-center justify-between gap-4">
           <Link href="/" className="text-[1.1rem] font-bold tracking-tight text-light-text dark:text-ghost-white">
             Digin Dominic
           </Link>
 
-          {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center gap-1 lg:gap-2">
-            <li>
-              <Link
-                href="/"
-                className={`inline-flex items-center justify-center rounded-lg px-2.5 py-2 text-sm ${
-                  isActive('/')
-                    ? 'bg-neural-blue/10 text-neural-blue'
-                    : 'text-light-text-secondary hover:text-light-text dark:text-muted-steel dark:hover:text-ghost-white'
-                }`}
-                aria-label="Home"
-              >
-                <FontAwesomeIcon icon={faHouse} className="h-3.5 w-3.5" />
-              </Link>
-            </li>
-            {navItems.map((item) => (
-              <li key={item.path}>
+          {/* Desktop navigation */}
+          <nav aria-label="Main" className="hidden md:block">
+            <ul className="flex items-center gap-1 lg:gap-2">
+              <li>
                 <Link
-                  href={item.path}
-                  className={`rounded-lg px-3 py-2 text-sm ${
-                    isActive(item.path)
-                      ? 'bg-neural-blue/10 text-neural-blue'
-                      : 'text-light-text-secondary hover:text-light-text dark:text-muted-steel dark:hover:text-ghost-white'
-                  }`}
+                  href="/"
+                  aria-label="Home"
+                  aria-current={ariaCurrent('/')}
+                  className={`inline-flex items-center justify-center px-2.5 py-2 ${linkBase} ${isActive('/') ? linkActive : linkIdle}`}
                 >
-                  {item.name}
+                  <FontAwesomeIcon icon={faHouse} className="h-3.5 w-3.5" aria-hidden="true" />
                 </Link>
               </li>
-            ))}
-          </ul>
+              {navItems.map((item) => (
+                <li key={item.path}>
+                  <Link
+                    href={item.path}
+                    aria-current={ariaCurrent(item.path)}
+                    className={`px-3 py-2 ${linkBase} ${isActive(item.path) ? linkActive : linkIdle}`}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-          {/* Right side */}
-          <div className="hidden md:flex items-center gap-2">
-            <a
-              href="/Digin_Dominic_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
+          <div className="hidden items-center gap-2 md:flex">
+            <a href="/Digin_Dominic_Resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-secondary">
               Resume
-              <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" />
+              <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" aria-hidden="true" />
             </a>
-            <button
-              onClick={toggleTheme}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-light-border bg-light-surface text-light-text-secondary hover:text-light-text dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel dark:hover:text-ghost-white"
-              aria-label="Toggle theme"
-            >
-              {mounted && <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="w-4 h-4" />}
-            </button>
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} mounted={mounted} />
           </div>
 
-          {/* Mobile: Theme toggle + Menu */}
-          <div className="md:hidden flex items-center gap-2">
+          {/* Mobile: theme toggle + menu button */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} mounted={mounted} />
             <button
-              onClick={toggleTheme}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-light-border bg-light-surface text-light-text-secondary dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel"
-              aria-label="Toggle theme"
-            >
-              {mounted && <FontAwesomeIcon icon={theme === 'dark' ? faSun : faMoon} className="w-4 h-4" />}
-            </button>
-            <button
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-light-border bg-light-surface text-light-text dark:border-zinc-800 dark:bg-zinc-900 dark:text-ghost-white"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
+              ref={menuButtonRef}
+              type="button"
+              className="flex h-10 w-10 items-center justify-center rounded-lg border border-light-border bg-light-surface text-light-text dark:border-zinc-800 dark:bg-zinc-900 dark:text-ghost-white"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
-              <div className="relative w-5 h-4">
+              <span className="relative h-4 w-5" aria-hidden="true">
                 <motion.span
-                  className="absolute left-0 w-full h-0.5 bg-current rounded-full"
-                  animate={{
-                    top: isMenuOpen ? '50%' : '0%',
-                    rotate: isMenuOpen ? 45 : 0,
-                    translateY: isMenuOpen ? '-50%' : 0,
-                  }}
+                  className="absolute left-0 h-0.5 w-full rounded-full bg-current"
+                  animate={{ top: isMenuOpen ? '50%' : '0%', rotate: isMenuOpen ? 45 : 0, translateY: isMenuOpen ? '-50%' : 0 }}
                   transition={{ duration: 0.2 }}
                 />
                 <motion.span
-                  className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-0.5 bg-current rounded-full"
+                  className="absolute left-0 top-1/2 h-0.5 w-full -translate-y-1/2 rounded-full bg-current"
                   animate={{ opacity: isMenuOpen ? 0 : 1 }}
                   transition={{ duration: 0.2 }}
                 />
                 <motion.span
-                  className="absolute left-0 w-full h-0.5 bg-current rounded-full"
-                  animate={{
-                    bottom: isMenuOpen ? '50%' : '0%',
-                    rotate: isMenuOpen ? -45 : 0,
-                    translateY: isMenuOpen ? '50%' : 0,
-                  }}
+                  className="absolute left-0 h-0.5 w-full rounded-full bg-current"
+                  animate={{ bottom: isMenuOpen ? '50%' : '0%', rotate: isMenuOpen ? -45 : 0, translateY: isMenuOpen ? '50%' : 0 }}
                   transition={{ duration: 0.2 }}
                 />
-              </div>
+              </span>
             </button>
           </div>
-        </nav>
+        </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile navigation */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.nav
-              className="md:hidden pb-4"
+              id="mobile-menu"
+              ref={menuRef}
+              aria-label="Mobile"
+              className="overflow-hidden pb-4 md:hidden"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <div className="flex flex-col gap-1 rounded-2xl border border-light-border bg-light-surface p-4 dark:border-zinc-800 dark:bg-zinc-900">
-                <Link
-                  href="/"
-                  className={`inline-flex items-center gap-2 rounded-lg px-4 py-3 text-sm transition-colors ${
-                    isActive('/')
-                      ? 'bg-neural-blue/10 text-neural-blue'
-                      : 'text-light-text-secondary hover:text-light-text dark:text-muted-steel dark:hover:text-ghost-white'
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <FontAwesomeIcon icon={faHouse} className="h-3.5 w-3.5" />
-                  Home
-                </Link>
-                {navItems.map((item) => (
+              <ul className="flex flex-col gap-1 rounded-lg border border-light-border bg-light-surface p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                <li>
                   <Link
-                    key={item.path}
-                    href={item.path}
-                    className={`rounded-lg px-4 py-3 text-sm transition-colors ${
-                      isActive(item.path)
-                        ? 'bg-neural-blue/10 text-neural-blue'
-                        : 'text-light-text-secondary hover:text-light-text dark:text-muted-steel dark:hover:text-ghost-white'
-                    }`}
-                    onClick={() => setIsMenuOpen(false)}
+                    href="/"
+                    aria-current={ariaCurrent('/')}
+                    className={`flex items-center gap-2 px-4 py-3 ${linkBase} ${isActive('/') ? linkActive : linkIdle}`}
                   >
-                    {item.name}
+                    <FontAwesomeIcon icon={faHouse} className="h-3.5 w-3.5" aria-hidden="true" />
+                    Home
                   </Link>
+                </li>
+                {navItems.map((item) => (
+                  <li key={item.path}>
+                    <Link
+                      href={item.path}
+                      aria-current={ariaCurrent(item.path)}
+                      className={`block px-4 py-3 ${linkBase} ${isActive(item.path) ? linkActive : linkIdle}`}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
                 ))}
-                <a
-                  href="/Digin_Dominic_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 inline-flex items-center justify-center gap-2 rounded-lg border border-neural-blue/30 bg-neural-blue px-4 py-3 text-sm font-medium text-deep-space"
-                >
-                  Resume
-                  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" />
-                </a>
-              </div>
+                <li className="mt-2">
+                  <a
+                    href="/Digin_Dominic_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary w-full py-3"
+                  >
+                    Resume
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3.5 w-3.5" aria-hidden="true" />
+                  </a>
+                </li>
+              </ul>
             </motion.nav>
           )}
         </AnimatePresence>

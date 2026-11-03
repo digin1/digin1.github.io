@@ -20,13 +20,13 @@ NeuroSphere is a comprehensive 3D brain atlas platform that allows users to expl
 ## Demo Videos
 
 ### Human Brain Atlas
-<video controls width="100%" poster="/images/neurosphere.jpg">
+<video controls preload="none" playsinline width="100%" poster="/images/neurosphere.jpg">
   <source src="/videos/human-threejs.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
 ### Mouse Brain Atlas
-<video controls width="100%">
+<video controls preload="none" playsinline width="100%" poster="/images/mouse-threejs-poster.jpg">
   <source src="/videos/mouse-threejs.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>

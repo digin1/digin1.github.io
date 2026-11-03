@@ -5,7 +5,7 @@ featured: false
 featuredOrder: 7
 category: "personal"
 summary: "A comprehensive MotoGP fan blog dedicated to legendary motorcycle racer Valentino Rossi (VR46), featuring race updates, rider interactions, event coverage, and exclusive content. The blog serves as a hub for racing enthusiasts to stay updated on Rossi's career and MotoGP events."
-image: "/images/46vale.png"
+image: "/images/46vale.jpg"
 tag: "Blogger, XML"
 demo: "https://46vale.info"
 role: "Creator & Writer"

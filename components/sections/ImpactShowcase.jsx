@@ -4,10 +4,9 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { getTags, getYear } from '@/lib/format';
+import StackPlaceholder from '@/components/common/StackPlaceholder';
 
-function getTags(tagString = '', limit = 3) {
-  return tagString.split(',').map(t => t.trim()).filter(Boolean).slice(0, limit);
-}
 
 function FeaturedRow({ project, index, reverse = false }) {
   const { title, summary, image, tag, role, problem, highlights } = project.metadata || {};
@@ -23,7 +22,7 @@ function FeaturedRow({ project, index, reverse = false }) {
       className="group"
     >
       <Link
-        href={`/projects/${project.id}`}
+        href={`/projects/${project.id}/`}
         className="block rounded-lg border border-light-border dark:border-zinc-800 overflow-hidden hover:border-zinc-500 dark:hover:border-zinc-600 transition-colors"
       >
         <div className={`grid gap-0 lg:grid-cols-2 ${reverse ? 'lg:[direction:rtl]' : ''}`}>
@@ -32,24 +31,19 @@ function FeaturedRow({ project, index, reverse = false }) {
             {image ? (
               <img
                 src={image}
-                alt={title}
+                alt={`Screenshot of ${title}`}
                 loading="lazy"
                 className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
               />
             ) : (
-              <div className="h-full w-full flex items-center justify-center">
-                <div className="text-center px-8">
-                  <p className="text-xs font-mono uppercase tracking-widest text-zinc-400 dark:text-zinc-600">Internal system</p>
-                  <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-500">Case study available</p>
-                </div>
-              </div>
+              <StackPlaceholder tags={getTags(tag, 6)} />
             )}
           </div>
 
           {/* Content side */}
           <div className={`p-6 lg:p-8 flex flex-col justify-center ${reverse ? 'lg:[direction:ltr]' : ''}`}>
             <div className="flex items-center gap-3 text-xs">
-              {role && <span className="font-mono uppercase tracking-widest text-zinc-500">{role}</span>}
+              {role && <span className="font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400">{role}</span>}
             </div>
 
             <h3 className="mt-3 text-xl font-display font-bold tracking-tight text-light-text dark:text-ghost-white group-hover:text-neural-blue transition-colors">
@@ -94,22 +88,22 @@ function FeaturedRow({ project, index, reverse = false }) {
 function ArchiveRow({ project }) {
   const { title, tag, category, date } = project.metadata || {};
   const tags = getTags(tag, 2);
-  const year = date ? new Date(date).getFullYear() : '';
+  const year = getYear(date);
 
   return (
     <Link
-      href={`/projects/${project.id}`}
+      href={`/projects/${project.id}/`}
       className="group flex items-center justify-between gap-4 py-3 border-b border-zinc-100 dark:border-zinc-800/60 last:border-0 hover:bg-zinc-50 dark:hover:bg-zinc-900/50 -mx-3 px-3 rounded transition-colors"
     >
       <div className="flex items-center gap-4 min-w-0">
-        <span className="text-xs font-mono text-zinc-400 dark:text-zinc-600 w-10 shrink-0">{year}</span>
+        <span className="text-xs font-mono text-zinc-600 dark:text-zinc-400 w-10 shrink-0">{year}</span>
         <span className="text-sm font-medium text-light-text dark:text-zinc-300 group-hover:text-neural-blue transition-colors truncate">
           {title}
         </span>
       </div>
       <div className="hidden sm:flex items-center gap-2 shrink-0">
         {tags.map(t => (
-          <span key={t} className="text-[11px] font-mono text-zinc-400 dark:text-zinc-600">{t}</span>
+          <span key={t} className="text-[11px] font-mono text-zinc-600 dark:text-zinc-400">{t}</span>
         ))}
         <FontAwesomeIcon icon={faArrowRight} className="h-3 w-3 text-zinc-300 dark:text-zinc-700 group-hover:text-neural-blue transition-colors" />
       </div>
@@ -142,7 +136,7 @@ export default function ImpactShowcase({ projects = [] }) {
             transition={{ duration: 0.35 }}
             className="mb-10"
           >
-            <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-3">Selected work</p>
+            <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-3">Selected work</p>
             <h2 className="text-section-heading font-display font-bold text-light-text dark:text-ghost-white">
               Featured case studies
             </h2>
@@ -158,14 +152,14 @@ export default function ImpactShowcase({ projects = [] }) {
           {/* Archive preview */}
           {archive.length > 0 && (
             <div className="mt-12">
-              <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-500 mb-4">More projects</p>
+              <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-4">More projects</p>
               <div>
                 {archive.map(project => (
                   <ArchiveRow key={project.id} project={project} />
                 ))}
               </div>
               <div className="mt-6">
-                <Link href="/projects" className="text-sm font-medium text-neural-blue hover:text-synapse-cyan inline-flex items-center gap-1.5">
+                <Link href="/projects/" className="text-sm font-medium text-neural-blue hover:text-synapse-cyan inline-flex items-center gap-1.5">
                   View all {projects.length} projects
                   <FontAwesomeIcon icon={faArrowRight} className="h-3 w-3" />
                 </Link>

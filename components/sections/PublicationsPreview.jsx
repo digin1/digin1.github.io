@@ -1,103 +1,106 @@
-'use client';
-
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+
+// Lead with the strongest paper (peer-reviewed, lead author), not just the newest.
+function pickPrimary(publications) {
+  return (
+    publications.find(p => p.role === 'main-author' && p.metadata.status === 'published') ||
+    publications.find(p => p.metadata.status === 'published') ||
+    publications[0]
+  );
+}
 
 export default function PublicationsPreview({ publications = [] }) {
   if (!publications.length) return null;
 
-  const primary = publications[0];
-  const supporting = publications.slice(1, 3);
+  const primary = pickPrimary(publications);
+  const supporting = publications.filter(p => p !== primary).slice(0, 3);
+  const { title, journal, year, doi, status, equalContribution } = primary.metadata;
+  const isLead = primary.role === 'main-author';
 
   return (
-    <section className="py-16 md:py-20">
+    <section className="py-16 md:py-20" aria-labelledby="publications-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.35 }}
-            className="mb-8"
-          >
-            <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-3">Research output</p>
-            <h2 className="text-section-heading font-display font-bold text-light-text dark:text-ghost-white">
-              Publications
-            </h2>
-          </motion.div>
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow mb-3">Research output</p>
+              <h2 id="publications-heading" className="text-section-heading font-display font-bold text-light-text dark:text-ghost-white">
+                Publications
+              </h2>
+            </div>
+            <p className="text-sm text-light-text-secondary dark:text-muted-steel">
+              {publications.length} papers in neuroscience and research software
+            </p>
+          </div>
 
-          {/* Primary publication — highlighted */}
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.35 }}
-            className="rounded-lg border border-light-border dark:border-zinc-800 p-6"
-          >
-            <div className="flex items-center gap-3 mb-3">
-              <span className="px-2 py-0.5 text-[11px] font-mono font-medium rounded bg-neural-blue/10 text-neural-blue">
-                {primary.metadata.status === 'published' ? 'Published' : 'Preprint'}
+          {/* Primary publication */}
+          <article className="editorial-card p-6">
+            <div className="mb-3 flex flex-wrap items-center gap-2">
+              <span className={`rounded px-2 py-0.5 text-[11px] font-mono font-medium ${
+                status === 'published' ? 'bg-signal-green/15 text-signal-green' : 'bg-plasma-purple/15 text-plasma-purple'
+              }`}>
+                {status === 'published' ? 'Peer-reviewed' : 'Preprint'}
               </span>
-              {primary.metadata.equalContribution && (
-                <span className="text-[11px] font-mono text-zinc-500">Equal contribution</span>
+              {isLead && (
+                <span className="rounded bg-neural-blue/15 px-2 py-0.5 text-[11px] font-mono font-medium text-neural-blue">
+                  {equalContribution ? 'Co-first author' : 'First author'}
+                </span>
               )}
             </div>
-            <h3 className="text-lg font-bold text-light-text dark:text-ghost-white leading-snug">
-              {primary.metadata.title}
-            </h3>
-            <p className="mt-2 text-sm text-zinc-500">
-              {primary.metadata.journal} &middot; {primary.metadata.year}
+            <h3 className="text-lg font-bold leading-snug text-light-text dark:text-ghost-white">{title}</h3>
+            <p className="mt-2 text-sm text-light-text-secondary dark:text-muted-steel">
+              <span className="italic">{journal}</span> &middot; {year}
             </p>
-            {primary.metadata.doi && (
+            {doi && (
               <a
-                href={primary.metadata.doi}
+                href={doi}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-neural-blue hover:text-synapse-cyan"
               >
                 View publication
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3 w-3" />
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3 w-3" aria-hidden="true" />
               </a>
             )}
-          </motion.div>
+          </article>
 
-          {/* Supporting publications — compact */}
+          {/* Supporting publications */}
           {supporting.length > 0 && (
-            <div className="mt-4 space-y-3">
-              {supporting.map((pub, i) => (
-                <motion.div
-                  key={pub.id}
-                  initial={{ opacity: 0, y: 8 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: i * 0.05 }}
-                  className="flex items-start justify-between gap-4 py-3 border-b border-zinc-100 dark:border-zinc-800/60 last:border-0"
+            <ul className="mt-4">
+              {supporting.map(pub => (
+                <li
+                  key={`${pub.role}-${pub.id}`}
+                  className="flex items-start justify-between gap-4 border-b border-light-border py-3 last:border-0 dark:border-zinc-800/60"
                 >
                   <div className="min-w-0">
-                    <p className="text-sm font-medium text-light-text dark:text-zinc-300 leading-snug">{pub.metadata.title}</p>
-                    <p className="mt-1 text-xs text-zinc-500">{pub.metadata.journal} &middot; {pub.metadata.year}</p>
+                    <p className="text-sm font-medium leading-snug text-light-text dark:text-zinc-300">{pub.metadata.title}</p>
+                    <p className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
+                      {pub.metadata.status === 'published' ? '' : 'Preprint · '}
+                      {pub.metadata.journal} &middot; {pub.metadata.year}
+                    </p>
                   </div>
                   {pub.metadata.doi && (
                     <a
                       href={pub.metadata.doi}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="shrink-0 text-xs text-neural-blue hover:text-synapse-cyan"
+                      aria-label={`View publication: ${pub.metadata.title}`}
+                      className="shrink-0 p-1 text-neural-blue hover:text-synapse-cyan"
                     >
-                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3 w-3" />
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-3 w-3" aria-hidden="true" />
                     </a>
                   )}
-                </motion.div>
+                </li>
               ))}
-            </div>
+            </ul>
           )}
 
           <div className="mt-6">
-            <Link href="/publications" className="text-sm font-medium text-neural-blue hover:text-synapse-cyan inline-flex items-center gap-1.5">
-              All publications
-              <FontAwesomeIcon icon={faArrowRight} className="h-3 w-3" />
+            <Link href="/publications/" className="inline-flex items-center gap-1.5 text-sm font-medium text-neural-blue hover:text-synapse-cyan">
+              All {publications.length} publications
+              <FontAwesomeIcon icon={faArrowRight} className="h-3 w-3" aria-hidden="true" />
             </Link>
           </div>
         </div>

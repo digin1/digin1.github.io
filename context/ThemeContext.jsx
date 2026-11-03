@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
+import { MotionConfig } from 'framer-motion';
 
 const ThemeContext = createContext({
   theme: 'dark',
@@ -36,7 +37,8 @@ export function ThemeProvider({ children }) {
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme, mounted }}>
-      {children}
+      {/* Honour the OS "reduce motion" setting for every framer-motion animation */}
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </ThemeContext.Provider>
   );
 }

@@ -1,82 +1,80 @@
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
+const matter = require('gray-matter');
 
 const SITE_URL = 'https://digindominic.me';
+const ROOT = path.join(__dirname, '..');
+const CONTENT = path.join(ROOT, 'content');
 
-// Static pages with their priorities and change frequencies
-const staticPages = [
-  { path: '/', changefreq: 'weekly', priority: '1.0' },
-  { path: '/projects/', changefreq: 'weekly', priority: '0.9' },
-  { path: '/publications/', changefreq: 'weekly', priority: '0.9' },
-  { path: '/blog/', changefreq: 'weekly', priority: '0.9' },
-  { path: '/about/', changefreq: 'monthly', priority: '0.8' },
-  { path: '/contact/', changefreq: 'monthly', priority: '0.8' },
-];
+const toDay = value => {
+  const date = value ? new Date(value) : null;
+  return date && !Number.isNaN(date.getTime()) ? date.toISOString().slice(0, 10) : null;
+};
 
-function getContentSlugs(contentType) {
-  const contentDir = path.join(__dirname, '..', 'content', contentType);
-
-  if (!fs.existsSync(contentDir)) {
-    return [];
+// Last time a file or folder changed in git (needs full history in CI:
+// actions/checkout with fetch-depth: 0). Falls back to null if unavailable.
+function gitDate(relPath) {
+  try {
+    return toDay(execFileSync('git', ['log', '-1', '--format=%cI', '--', relPath], { cwd: ROOT, encoding: 'utf8' }).trim());
+  } catch {
+    return null;
   }
+}
 
-  return fs.readdirSync(contentDir)
+function contentEntries(type) {
+  const dir = path.join(CONTENT, type);
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
     .filter(file => file.endsWith('.md'))
-    .map(file => file.replace('.md', '').toLowerCase());
+    .map(file => {
+      const { data } = matter(fs.readFileSync(path.join(dir, file), 'utf8'));
+      return {
+        slug: file.replace(/\.md$/, ''),
+        lastmod: gitDate(`content/${type}/${file}`) || toDay(data.date),
+      };
+    });
+}
+
+const latest = (...dates) => dates.flat().filter(Boolean).sort().pop() || toDay(new Date());
+
+function urlEntry(loc, lastmod, changefreq, priority) {
+  return `  <url>
+    <loc>${SITE_URL}${loc}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>\n`;
 }
 
 function generateSitemap() {
-  const today = new Date().toISOString().split('T')[0];
+  const projects = contentEntries('projects');
+  const posts = contentEntries('blog');
+  const projectDates = projects.map(p => p.lastmod);
+  const postDates = posts.map(p => p.lastmod);
 
-  // Get dynamic content
-  const projectSlugs = getContentSlugs('projects');
-  const blogSlugs = getContentSlugs('blog');
+  const staticPages = [
+    { path: '/', changefreq: 'weekly', priority: '1.0', lastmod: latest(projectDates, postDates, gitDate('app'), gitDate('content')) },
+    { path: '/projects/', changefreq: 'weekly', priority: '0.9', lastmod: latest(projectDates, gitDate('app/projects')) },
+    { path: '/publications/', changefreq: 'monthly', priority: '0.9', lastmod: latest(gitDate('content/publications'), gitDate('app/publications')) },
+    { path: '/blog/', changefreq: 'monthly', priority: '0.8', lastmod: latest(postDates, gitDate('app/blog')) },
+    { path: '/about/', changefreq: 'monthly', priority: '0.8', lastmod: latest(gitDate('content/about'), gitDate('app/about')) },
+    { path: '/contact/', changefreq: 'yearly', priority: '0.6', lastmod: latest(gitDate('app/contact')) },
+    { path: '/privacy/', changefreq: 'yearly', priority: '0.3', lastmod: latest(gitDate('app/privacy')) },
+  ];
 
-  // Build URL entries
   let urls = '';
-
-  // Add static pages
-  staticPages.forEach(page => {
-    urls += `  <url>
-    <loc>${SITE_URL}${page.path}</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>
-  </url>\n`;
-  });
-
-  // Add project pages
-  projectSlugs.forEach(slug => {
-    urls += `  <url>
-    <loc>${SITE_URL}/projects/${slug}/</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>\n`;
-  });
-
-  // Add blog pages
-  blogSlugs.forEach(slug => {
-    urls += `  <url>
-    <loc>${SITE_URL}/blog/${slug}/</loc>
-    <lastmod>${today}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>\n`;
-  });
+  staticPages.forEach(page => { urls += urlEntry(page.path, page.lastmod, page.changefreq, page.priority); });
+  projects.forEach(p => { urls += urlEntry(`/projects/${p.slug}/`, p.lastmod || latest(), 'monthly', '0.7'); });
+  posts.forEach(p => { urls += urlEntry(`/blog/${p.slug}/`, p.lastmod || latest(), 'monthly', '0.7'); });
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}</urlset>`;
+${urls}</urlset>
+`;
 
-  // Write to public folder
-  const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
-  fs.writeFileSync(outputPath, sitemap);
-
-  console.log(`✓ Sitemap generated with ${staticPages.length + projectSlugs.length + blogSlugs.length} URLs`);
-  console.log(`  - ${staticPages.length} static pages`);
-  console.log(`  - ${projectSlugs.length} projects`);
-  console.log(`  - ${blogSlugs.length} blog posts`);
+  fs.writeFileSync(path.join(ROOT, 'public', 'sitemap.xml'), sitemap);
+  console.log(`✓ Sitemap generated with ${staticPages.length + projects.length + posts.length} URLs`);
 }
 
 generateSitemap();

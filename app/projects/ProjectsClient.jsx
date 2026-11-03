@@ -10,26 +10,20 @@ import {
   faTimes,
   faFolderOpen,
 } from '@fortawesome/free-solid-svg-icons';
+import { categoryLabels, getTags, getYear } from '@/lib/format';
 
-const categoryLabels = {
-  research: 'Research project',
-  commercial: 'Commercial project',
-  personal: 'Independent project',
-  education: 'Academic project',
-};
+// Tags worth offering as filters (the rest are too niche to be useful).
+const ALLOWED_FILTER_TAGS = new Set([
+  'Python', 'React', 'Flask', 'Three.js', 'Docker', 'Docker Swarm',
+  'Next.js', 'FastAPI', 'PostgreSQL', 'TypeScript', 'JavaScript',
+  'NumPy', 'PyTorch', 'CUDA', 'D3.js', 'Celery', 'Redis',
+  'Dask', 'OpenCV', 'WebGL', 'Tailwind CSS', 'SQLite',
+  'Desktop App', 'GPU Computing', 'REST API', 'Data Visualization',
+  'Microscopy', 'Neuroscience', 'Image Processing',
+]);
 
-function getTags(tagString = '', limit = 3) {
-  return tagString
-    .split(',')
-    .map((tag) => tag.trim())
-    .filter(Boolean)
-    .slice(0, limit);
-}
 
-function getYear(dateString) {
-  if (!dateString) return 'Undated';
-  return new Date(dateString).getFullYear().toString();
-}
+
 
 function FeaturedProject({ project, index }) {
   const { title, summary, role, tag, image, category } = project.metadata || {};
@@ -43,7 +37,7 @@ function FeaturedProject({ project, index }) {
       transition={{ duration: 0.35, delay: index * 0.06 }}
     >
       <Link
-        href={`/projects/${project.id}`}
+        href={`/projects/${project.id}/`}
         className="group block editorial-card overflow-hidden hover:border-zinc-600 dark:hover:border-zinc-700 transition-colors"
       >
         {/* Image — full width on top */}
@@ -65,9 +59,9 @@ function FeaturedProject({ project, index }) {
             {role && <span className="meta-label">{role}</span>}
           </div>
 
-          <h2 className="mt-3 font-display font-bold text-xl tracking-tight text-light-text dark:text-ghost-white group-hover:text-neural-blue transition-colors">
+          <h3 className="mt-3 font-display font-bold text-xl tracking-tight text-light-text dark:text-ghost-white group-hover:text-neural-blue transition-colors">
             {title}
-          </h2>
+          </h3>
 
           <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel line-clamp-2">
             {summary}
@@ -103,14 +97,14 @@ function ArchiveRow({ project, index }) {
       transition={{ duration: 0.32, delay: Math.min(index * 0.03, 0.24) }}
     >
       <Link
-        href={`/projects/${project.id}`}
-        className="group block rounded-2xl border border-light-border bg-light-card p-4 hover:border-neural-blue/40 hover:bg-neural-blue/5 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-slate-950/35"
+        href={`/projects/${project.id}/`}
+        className="group block rounded-lg border border-light-border bg-light-card p-4 hover:border-neural-blue/40 hover:bg-neural-blue/5 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-900/60"
       >
         <div className="grid gap-4 md:grid-cols-[88px_minmax(0,1.6fr)_minmax(180px,0.9fr)_auto] md:items-start">
           <div className="min-w-0">
             <p className="meta-label">Year</p>
             <p className="mt-2 text-sm font-semibold text-light-text dark:text-ghost-white">
-              {getYear(date)}
+              {getYear(date, 'Undated')}
             </p>
           </div>
 
@@ -161,24 +155,12 @@ export default function ProjectsClient({ projects = [] }) {
   const [activeTag, setActiveTag] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const allowedTags = new Set([
-    'Python', 'React', 'Flask', 'Three.js', 'Docker', 'Docker Swarm',
-    'Next.js', 'FastAPI', 'PostgreSQL', 'TypeScript', 'JavaScript',
-    'NumPy', 'PyTorch', 'CUDA', 'D3.js', 'Celery', 'Redis',
-    'Dask', 'OpenCV', 'WebGL', 'Tailwind CSS', 'SQLite',
-    'Desktop App', 'GPU Computing', 'REST API', 'Data Visualization',
-    'Microscopy', 'Neuroscience', 'Image Processing',
-  ]);
-
   const allTags = useMemo(() => {
     const tags = new Set();
     projects.forEach((project) => {
-      if (project.metadata?.tag) {
-        project.metadata.tag.split(',').forEach((t) => {
-          const trimmed = t.trim();
-          if (allowedTags.has(trimmed)) tags.add(trimmed);
-        });
-      }
+      getTags(project.metadata?.tag).forEach((t) => {
+        if (ALLOWED_FILTER_TAGS.has(t)) tags.add(t);
+      });
     });
     return Array.from(tags).sort();
   }, [projects]);
@@ -199,18 +181,13 @@ export default function ProjectsClient({ projects = [] }) {
 
     if (activeTag) {
       result = result.filter((project) => {
-        const projectTags = project.metadata?.tag
-          ? project.metadata.tag.split(',').map((tag) => tag.trim())
-          : [];
+        const projectTags = getTags(project.metadata?.tag);
         return projectTags.includes(activeTag);
       });
     }
 
-    return [...result].sort((a, b) => {
-      const dateA = a.metadata?.date ? new Date(a.metadata.date) : new Date(0);
-      const dateB = b.metadata?.date ? new Date(b.metadata.date) : new Date(0);
-      return dateB - dateA;
-    });
+    // Already sorted newest first on the server.
+    return result;
   }, [projects, searchQuery, activeTag]);
 
   const featuredProjects = useMemo(() => {
@@ -237,7 +214,7 @@ export default function ProjectsClient({ projects = [] }) {
           className="border-b border-light-border pb-5 dark:border-zinc-800"
         >
           <span className="eyebrow mb-2">Selected work</span>
-          <h1 className="max-w-3xl font-display font-bold text-[2.2rem] leading-[1.05] tracking-tight text-light-text dark:text-ghost-white sm:text-[2.6rem]">
+          <h1 className="max-w-3xl text-page-title font-display text-light-text dark:text-ghost-white text-balance">
             Case studies across research software, visualisation, and infrastructure.
           </h1>
           <p className="mt-3 max-w-3xl text-[0.95rem] leading-7 text-light-text-secondary dark:text-muted-steel">
@@ -258,17 +235,18 @@ export default function ProjectsClient({ projects = [] }) {
               className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400"
             />
             <input
-              type="text"
+              type="search"
               value={searchQuery}
               onChange={(event) => setSearchQuery(event.target.value)}
               placeholder="Search projects..."
-              className="w-full rounded-lg border border-light-border bg-light-surface py-2.5 pl-11 pr-10 text-sm text-light-text outline-none placeholder:text-zinc-400 focus:border-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-ghost-white"
+              className="w-full rounded-lg border border-light-border bg-light-surface py-2.5 pl-11 pr-10 text-sm text-light-text placeholder:text-zinc-500 focus:border-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-ghost-white"
               aria-label="Search work"
             />
             {searchQuery ? (
               <button
+                type="button"
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-zinc-400 hover:text-light-text dark:hover:text-ghost-white"
+                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-zinc-500 dark:text-zinc-400 hover:text-light-text dark:hover:text-ghost-white"
                 aria-label="Clear search"
               >
                 <FontAwesomeIcon icon={faTimes} className="h-4 w-4" />
@@ -277,13 +255,13 @@ export default function ProjectsClient({ projects = [] }) {
           </div>
 
           <div className="mt-3 flex items-center justify-between gap-4">
-            <p className="text-xs text-zinc-500">
+            <p className="text-xs text-zinc-500 dark:text-zinc-400" aria-live="polite">
               {hasActiveFilters
                 ? `${filteredProjects.length} matching project${filteredProjects.length === 1 ? '' : 's'}`
                 : `${filteredProjects.length} projects`}
             </p>
             {hasActiveFilters ? (
-              <button onClick={clearFilters} className="text-xs text-neural-blue hover:text-synapse-cyan">
+              <button type="button" onClick={clearFilters} className="text-xs text-neural-blue hover:text-synapse-cyan">
                 Clear filters
               </button>
             ) : null}
@@ -294,7 +272,7 @@ export default function ProjectsClient({ projects = [] }) {
           <section className="mt-8">
             <div className="mb-4 flex items-end justify-between gap-4">
               <div>
-                <p className="eyebrow">Featured case studies</p>
+                <h2 className="eyebrow">Featured case studies</h2>
                 <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
                   Start here if you want the clearest view of the strongest public-facing work.
                 </p>
@@ -309,22 +287,23 @@ export default function ProjectsClient({ projects = [] }) {
         ) : null}
 
         <section className="mt-8">
-          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_220px]">
+          <div className="grid grid-cols-[minmax(0,1fr)] gap-8 lg:grid-cols-[minmax(0,1fr)_220px]">
             {/* Archive list — left */}
             <div>
               <div className="mb-4 border-b border-light-border pb-3 dark:border-zinc-800">
-                <p className="eyebrow">Archive</p>
+                <h2 className="eyebrow">{hasActiveFilters ? 'Results' : 'Archive'}</h2>
               </div>
 
               <AnimatePresence mode="wait">
                 {filteredProjects.length === 0 ? (
                   <motion.div
+                    key="empty"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     className="py-12 text-center"
                   >
-                    <p className="text-sm text-zinc-500">No matching projects. Try a broader search or clear filters.</p>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">No matching projects. Try a broader search or clear filters.</p>
                   </motion.div>
                 ) : (
                   <motion.div
@@ -344,18 +323,20 @@ export default function ProjectsClient({ projects = [] }) {
 
             {/* Tag sidebar — right */}
             {allTags.length > 0 && (
-              <aside className="hidden lg:block">
-                <div className="sticky top-24">
-                  <p className="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-3">Filter by tech</p>
-                  <div className="flex flex-wrap gap-1.5">
+              <aside className="order-first min-w-0 lg:order-none" aria-labelledby="tech-filter-heading">
+                <div className="lg:sticky lg:top-24">
+                  <h2 id="tech-filter-heading" className="meta-label mb-3">Filter by tech</h2>
+                  <div className="-mx-4 flex gap-1.5 overflow-x-auto px-4 pb-1 lg:mx-0 lg:flex-wrap lg:overflow-visible lg:px-0 lg:pb-0">
                     {allTags.map((tag) => (
                       <button
                         key={tag}
+                        type="button"
                         onClick={() => setActiveTag(activeTag === tag ? '' : tag)}
-                        className={`text-[11px] font-mono px-2 py-1 rounded transition-colors ${
+                        aria-pressed={activeTag === tag}
+                        className={`shrink-0 whitespace-nowrap text-[11px] font-mono px-2 py-1 rounded border transition-colors ${
                           activeTag === tag
-                            ? 'bg-neural-blue text-deep-space'
-                            : 'text-zinc-500 hover:text-light-text hover:bg-zinc-100 dark:hover:text-zinc-300 dark:hover:bg-zinc-800/50'
+                            ? 'border-neural-blue bg-neural-blue text-white dark:text-deep-space'
+                            : 'border-light-border text-zinc-600 hover:text-light-text hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-400 dark:hover:text-zinc-200 dark:hover:bg-zinc-800/50 lg:border-transparent lg:dark:border-transparent'
                         }`}
                       >
                         {tag}

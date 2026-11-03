@@ -122,7 +122,7 @@ The app uses a modern stack with continuous delivery pipelines:
 ---
 ## Award Certificate
 
-![Award Certificate](/images/projectaward.png)
+![Award Certificate](/images/projectaward.webp)
 
 ---
 

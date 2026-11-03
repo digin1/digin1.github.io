@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faBookOpen, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { formatDate, getTags } from '@/lib/format';
 
 const futureTopics = [
   'How I built SynaptopathyDB',
@@ -13,22 +14,7 @@ const futureTopics = [
   'Infrastructure choices in research environments',
 ];
 
-function getTags(tagString = '', limit = 3) {
-  return tagString
-    .split(',')
-    .map((tag) => tag.trim())
-    .filter(Boolean)
-    .slice(0, limit);
-}
 
-function formatDate(dateStr) {
-  if (!dateStr) return '';
-  return new Date(dateStr).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
-}
 
 function LeadPost({ post }) {
   const { title, summary, description, image, date, tag } = post.metadata || {};
@@ -39,9 +25,9 @@ function LeadPost({ post }) {
       <div className="grid gap-0 xl:grid-cols-[minmax(0,1fr)_380px]">
         <div className="p-6 sm:p-7">
           <span className="eyebrow">Lead essay</span>
-          <h2 className="mt-4 max-w-[18ch] font-display font-bold text-[2rem] leading-[1.04] tracking-tight text-light-text dark:text-ghost-white">
+          <h3 className="mt-4 max-w-[24ch] text-section-heading font-display text-light-text dark:text-ghost-white">
             {title}
-          </h2>
+          </h3>
           {date ? (
             <p className="mt-4 text-sm text-light-text-secondary dark:text-muted-steel">
               {formatDate(date)}
@@ -57,14 +43,14 @@ function LeadPost({ post }) {
               </span>
             ))}
           </div>
-          <Link href={`/blog/${post.id}`} className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-neural-blue hover:text-synapse-cyan">
+          <Link href={`/blog/${post.id}/`} className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-neural-blue hover:text-synapse-cyan">
             Read article
             <FontAwesomeIcon icon={faArrowRight} className="h-3.5 w-3.5" />
           </Link>
         </div>
 
         <div className="border-t border-light-border/80 bg-light-surface/70 p-4 dark:border-zinc-800 dark:bg-zinc-900 xl:border-l xl:border-t-0">
-          <div className="flex h-full min-h-[220px] items-center justify-center overflow-hidden rounded-xl border border-light-border/80 bg-light-surface dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="flex h-full min-h-[220px] items-center justify-center overflow-hidden rounded-lg border border-light-border/80 bg-light-surface dark:border-zinc-800 dark:bg-zinc-900">
             {image ? (
               <img src={image} alt={title} loading="lazy" className="h-full w-full object-cover object-center" />
             ) : (
@@ -93,8 +79,8 @@ function ArchivePost({ post, index }) {
       transition={{ duration: 0.32, delay: Math.min(index * 0.04, 0.24) }}
     >
       <Link
-        href={`/blog/${post.id}`}
-        className="group block rounded-2xl border border-light-border bg-light-card p-4 hover:border-neural-blue/40 hover:bg-neural-blue/5 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-slate-950/35"
+        href={`/blog/${post.id}/`}
+        className="group block rounded-lg border border-light-border bg-light-card p-4 hover:border-neural-blue/40 hover:bg-neural-blue/5 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-900/60"
       >
         <div className="grid gap-4 md:grid-cols-[180px_minmax(0,1fr)_auto] md:items-start">
           <div>
@@ -138,9 +124,7 @@ export default function BlogClient({ posts = [] }) {
   const allTags = useMemo(() => {
     const tags = new Set();
     posts.forEach((post) => {
-      if (post.metadata?.tag) {
-        post.metadata.tag.split(',').forEach((tag) => tags.add(tag.trim()));
-      }
+      getTags(post.metadata?.tag).forEach((tag) => tags.add(tag));
     });
     return Array.from(tags).filter(Boolean).sort();
   }, [posts]);
@@ -148,18 +132,13 @@ export default function BlogClient({ posts = [] }) {
   const sortedPosts = useMemo(() => {
     const result = activeTag
       ? posts.filter((post) => {
-          const postTags = post.metadata?.tag
-            ? post.metadata.tag.split(',').map((tag) => tag.trim())
-            : [];
+          const postTags = getTags(post.metadata?.tag);
           return postTags.includes(activeTag);
         })
       : posts;
 
-    return [...result].sort((a, b) => {
-      const dateA = a.metadata?.date ? new Date(a.metadata.date) : new Date(0);
-      const dateB = b.metadata?.date ? new Date(b.metadata.date) : new Date(0);
-      return dateB - dateA;
-    });
+    // Already sorted newest first on the server.
+    return result;
   }, [posts, activeTag]);
 
   const leadPost = sortedPosts[0];
@@ -175,7 +154,7 @@ export default function BlogClient({ posts = [] }) {
           className="border-b border-light-border pb-5 dark:border-zinc-800"
         >
           <span className="eyebrow mb-2">Writing</span>
-          <h1 className="max-w-3xl font-display font-bold text-[2.2rem] leading-[1.05] tracking-tight text-light-text dark:text-ghost-white sm:text-[2.6rem]">
+          <h1 className="max-w-3xl text-page-title font-display text-light-text dark:text-ghost-white text-balance">
             Notes on software, systems, and technical work that matters in practice.
           </h1>
           <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-7 text-light-text-secondary dark:text-muted-steel">
@@ -189,14 +168,16 @@ export default function BlogClient({ posts = [] }) {
               {allTags.map((tag) => (
                 <button
                   key={tag}
+                  type="button"
+                  aria-pressed={activeTag === tag}
                   onClick={() => setActiveTag(activeTag === tag ? '' : tag)}
-                  className={activeTag === tag ? 'tag bg-neural-blue text-deep-space border-neural-blue' : 'tag'}
+                  className={activeTag === tag ? 'tag bg-neural-blue text-white dark:text-deep-space border-neural-blue' : 'tag'}
                 >
                   {tag}
                 </button>
               ))}
               {activeTag ? (
-                <button onClick={() => setActiveTag('')} className="btn-secondary">
+                <button type="button" onClick={() => setActiveTag('')} className="btn-secondary">
                   <FontAwesomeIcon icon={faTimes} className="h-3.5 w-3.5" />
                   Clear
                 </button>
@@ -209,10 +190,7 @@ export default function BlogClient({ posts = [] }) {
           <section className="mt-8">
             <div className="mb-4 flex items-end justify-between gap-4">
               <div>
-                <p className="eyebrow">Latest post</p>
-                <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
-                  Writing should read like engineering notes, not lifestyle content.
-                </p>
+                <h2 className="eyebrow">Latest post</h2>
               </div>
             </div>
             <LeadPost post={leadPost} />
@@ -223,22 +201,20 @@ export default function BlogClient({ posts = [] }) {
           <div>
             <div className="mb-4 flex items-end justify-between gap-4 border-b border-light-border pb-3 dark:border-zinc-800">
               <div>
-                <p className="eyebrow">Archive</p>
-                <p className="mt-2 text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
-                  A denser list of published notes and technical reflections.
-                </p>
+                <h2 className="eyebrow">{archivePosts.length > 0 ? 'More posts' : 'More coming'}</h2>
               </div>
             </div>
 
             <AnimatePresence mode="wait">
               {sortedPosts.length === 0 ? (
                 <motion.div
+                  key="empty"
                   initial={{ opacity: 0, scale: 0.98 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.98 }}
                   className="editorial-card px-6 py-12 text-center"
                 >
-                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl border border-light-border bg-light-surface text-neural-blue dark:border-zinc-800 dark:bg-zinc-900">
+                  <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-lg border border-light-border bg-light-surface text-neural-blue dark:border-zinc-800 dark:bg-zinc-900">
                     <FontAwesomeIcon icon={faBookOpen} className="h-5 w-5" />
                   </div>
                   <h3 className="mt-5 text-xl font-display font-bold text-light-text dark:text-ghost-white">
@@ -256,20 +232,26 @@ export default function BlogClient({ posts = [] }) {
                   exit={{ opacity: 0 }}
                   className="space-y-3"
                 >
-                  {archivePosts.map((post, index) => (
-                    <ArchivePost key={post.id} post={post} index={index} />
-                  ))}
+                  {archivePosts.length === 0 ? (
+                    <p className="text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
+                      More notes are on the way. The topics planned next are listed alongside.
+                    </p>
+                  ) : (
+                    archivePosts.map((post, index) => (
+                      <ArchivePost key={post.id} post={post} index={index} />
+                    ))
+                  )}
                 </motion.div>
               )}
             </AnimatePresence>
           </div>
 
-          <aside className="space-y-5">
+          <div className="space-y-5">
             <div className="editorial-card p-5 sm:p-6">
-              <p className="meta-label">Planned writing</p>
+              <h2 className="meta-label">Planned writing</h2>
               <div className="mt-4 space-y-3">
                 {futureTopics.map((topic) => (
-                  <div key={topic} className="rounded-xl border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
+                  <div key={topic} className="rounded-lg border border-light-border/80 bg-light-surface/80 p-4 dark:border-zinc-800 dark:bg-zinc-900">
                     <p className="text-sm leading-6 text-light-text-secondary dark:text-muted-steel">
                       {topic}
                     </p>
@@ -279,20 +261,20 @@ export default function BlogClient({ posts = [] }) {
             </div>
 
             <div className="editorial-card p-5 sm:p-6">
-              <p className="meta-label">Related reading path</p>
+              <h2 className="meta-label">Related reading</h2>
               <p className="mt-4 text-sm leading-7 text-light-text-secondary dark:text-muted-steel">
                 If you want the strongest proof first, start with the work archive and publications, then come back here for the implementation notes and opinions behind the systems.
               </p>
               <div className="mt-5 flex flex-wrap gap-3">
-                <Link href="/projects" className="btn-secondary">
+                <Link href="/projects/" className="btn-secondary">
                   View work
                 </Link>
-                <Link href="/publications" className="btn-secondary">
+                <Link href="/publications/" className="btn-secondary">
                   Publications
                 </Link>
               </div>
             </div>
-          </aside>
+          </div>
         </section>
       </div>
     </div>

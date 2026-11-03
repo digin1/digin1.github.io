@@ -1,70 +1,195 @@
-# Getting Started with Portfolio App : DiginDominic.me
+# digindominic.me
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal site of **Digin Dominic**, Software Engineer at the University of Edinburgh (Genes to Cognition Programme). It collects case studies of research software, publications, and technical writing.
 
-## Available Scripts.
+**Live site:** [digindominic.me](https://digindominic.me)
 
-In the project directory, you can run:
+Built with Next.js 15 (App Router) as a fully static export, styled with Tailwind CSS, and deployed to GitHub Pages. All page content lives in Markdown files, so most updates mean editing a file in `content/` and pushing to `main`.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Quick start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Requires Node.js 20 or newer.
 
-### `npm test`
+```bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run dev
+```
 
-### `npm run build`
+The site runs at <http://localhost:3000> and reloads as you edit code or content.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Command | What it does |
+|---|---|
+| `npm run dev` | Development server with hot reload |
+| `npm run build` | Regenerates the sitemap, then builds the static site into `out/` |
+| `npm run sitemap` | Regenerates `public/sitemap.xml` on its own |
+| `npm run lint` | Runs Next.js linting |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To preview a production build locally, serve the `out/` folder with any static file server, for example `npx serve out`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Updating content
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Each Markdown file has a YAML front-matter block for its metadata, followed by the body in Markdown. Raw HTML is allowed in the body, for example `<video>` embeds. The file name becomes the URL slug.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Projects (`content/projects/*.md`, served at `/projects/<file-name>/`)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```yaml
+---
+title: "Grant Lab Research Platform"
+date: "2024-06-01"            # YYYY-MM-DD; sets sort order (newest first)
+category: "research"          # research | commercial | personal | education
+summary: "One or two sentences shown on cards and in search results."
+image: "/images/example.png"  # optional; leave "" for a stack-based placeholder
+tag: "Flask, Docker Swarm, Python"   # comma-separated; also drives the tech filter
+role: "Lead Developer"
+duration: "2+ years (ongoing)"
+featured: true                # optional; shows on the home page and top of Work
+featuredOrder: 1              # optional; order among featured projects
+problem: "…"                  # optional framing cards at the top of the case study
+scope: "…"
+outcome: "…"
+highlights:                   # optional bullet list shown above the body
+  - "…"
+demo: "https://…"             # optional live link
+github: "https://…"           # optional source link
+visibilityNote: "…"           # optional note for internal or institutional work
+---
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Every `##` heading in the body becomes an entry in the case study's "On this page" outline.
 
-## Learn More
+### Writing (`content/blog/*.md`, served at `/blog/<file-name>/`)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```yaml
+---
+title: "Post title"
+date: "2024-01-15"
+summary: "Shown in the post list and link previews."
+image: "/images/example.png"  # optional
+tag: "Ansible, DevOps"
+---
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Publications (`content/publications/<role>/*.md`)
 
-### Code Splitting
+The folder sets the authorship role:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- `main-author/`: first or co-first author (shows a "First author" or "Co-first author" badge)
+- `co-author/`: other authorship
+- `preprint/`: preprints (papers not yet peer-reviewed)
 
-### Analyzing the Bundle Size
+```yaml
+---
+title: "Paper title"
+date: "2025-12-02"
+authors: "Sorokina O*, Dominic D*, Grant SGN"
+journal: "Scientific Reports"
+year: "2025"
+volume: "15"        # optional
+issue: "1"          # optional
+pages: "42986"      # optional
+doi: "https://doi.org/…"
+pdf: "https://…"    # optional
+pubmed: "https://…" # optional
+status: "published" # published | preprint
+equalContribution: true   # optional
+---
+Abstract text goes here.
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+All papers appear on `/publications/` in one list, newest first. The home page features the first peer-reviewed, lead-author paper.
 
-### Making a Progressive Web App
+### Other content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| File | Used by |
+|---|---|
+| `content/hero/hero.md` | Home page introduction |
+| `content/about/about.md` | About page (body) and contact details on the About and Contact pages |
 
-### Advanced Configuration
+`content/archive/` and `content/toolkit/` are kept for reference but aren't rendered by any page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Images and video
 
-### Deployment
+Put files in `public/images/` or `public/videos/` and reference them with a leading slash, for example `/images/my-screenshot.png`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **Images:** keep them about 1600px wide or less. WebP or JPEG is usually far smaller than PNG.
+- **Videos:** use `preload="none"` and a `poster` image so they don't download until a visitor presses play.
+- **Link-preview image:** `public/images/og-image.png` (1200×630) is used for pages without their own image.
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Deployment
+
+Pushing to `main` deploys automatically. The [Deploy to GitHub Pages](.github/workflows/deploy.yml) workflow:
+
+1. installs dependencies with `npm ci`
+2. runs `npm run build`
+3. publishes `out/` to the `gh-pages` branch with the `digindominic.me` custom domain
+
+The live site updates about a minute after the push. You can follow each run in the repository's **Actions** tab.
+
+The workflow checks out the full git history so the sitemap can use real "last modified" dates.
+
+`npm run deploy` can still publish from your own machine with `gh-pages`, but the workflow is the normal route.
+
+---
+
+## Project structure
+
+```
+app/                  Routes (App Router). Each folder is a page.
+  layout.jsx          Site-wide <head>, metadata, header, footer, cookie banner
+  page.jsx            Home page
+  projects/           Work list and case study pages
+  blog/               Writing list and post pages
+  publications/       Publications list
+  about/ contact/ privacy/
+  not-found.jsx       404 page
+  globals.css         Design tokens (colour variables) and shared component classes
+components/
+  layout/             Header, Footer, PrevNextNav, CookieConsent
+  sections/           Home page sections (Hero, ImpactShowcase, Timeline, …)
+  projects/           Case study layout (ReadModeView)
+  common/             Small shared pieces (SocialLinks, StackPlaceholder)
+lib/
+  content.js          Reads and parses Markdown from content/
+  format.js           Date and tag helpers
+  site.js             Site URL, social links, page metadata helper
+content/              All page content as Markdown (see above)
+public/               Static files served as-is (images, videos, resume PDF, robots.txt)
+scripts/
+  generate-sitemap.js Builds public/sitemap.xml (runs before every build)
+  generate-resume.py  Builds public/Digin_Dominic_Resume.pdf (needs Python + reportlab)
+```
+
+---
+
+## Design and accessibility
+
+- **Themes:** dark is the default. A toggle in the header switches to light, and the choice is remembered.
+- **Colours:** accent colours are CSS variables in `app/globals.css`, with separate light and dark values that meet WCAG AA contrast. Use the Tailwind names (`text-neural-blue`, `bg-signal-green/15`, …) rather than hard-coded hex values so both themes stay correct.
+- **Shared classes:** `.eyebrow`, `.meta-label`, `.editorial-card`, `.proof-chip`, `.btn-primary`, `.btn-secondary`, `.tag` and `.case-study-prose`. Page titles use the `text-page-title` size and the home headline uses `text-hero`.
+- **Motion:** animations respect the visitor's "reduce motion" setting.
+- **Checking pages:** the pages pass an axe-core accessibility check in both themes. Recheck new pages, especially for colour contrast and heading order.
+
+---
+
+## Privacy and analytics
+
+Google Analytics loads **only after** a visitor clicks **Accept** on the cookie banner. Reject, or no choice, means no analytics script and no analytics cookies. Visitors can change their choice from **Cookie settings** in the footer. The details are explained on [/privacy/](https://digindominic.me/privacy/).
+
+The measurement ID is set in `components/layout/CookieConsent.jsx`.
+
+The contact form posts to Formspree; its endpoint is in `app/contact/ContactClient.jsx`.
+
+---
+
+## Licence
+
+© Digin Dominic. All rights reserved. The code and content are published for reference. Please ask before reusing them.

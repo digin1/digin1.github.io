@@ -4,9 +4,16 @@ import { pageMetadata } from '@/lib/site';
 
 export const metadata = pageMetadata({
   title: 'Contact',
-  description: 'Contact Digin Dominic about research software, scientific tooling, browser-based visualisation, and infrastructure-heavy engineering work.',
+  description:
+    'Contact Digin Dominic about research software, scientific tooling, microscopy workflows, interactive visualisation and engineering collaboration.',
   path: '/contact/',
-  keywords: ['contact Digin Dominic', 'research software collaboration', 'scientific tooling', 'engineering contact', 'University of Edinburgh software engineer'],
+  keywords: [
+    'contact Digin Dominic',
+    'research software collaboration',
+    'scientific tooling',
+    'engineering contact',
+    'University of Edinburgh software engineer',
+  ],
 });
 
 export default async function ContactPage() {

@@ -1,3 +1,4 @@
+import PortfolioImage from '@/components/common/PortfolioImage';
 import { categoryLabels, formatDate, getTags, getYear } from '@/lib/format';
 import ReadingLayout from '@/components/editorial/ReadingLayout';
 
@@ -40,11 +41,11 @@ export default function ReadModeView({ project }) {
       </dl>
       {m.image && (
         <figure className="case-study-plate">
-          <img
+          <PortfolioImage
             src={m.image}
             alt={m.imageAlt || `Screenshot of ${m.title}`}
             fetchPriority="high"
-            decoding="async"
+            sizes="(min-width: 1400px) 1184px, (min-width: 640px) calc(100vw - 180px), calc(100vw - 80px)"
           />
           <figcaption>
             <span>{m.title}</span>

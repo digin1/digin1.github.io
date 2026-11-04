@@ -1,5 +1,7 @@
 ---
 title: "Lessons Learned from Automating Infrastructure with Ansible"
+seoTitle: "Ansible Automation: Lessons from the Field"
+seoDescription: "Lessons from automating Linux infrastructure with Ansible: SSH keys, user access, sudoers configuration and practical approaches to security hardening."
 date: "2024-01-15"
 summary: "Working on this project provided invaluable hands-on experience in infrastructure automation, security hardening, and user access management using Ansible. While I had a solid foundation in system administration, implementing automation at scale required me to refine my approach, adapt to challenges, and adopt best practices that I had not previously considered."
 image: /images/ansible.png

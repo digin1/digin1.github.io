@@ -1,5 +1,7 @@
 ---
 title: "SynaptopathyDB"
+seoTitle: "SynaptopathyDB: Synapses, Genes & Disease"
+seoDescription: "A research database connecting synaptic proteins, genes, mutations and diseases, with unified search, data exports and API access."
 date: "2025-06-27"
 featured: true
 featuredOrder: 1

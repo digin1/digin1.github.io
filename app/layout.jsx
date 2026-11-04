@@ -8,18 +8,27 @@ import { ThemeProvider } from '@/context/ThemeContext';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import CookieConsent from '@/components/layout/CookieConsent';
-import { siteUrl, siteName, ogImage, pageUrl, absoluteUrl, jsonLdScript, socialLinks } from '@/lib/site';
+import {
+  siteUrl,
+  siteName,
+  ogImage,
+  pageUrl,
+  absoluteUrl,
+  jsonLdScript,
+  socialLinks,
+} from '@/lib/site';
 
 // The stylesheet is imported above, so stop Font Awesome injecting it at
 // runtime (which made icons flash at full size before JS loaded).
 faConfig.autoAddCss = false;
 
-const siteDescription = 'Software Engineer & Research Toolsmith at the University of Edinburgh. Co-first author on SynaptopathyDB in Scientific Reports, a Nature Portfolio journal. Building research platforms, microscopy workflows, and visualisation systems for neuroscience.';
+const siteDescription =
+  'Digin Dominic, software engineer at the University of Edinburgh, building research platforms, microscopy tools and scientific visualisations.';
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Digin Dominic | Software Engineer & Research Toolsmith — University of Edinburgh',
+    default: 'Digin Dominic | Research Software Engineer',
     template: '%s | Digin Dominic',
   },
   description: siteDescription,
@@ -56,13 +65,13 @@ export const metadata = {
     locale: 'en_GB',
     url: pageUrl('/'),
     siteName: siteName,
-    title: 'Digin Dominic | Software Engineer & Research Toolsmith',
+    title: 'Digin Dominic | Research Software Engineer',
     description: siteDescription,
     images: [ogImage],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Digin Dominic | Software Engineer & Research Toolsmith',
+    title: 'Digin Dominic | Research Software Engineer',
     description: siteDescription,
     images: [ogImage.url],
     creator: '@digin1',
@@ -88,7 +97,7 @@ export default function RootLayout({ children }) {
     },
     description: siteDescription,
     sameAs: [
-      ...socialLinks.filter(l => l.href.startsWith('http')).map(l => l.href),
+      ...socialLinks.filter((l) => l.href.startsWith('http')).map((l) => l.href),
       'https://sidb.org.uk/seth-grant/digin-dominic/',
     ],
     knowsAbout: [
@@ -121,10 +130,18 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         {/* Apply an explicitly saved theme before paint; editorial light is the default */}
-        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t==='dark')}catch(e){}` }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t==='dark')}catch(e){}`,
+          }}
+        />
         <link rel="icon" href="/favicon.ico?v=editorial" sizes="16x16 32x32 48x48" />
         <link rel="icon" href="/favicon.svg?v=editorial" type="image/svg+xml" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=editorial" />

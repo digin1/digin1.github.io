@@ -1,5 +1,7 @@
 ---
 title: "Brain Heatmap Visualization Tool"
+seoTitle: "Brain Heatmap Visualisation Tool"
+seoDescription: "A web tool for creating brain-region heatmaps from experimental data, with atlas templates, CSV upload and publication-ready PNG and SVG exports."
 date: "2025-06-01"
 featured: false
 category: "research"

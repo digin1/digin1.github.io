@@ -1,5 +1,7 @@
 ---
 title: "NeuroSphere - Interactive 3D Brain Atlas"
+seoTitle: "NeuroSphere: Interactive 3D Brain Atlas"
+seoDescription: "A Three.js brain atlas for exploring human and mouse anatomy, with interactive regions, connectivity-based activity propagation and WebGL rendering."
 date: "2025-12-20"
 featured: false
 featuredOrder: 1

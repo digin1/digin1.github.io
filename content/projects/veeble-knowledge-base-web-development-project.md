@@ -1,5 +1,7 @@
 ---
 title: "Veeble Knowledge Base - Web Development Project"
+seoTitle: "Veeble Hosting Knowledge Base"
+seoDescription: "A searchable hosting knowledge base built for Veeble, organising technical support articles with clear categories and accessible documentation."
 date: "2020-03-01"
 featured: false
 category: "commercial"

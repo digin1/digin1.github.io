@@ -1,5 +1,7 @@
 ---
 title: "Cortex — AI Memory & Agent Fleet Management"
+seoTitle: "Cortex: AI Memory & Agent Management"
+seoDescription: "Open-source memory and agent management for AI coding, with hybrid search, ChromaDB, Claude Code hooks, MCP tools, reminders and persistent plans."
 date: "2026-10-27"
 featured: false
 category: "personal"

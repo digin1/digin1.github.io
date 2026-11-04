@@ -1,5 +1,6 @@
 'use client';
 
+import PortfolioImage from '@/components/common/PortfolioImage';
 import { useState } from 'react';
 import Link from 'next/link';
 import PageIntro from '@/components/editorial/PageIntro';
@@ -74,7 +75,12 @@ export default function BlogClient({ posts = [] }) {
             aria-hidden="true"
           >
             {lead.metadata.image ? (
-              <img src={lead.metadata.image} alt="" />
+              <PortfolioImage
+                src={lead.metadata.image}
+                alt=""
+                fetchPriority="high"
+                sizes="(min-width: 1400px) 540px, (min-width: 640px) 40vw, calc(100vw - 98px)"
+              />
             ) : (
               <span className="essay-placeholder" aria-hidden="true">
                 Field

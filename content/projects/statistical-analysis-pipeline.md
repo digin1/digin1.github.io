@@ -1,5 +1,7 @@
 ---
 title: "Statistical Analysis Pipeline for Neuroscience Data"
+seoTitle: "Neuroscience Statistical Analysis Pipeline"
+seoDescription: "A Python and R framework for neuroscience statistics, with group comparisons, post-hoc corrections, effect sizes and publication-ready visualisations."
 date: "2024-10-01"
 featured: false
 category: "research"

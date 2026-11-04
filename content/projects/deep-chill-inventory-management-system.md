@@ -1,5 +1,7 @@
 ---
 title: "Deep Chill Inventory Management System"
+seoTitle: "Deep Chill Inventory Management"
+seoDescription: "A tablet-friendly inventory system for cold storage operations, tracking stock across blast-freezing areas and automating quantity calculations."
 date: "2022-04-01"
 featured: false
 category: "commercial"

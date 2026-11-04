@@ -1,5 +1,7 @@
 ---
 title: "Automating Secure Infrastructure with Ansible: Managing SSH, Sudoers, and User Access Control"
+seoTitle: "Secure Linux Infrastructure with Ansible"
+seoDescription: "Ansible automation for SSH keys, user provisioning and sudoers configuration, bringing repeatable access control to Ubuntu servers."
 date: "2021-12-12"
 featured: false
 featuredOrder: 8

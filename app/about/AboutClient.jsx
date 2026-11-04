@@ -1,3 +1,4 @@
+import PortfolioImage from '@/components/common/PortfolioImage';
 import Link from 'next/link';
 import SocialLinks from '@/components/common/SocialLinks';
 import ReadingLayout from '@/components/editorial/ReadingLayout';
@@ -51,8 +52,10 @@ export default function AboutClient({ content }) {
           </div>
           <figure className="about-portrait">
             <div>
-              <img
+              <PortfolioImage
                 src={m.image || '/images/digin.png'}
+                sizes="(min-width: 1400px) 400px, (min-width: 640px) 33vw, calc(100vw - 100px)"
+                fetchPriority="high"
                 alt={m.name || 'Digin Dominic'}
                 width="400"
                 height="400"

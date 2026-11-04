@@ -1,5 +1,7 @@
 ---
 title: "GridComposer — Image Layout & Design Tool"
+seoTitle: "GridComposer: Image Layout & Design"
+seoDescription: "A browser-based image layout tool built with Next.js and Fabric.js, featuring a drag-and-drop canvas, layers, text editing and multi-format export."
 date: "2025-03-01"
 featured: false
 category: "personal"

@@ -3,10 +3,18 @@ import BlogClient from './BlogClient';
 import { pageMetadata } from '@/lib/site';
 
 export const metadata = pageMetadata({
-  title: 'Writing',
-  description: 'Technical notes and writing from Digin Dominic on research software, infrastructure, visualisation, and practical engineering work.',
+  title: 'Software Engineering Notes',
+  description:
+    'Practical notes from Digin Dominic on research software, Linux infrastructure, automation and the engineering decisions behind useful systems.',
   path: '/blog/',
-  keywords: ['writing', 'research software', 'technical notes', 'infrastructure', 'visualisation', 'engineering blog'],
+  keywords: [
+    'writing',
+    'research software',
+    'technical notes',
+    'infrastructure',
+    'visualisation',
+    'engineering blog',
+  ],
 });
 
 export default async function BlogPage() {

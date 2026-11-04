@@ -1,5 +1,7 @@
 ---
 title: "WordPress CMS Development: ClearStackNow.com"
+seoTitle: "ClearStackNow: Technical WordPress Publishing"
+seoDescription: "A WordPress publishing platform for database and systems administration articles, with customised themes and a structured knowledge-sharing interface."
 date: "2015-10-11"
 featured: false
 category: "personal"

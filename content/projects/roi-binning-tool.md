@@ -1,5 +1,7 @@
 ---
 title: "ROI Binning Tool — Interactive Brain Region Grid Generator"
+seoTitle: "ROI Binning: Brain Region Grid Generator"
+seoDescription: "A Three.js and Flask microscopy tool for drawing region boundaries, generating uniform ROI grids and exporting ImageJ-compatible annotations."
 date: "2024-08-01"
 featured: false
 category: "research"

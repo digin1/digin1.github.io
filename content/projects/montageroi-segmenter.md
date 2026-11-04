@@ -1,5 +1,7 @@
 ---
 title: "MontageROI Segmenter"
+seoTitle: "MontageROI: Browser-Based Microscopy Annotation"
+seoDescription: "A Flask and Three.js tool for annotating large microscopy images in the browser, with ROI editing, overlay transforms and ImageJ-compatible export."
 date: "2025-11-13"
 featured: true
 featuredOrder: 3

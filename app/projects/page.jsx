@@ -3,10 +3,20 @@ import ProjectsClient from './ProjectsClient';
 import { pageMetadata } from '@/lib/site';
 
 export const metadata = pageMetadata({
-  title: 'Work',
-  description: 'Case studies across research software, scientific databases, microscopy tooling, browser-based visualisation, and infrastructure-heavy engineering work by Digin Dominic.',
+  title: 'Research Software Projects',
+  description:
+    'Explore Digin Dominic’s research software projects: scientific databases, microscopy tools, 3D visualisations and distributed infrastructure.',
   path: '/projects/',
-  keywords: ['research software', 'case studies', 'scientific software', 'microscopy tooling', 'Three.js', 'Python', 'research engineering', 'data workflows'],
+  keywords: [
+    'research software',
+    'case studies',
+    'scientific software',
+    'microscopy tooling',
+    'Three.js',
+    'Python',
+    'research engineering',
+    'data workflows',
+  ],
 });
 
 export default async function ProjectsPage() {

@@ -1,3 +1,4 @@
+import PortfolioImage from '@/components/common/PortfolioImage';
 import { notFound } from 'next/navigation';
 import { getContentById, getAllContentIds, getContentByType, getNeighbours } from '@/lib/content';
 import { absoluteUrl, jsonLdScript, pageMetadata, pageUrl } from '@/lib/site';
@@ -16,11 +17,11 @@ export async function generateMetadata({ params }) {
   const post = await getContentById('blog', id);
   if (!post) return { title: 'Blog Post Not Found' };
 
-  const { title, summary, image, date, tag, tags } = post.metadata;
+  const { title, seoTitle, summary, seoDescription, image, date, tag, tags } = post.metadata;
 
   return pageMetadata({
-    title,
-    description: summary || `${title}. A blog post by Digin Dominic`,
+    title: seoTitle || title,
+    description: seoDescription || summary || `${title}. A blog post by Digin Dominic`,
     path: `/blog/${id}/`,
     type: 'article',
     image,
@@ -45,7 +46,7 @@ export default async function BlogPostPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
     headline: post.metadata.title,
-    description: post.metadata.summary,
+    description: post.metadata.seoDescription || post.metadata.summary,
     url: pageUrl(`/blog/${id}/`),
     datePublished: post.metadata.date,
     author: { '@type': 'Person', name: 'Digin Dominic', url: pageUrl('/') },
@@ -81,7 +82,7 @@ export default async function BlogPostPage({ params }) {
           <h1>{title}</h1>
           {summary && <p className="detail-deck">{summary}</p>}
           <div className="essay-byline">
-            <img src="/images/digin.png" width="40" height="40" alt="" />
+            <PortfolioImage src="/images/digin.png" sizes="40px" width="40" height="40" alt="" />
             <div>
               <span>Digin Dominic</span>
               <p>Software engineer & research toolsmith</p>
@@ -95,11 +96,11 @@ export default async function BlogPostPage({ params }) {
         </header>
         {image && (
           <figure className="case-study-plate essay-plate">
-            <img
+            <PortfolioImage
               src={image}
               alt={`Illustration for ${title}`}
               fetchPriority="high"
-              decoding="async"
+              sizes="(min-width: 1400px) 1184px, (min-width: 640px) calc(100vw - 180px), calc(100vw - 80px)"
             />
             <figcaption>{title}</figcaption>
           </figure>

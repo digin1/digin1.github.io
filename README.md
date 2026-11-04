@@ -26,8 +26,10 @@ The site runs at <http://localhost:3000> and reloads as you edit code or content
 |---|---|
 | `npm run dev` | Development server with hot reload |
 | `npm run build` | Regenerates the sitemap, then builds the static site into `out/` |
+| `npm run images` | Generates responsive WebP variants from content images |
 | `npm run sitemap` | Regenerates `public/sitemap.xml` on its own |
 | `npm run lint` | Runs Next.js linting |
+| `npm run check:seo` | Audits the built `out/` site (requires Python 3.9+) |
 
 To preview a production build locally, serve the `out/` folder with any static file server, for example `npx serve out`.
 
@@ -44,7 +46,7 @@ Each Markdown file has a YAML front-matter block for its metadata, followed by t
 title: "Grant Lab Research Platform"
 date: "2024-06-01"            # YYYY-MM-DD; sets sort order (newest first)
 category: "research"          # research | commercial | personal | education
-summary: "One or two sentences shown on cards and in search results."
+summary: "One or two sentences shown on cards and the case study."
 image: "/images/example.png"  # optional; leave "" for a stack-based placeholder
 tag: "Flask, Docker Swarm, Python"   # comma-separated; also drives the tech filter
 role: "Lead Developer"
@@ -114,9 +116,24 @@ All papers appear on `/publications/` in one list, newest first. The home page f
 
 `content/archive/` and `content/toolkit/` are kept for reference but aren't rendered by any page.
 
+### Search titles and descriptions
+
+Projects and articles support optional `seoTitle` and `seoDescription` front-matter fields. These control search metadata and social previews while keeping `title`, `summary`, page headings, and body content intact.
+
+```yaml
+seoTitle: "Cortex: AI Memory & Agent Management"
+seoDescription: "Open-source memory and agent management for AI coding, with hybrid search, ChromaDB, Claude Code hooks, MCP tools, reminders and persistent plans."
+```
+
+After building, run `npm run check:seo`. It checks the emitted pages, including unique metadata, canonical URLs, social image files, JSON-LD, sitemap coverage, and 404 exclusion. The audit uses editorial budgets of 65 characters for full titles (including ` | Digin Dominic`) and 170 for descriptions. Search engines use their own display rules; these budgets help keep copy concise.
+
+Search Console indexing and real-user Core Web Vitals require access to the live site's Google property and are separate from these build checks.
+
 ### Images and video
 
-Put files in `public/images/` or `public/videos/` and reference them with a leading slash, for example `/images/my-screenshot.png`.
+Put original files in `public/images/` or `public/videos/` and reference them with a leading slash, for example `/images/my-screenshot.png`.
+
+`npm run dev` and `npm run build` generate responsive WebP variants for content images. The shared `PortfolioImage` component selects the appropriate size and includes intrinsic dimensions. Generated files live in the ignored `public/images/generated/` directory, with an ignored lookup at `lib/generated-images.json`; keep the original image paths in Markdown. This uses the Sharp dependency supplied by Next.js.
 
 - **Images:** keep them about 1600px wide or less. WebP or JPEG is usually far smaller than PNG.
 - **Videos:** use `preload="none"` and a `poster` image so they don't download until a visitor presses play.
@@ -173,7 +190,7 @@ scripts/
 ## Design and accessibility
 
 - **Layouts:** Work has a searchable catalogue with technology filters; publications have expandable abstracts; case studies and essays have reading guides. About, Contact, Privacy, and the 404 page share the editorial visual language. Mastheads and reading layouts live in `components/editorial/`, with inner-page styles in `app/editorial-pages.css`.
-- **Themes:** the editorial design uses warm cream, forest green, and serif headings. Light is the default. A toggle in the header switches to light, and the choice is remembered.
+- **Themes:** the editorial design uses warm cream, forest green, and serif headings. Light is the default. A toggle in the header switches between light and dark, and the choice is remembered.
 - **Colours:** accent colours are CSS variables in `app/globals.css`, with separate light and dark values that meet WCAG AA contrast. Use the Tailwind names (`text-neural-blue`, `bg-signal-green/15`, …) rather than hard-coded hex values so both themes stay correct.
 - **Shared classes:** `.eyebrow`, `.meta-label`, `.editorial-card`, `.proof-chip`, `.btn-primary`, `.btn-secondary`, `.tag` and `.case-study-prose`. Page titles use the `text-page-title` size and the home headline uses `text-hero`.
 - **Motion:** animations respect the visitor's "reduce motion" setting.

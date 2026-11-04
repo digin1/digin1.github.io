@@ -1,5 +1,7 @@
 ---
 title: "GPU-Accelerated ROI Classification Tool"
+seoTitle: "GPU-Accelerated ROI Classification"
+seoDescription: "A Python and CUDA tool for classifying large microscopy datasets into polygonal regions of interest, accelerating point-in-polygon analysis."
 date: "2024-11-01"
 featured: false
 category: "research"

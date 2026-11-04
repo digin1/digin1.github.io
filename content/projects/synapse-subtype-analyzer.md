@@ -1,5 +1,7 @@
 ---
 title: "Synapse Subtype Analyzer"
+seoTitle: "Synapse Subtype Analyzer"
+seoDescription: "A Python classification engine for identifying molecular synapse subtypes from multi-protein colocalisation, marker presence and intensity data."
 date: "2024-07-01"
 featured: false
 category: "research"

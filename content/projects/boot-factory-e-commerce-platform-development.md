@@ -1,5 +1,7 @@
 ---
 title: "Boot Factory: E-Commerce Platform Development with ASP.NET MVC"
+seoTitle: "Boot Factory: ASP.NET MVC E-Commerce"
+seoDescription: "A footwear e-commerce platform built with ASP.NET MVC, C# and SQL Server, with user accounts, product management and a shopping cart."
 date: "2021-05-31"
 featured: false
 category: "education"

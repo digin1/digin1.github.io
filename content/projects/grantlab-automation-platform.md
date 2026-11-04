@@ -1,5 +1,7 @@
 ---
 title: "Grant Lab Automation — AI Workflow Platform"
+seoTitle: "Grant Lab AI Workflow Platform"
+seoDescription: "An internal AI workflow platform with a visual builder, multiple model providers, live execution tracking, file processing and administrative controls."
 date: "2025-03-10"
 featured: false
 category: "research"

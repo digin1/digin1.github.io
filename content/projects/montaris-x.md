@@ -1,5 +1,7 @@
 ---
 title: "Montaris-X"
+seoTitle: "Montaris-X: Microscopy ROI Editor"
+seoDescription: "A cross-platform microscopy ROI editor built with Python and PySide6, providing local annotation tools and ImageJ-compatible file interoperability."
 date: "2025-01-01"
 featured: true
 featuredOrder: 4

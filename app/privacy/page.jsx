@@ -3,8 +3,9 @@ import PageIntro from '@/components/editorial/PageIntro';
 import { CookieSettingsButton } from '@/components/layout/CookieConsent';
 
 export const metadata = pageMetadata({
-  title: 'Privacy',
-  description: 'How digindominic.me uses cookies and analytics, and how to change your choice.',
+  title: 'Privacy & Cookies',
+  description:
+    'Learn how digindominic.me handles analytics, local preferences and contact messages, and how to accept, reject or change your cookie choice.',
   path: '/privacy/',
 });
 

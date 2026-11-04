@@ -3,6 +3,7 @@ import { getContentById, getAllContentIds, getContentByType, getNeighbours } fro
 import { absoluteUrl, jsonLdScript, pageMetadata, pageUrl } from '@/lib/site';
 import PrevNextNav from '@/components/layout/PrevNextNav';
 import ReadModeView from '@/components/projects/ReadModeView';
+import { getTags } from '@/lib/format';
 
 export async function generateStaticParams() {
   const ids = getAllContentIds('projects');
@@ -14,15 +15,15 @@ export async function generateMetadata({ params }) {
   const project = await getContentById('projects', id);
   if (!project) return { title: 'Project Not Found' };
 
-  const { title, summary, image, technologies } = project.metadata;
+  const { title, seoTitle, summary, seoDescription, image, technologies, tag } = project.metadata;
 
   return pageMetadata({
-    title,
-    description: summary || `${title}. A project by Digin Dominic`,
+    title: seoTitle || title,
+    description: seoDescription || summary || `${title}. A project by Digin Dominic`,
     path: `/projects/${id}/`,
     type: 'article',
     image,
-    keywords: technologies,
+    keywords: technologies || getTags(tag),
   });
 }
 
@@ -43,7 +44,7 @@ export default async function ProjectPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'CreativeWork',
     name: project.metadata.title,
-    description: project.metadata.summary,
+    description: project.metadata.seoDescription || project.metadata.summary,
     url: pageUrl(`/projects/${id}/`),
     author: { '@type': 'Person', name: 'Digin Dominic', url: pageUrl('/') },
     dateCreated: project.metadata.date,

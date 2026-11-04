@@ -1,5 +1,7 @@
 ---
 title: "Hycel Asset Management System"
+seoTitle: "Hycel Asset Management System"
+seoDescription: "An IoT sensor dashboard for Deakin University, mapping hydrogen monitoring data with Google Maps, temperature readings and equipment status."
 date: "2021-04-15"
 featured: false
 category: "commercial"

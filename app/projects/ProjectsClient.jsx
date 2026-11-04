@@ -1,5 +1,6 @@
 'use client';
 
+import PortfolioImage from '@/components/common/PortfolioImage';
 import { useMemo, useState } from 'react';
 import Link from 'next/link';
 import PageIntro from '@/components/editorial/PageIntro';
@@ -119,10 +120,12 @@ export default function ProjectsClient({ projects = [] }) {
                     className={`work-featured-image ${project.metadata.image ? 'has-image' : ''}`}
                   >
                     {project.metadata.image ? (
-                      <img
+                      <PortfolioImage
                         src={project.metadata.image}
                         alt={`Screenshot of ${project.metadata.title}`}
-                        loading="lazy"
+                        loading={index === 0 ? 'eager' : 'lazy'}
+                        fetchPriority={index === 0 ? 'high' : undefined}
+                        sizes="(min-width: 1400px) 600px, (min-width: 640px) 43vw, calc(100vw - 88px)"
                       />
                     ) : (
                       <StackPlaceholder

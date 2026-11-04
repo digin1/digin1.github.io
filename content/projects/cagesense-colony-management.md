@@ -1,5 +1,7 @@
 ---
 title: "CageSense — AI-Powered Mouse Colony Management System"
+seoTitle: "CageSense: Mouse Colony Management"
+seoDescription: "A mouse colony management platform with AI-assisted queries, approval-gated updates, genotype tracking, reporting and an audit history."
 date: "2025-03-15"
 featured: false
 featuredOrder: 5

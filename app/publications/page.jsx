@@ -3,8 +3,9 @@ import { jsonLdScript, pageMetadata, pageUrl } from '@/lib/site';
 import PublicationsList from './PublicationsList';
 
 export const metadata = pageMetadata({
-  title: 'Publications',
-  description: 'Academic publications, peer-reviewed research papers, and preprints by Digin Dominic in neuroscience, bioinformatics, and computational biology.',
+  title: 'Research Publications',
+  description:
+    'Research papers and preprints by Digin Dominic, including SynaptopathyDB in Scientific Reports and work on neuroscience data and research software.',
   path: '/publications/',
   keywords: [
     'Digin Dominic publications',
@@ -26,9 +27,9 @@ function publicationJsonLd({ metadata, rawContent }) {
     headline: metadata.title,
     author: metadata.authors
       ?.split(',')
-      .map(name => name.trim().replace(/\*$/, ''))
-      .filter(name => name && !/^et al/i.test(name))
-      .map(name => ({ '@type': 'Person', name })),
+      .map((name) => name.trim().replace(/\*$/, ''))
+      .filter((name) => name && !/^et al/i.test(name))
+      .map((name) => ({ '@type': 'Person', name })),
     datePublished: metadata.date,
     publisher: { '@type': 'Organization', name: metadata.journal },
     description: plainText(rawContent).slice(0, 300),
@@ -47,7 +48,8 @@ export default async function PublicationsPage() {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     name: 'Publications by Digin Dominic',
-    description: 'Academic publications, peer-reviewed research papers, and preprints in neuroscience, bioinformatics, and computational biology.',
+    description:
+      'Academic publications, peer-reviewed research papers, and preprints in neuroscience, bioinformatics, and computational biology.',
     url: pageUrl('/publications/'),
     author: { '@type': 'Person', name: 'Digin Dominic', url: pageUrl('/') },
     mainEntity: {
@@ -63,9 +65,17 @@ export default async function PublicationsPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
+      />
       <PublicationsList
-        publications={publications.map(({ id, role, metadata, content }) => ({ id, role, metadata, content }))}
+        publications={publications.map(({ id, role, metadata, content }) => ({
+          id,
+          role,
+          metadata,
+          content,
+        }))}
       />
     </>
   );

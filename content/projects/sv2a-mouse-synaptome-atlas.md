@@ -1,5 +1,7 @@
 ---
 title: "SV2A Mouse Synaptome Atlas - Synaptic Diversity Visualization"
+seoTitle: "SV2A Mouse Synaptome Atlas"
+seoDescription: "An interactive mouse brain atlas for exploring SV2A synaptic protein density and intensity across brain regions, developmental stages and sexes."
 date: "2025-11-26"
 featured: false
 featuredOrder: 6

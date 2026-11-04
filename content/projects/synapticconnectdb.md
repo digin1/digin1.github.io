@@ -1,5 +1,7 @@
 ---
 title: "SynapticConnectDB — Synaptic Connection Database"
+seoTitle: "SynapticConnectDB: Synaptic Connection Data"
+seoDescription: "A React and Flask research database for exploring synaptic connections through searchable records, charts and interactive flow diagrams."
 date: "2025-01-15"
 featured: false
 category: "research"

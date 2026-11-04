@@ -1,5 +1,7 @@
 ---
 title: "Grant Lab Research Platform"
+seoTitle: "Grant Lab Research Platform"
+seoDescription: "A distributed microscopy and synaptome analysis platform, combining web tools, task queues, GPU pipelines and Docker Swarm at Edinburgh."
 date: "2024-06-01"
 featured: true
 featuredOrder: 2

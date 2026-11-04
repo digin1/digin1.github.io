@@ -1,5 +1,7 @@
 ---
 title: "Human Brain Heatmap Generator"
+seoTitle: "Human Brain Heatmap Generator"
+seoDescription: "A Python tool that turns brain-region measurements into SVG and PNG heatmaps, with Brodmann area templates and scientific colour palettes."
 date: "2024-09-01"
 featured: false
 category: "research"

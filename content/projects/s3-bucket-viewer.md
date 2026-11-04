@@ -1,5 +1,7 @@
 ---
 title: "S3 Bucket Viewer"
+seoTitle: "S3 Bucket Viewer"
+seoDescription: "An open-source React and Flask browser for public S3-compatible storage, with file previews, shareable paths and straightforward downloads."
 date: "2025-01-15"
 featured: true
 featuredOrder: 6

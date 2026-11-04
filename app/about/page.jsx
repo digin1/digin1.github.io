@@ -4,10 +4,20 @@ import { pageMetadata } from '@/lib/site';
 
 export const metadata = pageMetadata({
   title: 'About',
-  description: 'Background, career path, and working style of Digin Dominic, from Linux systems and security to research software engineering at the University of Edinburgh.',
+  description:
+    'Meet Digin Dominic, a University of Edinburgh software engineer whose work connects Linux systems, cybersecurity and scientific research tools.',
   path: '/about/',
   type: 'profile',
-  keywords: ['Digin Dominic', 'about', 'research software engineer', 'University of Edinburgh', 'scientific software', 'Linux systems', 'SynaptopathyDB', 'neuroscience tooling'],
+  keywords: [
+    'Digin Dominic',
+    'about',
+    'research software engineer',
+    'University of Edinburgh',
+    'scientific software',
+    'Linux systems',
+    'SynaptopathyDB',
+    'neuroscience tooling',
+  ],
 });
 
 export default async function AboutPage() {

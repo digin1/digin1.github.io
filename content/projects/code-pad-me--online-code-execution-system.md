@@ -1,5 +1,7 @@
 ---
 title: "Code-Pad.me - Award-Winning Online Code Execution System"
+seoTitle: "Code-Pad.me: Online Code Execution"
+seoDescription: "An award-winning online coding platform built with Django, Docker and Judge0, helping learners write, run and share code without local compilers."
 date: "2021-11-15"
 featured: false
 featuredOrder: 4

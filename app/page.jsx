@@ -8,11 +8,12 @@ import CTASection from '@/components/sections/CTASection';
 
 export const metadata = {
   ...pageMetadata({
-    description: 'Software Engineer at the University of Edinburgh. Co-first author on SynaptopathyDB (Nature Scientific Reports). Building 3D visualisations, data pipelines, and research tools for human brain synaptome mapping.',
+    description:
+      'Digin Dominic, software engineer at the University of Edinburgh, building research platforms, microscopy tools and scientific visualisations.',
     path: '/',
-    socialTitle: 'Digin Dominic | Software Engineer & Research Toolsmith',
+    socialTitle: 'Digin Dominic | Research Software Engineer',
   }),
-  title: { absolute: 'Digin Dominic | Software Engineer & Research Toolsmith, University of Edinburgh' },
+  title: { absolute: 'Digin Dominic | Research Software Engineer' },
 };
 
 export default async function HomePage() {
@@ -30,7 +31,9 @@ export default async function HomePage() {
       />
       <ImpactShowcase projects={projects.map(toSummary)} />
       <Timeline />
-      <PublicationsPreview publications={publications.map(({ id, role, metadata }) => ({ id, role, metadata }))} />
+      <PublicationsPreview
+        publications={publications.map(({ id, role, metadata }) => ({ id, role, metadata }))}
+      />
       <CTASection />
     </>
   );

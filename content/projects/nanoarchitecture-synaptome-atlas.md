@@ -1,5 +1,7 @@
 ---
 title: "Nanoarchitecture Synaptome Atlas - Interactive Brain Visualization"
+seoTitle: "Nanoarchitecture Synaptome Atlas"
+seoDescription: "An interactive atlas of PSD95 proximity measurements across mouse brain regions and developmental stages, built with Next.js, TypeScript and SVG."
 date: "2025-11-24"
 featured: false
 featuredOrder: 5

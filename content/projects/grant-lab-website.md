@@ -1,5 +1,7 @@
 ---
 title: "Grant Lab Website — Research Lab Portal"
+seoTitle: "Grant Lab Research Website"
+seoDescription: "A research lab website built with Next.js and FastAPI, bringing together team profiles, publications, MDX content and scientific tool documentation."
 date: "2025-02-01"
 featured: false
 category: "research"

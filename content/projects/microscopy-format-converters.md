@@ -1,5 +1,7 @@
 ---
 title: "Microscopy Format Conversion Suite"
+seoTitle: "Microscopy Format Conversion Suite"
+seoDescription: "Python tools for converting ND2, CZI and IMS microscopy files into open TIFF workflows, supporting reproducible analysis of large imaging datasets."
 date: "2024-03-01"
 featured: true
 featuredOrder: 5

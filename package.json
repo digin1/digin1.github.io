@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generate-sitemap.js",
+    "prebuild": "npm run images && node scripts/generate-sitemap.js",
     "build": "next build && cp CNAME out/ && cp out/404/index.html out/404.html",
     "start": "next start",
     "lint": "next lint",
     "sitemap": "node scripts/generate-sitemap.js",
-    "deploy": "npm run build && touch out/.nojekyll && gh-pages -d out -t true"
+    "deploy": "npm run build && touch out/.nojekyll && gh-pages -d out -t true",
+    "check:seo": "python3 scripts/check-seo.py",
+    "images": "node scripts/generate-image-variants.js",
+    "predev": "npm run images"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

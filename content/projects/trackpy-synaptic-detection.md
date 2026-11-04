@@ -1,5 +1,7 @@
 ---
 title: "TrackPy Synaptic Detection Pipeline"
+seoTitle: "TrackPy Synaptic Detection Pipeline"
+seoDescription: "An automated Python pipeline for detecting synaptic proteins in fluorescence microscopy images, replacing a manual Fiji and TrackMate workflow."
 date: "2025-02-15"
 featured: false
 category: "research"

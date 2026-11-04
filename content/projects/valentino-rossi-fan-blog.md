@@ -1,5 +1,7 @@
 ---
 title: "46vale.info - Valentino Rossi Fan Blog"
+seoTitle: "46vale.info: Valentino Rossi Fan Blog"
+seoDescription: "A MotoGP fan blog dedicated to Valentino Rossi, covering race updates, event reports and rider interactions through a customised Blogger site."
 date: "2013-03-15"
 featured: false
 featuredOrder: 7

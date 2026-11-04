@@ -4,18 +4,20 @@ import { createContext, useContext, useEffect, useState } from 'react';
 import { MotionConfig } from 'framer-motion';
 
 const ThemeContext = createContext({
-  theme: 'dark',
+  theme: 'light',
   toggleTheme: () => {},
   mounted: false,
 });
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    const saved = localStorage.getItem('theme');
-    if (saved) setTheme(saved);
+    try {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') setTheme(saved);
+    } catch { /* The theme still works when browser storage is blocked. */ }
     setMounted(true);
   }, []);
 
@@ -27,7 +29,7 @@ export function ThemeProvider({ children }) {
       } else {
         root.classList.remove('dark');
       }
-      localStorage.setItem('theme', theme);
+      try { localStorage.setItem('theme', theme); } catch { /* Keep the in-memory choice. */ }
     }
   }, [theme, mounted]);
 

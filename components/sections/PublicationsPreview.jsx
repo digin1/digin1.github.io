@@ -25,8 +25,8 @@ export default function PublicationsPreview({ publications = [] }) {
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <p className="eyebrow mb-3">Research output</p>
-              <h2 id="publications-heading" className="text-section-heading font-display font-bold text-light-text dark:text-ghost-white">
+              <p className="eyebrow mb-3">03 / Publications</p>
+              <h2 id="publications-heading" className="text-section-heading font-display font-normal text-light-text dark:text-ghost-white">
                 Publications
               </h2>
             </div>
@@ -49,7 +49,7 @@ export default function PublicationsPreview({ publications = [] }) {
                 </span>
               )}
             </div>
-            <h3 className="text-lg font-bold leading-snug text-light-text dark:text-ghost-white">{title}</h3>
+            <h3 className="text-xl font-display font-normal leading-snug text-light-text dark:text-ghost-white">{title}</h3>
             <p className="mt-2 text-sm text-light-text-secondary dark:text-muted-steel">
               <span className="italic">{journal}</span> &middot; {year}
             </p>

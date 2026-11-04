@@ -9,19 +9,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Light mode — clean whites
-        'light-bg': '#FAFAFA',
-        'light-surface': '#FFFFFF',
-        'light-card': '#FFFFFF',
-        'light-border': '#E4E4E7',
-        'light-text': '#09090B',
-        'light-text-secondary': '#52525B',
+        // Editorial palette: warm paper and forest green
+        'light-bg': '#F4F3EB',
+        'light-surface': '#F8F7F1',
+        'light-card': '#F8F7F1',
+        'light-border': '#C9CFC3',
+        'light-text': '#253D35',
+        'light-text-secondary': '#59635A',
 
-        // Dark mode — neutral zinc blacks (no blue tint)
-        'deep-space': '#09090B',
-        'midnight-steel': '#18181B',
-        'ghost-white': '#FAFAFA',
-        'muted-steel': '#A1A1AA',
+        // Complementary forest palette for the optional dark theme
+        'deep-space': '#17271F',
+        'midnight-steel': '#263C33',
+        'ghost-white': '#F4F3EB',
+        'muted-steel': '#ABB9AD',
 
         // Accents are CSS variables (see globals.css) so each one has a
         // light-mode and a dark-mode value that both pass WCAG AA contrast.
@@ -36,15 +36,15 @@ module.exports = {
         'category-personal': '#A78BFA',
       },
       fontFamily: {
-        display: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
+        display: ['Georgia', 'Times New Roman', 'serif'],
         body: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-geist-mono)', 'ui-monospace', 'monospace'],
         sans: ['var(--font-geist-sans)', 'system-ui', 'sans-serif'],
       },
       fontSize: {
-        'hero': ['clamp(2.2rem, 4.5vw, 3.2rem)', { lineHeight: '1.1', letterSpacing: '-0.025em', fontWeight: '800' }],
+        'hero': ['clamp(3rem, 5.4vw, 4.8rem)', { lineHeight: '1.1', letterSpacing: '-0.025em', fontWeight: '800' }],
         'page-title': ['clamp(1.9rem, 3.6vw, 2.6rem)', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '700' }],
-        'section-heading': ['clamp(1.3rem, 2.5vw, 1.75rem)', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '700' }],
+        'section-heading': ['clamp(1.7rem, 3vw, 2.5rem)', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '700' }],
       },
       animation: {
         'fadeInUp': 'fadeInUp 0.5s ease-out forwards',

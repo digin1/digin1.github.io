@@ -74,18 +74,12 @@ export default function Timeline({ className = '' }) {
     <section id="experience" className={`py-16 md:py-20 ${className}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.35 }}
-            className="mb-8"
-          >
-            <p className="eyebrow mb-3">Experience</p>
-            <h2 className="text-section-heading font-display font-bold text-light-text dark:text-ghost-white">
-              Where I&apos;ve worked
+          <div className="mb-8">
+            <p className="eyebrow mb-3">02 / Experience</p>
+            <h2 className="text-section-heading font-display font-normal text-light-text dark:text-ghost-white">
+              From systems to science.
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid gap-0 md:grid-cols-[200px_minmax(0,1fr)] lg:grid-cols-[220px_minmax(0,1fr)]">
             {/* Tab list */}
@@ -104,7 +98,7 @@ export default function Timeline({ className = '' }) {
                   className={`text-left whitespace-nowrap px-4 py-2.5 text-sm font-medium rounded-md md:rounded-none md:rounded-l-md transition-colors shrink-0 ${
                     activeId === role.id
                       ? 'text-neural-blue bg-neural-blue/10 md:border-r-2 md:border-neural-blue'
-                      : 'text-zinc-500 dark:text-zinc-400 hover:text-light-text dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-900'
+                      : 'text-light-text-secondary dark:text-muted-steel hover:text-light-text dark:hover:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-900'
                   }`}
                 >
                   {role.company}
@@ -125,7 +119,7 @@ export default function Timeline({ className = '' }) {
                   <h3 className="text-lg font-bold text-light-text dark:text-ghost-white">
                     {active.title}
                   </h3>
-                  <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">{active.period}</p>
+                  <p className="mt-1 text-sm text-light-text-secondary dark:text-muted-steel">{active.period}</p>
 
                   <ul className="mt-5 space-y-3">
                     {active.bullets.map((b, i) => (

@@ -172,7 +172,8 @@ scripts/
 
 ## Design and accessibility
 
-- **Themes:** dark is the default. A toggle in the header switches to light, and the choice is remembered.
+- **Layouts:** Work has a searchable catalogue with technology filters; publications have expandable abstracts; case studies and essays have reading guides. About, Contact, Privacy, and the 404 page share the editorial visual language. Mastheads and reading layouts live in `components/editorial/`, with inner-page styles in `app/editorial-pages.css`.
+- **Themes:** the editorial design uses warm cream, forest green, and serif headings. Light is the default. A toggle in the header switches to light, and the choice is remembered.
 - **Colours:** accent colours are CSS variables in `app/globals.css`, with separate light and dark values that meet WCAG AA contrast. Use the Tailwind names (`text-neural-blue`, `bg-signal-green/15`, …) rather than hard-coded hex values so both themes stay correct.
 - **Shared classes:** `.eyebrow`, `.meta-label`, `.editorial-card`, `.proof-chip`, `.btn-primary`, `.btn-secondary`, `.tag` and `.case-study-prose`. Page titles use the `text-page-title` size and the home headline uses `text-hero`.
 - **Motion:** animations respect the visitor's "reduce motion" setting.

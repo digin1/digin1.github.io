@@ -9,7 +9,7 @@ export default function SocialLinks({ variant = 'plain', include, iconClassName 
   const links = include ? socialLinks.filter(link => include.includes(link.label)) : socialLinks;
   const linkClass = variant === 'boxed'
     ? 'flex h-10 w-10 items-center justify-center rounded-lg border border-light-border bg-light-card text-light-text-secondary hover:border-neural-blue/50 hover:text-neural-blue dark:border-zinc-800 dark:bg-zinc-900 dark:text-muted-steel'
-    : 'inline-flex p-1 text-zinc-500 hover:text-light-text dark:text-zinc-400 dark:hover:text-ghost-white transition-colors';
+    : 'inline-flex p-1 text-light-text-secondary hover:text-light-text dark:text-zinc-400 dark:hover:text-ghost-white transition-colors';
 
   return (
     <ul className={`flex items-center ${variant === 'boxed' ? 'gap-3' : 'gap-3'} ${className}`}>

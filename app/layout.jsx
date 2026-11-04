@@ -1,5 +1,6 @@
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import './globals.css';
+import './editorial-pages.css';
 import { config as faConfig } from '@fortawesome/fontawesome-svg-core';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
@@ -120,15 +121,15 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={`dark ${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <head>
-        {/* Prevent flash of light mode — set dark before paint */}
-        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}` }} />
+        {/* Apply an explicitly saved theme before paint; editorial light is the default */}
+        <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t==='dark')}catch(e){}` }} />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#09090B" />
+        <meta name="theme-color" content="#F4F3EB" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <script
           type="application/ld+json"
@@ -148,7 +149,7 @@ export default function RootLayout({ children }) {
         </a>
         <ThemeProvider>
           <Header />
-          <main id="main" tabIndex={-1} className="flex-1 pt-20 focus:outline-none">
+          <main id="main" tabIndex={-1} className="site-main flex-1 focus:outline-none">
             {children}
           </main>
           <Footer />

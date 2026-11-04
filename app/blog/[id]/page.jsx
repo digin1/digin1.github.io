@@ -4,6 +4,7 @@ import { absoluteUrl, jsonLdScript, pageMetadata, pageUrl } from '@/lib/site';
 import Link from 'next/link';
 import { formatDate, getTags } from '@/lib/format';
 import PrevNextNav from '@/components/layout/PrevNextNav';
+import ReadingLayout from '@/components/editorial/ReadingLayout';
 
 export async function generateStaticParams() {
   const ids = getAllContentIds('blog');
@@ -54,8 +55,11 @@ export default async function BlogPostPage({ params }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }} />
-      <article className="mx-auto max-w-4xl px-4 py-4 sm:px-6 md:py-6 lg:px-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
+      />
+      <article className="editorial-container inner-page detail-page essay-page">
         <PrevNextNav
           eyebrow="Writing"
           backHref="/blog/"
@@ -64,49 +68,66 @@ export default async function BlogPostPage({ params }) {
           prev={prevPost}
           next={nextPost}
         />
-
-        <header className="mb-8">
-          <h1 className="max-w-3xl text-page-title font-display text-light-text text-balance dark:text-ghost-white">
-            {title}
-          </h1>
-          <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-light-text-secondary dark:text-muted-steel">
-            {date ? <time dateTime={date}>{formatDate(date)}</time> : null}
-            {tags.length > 0 && (
-              <ul className="flex flex-wrap gap-1.5" aria-label="Tags">
-                {tags.map((t) => (
-                  <li key={t} className="tag">{t}</li>
-                ))}
-              </ul>
+        <header className="detail-masthead essay-masthead">
+          <p className="eyebrow">
+            From the notebook{' '}
+            {date && (
+              <>
+                {' '}
+                / <time dateTime={date}>{formatDate(date)}</time>
+              </>
             )}
+          </p>
+          <h1>{title}</h1>
+          {summary && <p className="detail-deck">{summary}</p>}
+          <div className="essay-byline">
+            <img src="/images/digin.png" width="40" height="40" alt="" />
+            <div>
+              <span>Digin Dominic</span>
+              <p>Software engineer & research toolsmith</p>
+            </div>
+            <ul aria-label="Topics">
+              {tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
           </div>
-          {summary ? (
-            <p className="mt-4 max-w-2xl text-[1.03rem] leading-8 text-light-text-secondary dark:text-muted-steel">
-              {summary}
-            </p>
-          ) : null}
         </header>
-
-        {image ? (
-          <figure className="mb-8 overflow-hidden rounded-lg border border-light-border dark:border-zinc-800">
+        {image && (
+          <figure className="case-study-plate essay-plate">
             <img
               src={image}
               alt={`Illustration for ${title}`}
               fetchPriority="high"
               decoding="async"
-              className="max-h-[320px] w-full object-contain"
             />
+            <figcaption>{title}</figcaption>
           </figure>
-        ) : null}
-
-        <div className="case-study-prose" dangerouslySetInnerHTML={{ __html: post.content }} />
-
-        <footer className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-light-border py-5 text-sm text-light-text-secondary dark:border-zinc-800 dark:text-muted-steel">
-          <span>{date ? `Published ${formatDate(date)}` : 'Technical note'}</span>
-          <div className="flex gap-4">
-            <Link href="/projects/" className="hover:text-neural-blue">View work</Link>
-            <Link href="/blog/" className="hover:text-neural-blue">All writing</Link>
-          </div>
-        </footer>
+        )}
+        <ReadingLayout
+          headings={post.headings || []}
+          label="In this essay"
+          aside={
+            <div className="reading-aside-section">
+              <p className="eyebrow">From ideas to practice</p>
+              <p className="small-note">Explore the projects behind the writing.</p>
+              <Link href="/projects/" className="editorial-text-link">
+                Selected work <span aria-hidden="true">↗</span>
+              </Link>
+            </div>
+          }
+        >
+          <div
+            className="case-study-prose editorial-prose"
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
+          <footer className="essay-colophon">
+            <p>{date ? `Published ${formatDate(date)}` : 'Technical note'} · Digin Dominic</p>
+            <Link href="/blog/" className="editorial-text-link">
+              Back to the notebook <span aria-hidden="true">↗</span>
+            </Link>
+          </footer>
+        </ReadingLayout>
       </article>
     </>
   );

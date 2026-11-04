@@ -34,7 +34,10 @@ export default async function ProjectPage({ params }) {
     notFound();
   }
 
-  const { prev: prevProject, next: nextProject } = getNeighbours(await getContentByType('projects'), id);
+  const { prev: prevProject, next: nextProject } = getNeighbours(
+    await getContentByType('projects'),
+    id,
+  );
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -49,8 +52,11 @@ export default async function ProjectPage({ params }) {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }} />
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
+      />
+      <div className="editorial-container inner-page detail-page">
         <PrevNextNav
           eyebrow="Case study"
           backHref="/projects/"

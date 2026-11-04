@@ -125,10 +125,10 @@ export default function RootLayout({ children }) {
       <head>
         {/* Apply an explicitly saved theme before paint; editorial light is the default */}
         <script dangerouslySetInnerHTML={{ __html: `try{var t=localStorage.getItem('theme');document.documentElement.classList.toggle('dark',t==='dark')}catch(e){}` }} />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/android-chrome-192x192.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" href="/favicon.ico?v=editorial" sizes="16x16 32x32 48x48" />
+        <link rel="icon" href="/favicon.svg?v=editorial" type="image/svg+xml" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=editorial" />
+        <link rel="manifest" href="/manifest.json?v=editorial" />
         <meta name="theme-color" content="#F4F3EB" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <script

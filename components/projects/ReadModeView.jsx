@@ -42,13 +42,13 @@ export default function ReadModeView({ project }) {
         <figure className="case-study-plate">
           <img
             src={m.image}
-            alt={`Screenshot of ${m.title}`}
+            alt={m.imageAlt || `Screenshot of ${m.title}`}
             fetchPriority="high"
             decoding="async"
           />
           <figcaption>
             <span>{m.title}</span>
-            <span>Interface / Project documentation</span>
+            <span>{m.imageCaption || 'Interface / Project documentation'}</span>
           </figcaption>
         </figure>
       )}

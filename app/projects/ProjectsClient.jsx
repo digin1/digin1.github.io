@@ -7,6 +7,8 @@ import StackPlaceholder from '@/components/common/StackPlaceholder';
 import { categoryLabels, getTags, getYear } from '@/lib/format';
 
 const ALLOWED_FILTER_TAGS = new Set([
+  'ChromaDB',
+  'MCP',
   'Python',
   'React',
   'Flask',

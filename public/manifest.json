@@ -4,18 +4,18 @@
   "name": "Digin Dominic: Research Software Engineer",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "/android-chrome-192x192.png?v=editorial",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "/android-chrome-512x512.png?v=editorial",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#09090B",
-  "background_color": "#09090B"
+  "theme_color": "#F4F3EB",
+  "background_color": "#F4F3EB"
 }

@@ -1,27 +1,6 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3B82F6"/>
-      <stop offset="100%" style="stop-color:#06B6D4"/>
-    </linearGradient>
-    <linearGradient id="gradient-dark" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#2563EB"/>
-      <stop offset="100%" style="stop-color:#0891B2"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Background rounded square -->
-  <rect x="16" y="16" width="480" height="480" rx="96" fill="url(#gradient)"/>
-
-  <!-- Inner subtle border -->
-  <rect x="32" y="32" width="448" height="448" rx="80" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
-
-  <!-- Letter D - stylized -->
-  <path d="M140 140 L140 372 L220 372 C300 372 340 312 340 256 C340 200 300 140 220 140 L140 140 Z M180 180 L220 180 C270 180 300 210 300 256 C300 302 270 332 220 332 L180 332 L180 180 Z" fill="white"/>
-
-  <!-- Letter D - second, offset -->
-  <path d="M200 140 L200 372 L280 372 C360 372 400 312 400 256 C400 200 360 140 280 140 L200 140 Z M240 180 L280 180 C330 180 360 210 360 256 C360 302 330 332 280 332 L240 332 L240 180 Z" fill="rgba(255,255,255,0.6)"/>
-
-  <!-- Accent dot -->
-  <circle cx="420" cy="380" r="24" fill="white"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Digin Dominic</title>
+  <rect width="64" height="64" rx="14" fill="#F4F3EB"/>
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#284B3D" stroke-width="1.75"/>
+  <path fill="#284B3D" transform="translate(14.928 48.500) scale(0.04400 -0.04400)" d="M172 -10Q128 -10 99.0 14.0Q70 38 56.5 79.5Q43 121 43 173Q43 220 55.5 271.5Q68 323 93.0 371.5Q118 420 154.0 459.5Q190 499 237.0 522.5Q284 546 341 546Q370 546 395.5 539.0Q421 532 440 521Q442 534 445.0 551.5Q448 569 450 578L460 626Q463 640 465.0 652.5Q467 665 467 671Q467 701 446.5 709.5Q426 718 397 718H389L398 760H582L466 215Q464 204 460.0 183.0Q456 162 453.5 140.0Q451 118 451 104Q451 53 484 53Q501 53 519.0 60.5Q537 68 556 79L574 50Q560 37 536.0 23.0Q512 9 485.0 -0.5Q458 -10 433 -10Q397 -10 376.0 12.0Q355 34 355 73Q355 86 357.5 106.0Q360 126 365 151H359Q325 74 278.0 32.0Q231 -10 172 -10ZM208 53Q234 53 261.5 73.0Q289 93 313.5 127.0Q338 161 357.0 203.0Q376 245 385 288L422 465Q411 483 390.0 492.0Q369 501 346 501Q306 501 274.0 478.5Q242 456 218.0 419.0Q194 382 177.5 338.0Q161 294 153.0 249.5Q145 205 145 169Q145 107 163.0 80.0Q181 53 208 53ZM661 -8Q636 -8 620.5 6.0Q605 20 605 43Q605 89 628.5 109.0Q652 129 677 129Q702 129 717.5 116.0Q733 103 733 80Q733 33 711.0 12.5Q689 -8 661 -8Z"/>
 </svg>
